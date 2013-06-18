@@ -1,0 +1,26 @@
+<../../../../../mkconfig
+
+TARG=\
+	ArrayData.dis\
+	Assembler.dis\
+	CatchData.dis\
+	ClassConstantData.dis\
+	ConstantPool.dis\
+	ConstantPoolData.dis\
+	Cover.dis\
+	FieldConstantData.dis\
+	Instruction.dis\
+	Label.dis\
+	LocalVariable.dis\
+	LocalVariableTable.dis\
+	NameAndTypeConstantData.dis\
+	NameAndTypeData.dis\
+	NumberConstantData.dis\
+	StringConstantData.dis\
+	StringExpressionConstantData.dis\
+	SwitchData.dis\
+	TryData.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/asm
+
+<$ROOT/mkfiles/mkjava

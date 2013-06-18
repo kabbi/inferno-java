@@ -1,0 +1,32 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	SnmpEntryOid.dis\
+	SnmpErrorHandlerAgent.dis\
+	SnmpGenericMetaServer.dis\
+	SnmpGenericObjectServer.dis\
+	SnmpIndex.dis\
+	SnmpMib.dis\
+	SnmpMibAgent.dis\
+	SnmpMibAgentMBean.dis\
+	SnmpMibEntry.dis\
+	SnmpMibGroup.dis\
+	SnmpMibHandler.dis\
+	SnmpMibNode.dis\
+	SnmpMibOid.dis\
+	SnmpMibRequest.dis\
+	SnmpMibRequestImpl.dis\
+	SnmpMibSubRequest.dis\
+	SnmpMibTable.dis\
+	SnmpRequestTree.dis\
+	SnmpStandardMetaServer.dis\
+	SnmpStandardObjectServer.dis\
+	SnmpTableCallbackHandler.dis\
+	SnmpTableEntryFactory.dis\
+	SnmpTableEntryNotification.dis\
+	SnmpTableSupport.dis\
+	SnmpUserDataFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp/agent
+
+<$ROOT/mkfiles/mkjava

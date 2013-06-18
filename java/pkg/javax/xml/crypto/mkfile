@@ -1,0 +1,26 @@
+<../../../../../mkconfig
+
+DIRS=\
+	dom\
+	dsig\
+
+TARG=\
+	AlgorithmMethod.dis\
+	Data.dis\
+	KeySelector.dis\
+	KeySelectorException.dis\
+	KeySelectorResult.dis\
+	MarshalException.dis\
+	NodeSetData.dis\
+	NoSuchMechanismException.dis\
+	OctetStreamData.dis\
+	URIDereferencer.dis\
+	URIReference.dis\
+	URIReferenceException.dis\
+	XMLCryptoContext.dis\
+	XMLStructure.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/xml/crypto
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

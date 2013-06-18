@@ -1,0 +1,35 @@
+<../../../../mkconfig
+
+DIRS=\
+	cmm\
+	loops\
+	opengl\
+	pipe\
+	pisces\
+
+TARG=\
+	DefaultDisposerRecord.dis\
+	DestSurfaceProvider.dis\
+	Disposer.dis\
+	DisposerRecord.dis\
+	DisposerTarget.dis\
+	FontSupport.dis\
+	HeadlessGraphicsEnvironment.dis\
+	InvalidPipeException.dis\
+	NullSurfaceData.dis\
+	Spans.dis\
+	StateTrackable.dis\
+	StateTrackableDelegate.dis\
+	StateTracker.dis\
+	SunCompositeContext.dis\
+	SunGraphics2D.dis\
+	SunGraphicsEnvironment.dis\
+	Surface.dis\
+	SurfaceData.dis\
+	SurfaceDataProxy.dis\
+	SurfaceManagerFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/java2d
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

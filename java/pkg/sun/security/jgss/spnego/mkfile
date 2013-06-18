@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	NegTokenInit.dis\
+	NegTokenTarg.dis\
+	SpNegoContext.dis\
+	SpNegoCredElement.dis\
+	SpNegoMechFactory.dis\
+	SpNegoToken.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/jgss/spnego
+
+<$ROOT/mkfiles/mkjava

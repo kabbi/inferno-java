@@ -1,0 +1,16 @@
+<../../../../../mkconfig
+
+DIRS=\
+	encoding\
+	ept\
+	presentation\
+	protocol\
+	transport\
+
+TARG=\
+	Delegate.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/pept
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	CommandLine.dis\
+	JarException.dis\
+	JarImageSource.dis\
+	Main.dis\
+	Manifest.dis\
+	SignatureFile.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jar
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

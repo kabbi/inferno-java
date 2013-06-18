@@ -1,0 +1,33 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	resolver\
+
+TARG=\
+	Base64.dis\
+	CachedXPathAPIHolder.dis\
+	CachedXPathFuncHereAPI.dis\
+	Constants.dis\
+	DigesterOutputStream.dis\
+	ElementChecker.dis\
+	ElementCheckerImpl.dis\
+	ElementProxy.dis\
+	EncryptionConstants.dis\
+	EncryptionElementProxy.dis\
+	HelperNodeList.dis\
+	I18n.dis\
+	IdResolver.dis\
+	IgnoreAllErrorHandler.dis\
+	JavaUtils.dis\
+	RFC2253Parser.dis\
+	SignatureElementProxy.dis\
+	SignerOutputStream.dis\
+	UnsyncBufferedOutputStream.dis\
+	UnsyncByteArrayOutputStream.dis\
+	XMLUtils.dis\
+	XPathFuncHereAPI.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/utils
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

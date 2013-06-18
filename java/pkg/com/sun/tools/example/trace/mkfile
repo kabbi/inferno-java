@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	EventThread.dis\
+	StreamRedirectThread.dis\
+	Trace.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/example/trace
+
+<$ROOT/mkfiles/mkjava

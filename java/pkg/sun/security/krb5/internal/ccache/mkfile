@@ -1,0 +1,15 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	CCacheInputStream.dis\
+	CCacheOutputStream.dis\
+	Credentials.dis\
+	CredentialsCache.dis\
+	FileCCacheConstants.dis\
+	FileCredentialsCache.dis\
+	MemoryCredentialsCache.dis\
+	Tag.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal/ccache
+
+<$ROOT/mkfiles/mkjava

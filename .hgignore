@@ -1,0 +1,20 @@
+syntax: glob
+
+# Proprietary files
+fonts
+
+# System files
+.DS_Store
+
+# Personal data
+mnt/keys
+keydb
+usr
+
+# Object files
+*.debug
+*.tab.[hc]
+*.dis
+*.sbl
+*.out
+*.o

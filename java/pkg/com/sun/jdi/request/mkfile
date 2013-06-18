@@ -1,0 +1,28 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AccessWatchpointRequest.dis\
+	BreakpointRequest.dis\
+	ClassPrepareRequest.dis\
+	ClassUnloadRequest.dis\
+	DuplicateRequestException.dis\
+	EventRequest.dis\
+	EventRequestManager.dis\
+	ExceptionRequest.dis\
+	InvalidRequestStateException.dis\
+	MethodEntryRequest.dis\
+	MethodExitRequest.dis\
+	ModificationWatchpointRequest.dis\
+	MonitorContendedEnteredRequest.dis\
+	MonitorContendedEnterRequest.dis\
+	MonitorWaitedRequest.dis\
+	MonitorWaitRequest.dis\
+	StepRequest.dis\
+	ThreadDeathRequest.dis\
+	ThreadStartRequest.dis\
+	VMDeathRequest.dis\
+	WatchpointRequest.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jdi/request
+
+<$ROOT/mkfiles/mkjava

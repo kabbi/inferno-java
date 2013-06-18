@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	LocateRegistry.dis\
+	Registry.dis\
+	RegistryHandler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/rmi/registry
+
+<$ROOT/mkfiles/mkjava

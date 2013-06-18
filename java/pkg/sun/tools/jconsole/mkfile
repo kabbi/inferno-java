@@ -1,0 +1,45 @@
+<../../../../../mkconfig
+
+DIRS=\
+	inspector\
+	resources\
+
+TARG=\
+	AboutDialog.dis\
+	BorderedComponent.dis\
+	ClassTab.dis\
+	ConnectDialog.dis\
+	CreateMBeanDialog.dis\
+	Formatter.dis\
+	HTMLPane.dis\
+	InternalDialog.dis\
+	JConsole.dis\
+	LabeledComponent.dis\
+	LocalVirtualMachine.dis\
+	MaximizableInternalFrame.dis\
+	MBeansTab.dis\
+	MemoryPoolProxy.dis\
+	MemoryPoolStat.dis\
+	MemoryTab.dis\
+	OutputViewer.dis\
+	OverviewPanel.dis\
+	OverviewTab.dis\
+	Plotter.dis\
+	PlotterPanel.dis\
+	ProxyClient.dis\
+	Resources.dis\
+	SheetDialog.dis\
+	SummaryTab.dis\
+	Tab.dis\
+	ThreadTab.dis\
+	TimeComboBox.dis\
+	Utilities.dis\
+	VariableGridLayout.dis\
+	VMInternalFrame.dis\
+	VMPanel.dis\
+	Worker.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jconsole
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

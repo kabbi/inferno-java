@@ -1,0 +1,63 @@
+<../../../../mkconfig
+
+DIRS=\
+	counter\
+	jmxremote\
+	resources\
+	snmp\
+
+TARG=\
+	Agent.dis\
+	AgentConfigurationError.dis\
+	ClassLoadingImpl.dis\
+	CompilationImpl.dis\
+	CompilerThreadStat.dis\
+	ConnectorAddressLink.dis\
+	FileSystem.dis\
+	Flag.dis\
+	GarbageCollectionNotifInfoCompositeData.dis\
+	GarbageCollectorImpl.dis\
+	GcInfoBuilder.dis\
+	GcInfoCompositeData.dis\
+	HotspotClassLoading.dis\
+	HotspotClassLoadingMBean.dis\
+	HotspotCompilation.dis\
+	HotspotCompilationMBean.dis\
+	HotSpotDiagnostic.dis\
+	HotspotInternal.dis\
+	HotspotInternalMBean.dis\
+	HotspotMemory.dis\
+	HotspotMemoryMBean.dis\
+	HotspotRuntime.dis\
+	HotspotRuntimeMBean.dis\
+	HotspotThread.dis\
+	HotspotThreadMBean.dis\
+	LazyCompositeData.dis\
+	LockDataConverter.dis\
+	LockDataConverterMXBean.dis\
+	ManagementFactory.dis\
+	ManagementFactoryHelper.dis\
+	MappedMXBeanType.dis\
+	MemoryImpl.dis\
+	MemoryManagerImpl.dis\
+	MemoryNotifInfoCompositeData.dis\
+	MemoryPoolImpl.dis\
+	MemoryUsageCompositeData.dis\
+	MethodInfo.dis\
+	MonitorInfoCompositeData.dis\
+	NotificationEmitterSupport.dis\
+	OperatingSystemImpl.dis\
+	RuntimeImpl.dis\
+	Sensor.dis\
+	StackTraceElementCompositeData.dis\
+	ThreadImpl.dis\
+	ThreadInfoCompositeData.dis\
+	Util.dis\
+	VMManagement.dis\
+	VMManagementImpl.dis\
+	VMOptionCompositeData.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

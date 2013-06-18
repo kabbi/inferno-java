@@ -1,0 +1,13 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	META-INF\
+
+TARG=\
+	DNSNameService.dis\
+	DNSNameServiceDescriptor.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/spi/nameservice/dns
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

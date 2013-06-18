@@ -1,0 +1,26 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AbstractNotificationHandler.dis\
+	Association.dis\
+	AssociationChangeNotification.dis\
+	HandlerResult.dis\
+	IllegalReceiveException.dis\
+	IllegalUnbindException.dis\
+	InvalidStreamException.dis\
+	MessageInfo.dis\
+	Notification.dis\
+	NotificationHandler.dis\
+	package-info.dis\
+	PeerAddressChangeNotification.dis\
+	SctpChannel.dis\
+	SctpMultiChannel.dis\
+	SctpServerChannel.dis\
+	SctpSocketOption.dis\
+	SctpStandardSocketOptions.dis\
+	SendFailedNotification.dis\
+	ShutdownNotification.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/nio/sctp
+
+<$ROOT/mkfiles/mkjava

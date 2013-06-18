@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+TARG=\
+	DefaultShellFolder.dis\
+	ShellFolder.dis\
+	ShellFolderColumnInfo.dis\
+	ShellFolderManager.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt/shell
+
+<$ROOT/mkfiles/mkjava

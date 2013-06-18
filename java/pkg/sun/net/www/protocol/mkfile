@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	file\
+	ftp\
+	gopher\
+	http\
+	https\
+	jar\
+	mailto\
+	netdoc\
+
+<$ROOT/mkfiles/mksubdirs

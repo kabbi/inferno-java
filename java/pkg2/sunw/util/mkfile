@@ -1,0 +1,16 @@
+<../../../../mkconfig
+
+TARG=\
+	DefaultTimer.dis\
+	DefaultTimerItem.dis\
+	PTimer.dis\
+	PTimerSpec.dis\
+	PTimerWentOffEvent.dis\
+	PTimerWentOffListener.dis\
+
+DISBIN=$ROOT/java/dis/java/sunw/util
+
+<$ROOT/mkfiles/mkjava
+
+DefaultTimerItem.dis:	DefaultTimer.class
+	j2d DefaultTimerItem.class

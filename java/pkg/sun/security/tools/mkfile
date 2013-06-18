@@ -1,0 +1,18 @@
+<../../../../../mkconfig
+
+DIRS=\
+	policytool\
+
+TARG=\
+	JarSigner.dis\
+	JarSignerResources.dis\
+	JarSignerResources_ja.dis\
+	JarSignerResources_zh_CN.dis\
+	KeyStoreUtil.dis\
+	KeyTool.dis\
+	TimestampedSigner.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/tools
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

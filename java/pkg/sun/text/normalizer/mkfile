@@ -1,0 +1,34 @@
+<../../../../../mkconfig
+
+TARG=\
+	CharacterIteratorWrapper.dis\
+	CharTrie.dis\
+	ICUBinary.dis\
+	ICUData.dis\
+	IntTrie.dis\
+	NormalizerBase.dis\
+	NormalizerDataReader.dis\
+	NormalizerImpl.dis\
+	RangeValueIterator.dis\
+	Replaceable.dis\
+	ReplaceableString.dis\
+	ReplaceableUCharacterIterator.dis\
+	RuleCharacterIterator.dis\
+	SymbolTable.dis\
+	Trie.dis\
+	TrieIterator.dis\
+	UBiDiProps.dis\
+	UCharacter.dis\
+	UCharacterIterator.dis\
+	UCharacterProperty.dis\
+	UCharacterPropertyReader.dis\
+	UnicodeMatcher.dis\
+	UnicodeSet.dis\
+	UnicodeSetIterator.dis\
+	UTF16.dis\
+	Utility.dis\
+	VersionInfo.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/text/normalizer
+
+<$ROOT/mkfiles/mkjava

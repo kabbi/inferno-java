@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	IPAddressUtil.dis\
+	URLUtil.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/util
+
+<$ROOT/mkfiles/mkjava

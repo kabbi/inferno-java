@@ -1,0 +1,27 @@
+<../../../../../../../../mkconfig
+
+DIRS=\
+	icons\
+	resources\
+
+TARG=\
+	GTKColorChooserPanel.dis\
+	GTKColorType.dis\
+	GTKConstants.dis\
+	GTKEngine.dis\
+	GTKFileChooserUI.dis\
+	GTKGraphicsUtils.dis\
+	GTKIconFactory.dis\
+	GTKLookAndFeel.dis\
+	GTKPainter.dis\
+	GTKRegion.dis\
+	GTKStyle.dis\
+	GTKStyleFactory.dis\
+	Metacity.dis\
+	PangoFonts.dis\
+	XColors.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/swing/plaf/gtk
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

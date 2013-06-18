@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	plaf\
+
+TARG=\
+	Painter.dis\
+	SwingUtilities3.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/swing
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

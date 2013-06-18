@@ -1,0 +1,77 @@
+<../../../../../../mkconfig
+
+TARG=\
+	Chromaticity.dis\
+	ColorSupported.dis\
+	Compression.dis\
+	Copies.dis\
+	CopiesSupported.dis\
+	DateTimeAtCompleted.dis\
+	DateTimeAtCreation.dis\
+	DateTimeAtProcessing.dis\
+	Destination.dis\
+	DialogTypeSelection.dis\
+	DocumentName.dis\
+	Fidelity.dis\
+	Finishings.dis\
+	JobHoldUntil.dis\
+	JobImpressions.dis\
+	JobImpressionsCompleted.dis\
+	JobImpressionsSupported.dis\
+	JobKOctets.dis\
+	JobKOctetsProcessed.dis\
+	JobKOctetsSupported.dis\
+	JobMediaSheets.dis\
+	JobMediaSheetsCompleted.dis\
+	JobMediaSheetsSupported.dis\
+	JobMessageFromOperator.dis\
+	JobName.dis\
+	JobOriginatingUserName.dis\
+	JobPriority.dis\
+	JobPrioritySupported.dis\
+	JobSheets.dis\
+	JobState.dis\
+	JobStateReason.dis\
+	JobStateReasons.dis\
+	Media.dis\
+	MediaName.dis\
+	MediaPrintableArea.dis\
+	MediaSize.dis\
+	MediaSizeName.dis\
+	MediaTray.dis\
+	MultipleDocumentHandling.dis\
+	NumberOfDocuments.dis\
+	NumberOfInterveningJobs.dis\
+	NumberUp.dis\
+	NumberUpSupported.dis\
+	OrientationRequested.dis\
+	OutputDeviceAssigned.dis\
+	PageRanges.dis\
+	PagesPerMinute.dis\
+	PagesPerMinuteColor.dis\
+	PDLOverrideSupported.dis\
+	PresentationDirection.dis\
+	PrinterInfo.dis\
+	PrinterIsAcceptingJobs.dis\
+	PrinterLocation.dis\
+	PrinterMakeAndModel.dis\
+	PrinterMessageFromOperator.dis\
+	PrinterMoreInfo.dis\
+	PrinterMoreInfoManufacturer.dis\
+	PrinterName.dis\
+	PrinterResolution.dis\
+	PrinterState.dis\
+	PrinterStateReason.dis\
+	PrinterStateReasons.dis\
+	PrinterURI.dis\
+	PrintQuality.dis\
+	QueuedJobCount.dis\
+	ReferenceUriSchemesSupported.dis\
+	RequestingUserName.dis\
+	Severity.dis\
+	SheetCollate.dis\
+	Sides.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/print/attribute/standard
+
+<$ROOT/mkfiles/mkjava

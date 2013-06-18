@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+DIRS=\
+	attach\
+	example\
+	extcheck\
+	hat\
+	jconsole\
+	jdi\
+	script\
+
+<$ROOT/mkfiles/mksubdirs

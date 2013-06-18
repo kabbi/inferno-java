@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+TARG=\
+	Activation.dis\
+	DTraceProbe.dis\
+	DTraceProvider.dis\
+	DTraceProviderFactory.dis\
+	JVM.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tracing/dtrace
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Handler.dis\
+	MailToURLConnection.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/mailto
+
+<$ROOT/mkfiles/mkjava

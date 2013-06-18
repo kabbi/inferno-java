@@ -1,0 +1,7 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	ssl\
+	www\
+
+<$ROOT/mkfiles/mksubdirs

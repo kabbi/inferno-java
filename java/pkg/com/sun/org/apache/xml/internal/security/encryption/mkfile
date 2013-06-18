@@ -1,0 +1,24 @@
+<../../../../../../../../../../mkconfig
+
+TARG=\
+	AgreementMethod.dis\
+	CipherData.dis\
+	CipherReference.dis\
+	CipherValue.dis\
+	EncryptedData.dis\
+	EncryptedKey.dis\
+	EncryptedType.dis\
+	EncryptionMethod.dis\
+	EncryptionProperties.dis\
+	EncryptionProperty.dis\
+	Reference.dis\
+	ReferenceList.dis\
+	Transforms.dis\
+	XMLCipher.dis\
+	XMLCipherInput.dis\
+	XMLCipherParameters.dis\
+	XMLEncryptionException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/encryption
+
+<$ROOT/mkfiles/mkjava

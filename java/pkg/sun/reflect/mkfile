@@ -1,0 +1,84 @@
+<../../../../mkconfig
+
+DIRS=\
+	annotation\
+	generics\
+	misc\
+
+TARG=\
+	AccessorGenerator.dis\
+	BootstrapConstructorAccessorImpl.dis\
+	ByteVector.dis\
+	ByteVectorFactory.dis\
+	ByteVectorImpl.dis\
+	ClassDefiner.dis\
+	ClassFileAssembler.dis\
+	ClassFileConstants.dis\
+	ConstantPool.dis\
+	ConstructorAccessor.dis\
+	ConstructorAccessorImpl.dis\
+	DelegatingConstructorAccessorImpl.dis\
+	DelegatingMethodAccessorImpl.dis\
+	FieldAccessor.dis\
+	FieldAccessorImpl.dis\
+	FieldInfo.dis\
+	InstantiationExceptionConstructorAccessorImpl.dis\
+	Label.dis\
+	LangReflectAccess.dis\
+	MagicAccessorImpl.dis\
+	MethodAccessor.dis\
+	MethodAccessorGenerator.dis\
+	MethodAccessorImpl.dis\
+	NativeConstructorAccessorImpl.dis\
+	NativeMethodAccessorImpl.dis\
+	Reflection.dis\
+	ReflectionFactory.dis\
+	SerializationConstructorAccessorImpl.dis\
+	SignatureIterator.dis\
+	UnsafeBooleanFieldAccessorImpl.dis\
+	UnsafeByteFieldAccessorImpl.dis\
+	UnsafeCharacterFieldAccessorImpl.dis\
+	UnsafeDoubleFieldAccessorImpl.dis\
+	UnsafeFieldAccessorFactory.dis\
+	UnsafeFieldAccessorImpl.dis\
+	UnsafeFloatFieldAccessorImpl.dis\
+	UnsafeIntegerFieldAccessorImpl.dis\
+	UnsafeLongFieldAccessorImpl.dis\
+	UnsafeObjectFieldAccessorImpl.dis\
+	UnsafeQualifiedBooleanFieldAccessorImpl.dis\
+	UnsafeQualifiedByteFieldAccessorImpl.dis\
+	UnsafeQualifiedCharacterFieldAccessorImpl.dis\
+	UnsafeQualifiedDoubleFieldAccessorImpl.dis\
+	UnsafeQualifiedFieldAccessorImpl.dis\
+	UnsafeQualifiedFloatFieldAccessorImpl.dis\
+	UnsafeQualifiedIntegerFieldAccessorImpl.dis\
+	UnsafeQualifiedLongFieldAccessorImpl.dis\
+	UnsafeQualifiedObjectFieldAccessorImpl.dis\
+	UnsafeQualifiedShortFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticBooleanFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticByteFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticCharacterFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticDoubleFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticFloatFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticIntegerFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticLongFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticObjectFieldAccessorImpl.dis\
+	UnsafeQualifiedStaticShortFieldAccessorImpl.dis\
+	UnsafeShortFieldAccessorImpl.dis\
+	UnsafeStaticBooleanFieldAccessorImpl.dis\
+	UnsafeStaticByteFieldAccessorImpl.dis\
+	UnsafeStaticCharacterFieldAccessorImpl.dis\
+	UnsafeStaticDoubleFieldAccessorImpl.dis\
+	UnsafeStaticFieldAccessorImpl.dis\
+	UnsafeStaticFloatFieldAccessorImpl.dis\
+	UnsafeStaticIntegerFieldAccessorImpl.dis\
+	UnsafeStaticLongFieldAccessorImpl.dis\
+	UnsafeStaticObjectFieldAccessorImpl.dis\
+	UnsafeStaticShortFieldAccessorImpl.dis\
+	UTF8.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+TARG=\
+	Acl.dis\
+	AclEntry.dis\
+	AclNotFoundException.dis\
+	Group.dis\
+	LastOwnerException.dis\
+	NotOwnerException.dis\
+	Owner.dis\
+	Permission.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/security/acl
+
+<$ROOT/mkfiles/mkjava

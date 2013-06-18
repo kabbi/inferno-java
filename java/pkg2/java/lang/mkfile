@@ -1,0 +1,152 @@
+<../../../../mkconfig
+
+DIRS=\
+	reflect\
+
+TARG=\
+	AbstractMethodError.dis\
+	ArithmeticException.dis\
+# for ArrayIndexOutOfBoundsException.dis\
+	++5KkA5LRlUzD1nsDM8Mj.dis\
+	ArrayStoreException.dis\
+	Boolean.dis\
+	Byte.dis\
+	Character.dis\
+	Class.dis\
+	ClassCastException.dis\
+	ClassCircularityError.dis\
+	ClassFormatError.dis\
+	ClassLoader.dis\
+# for ClassNotFoundException.dis\
+	S1vm8N5TePhsu3h1FO7yj.dis\
+# for CloneNotSupportedException.dis\
+	wmF21yXDq7VxPRRLc7v5t.dis\
+	Cloneable.dis\
+	Compiler.dis\
+	Double.dis\
+	Error.dis\
+	Exception.dis\
+# for ExceptionInInitializerError.dis\
+	Ub2BD3PjJRDSI4wyZi7ID.dis\
+	Float.dis\
+	IllegalAccessError.dis\
+# for IllegalAccessException.dis\
+	ClJ4BmIE1TECvv1qdqbQN.dis\
+# for IllegalArgumentException.dis\
+	Z07h8c1IAX5LIjYbhqgGl.dis\
+# for IllegalMonitorStateException.dis\
+	375fcBxmum6K8ZSGn7W2N.dis\
+	IllegalStateException.dis\
+# for IllegalThreadStateException.dis\
+	1PLXdCFiGoZkxBoL8Bo0P.dis\
+# for IncompatibleClassChangeError.dis\
+	FiACrRolKM+iZTikdgUFa.dis\
+# for IndexOutOfBoundsException.dis\
+	IKsPHNdWGHpuZGqgvYD4e.dis\
+	InfernoProcess.dis\
+	InstantiationError.dis\
+# for InstantiationException.dis\
+	jhj+E2mCFNmQ2VUL0zYp8.dis\
+	Integer.dis\
+	InternalError.dis\
+	InterruptedException.dis\
+	LinkageError.dis\
+	Long.dis\
+	Math.dis\
+# for NegativeArraySizeException.dis\
+	iu6-cux1hLK1GoPKq9m1l.dis\
+	NoClassDefFoundError.dis\
+	NoSuchFieldError.dis\
+	NoSuchFieldException.dis\
+	NoSuchMethodError.dis\
+	NoSuchMethodException.dis\
+	NullPointerException.dis\
+	NullSecurityManager.dis\
+	Number.dis\
+	NumberFormatException.dis\
+	Object.dis\
+	OutOfMemoryError.dis\
+	Process.dis\
+	Runnable.dis\
+	Runtime.dis\
+	RuntimeException.dis\
+	SecurityException.dis\
+	SecurityManager.dis\
+	Short.dis\
+	StackOverflowError.dis\
+	String.dis\
+	StringBuffer.dis\
+# for StringIndexOutOfBoundsException.dis\
+	5ZD+zz0io892VFWeXUN1a.dis\
+	System.dis\
+	Thread.dis\
+	ThreadDeath.dis\
+	ThreadGroup.dis\
+	Throwable.dis\
+	UnknownError.dis\
+	UnsatisfiedLinkError.dis\
+	VerifyError.dis\
+	VirtualMachineError.dis\
+	Void.dis\
+# Limbo code\
+	Character_L.dis\
+	ClassLoader_L.dis\
+	Class_L.dis\
+	Double_L.dis\
+	Float_L.dis\
+	InfernoProcess_L.dis\
+	Math_L.dis\
+	Object_L.dis\
+	Runtime_L.dis\
+	SecurityManager_L.dis\
+	StringBuffer_L.dis\
+	String_L.dis\
+	System_L.dis\
+	Thread_L.dis\
+	Throwable_L.dis\
+	unicode_table.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	Character_L.m\
+	ClassLoader_L.m\
+	Class_L.m\
+	Double_L.m\
+	Float_L.m\
+	InfernoProcess_L.m\
+	Math_L.m\
+	Object_L.m\
+	Runtime_L.m\
+	SecurityManager_L.m\
+	StringBuffer_L.m\
+	String_L.m\
+	System_L.m\
+	Thread_L.m\
+	Throwable_L.m\
+	unicode_table.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/lang
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs
+
+LIMBOINCL=\
+	$LIMBOINCL\
+	-I$ROOT/java/pkg\
+
+unicode_table.dis:	unicode_table.b
+	limbo $LIMBOINCL -gw unicode_table.b
+	
+NullSecurityManager.dis:	SecurityManager.class
+	j2d NullSecurityManager.class

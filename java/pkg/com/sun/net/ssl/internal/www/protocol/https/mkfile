@@ -1,0 +1,10 @@
+<../../../../../../../../../../mkconfig
+
+TARG=\
+	DelegateHttpsURLConnection.dis\
+	Handler.dis\
+	HttpsURLConnectionOldImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/net/ssl/internal/www/protocol/https
+
+<$ROOT/mkfiles/mkjava

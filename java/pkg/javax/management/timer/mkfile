@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+TARG=\
+	Timer.dis\
+	TimerAlarmClockNotification.dis\
+	TimerMBean.dis\
+	TimerNotification.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/timer
+
+<$ROOT/mkfiles/mkjava

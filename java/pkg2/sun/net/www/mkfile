@@ -1,0 +1,24 @@
+<../../../../../mkconfig
+
+DIRS=\
+	http\
+	protocol\
+
+TARG=\
+# for ApplicationLaunchException.dis\
+	CD9iqXENL4Q--iDf+DnAg.dis\
+	HeaderParser.dis\
+	MessageHeader.dis\
+	MeteredStream.dis\
+	MimeEntry.dis\
+	MimeLauncher.dis\
+	MimeTable.dis\
+	URLConnection.dis\
+
+DISBIN=$ROOT/java/dis/java/sun/net/www
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs
+
+CD9iqXENL4Q--iDf+DnAg.dis:	ApplicationLaunchException.class
+	j2d $prereq

@@ -1,0 +1,7 @@
+<../../../../../mkconfig
+
+DIRS=\
+	javascript\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

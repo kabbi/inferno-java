@@ -406,7 +406,7 @@ parsemod(char *path, uchar *code, ulong length, Dir *dir)
 	l->name = nil;
 
 	if(m->rt & HASLDT0){
-		kwerrstr("obsolete dis");
+		kwerrstr("obsolete dis load");
 		goto bad;
 	}
 

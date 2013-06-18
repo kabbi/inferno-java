@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+TARG=\
+	AsciiUtil.dis\
+	BaseLocale.dis\
+	Extension.dis\
+	InternalLocaleBuilder.dis\
+	LanguageTag.dis\
+	LocaleExtensions.dis\
+	LocaleObjectCache.dis\
+	LocaleSyntaxException.dis\
+	LocaleUtils.dis\
+	ParseStatus.dis\
+	StringTokenIterator.dis\
+	UnicodeLocaleExtension.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/util/locale
+
+<$ROOT/mkfiles/mkjava

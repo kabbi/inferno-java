@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	FrameEditorPaneTag.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing/text/html
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	FactoryImpl.dis\
+	NTLMClient.dis\
+	NTLMServer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/sasl/ntlm
+
+<$ROOT/mkfiles/mkjava

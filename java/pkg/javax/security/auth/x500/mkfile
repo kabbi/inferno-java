@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	X500Principal.dis\
+	X500PrivateCredential.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/auth/x500
+
+<$ROOT/mkfiles/mkjava

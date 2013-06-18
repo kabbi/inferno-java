@@ -1,0 +1,13 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	LocalEventTimer.dis\
+	LocalMonitoredVm.dis\
+	LocalVmManager.dis\
+	MonitoredHostProvider.dis\
+	PerfDataBuffer.dis\
+	PerfDataFile.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/perfdata/monitor/protocol/local
+
+<$ROOT/mkfiles/mkjava

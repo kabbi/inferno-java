@@ -1,0 +1,46 @@
+<../../../../../mkconfig
+
+TARG=\
+# for AreaAveragingScaleFilter.dis\
+	CEw7djK-zeE4-ezmJIAZ+.dis\
+	ColorModel.dis\
+	CropImageFilter.dis\
+	DirectColorModel.dis\
+	FilteredImageSource.dis\
+	ImageConsumer.dis\
+	ImageFilter.dis\
+	ImageObserver.dis\
+	ImageProducer.dis\
+	IndexColorModel.dis\
+	MemoryImageSource.dis\
+	PixelGrabber.dis\
+	RGBImageFilter.dis\
+	ReplicateScaleFilter.dis\
+# Limbo code\
+	ColorModel_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	ColorModel_L.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/awt/image
+
+<$ROOT/mkfiles/mkjava
+
+LIMBOINCL=\
+	$LIMBOINCL\
+	-I$ROOT/java/pkg\
+
+CEw7djK-zeE4-ezmJIAZ+.dis:	AreaAveragingScaleFilter.class
+	j2d AreaAveragingScaleFilter.class

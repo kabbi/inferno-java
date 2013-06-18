@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Task.dis\
+	TaskServer.dis\
+	ThreadService.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp/tasks
+
+<$ROOT/mkfiles/mkjava

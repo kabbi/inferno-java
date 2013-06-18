@@ -1,0 +1,9 @@
+<../../mkconfig
+
+DIRS=\
+#	inferno\
+	java\
+#	sun\
+#	sunw\
+
+<$ROOT/mkfiles/mksubdirs

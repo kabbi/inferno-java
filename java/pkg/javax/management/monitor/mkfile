@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	CounterMonitor.dis\
+	CounterMonitorMBean.dis\
+	GaugeMonitor.dis\
+	GaugeMonitorMBean.dis\
+	Monitor.dis\
+	MonitorMBean.dis\
+	MonitorNotification.dis\
+	MonitorSettingException.dis\
+	StringMonitor.dis\
+	StringMonitorMBean.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/monitor
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,17 @@
+<../../../../../../mkconfig
+
+TARG=\
+	SerialArray.dis\
+	SerialBlob.dis\
+	SerialClob.dis\
+	SerialDatalink.dis\
+	SerialException.dis\
+	SerialJavaObject.dis\
+	SerialRef.dis\
+	SerialStruct.dis\
+	SQLInputImpl.dis\
+	SQLOutputImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sql/rowset/serial
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,18 @@
+<../../../../../mkconfig
+
+TARG=\
+	Annotation.dis\
+	AnnotationFormatError.dis\
+	AnnotationTypeMismatchException.dis\
+	Documented.dis\
+	ElementType.dis\
+	IncompleteAnnotationException.dis\
+	Inherited.dis\
+	package-info.dis\
+	Retention.dis\
+	RetentionPolicy.dis\
+	Target.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/lang/annotation
+
+<$ROOT/mkfiles/mkjava

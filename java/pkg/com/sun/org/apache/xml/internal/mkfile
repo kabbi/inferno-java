@@ -1,0 +1,6 @@
+<../../../../../../../../mkconfig
+
+DIRS=\
+	security\
+
+<$ROOT/mkfiles/mksubdirs

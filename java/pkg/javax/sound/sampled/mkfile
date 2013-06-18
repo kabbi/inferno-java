@@ -1,0 +1,33 @@
+<../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	AudioFileFormat.dis\
+	AudioFormat.dis\
+	AudioInputStream.dis\
+	AudioPermission.dis\
+	AudioSystem.dis\
+	BooleanControl.dis\
+	Clip.dis\
+	CompoundControl.dis\
+	Control.dis\
+	DataLine.dis\
+	EnumControl.dis\
+	FloatControl.dis\
+	Line.dis\
+	LineEvent.dis\
+	LineListener.dis\
+	LineUnavailableException.dis\
+	Mixer.dis\
+	Port.dis\
+	ReverbType.dis\
+	SourceDataLine.dis\
+	TargetDataLine.dis\
+	UnsupportedAudioFileException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sound/sampled
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

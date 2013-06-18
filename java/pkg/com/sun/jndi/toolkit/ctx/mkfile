@@ -1,0 +1,16 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AtomicContext.dis\
+	AtomicDirContext.dis\
+	ComponentContext.dis\
+	ComponentDirContext.dis\
+	Continuation.dis\
+	HeadTail.dis\
+	PartialCompositeContext.dis\
+	PartialCompositeDirContext.dis\
+	StringHeadTail.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/toolkit/ctx
+
+<$ROOT/mkfiles/mkjava

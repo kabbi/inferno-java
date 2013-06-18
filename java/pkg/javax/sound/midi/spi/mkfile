@@ -1,0 +1,11 @@
+<../../../../../../mkconfig
+
+TARG=\
+	MidiDeviceProvider.dis\
+	MidiFileReader.dis\
+	MidiFileWriter.dis\
+	SoundbankReader.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sound/midi/spi
+
+<$ROOT/mkfiles/mkjava

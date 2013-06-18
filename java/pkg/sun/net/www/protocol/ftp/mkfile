@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	FtpURLConnection.dis\
+	Handler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/ftp
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Generic.dis\
+	plain.dis\
+	PlainTextInputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/content/text
+
+<$ROOT/mkfiles/mkjava

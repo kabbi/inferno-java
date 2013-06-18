@@ -1,0 +1,6 @@
+<../../../../../../../../mkconfig
+
+DIRS=\
+	protocol\
+
+<$ROOT/mkfiles/mksubdirs

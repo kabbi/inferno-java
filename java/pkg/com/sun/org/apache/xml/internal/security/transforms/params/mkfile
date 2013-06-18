@@ -1,0 +1,12 @@
+<../../../../../../../../../../../mkconfig
+
+TARG=\
+	InclusiveNamespaces.dis\
+	XPath2FilterContainer.dis\
+	XPath2FilterContainer04.dis\
+	XPathContainer.dis\
+	XPathFilterCHGPContainer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/transforms/params
+
+<$ROOT/mkfiles/mkjava

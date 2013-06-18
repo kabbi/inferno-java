@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+DIRS=\
+	html\
+
+TARG=\
+	CompoundPrintable.dis\
+	CountingPrintable.dis\
+	TextComponentPrintable.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing/text
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

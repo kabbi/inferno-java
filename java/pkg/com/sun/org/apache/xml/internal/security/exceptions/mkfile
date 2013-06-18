@@ -1,0 +1,11 @@
+<../../../../../../../../../../mkconfig
+
+TARG=\
+	AlgorithmAlreadyRegisteredException.dis\
+	Base64DecodingException.dis\
+	XMLSecurityException.dis\
+	XMLSecurityRuntimeException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/exceptions
+
+<$ROOT/mkfiles/mkjava

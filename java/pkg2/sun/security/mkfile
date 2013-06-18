@@ -1,0 +1,6 @@
+<../../../../mkconfig
+
+DIRS=\
+	provider\
+
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,52 @@
+<../../../../../mkconfig
+
+TARG=\
+	AncestorEvent.dis\
+	AncestorListener.dis\
+	CaretEvent.dis\
+	CaretListener.dis\
+	CellEditorListener.dis\
+	ChangeEvent.dis\
+	ChangeListener.dis\
+	DocumentEvent.dis\
+	DocumentListener.dis\
+	EventListenerList.dis\
+	HyperlinkEvent.dis\
+	HyperlinkListener.dis\
+	InternalFrameAdapter.dis\
+	InternalFrameEvent.dis\
+	InternalFrameListener.dis\
+	ListDataEvent.dis\
+	ListDataListener.dis\
+	ListSelectionEvent.dis\
+	ListSelectionListener.dis\
+	MenuDragMouseEvent.dis\
+	MenuDragMouseListener.dis\
+	MenuEvent.dis\
+	MenuKeyEvent.dis\
+	MenuKeyListener.dis\
+	MenuListener.dis\
+	MouseInputAdapter.dis\
+	MouseInputListener.dis\
+	PopupMenuEvent.dis\
+	PopupMenuListener.dis\
+	RowSorterEvent.dis\
+	RowSorterListener.dis\
+	SwingPropertyChangeSupport.dis\
+	TableColumnModelEvent.dis\
+	TableColumnModelListener.dis\
+	TableModelEvent.dis\
+	TableModelListener.dis\
+	TreeExpansionEvent.dis\
+	TreeExpansionListener.dis\
+	TreeModelEvent.dis\
+	TreeModelListener.dis\
+	TreeSelectionEvent.dis\
+	TreeSelectionListener.dis\
+	TreeWillExpandListener.dis\
+	UndoableEditEvent.dis\
+	UndoableEditListener.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/event
+
+<$ROOT/mkfiles/mkjava

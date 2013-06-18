@@ -1,0 +1,28 @@
+<../../../../../mkconfig
+
+DIRS=\
+	krb5\
+	spi\
+	spnego\
+	wrapper\
+
+TARG=\
+	GSSCaller.dis\
+	GSSContextImpl.dis\
+	GSSCredentialImpl.dis\
+	GSSExceptionImpl.dis\
+	GSSHeader.dis\
+	GSSManagerImpl.dis\
+	GSSNameImpl.dis\
+	GSSToken.dis\
+	GSSUtil.dis\
+	HttpCaller.dis\
+	LoginConfigImpl.dis\
+	ProviderList.dis\
+	SunProvider.dis\
+	TokenTracker.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/jgss
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,34 @@
+<../../../../../mkconfig
+
+TARG=\
+	InvalidRelationIdException.dis\
+	InvalidRelationServiceException.dis\
+	InvalidRelationTypeException.dis\
+	InvalidRoleInfoException.dis\
+	InvalidRoleValueException.dis\
+	MBeanServerNotificationFilter.dis\
+	Relation.dis\
+	RelationException.dis\
+	RelationNotFoundException.dis\
+	RelationNotification.dis\
+	RelationService.dis\
+	RelationServiceMBean.dis\
+	RelationServiceNotRegisteredException.dis\
+	RelationSupport.dis\
+	RelationSupportMBean.dis\
+	RelationType.dis\
+	RelationTypeNotFoundException.dis\
+	RelationTypeSupport.dis\
+	Role.dis\
+	RoleInfo.dis\
+	RoleInfoNotFoundException.dis\
+	RoleList.dis\
+	RoleNotFoundException.dis\
+	RoleResult.dis\
+	RoleStatus.dis\
+	RoleUnresolved.dis\
+	RoleUnresolvedList.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/relation
+
+<$ROOT/mkfiles/mkjava

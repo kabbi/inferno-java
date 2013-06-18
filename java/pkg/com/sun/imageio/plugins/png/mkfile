@@ -1,0 +1,15 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	PNGImageReader.dis\
+	PNGImageReaderSpi.dis\
+	PNGImageWriter.dis\
+	PNGImageWriterSpi.dis\
+	PNGMetadata.dis\
+	PNGMetadataFormat.dis\
+	PNGMetadataFormatResources.dis\
+	RowFilter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/plugins/png
+
+<$ROOT/mkfiles/mkjava

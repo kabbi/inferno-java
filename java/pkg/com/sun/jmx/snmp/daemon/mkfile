@@ -1,0 +1,19 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ClientHandler.dis\
+	CommunicationException.dis\
+	CommunicatorServer.dis\
+	CommunicatorServerMBean.dis\
+	SnmpAdaptorServer.dis\
+	SnmpAdaptorServerMBean.dis\
+	SnmpInformHandler.dis\
+	SnmpMibTree.dis\
+	SnmpRequestHandler.dis\
+	SnmpSubBulkRequestHandler.dis\
+	SnmpSubNextRequestHandler.dis\
+	SnmpSubRequestHandler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp/daemon
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,11 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	KerberosFlags.dis\
+	KerberosString.dis\
+	KrbDataInputStream.dis\
+	KrbDataOutputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal/util
+
+<$ROOT/mkfiles/mkjava

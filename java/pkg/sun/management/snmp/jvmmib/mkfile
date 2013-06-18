@@ -1,0 +1,60 @@
+<../../../../../../mkconfig
+
+TARG=\
+	EnumJvmClassesVerboseLevel.dis\
+	EnumJvmJITCompilerTimeMonitoring.dis\
+	EnumJvmMemManagerState.dis\
+	EnumJvmMemoryGCCall.dis\
+	EnumJvmMemoryGCVerboseLevel.dis\
+	EnumJvmMemPoolCollectThreshdSupport.dis\
+	EnumJvmMemPoolState.dis\
+	EnumJvmMemPoolThreshdSupport.dis\
+	EnumJvmMemPoolType.dis\
+	EnumJvmRTBootClassPathSupport.dis\
+	EnumJvmThreadContentionMonitoring.dis\
+	EnumJvmThreadCpuTimeMonitoring.dis\
+	JVM_MANAGEMENT_MIB.dis\
+	JVM_MANAGEMENT_MIBOidTable.dis\
+	JvmClassLoadingMBean.dis\
+	JvmClassLoadingMeta.dis\
+	JvmCompilationMBean.dis\
+	JvmCompilationMeta.dis\
+	JvmMemGCEntryMBean.dis\
+	JvmMemGCEntryMeta.dis\
+	JvmMemGCTableMeta.dis\
+	JvmMemManagerEntryMBean.dis\
+	JvmMemManagerEntryMeta.dis\
+	JvmMemManagerTableMeta.dis\
+	JvmMemMgrPoolRelEntryMBean.dis\
+	JvmMemMgrPoolRelEntryMeta.dis\
+	JvmMemMgrPoolRelTableMeta.dis\
+	JvmMemoryMBean.dis\
+	JvmMemoryMeta.dis\
+	JvmMemPoolEntryMBean.dis\
+	JvmMemPoolEntryMeta.dis\
+	JvmMemPoolTableMeta.dis\
+	JvmOSMBean.dis\
+	JvmOSMeta.dis\
+	JvmRTBootClassPathEntryMBean.dis\
+	JvmRTBootClassPathEntryMeta.dis\
+	JvmRTBootClassPathTableMeta.dis\
+	JvmRTClassPathEntryMBean.dis\
+	JvmRTClassPathEntryMeta.dis\
+	JvmRTClassPathTableMeta.dis\
+	JvmRTInputArgsEntryMBean.dis\
+	JvmRTInputArgsEntryMeta.dis\
+	JvmRTInputArgsTableMeta.dis\
+	JvmRTLibraryPathEntryMBean.dis\
+	JvmRTLibraryPathEntryMeta.dis\
+	JvmRTLibraryPathTableMeta.dis\
+	JvmRuntimeMBean.dis\
+	JvmRuntimeMeta.dis\
+	JvmThreadingMBean.dis\
+	JvmThreadingMeta.dis\
+	JvmThreadInstanceEntryMBean.dis\
+	JvmThreadInstanceEntryMeta.dis\
+	JvmThreadInstanceTableMeta.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/snmp/jvmmib
+
+<$ROOT/mkfiles/mkjava

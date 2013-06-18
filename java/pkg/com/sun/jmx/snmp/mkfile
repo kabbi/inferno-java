@@ -1,0 +1,69 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	agent\
+	daemon\
+	defaults\
+	internal\
+	IPAcl\
+	mpm\
+	tasks\
+
+TARG=\
+	BerDecoder.dis\
+	BerEncoder.dis\
+	BerException.dis\
+	Enumerated.dis\
+	EnumRowStatus.dis\
+	InetAddressAcl.dis\
+	ServiceName.dis\
+	SnmpAckPdu.dis\
+	SnmpBadSecurityLevelException.dis\
+	SnmpCounter.dis\
+	SnmpCounter64.dis\
+	SnmpEngine.dis\
+	SnmpEngineFactory.dis\
+	SnmpEngineId.dis\
+	SnmpEngineParameters.dis\
+	SnmpGauge.dis\
+	SnmpInt.dis\
+	SnmpIpAddress.dis\
+	SnmpMessage.dis\
+	SnmpMsg.dis\
+	SnmpNull.dis\
+	SnmpOpaque.dis\
+	SnmpParams.dis\
+	SnmpPdu.dis\
+	SnmpPduBulk.dis\
+	SnmpPduBulkType.dis\
+	SnmpPduFactory.dis\
+	SnmpPduFactoryBER.dis\
+	SnmpPduRequest.dis\
+	SnmpPduRequestType.dis\
+	SnmpPduTrap.dis\
+	SnmpScopedPduBulk.dis\
+	SnmpScopedPduPacket.dis\
+	SnmpScopedPduRequest.dis\
+	SnmpSecurityException.dis\
+	SnmpSecurityParameters.dis\
+	SnmpStatusException.dis\
+	SnmpString.dis\
+	SnmpStringFixed.dis\
+	SnmpTooBigException.dis\
+	SnmpUnknownAccContrModelException.dis\
+	SnmpUnknownModelException.dis\
+	SnmpUnknownModelLcdException.dis\
+	SnmpUnknownMsgProcModelException.dis\
+	SnmpUnknownSecModelException.dis\
+	SnmpUnknownSubSystemException.dis\
+	SnmpUnsignedInt.dis\
+	SnmpUsmKeyHandler.dis\
+	SnmpV3Message.dis\
+	SnmpValue.dis\
+	ThreadContext.dis\
+	UserAcl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

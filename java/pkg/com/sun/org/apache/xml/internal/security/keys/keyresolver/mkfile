@@ -1,0 +1,15 @@
+<../../../../../../../../../../../mkconfig
+
+DIRS=\
+	implementations\
+
+TARG=\
+	InvalidKeyResolverException.dis\
+	KeyResolver.dis\
+	KeyResolverException.dis\
+	KeyResolverSpi.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/keyresolver
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+TARG=\
+	GarbageCollectionNotificationInfo.dis\
+	GarbageCollectorMXBean.dis\
+	GcInfo.dis\
+	HotSpotDiagnosticMXBean.dis\
+	OperatingSystemMXBean.dis\
+	ThreadMXBean.dis\
+	UnixOperatingSystemMXBean.dis\
+	VMOption.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/management
+
+<$ROOT/mkfiles/mkjava

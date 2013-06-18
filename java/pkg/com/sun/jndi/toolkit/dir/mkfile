@@ -1,0 +1,14 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AttrFilter.dis\
+	ContainmentFilter.dis\
+	ContextEnumerator.dis\
+	DirSearch.dis\
+	HierMemDirCtx.dis\
+	LazySearchEnumerationImpl.dis\
+	SearchFilter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/toolkit/dir
+
+<$ROOT/mkfiles/mkjava

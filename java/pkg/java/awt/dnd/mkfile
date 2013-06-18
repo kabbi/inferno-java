@@ -1,0 +1,35 @@
+<../../../../../mkconfig
+
+DIRS=\
+	peer\
+
+TARG=\
+	Autoscroll.dis\
+	DnDConstants.dis\
+	DnDEventMulticaster.dis\
+	DragGestureEvent.dis\
+	DragGestureListener.dis\
+	DragGestureRecognizer.dis\
+	DragSource.dis\
+	DragSourceAdapter.dis\
+	DragSourceContext.dis\
+	DragSourceDragEvent.dis\
+	DragSourceDropEvent.dis\
+	DragSourceEvent.dis\
+	DragSourceListener.dis\
+	DragSourceMotionListener.dis\
+	DropTarget.dis\
+	DropTargetAdapter.dis\
+	DropTargetContext.dis\
+	DropTargetDragEvent.dis\
+	DropTargetDropEvent.dis\
+	DropTargetEvent.dis\
+	DropTargetListener.dis\
+	InvalidDnDOperationException.dis\
+	MouseDragGestureRecognizer.dis\
+	SerializationTester.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/dnd
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

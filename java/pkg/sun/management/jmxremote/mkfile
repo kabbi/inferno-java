@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	ConnectorBootstrap.dis\
+	LocalRMIServerSocketFactory.dis\
+	SingleEntryRegistry.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/jmxremote
+
+<$ROOT/mkfiles/mkjava

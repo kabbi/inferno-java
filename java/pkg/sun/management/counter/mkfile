@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+DIRS=\
+	perf\
+
+TARG=\
+	AbstractCounter.dis\
+	ByteArrayCounter.dis\
+	Counter.dis\
+	LongArrayCounter.dis\
+	LongCounter.dis\
+	StringCounter.dis\
+	Units.dis\
+	Variability.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/counter
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	Certificate.dis\
+	CertificateEncodingException.dis\
+	CertificateException.dis\
+	CertificateExpiredException.dis\
+	CertificateNotYetValidException.dis\
+	CertificateParsingException.dis\
+	X509Certificate.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/cert
+
+<$ROOT/mkfiles/mkjava

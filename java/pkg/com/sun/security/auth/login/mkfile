@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ConfigFile.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/auth/login
+
+<$ROOT/mkfiles/mkjava

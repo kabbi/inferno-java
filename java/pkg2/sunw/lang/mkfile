@@ -1,0 +1,12 @@
+<../../../../mkconfig
+
+TARG=\
+# for UnsupportedOperationException.dis\
+	Et4wxuu1TyylKlV38rZ7R.dis\
+
+DISBIN=$ROOT/java/dis/java/sunw/lang
+
+<$ROOT/mkfiles/mkjava
+
+Et4wxuu1TyylKlV38rZ7R.dis:	UnsupportedOperationException.class
+	j2d $prereq

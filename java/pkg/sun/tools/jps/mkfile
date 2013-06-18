@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	Arguments.dis\
+	Jps.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jps
+
+<$ROOT/mkfiles/mkjava

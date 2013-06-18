@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	LoginModule.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/auth/spi
+
+<$ROOT/mkfiles/mkjava

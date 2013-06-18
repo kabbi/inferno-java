@@ -1,0 +1,21 @@
+<../../../../../mkconfig
+
+TARG=\
+	OGLBlitLoops.dis\
+	OGLBufImgOps.dis\
+	OGLContext.dis\
+	OGLDrawImage.dis\
+	OGLGraphicsConfig.dis\
+	OGLMaskBlit.dis\
+	OGLMaskFill.dis\
+	OGLPaints.dis\
+	OGLRenderer.dis\
+	OGLRenderQueue.dis\
+	OGLSurfaceData.dis\
+	OGLSurfaceDataProxy.dis\
+	OGLTextRenderer.dis\
+	OGLUtilities.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/java2d/opengl
+
+<$ROOT/mkfiles/mkjava

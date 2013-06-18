@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	IgnorePaintEvent.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt/event
+
+<$ROOT/mkfiles/mkjava

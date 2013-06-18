@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	DefaultFtpClientProvider.dis\
+	FtpClient.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/ftp/impl
+
+<$ROOT/mkfiles/mkjava

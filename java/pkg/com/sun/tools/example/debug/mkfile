@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	bdi\
+	event\
+	expr\
+	gui\
+	tty\
+
+<$ROOT/mkfiles/mksubdirs

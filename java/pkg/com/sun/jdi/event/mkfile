@@ -1,0 +1,31 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AccessWatchpointEvent.dis\
+	BreakpointEvent.dis\
+	ClassPrepareEvent.dis\
+	ClassUnloadEvent.dis\
+	Event.dis\
+	EventIterator.dis\
+	EventQueue.dis\
+	EventSet.dis\
+	ExceptionEvent.dis\
+	LocatableEvent.dis\
+	MethodEntryEvent.dis\
+	MethodExitEvent.dis\
+	ModificationWatchpointEvent.dis\
+	MonitorContendedEnteredEvent.dis\
+	MonitorContendedEnterEvent.dis\
+	MonitorWaitedEvent.dis\
+	MonitorWaitEvent.dis\
+	StepEvent.dis\
+	ThreadDeathEvent.dis\
+	ThreadStartEvent.dis\
+	VMDeathEvent.dis\
+	VMDisconnectEvent.dis\
+	VMStartEvent.dis\
+	WatchpointEvent.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jdi/event
+
+<$ROOT/mkfiles/mkjava

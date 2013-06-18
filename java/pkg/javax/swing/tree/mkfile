@@ -1,0 +1,24 @@
+<../../../../../mkconfig
+
+TARG=\
+	AbstractLayoutCache.dis\
+	DefaultMutableTreeNode.dis\
+	DefaultTreeCellEditor.dis\
+	DefaultTreeCellRenderer.dis\
+	DefaultTreeModel.dis\
+	DefaultTreeSelectionModel.dis\
+	ExpandVetoException.dis\
+	FixedHeightLayoutCache.dis\
+	MutableTreeNode.dis\
+	RowMapper.dis\
+	TreeCellEditor.dis\
+	TreeCellRenderer.dis\
+	TreeModel.dis\
+	TreeNode.dis\
+	TreePath.dis\
+	TreeSelectionModel.dis\
+	VariableHeightLayoutCache.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/tree
+
+<$ROOT/mkfiles/mkjava

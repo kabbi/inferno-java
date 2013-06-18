@@ -1,0 +1,13 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	DOMAccessException.dis\
+	DOMAccessor.dis\
+	DOMAction.dis\
+	DOMService.dis\
+	DOMServiceProvider.dis\
+	DOMUnsupportedException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/browser/dom
+
+<$ROOT/mkfiles/mkjava

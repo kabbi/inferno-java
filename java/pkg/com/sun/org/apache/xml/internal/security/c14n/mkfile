@@ -1,0 +1,16 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	helper\
+	implementations\
+
+TARG=\
+	CanonicalizationException.dis\
+	Canonicalizer.dis\
+	CanonicalizerSpi.dis\
+	InvalidCanonicalizerException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/c14n
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

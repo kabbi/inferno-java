@@ -1,0 +1,6 @@
+<../../../../../mkconfig
+
+DIRS=\
+	rmid\
+
+<$ROOT/mkfiles/mksubdirs

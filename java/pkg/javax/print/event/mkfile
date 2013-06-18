@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+TARG=\
+	PrintEvent.dis\
+	PrintJobAdapter.dis\
+	PrintJobAttributeEvent.dis\
+	PrintJobAttributeListener.dis\
+	PrintJobEvent.dis\
+	PrintJobListener.dis\
+	PrintServiceAttributeEvent.dis\
+	PrintServiceAttributeListener.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/print/event
+
+<$ROOT/mkfiles/mkjava

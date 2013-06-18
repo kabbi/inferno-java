@@ -1,0 +1,28 @@
+<../../../../../mkconfig
+
+DIRS=\
+	proxy\
+	tcp\
+
+TARG=\
+	Channel.dis\
+	Connection.dis\
+	ConnectionInputStream.dis\
+	ConnectionOutputStream.dis\
+	DGCAckHandler.dis\
+	DGCClient.dis\
+	DGCImpl.dis\
+	Endpoint.dis\
+	LiveRef.dis\
+	ObjectEndpoint.dis\
+	ObjectTable.dis\
+	StreamRemoteCall.dis\
+	Target.dis\
+	Transport.dis\
+	TransportConstants.dis\
+	WeakRef.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/transport
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

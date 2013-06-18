@@ -1,0 +1,48 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	parser\
+
+TARG=\
+	AccessibleHTML.dis\
+	BlockView.dis\
+	BRView.dis\
+	CommentView.dis\
+	CSS.dis\
+	CSSBorder.dis\
+	CSSParser.dis\
+	EditableView.dis\
+	FormSubmitEvent.dis\
+	FormView.dis\
+	FrameSetView.dis\
+	FrameView.dis\
+	HiddenTagView.dis\
+	HRuleView.dis\
+	HTML.dis\
+	HTMLDocument.dis\
+	HTMLEditorKit.dis\
+	HTMLFrameHyperlinkEvent.dis\
+	HTMLWriter.dis\
+	ImageView.dis\
+	InlineView.dis\
+	IsindexView.dis\
+	LineView.dis\
+	ListView.dis\
+	Map.dis\
+	MinimalHTMLWriter.dis\
+	MuxingAttributeSet.dis\
+	NoFramesView.dis\
+	ObjectView.dis\
+	Option.dis\
+	OptionComboBoxModel.dis\
+	OptionListModel.dis\
+	ParagraphView.dis\
+	ResourceLoader.dis\
+	StyleSheet.dis\
+	TableView.dis\
+	TextAreaDocument.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/text/html
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,67 @@
+<../../../../../mkconfig
+
+DIRS=\
+	atomic\
+	locks\
+
+TARG=\
+	AbstractExecutorService.dis\
+	ArrayBlockingQueue.dis\
+	BlockingDeque.dis\
+	BlockingQueue.dis\
+	BrokenBarrierException.dis\
+	Callable.dis\
+	CancellationException.dis\
+	CompletionService.dis\
+	ConcurrentHashMap.dis\
+	ConcurrentLinkedDeque.dis\
+	ConcurrentLinkedQueue.dis\
+	ConcurrentMap.dis\
+	ConcurrentNavigableMap.dis\
+	ConcurrentSkipListMap.dis\
+	ConcurrentSkipListSet.dis\
+	CopyOnWriteArrayList.dis\
+	CopyOnWriteArraySet.dis\
+	CountDownLatch.dis\
+	CyclicBarrier.dis\
+	Delayed.dis\
+	DelayQueue.dis\
+	Exchanger.dis\
+	ExecutionException.dis\
+	Executor.dis\
+	ExecutorCompletionService.dis\
+	Executors.dis\
+	ExecutorService.dis\
+	ForkJoinPool.dis\
+	ForkJoinTask.dis\
+	ForkJoinWorkerThread.dis\
+	Future.dis\
+	FutureTask.dis\
+	LinkedBlockingDeque.dis\
+	LinkedBlockingQueue.dis\
+	LinkedTransferQueue.dis\
+	package-info.dis\
+	Phaser.dis\
+	PriorityBlockingQueue.dis\
+	RecursiveAction.dis\
+	RecursiveTask.dis\
+	RejectedExecutionException.dis\
+	RejectedExecutionHandler.dis\
+	RunnableFuture.dis\
+	RunnableScheduledFuture.dis\
+	ScheduledExecutorService.dis\
+	ScheduledFuture.dis\
+	ScheduledThreadPoolExecutor.dis\
+	Semaphore.dis\
+	SynchronousQueue.dis\
+	ThreadFactory.dis\
+	ThreadLocalRandom.dis\
+	ThreadPoolExecutor.dis\
+	TimeoutException.dis\
+	TimeUnit.dis\
+	TransferQueue.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/concurrent
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

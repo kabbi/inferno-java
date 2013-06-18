@@ -1,0 +1,13 @@
+<../../../../../mkconfig
+
+TARG=\
+	GetInstance.dis\
+	JCAUtil.dis\
+	ProviderConfig.dis\
+	ProviderList.dis\
+	Providers.dis\
+	ServiceId.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/jca
+
+<$ROOT/mkfiles/mkjava

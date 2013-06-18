@@ -1,0 +1,6 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	x509\
+
+<$ROOT/mkfiles/mksubdirs

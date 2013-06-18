@@ -1,0 +1,11 @@
+<../../../../mkconfig
+
+DIRS=\
+	log\
+	registry\
+	rmic\
+	runtime\
+	server\
+	transport\
+
+<$ROOT/mkfiles/mksubdirs

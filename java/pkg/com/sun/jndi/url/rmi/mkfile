@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	rmiURLContext.dis\
+	rmiURLContextFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/url/rmi
+
+<$ROOT/mkfiles/mkjava

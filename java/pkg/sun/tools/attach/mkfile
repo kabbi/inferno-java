@@ -1,0 +1,13 @@
+<../../../../../mkconfig
+
+DIRS=\
+	META-INF\
+
+TARG=\
+	HotSpotAttachProvider.dis\
+	HotSpotVirtualMachine.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/attach
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	Book.dis\
+	Pageable.dis\
+	PageFormat.dis\
+	Paper.dis\
+	Printable.dis\
+	PrinterAbortException.dis\
+	PrinterException.dis\
+	PrinterGraphics.dis\
+	PrinterIOException.dis\
+	PrinterJob.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/print
+
+<$ROOT/mkfiles/mkjava

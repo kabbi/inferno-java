@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	JStack.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jstack
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,37 @@
+<../../../../../mkconfig
+
+DIRS=\
+	standard\
+
+TARG=\
+	Attribute.dis\
+	AttributeSet.dis\
+	AttributeSetUtilities.dis\
+	DateTimeSyntax.dis\
+	DocAttribute.dis\
+	DocAttributeSet.dis\
+	EnumSyntax.dis\
+	HashAttributeSet.dis\
+	HashDocAttributeSet.dis\
+	HashPrintJobAttributeSet.dis\
+	HashPrintRequestAttributeSet.dis\
+	HashPrintServiceAttributeSet.dis\
+	IntegerSyntax.dis\
+	PrintJobAttribute.dis\
+	PrintJobAttributeSet.dis\
+	PrintRequestAttribute.dis\
+	PrintRequestAttributeSet.dis\
+	PrintServiceAttribute.dis\
+	PrintServiceAttributeSet.dis\
+	ResolutionSyntax.dis\
+	SetOfIntegerSyntax.dis\
+	Size2DSyntax.dis\
+	SupportedValuesAttribute.dis\
+	TextSyntax.dis\
+	UnmodifiableSetException.dis\
+	URISyntax.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/print/attribute
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

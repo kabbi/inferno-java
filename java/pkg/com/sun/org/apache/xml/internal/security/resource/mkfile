@@ -1,0 +1,6 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	schema\
+
+<$ROOT/mkfiles/mksubdirs

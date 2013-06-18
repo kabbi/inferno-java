@@ -1,0 +1,87 @@
+<../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	ASCIICaseInsensitiveComparator.dis\
+	BASE64Decoder.dis\
+	BASE64Encoder.dis\
+	Cache.dis\
+	CEFormatException.dis\
+	CEStreamExhausted.dis\
+	CharacterDecoder.dis\
+	CharacterEncoder.dis\
+	ClassFileTransformer.dis\
+	ClassLoaderUtil.dis\
+	Cleaner.dis\
+	Compare.dis\
+	CompoundEnumeration.dis\
+	ConditionLock.dis\
+	CRC16.dis\
+	DoubleConsts.dis\
+	ExtensionDependency.dis\
+	ExtensionInfo.dis\
+	ExtensionInstallationException.dis\
+	ExtensionInstallationProvider.dis\
+	FloatConsts.dis\
+	FloatingDecimal.dis\
+	FormattedFloatingDecimal.dis\
+	FpUtils.dis\
+	GC.dis\
+	HexDumpEncoder.dis\
+	InvalidJarIndexException.dis\
+	IOUtils.dis\
+	JarFilter.dis\
+	JarIndex.dis\
+	JavaIOAccess.dis\
+	JavaIOFileDescriptorAccess.dis\
+	JavaLangAccess.dis\
+	JavaNetAccess.dis\
+	JavaNioAccess.dis\
+	JavaSecurityAccess.dis\
+	JavaSecurityProtectionDomainAccess.dis\
+	JavaUtilJarAccess.dis\
+	JavaxSecurityAuthKerberosAccess.dis\
+	Launcher.dis\
+	Lock.dis\
+	LRUCache.dis\
+	MessageUtils.dis\
+	MetaIndex.dis\
+	NativeSignalHandler.dis\
+	Perf.dis\
+	PerfCounter.dis\
+	PerformanceLogger.dis\
+	ProxyGenerator.dis\
+	Queue.dis\
+	REException.dis\
+	Ref.dis\
+	Regexp.dis\
+	RegexpPool.dis\
+	RegexpTarget.dis\
+	Request.dis\
+	RequestProcessor.dis\
+	Resource.dis\
+	Service.dis\
+	ServiceConfigurationError.dis\
+	SharedSecrets.dis\
+	Signal.dis\
+	SignalHandler.dis\
+	SoftCache.dis\
+	Sort.dis\
+	Timeable.dis\
+	Timer.dis\
+	UCDecoder.dis\
+	UCEncoder.dis\
+	Unsafe.dis\
+	URLClassPath.dis\
+	UUDecoder.dis\
+	UUEncoder.dis\
+	VM.dis\
+	VMNotification.dis\
+	VMSupport.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/misc
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

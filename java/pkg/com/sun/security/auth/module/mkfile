@@ -1,0 +1,18 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Crypt.dis\
+	JndiLoginModule.dis\
+	KeyStoreLoginModule.dis\
+	Krb5LoginModule.dis\
+	LdapLoginModule.dis\
+	NTLoginModule.dis\
+	NTSystem.dis\
+	SolarisLoginModule.dis\
+	SolarisSystem.dis\
+	UnixLoginModule.dis\
+	UnixSystem.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/auth/module
+
+<$ROOT/mkfiles/mkjava

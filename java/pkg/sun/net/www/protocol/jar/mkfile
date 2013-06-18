@@ -1,0 +1,11 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Handler.dis\
+	JarURLConnection.dis\
+	URLJarFile.dis\
+	URLJarFileCallBack.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/jar
+
+<$ROOT/mkfiles/mkjava

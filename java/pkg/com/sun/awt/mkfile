@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	AWTUtilities.dis\
+	SecurityWarning.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/awt
+
+<$ROOT/mkfiles/mkjava

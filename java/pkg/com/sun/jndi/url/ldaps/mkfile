@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ldapsURLContextFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/url/ldaps
+
+<$ROOT/mkfiles/mkjava

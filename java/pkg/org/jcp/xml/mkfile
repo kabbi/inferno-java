@@ -1,0 +1,6 @@
+<../../../../../mkconfig
+
+DIRS=\
+	dsig\
+
+<$ROOT/mkfiles/mksubdirs

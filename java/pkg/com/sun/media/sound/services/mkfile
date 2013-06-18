@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	linux-i586\
+	windows-i586\
+	windows-ia64\
+
+<$ROOT/mkfiles/mksubdirs

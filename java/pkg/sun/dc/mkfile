@@ -1,0 +1,12 @@
+<../../../../mkconfig
+
+DIRS=\
+	META-INF\
+
+TARG=\
+	DuctusRenderingEngine.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/dc
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

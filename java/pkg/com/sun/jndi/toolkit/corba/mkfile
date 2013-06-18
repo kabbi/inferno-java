@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	CorbaUtils.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/toolkit/corba
+
+<$ROOT/mkfiles/mkjava

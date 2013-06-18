@@ -1,0 +1,60 @@
+<../../../../../mkconfig
+
+DIRS=\
+	attribute\
+	spi\
+
+TARG=\
+	AccessDeniedException.dis\
+	AccessMode.dis\
+	AtomicMoveNotSupportedException.dis\
+	ClosedDirectoryStreamException.dis\
+	ClosedFileSystemException.dis\
+	ClosedWatchServiceException.dis\
+	CopyMoveHelper.dis\
+	CopyOption.dis\
+	DirectoryIteratorException.dis\
+	DirectoryNotEmptyException.dis\
+	DirectoryStream.dis\
+	FileAlreadyExistsException.dis\
+	Files.dis\
+	FileStore.dis\
+	FileSystem.dis\
+	FileSystemAlreadyExistsException.dis\
+	FileSystemException.dis\
+	FileSystemLoopException.dis\
+	FileSystemNotFoundException.dis\
+	FileSystems.dis\
+	FileTreeWalker.dis\
+	FileVisitOption.dis\
+	FileVisitor.dis\
+	FileVisitResult.dis\
+	InvalidPathException.dis\
+	LinkOption.dis\
+	LinkPermission.dis\
+	NoSuchFileException.dis\
+	NotDirectoryException.dis\
+	NotLinkException.dis\
+	OpenOption.dis\
+	package-info.dis\
+	Path.dis\
+	PathMatcher.dis\
+	Paths.dis\
+	ProviderMismatchException.dis\
+	ProviderNotFoundException.dis\
+	ReadOnlyFileSystemException.dis\
+	SecureDirectoryStream.dis\
+	SimpleFileVisitor.dis\
+	StandardCopyOption.dis\
+	StandardOpenOption.dis\
+	StandardWatchEventKinds.dis\
+	TempFileHelper.dis\
+	Watchable.dis\
+	WatchEvent.dis\
+	WatchKey.dis\
+	WatchService.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/file
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

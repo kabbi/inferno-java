@@ -1,0 +1,14 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ContextualRenderedImageFactory.dis\
+	ParameterBlock.dis\
+	RenderableImage.dis\
+	RenderableImageOp.dis\
+	RenderableImageProducer.dis\
+	RenderContext.dis\
+	RenderedImageFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/image/renderable
+
+<$ROOT/mkfiles/mkjava

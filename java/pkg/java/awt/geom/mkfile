@@ -1,0 +1,32 @@
+<../../../../../mkconfig
+
+TARG=\
+	AffineTransform.dis\
+	Arc2D.dis\
+	ArcIterator.dis\
+	Area.dis\
+	CubicCurve2D.dis\
+	CubicIterator.dis\
+	Dimension2D.dis\
+	Ellipse2D.dis\
+	EllipseIterator.dis\
+	FlatteningPathIterator.dis\
+	GeneralPath.dis\
+	IllegalPathStateException.dis\
+	Line2D.dis\
+	LineIterator.dis\
+	NoninvertibleTransformException.dis\
+	Path2D.dis\
+	PathIterator.dis\
+	Point2D.dis\
+	QuadCurve2D.dis\
+	QuadIterator.dis\
+	Rectangle2D.dis\
+	RectangularShape.dis\
+	RectIterator.dis\
+	RoundRectangle2D.dis\
+	RoundRectIterator.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/geom
+
+<$ROOT/mkfiles/mkjava

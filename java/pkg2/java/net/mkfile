@@ -1,0 +1,100 @@
+<../../../../mkconfig
+
+TARG=\
+	BindException.dis\
+	ConnectException.dis\
+	ContentHandler.dis\
+	ContentHandlerFactory.dis\
+	DatagramPacket.dis\
+	DatagramSocket.dis\
+	DatagramSocketImpl.dis\
+	FileNameMap.dis\
+	HttpURLConnection.dis\
+	InetAddress.dis\
+	InetAddressImpl.dis\
+	MalformedURLException.dis\
+	MulticastSocket.dis\
+# for NoRouteToHostException.dis\
+	r9PkdNz+JgG1Itcw2f6YJ.dis\
+# for PlainDatagramSocketImpl.dis\
+	5zd2a5CaD3UBT8TZHMXzK.dis\
+	PlainSocketImpl.dis\
+	ProtocolException.dis\
+	ServerSocket.dis\
+	Socket.dis\
+	SocketException.dis\
+	SocketImpl.dis\
+	SocketImplFactory.dis\
+	SocketInputStream.dis\
+	SocketOptions.dis\
+	SocketOutputStream.dis\
+	URL.dis\
+	URLConnection.dis\
+	URLEncoder.dis\
+	URLStreamHandler.dis\
+# for URLStreamHandlerFactory.dis\
+	O1DuMby-OVJt3a8-blgAl.dis\
+	UnknownContentHandler.dis\
+	UnknownHostException.dis\
+# for UnknownServiceException.dis\
+	r10zsfdVB4eiod6AyF43R.dis\
+# Limbo code\
+	InetAddressImpl_L.dis\
+# for PlainDatagramSocketImpl_L.dis\
+	5zd2a5CaD3UBT8TZHMXzK_L.dis\
+	PlainSocketImpl_L.dis\
+	SocketInputStream_L.dis\
+	SocketOutputStream_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	DatagramPacket_L.m\
+	DatagramSocketImpl_L.m\
+	InetAddressImpl_L.m\
+	InetAddress_L.m\
+	PlainDatagramSocketImpl_L.m\
+	PlainSocketImpl_L.m\
+	SocketImpl_L.m\
+	SocketInputStream_L.m\
+	SocketOutputStream_L.m\
+	jnet.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/net
+
+<$ROOT/mkfiles/mkjava
+
+LIMBOINCL=\
+	$LIMBOINCL\
+	-I$ROOT/java/pkg\
+
+InetAddressImpl.dis:	InetAddress.class
+	j2d InetAddressImpl.class
+
+r9PkdNz+JgG1Itcw2f6YJ.dis:	NoRouteToHostException.class
+	j2d NoRouteToHostException.class
+
+5zd2a5CaD3UBT8TZHMXzK.dis:	PlainDatagramSocketImpl.class
+	j2d PlainDatagramSocketImpl.class
+
+UnknownContentHandler.dis:	URLConnection.class
+	j2d UnknownContentHandler.class
+
+O1DuMby-OVJt3a8-blgAl.dis:	URLStreamHandlerFactory.class
+	j2d URLStreamHandlerFactory.class
+
+r10zsfdVB4eiod6AyF43R.dis:	UnknownServiceException.class
+	j2d UnknownServiceException.class
+
+5zd2a5CaD3UBT8TZHMXzK_L.dis:	PlainDatagramSocketImpl_L.b
+	limbo $LIMBOFLAGS $LIMBOINCL -gw -o $target PlainDatagramSocketImpl_L.b

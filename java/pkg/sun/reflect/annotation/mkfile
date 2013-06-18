@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	AnnotationInvocationHandler.dis\
+	AnnotationParser.dis\
+	AnnotationType.dis\
+	AnnotationTypeMismatchExceptionProxy.dis\
+	EnumConstantNotPresentExceptionProxy.dis\
+	ExceptionProxy.dis\
+	TypeNotPresentExceptionProxy.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/annotation
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+DIRS=\
+	internal\
+	providers\
+
+TARG=\
+	CachedRowSetImpl.dis\
+	FilteredRowSetImpl.dis\
+	JdbcRowSetImpl.dis\
+	JdbcRowSetResourceBundle.dis\
+	JoinRowSetImpl.dis\
+	RowSetFactoryImpl.dis\
+	WebRowSetImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/rowset
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

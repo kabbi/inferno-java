@@ -1,0 +1,16 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	content\
+	keyresolver\
+	storage\
+
+TARG=\
+	ContentHandlerAlreadyRegisteredException.dis\
+	KeyInfo.dis\
+	KeyUtils.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

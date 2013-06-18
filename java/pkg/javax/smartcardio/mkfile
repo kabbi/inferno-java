@@ -1,0 +1,19 @@
+<../../../../mkconfig
+
+TARG=\
+	ATR.dis\
+	Card.dis\
+	CardChannel.dis\
+	CardException.dis\
+	CardNotPresentException.dis\
+	CardPermission.dis\
+	CardTerminal.dis\
+	CardTerminals.dis\
+	CommandAPDU.dis\
+	ResponseAPDU.dis\
+	TerminalFactory.dis\
+	TerminalFactorySpi.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/smartcardio
+
+<$ROOT/mkfiles/mkjava

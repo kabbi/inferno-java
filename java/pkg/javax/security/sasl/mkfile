@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	AuthenticationException.dis\
+	AuthorizeCallback.dis\
+	RealmCallback.dis\
+	RealmChoiceCallback.dis\
+	Sasl.dis\
+	SaslClient.dis\
+	SaslClientFactory.dis\
+	SaslException.dis\
+	SaslServer.dis\
+	SaslServerFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/sasl
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,7 @@
+<../../../../../mkconfig
+
+DIRS=\
+	bmp\
+	jpeg\
+
+<$ROOT/mkfiles/mksubdirs

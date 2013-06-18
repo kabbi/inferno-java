@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+TARG=\
+	ClassDefinition.dis\
+	ClassFileTransformer.dis\
+	IllegalClassFormatException.dis\
+	Instrumentation.dis\
+	UnmodifiableClassException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/lang/instrument
+
+<$ROOT/mkfiles/mkjava

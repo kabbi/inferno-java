@@ -1,0 +1,63 @@
+<../../../../../mkconfig
+
+DIRS=\
+	renderable\
+
+TARG=\
+	AffineTransformOp.dis\
+	AreaAveragingScaleFilter.dis\
+	BandCombineOp.dis\
+	BandedSampleModel.dis\
+	BufferedImage.dis\
+	BufferedImageFilter.dis\
+	BufferedImageOp.dis\
+	BufferStrategy.dis\
+	ByteLookupTable.dis\
+	ColorConvertOp.dis\
+	ColorModel.dis\
+	ComponentColorModel.dis\
+	ComponentSampleModel.dis\
+	ConvolveOp.dis\
+	CropImageFilter.dis\
+	DataBuffer.dis\
+	DataBufferByte.dis\
+	DataBufferDouble.dis\
+	DataBufferFloat.dis\
+	DataBufferInt.dis\
+	DataBufferShort.dis\
+	DataBufferUShort.dis\
+	DirectColorModel.dis\
+	FilteredImageSource.dis\
+	ImageConsumer.dis\
+	ImageFilter.dis\
+	ImageObserver.dis\
+	ImageProducer.dis\
+	ImagingOpException.dis\
+	IndexColorModel.dis\
+	Kernel.dis\
+	LookupOp.dis\
+	LookupTable.dis\
+	MemoryImageSource.dis\
+	MultiPixelPackedSampleModel.dis\
+	PackedColorModel.dis\
+	PixelGrabber.dis\
+	PixelInterleavedSampleModel.dis\
+	Raster.dis\
+	RasterFormatException.dis\
+	RasterOp.dis\
+	RenderedImage.dis\
+	ReplicateScaleFilter.dis\
+	RescaleOp.dis\
+	RGBImageFilter.dis\
+	SampleModel.dis\
+	ShortLookupTable.dis\
+	SinglePixelPackedSampleModel.dis\
+	TileObserver.dis\
+	VolatileImage.dis\
+	WritableRaster.dis\
+	WritableRenderedImage.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/image
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,29 @@
+<../../../../../mkconfig
+
+DIRS=\
+	rmi\
+
+TARG=\
+	JMXAddressable.dis\
+	JMXAuthenticator.dis\
+	JMXConnectionNotification.dis\
+	JMXConnector.dis\
+	JMXConnectorFactory.dis\
+	JMXConnectorProvider.dis\
+	JMXConnectorServer.dis\
+	JMXConnectorServerFactory.dis\
+	JMXConnectorServerMBean.dis\
+	JMXConnectorServerProvider.dis\
+	JMXPrincipal.dis\
+	JMXProviderException.dis\
+	JMXServerErrorException.dis\
+	JMXServiceURL.dis\
+	MBeanServerForwarder.dis\
+	NotificationResult.dis\
+	SubjectDelegationPermission.dis\
+	TargetedNotification.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/remote
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

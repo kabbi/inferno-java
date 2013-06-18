@@ -730,7 +730,8 @@ OP(iload)
 		ldt = m->ldt[W(m)];
 	else{
 		ldt = nil;
-		error("obsolete dis");
+		print("[The Voice of the System] [xec.c]: loading module %s from %s(%x)\n", n, m->name, m->rt);
+		error("obsolete dis exec");
 	}
 
 	if(strcmp(n, "$self") == 0) {

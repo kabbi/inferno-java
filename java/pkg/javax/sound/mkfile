@@ -1,0 +1,7 @@
+<../../../../mkconfig
+
+DIRS=\
+	midi\
+	sampled\
+
+<$ROOT/mkfiles/mksubdirs

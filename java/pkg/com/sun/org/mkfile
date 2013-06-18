@@ -1,0 +1,6 @@
+<../../../../../mkconfig
+
+DIRS=\
+	apache\
+
+<$ROOT/mkfiles/mksubdirs

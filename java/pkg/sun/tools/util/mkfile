@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	CommandLine.dis\
+	ModifierFilter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/util
+
+<$ROOT/mkfiles/mkjava

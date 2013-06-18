@@ -1,0 +1,11 @@
+<../../../../../../mkconfig
+
+TARG=\
+	JPEGHuffmanTable.dis\
+	JPEGImageReadParam.dis\
+	JPEGImageWriteParam.dis\
+	JPEGQTable.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio/plugins/jpeg
+
+<$ROOT/mkfiles/mkjava

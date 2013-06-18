@@ -1,0 +1,12 @@
+<../../../../../../mkconfig
+
+TARG=\
+	BindingsBase.dis\
+	BindingsEntrySet.dis\
+	BindingsImpl.dis\
+	InterfaceImplementor.dis\
+	ScriptEngineFactoryBase.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/script/util
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	CMMException.dis\
+	ColorSpace.dis\
+	ICC_ColorSpace.dis\
+	ICC_Profile.dis\
+	ICC_ProfileGray.dis\
+	ICC_ProfileRGB.dis\
+	ProfileDataException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/color
+
+<$ROOT/mkfiles/mkjava

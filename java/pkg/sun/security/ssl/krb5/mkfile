@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	KerberosClientKeyExchangeImpl.dis\
+	KerberosPreMasterSecret.dis\
+	Krb5ProxyImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/ssl/krb5
+
+<$ROOT/mkfiles/mkjava

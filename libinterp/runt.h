@@ -32,6 +32,7 @@ typedef struct Crypt_PKsig Crypt_PKsig;
 typedef struct Loader_Inst Loader_Inst;
 typedef struct Loader_Typedesc Loader_Typedesc;
 typedef struct Loader_Link Loader_Link;
+typedef struct Loader_Import Loader_Import;
 typedef struct Loader_Niladt Loader_Niladt;
 typedef struct Freetype_Matrix Freetype_Matrix;
 typedef struct Freetype_Vector Freetype_Vector;
@@ -426,6 +427,13 @@ struct Loader_Link
 };
 #define Loader_Link_size 16
 #define Loader_Link_map {0x80,}
+struct Loader_Import
+{
+	String*	name;
+	WORD	sig;
+};
+#define Loader_Import_size 8
+#define Loader_Import_map {0x80,}
 struct Loader_Niladt
 {
 	char	dummy[1];
@@ -3889,6 +3897,15 @@ struct F_Loader_ifetch
 	uchar	temps[12];
 	Modlink*	mp;
 };
+void Loader_imports(void*);
+typedef struct F_Loader_imports F_Loader_imports;
+struct F_Loader_imports
+{
+	WORD	regs[NREG-1];
+	Array**	ret;
+	uchar	temps[12];
+	Modlink*	mp;
+};
 void Loader_link(void*);
 typedef struct F_Loader_link F_Loader_link;
 struct F_Loader_link
@@ -3910,6 +3927,16 @@ struct F_Loader_newmod
 	WORD	nlink;
 	Array*	inst;
 	Loader_Niladt*	data;
+};
+void Loader_setimports(void*);
+typedef struct F_Loader_setimports F_Loader_setimports;
+struct F_Loader_setimports
+{
+	WORD	regs[NREG-1];
+	WORD*	ret;
+	uchar	temps[12];
+	Modlink*	mp;
+	Array*	imp;
 };
 void Loader_tdesc(void*);
 typedef struct F_Loader_tdesc F_Loader_tdesc;

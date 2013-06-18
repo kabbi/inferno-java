@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	StartTlsResponseImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/ldap/ext
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	DOMSignContext.dis\
+	DOMValidateContext.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/xml/crypto/dsig/dom
+
+<$ROOT/mkfiles/mkjava

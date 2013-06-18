@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ExecOptionPermission.dis\
+	ExecPermission.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/rmi/rmid
+
+<$ROOT/mkfiles/mkjava

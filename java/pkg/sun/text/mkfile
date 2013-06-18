@@ -1,0 +1,21 @@
+<../../../../mkconfig
+
+DIRS=\
+	bidi\
+	normalizer\
+	resources\
+
+TARG=\
+	CodePointIterator.dis\
+	CollatorUtilities.dis\
+	CompactByteArray.dis\
+	ComposedCharIter.dis\
+	IntHashtable.dis\
+	Normalizer.dis\
+	SupplementaryCharacterData.dis\
+	UCompactIntArray.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/text
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

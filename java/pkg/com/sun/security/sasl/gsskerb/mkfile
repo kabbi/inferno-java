@@ -1,0 +1,11 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	FactoryImpl.dis\
+	GssKrb5Base.dis\
+	GssKrb5Client.dis\
+	GssKrb5Server.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/sasl/gsskerb
+
+<$ROOT/mkfiles/mkjava

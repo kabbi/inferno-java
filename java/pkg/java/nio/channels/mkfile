@@ -1,0 +1,40 @@
+<../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	AsynchronousByteChannel.dis\
+	AsynchronousChannel.dis\
+	AsynchronousChannelGroup.dis\
+	AsynchronousFileChannel.dis\
+	AsynchronousServerSocketChannel.dis\
+	AsynchronousSocketChannel.dis\
+	ByteChannel.dis\
+	Channel.dis\
+	Channels.dis\
+	CompletionHandler.dis\
+	DatagramChannel.dis\
+	FileChannel.dis\
+	FileLock.dis\
+	GatheringByteChannel.dis\
+	InterruptibleChannel.dis\
+	MembershipKey.dis\
+	MulticastChannel.dis\
+	NetworkChannel.dis\
+	package-info.dis\
+	Pipe.dis\
+	ReadableByteChannel.dis\
+	ScatteringByteChannel.dis\
+	SeekableByteChannel.dis\
+	SelectableChannel.dis\
+	SelectionKey.dis\
+	Selector.dis\
+	ServerSocketChannel.dis\
+	SocketChannel.dis\
+	WritableByteChannel.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/channels
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

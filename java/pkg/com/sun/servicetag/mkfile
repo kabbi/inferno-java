@@ -1,0 +1,25 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	BrowserSupport.dis\
+	Installer.dis\
+	LinuxSystemEnvironment.dis\
+	RegistrationData.dis\
+	RegistrationDocument.dis\
+	Registry.dis\
+	ServiceTag.dis\
+	SolarisServiceTag.dis\
+	SolarisSystemEnvironment.dis\
+	SunConnection.dis\
+	SystemEnvironment.dis\
+	UnauthorizedAccessException.dis\
+	Util.dis\
+	WindowsSystemEnvironment.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/servicetag
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

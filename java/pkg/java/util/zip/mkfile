@@ -1,0 +1,31 @@
+<../../../../../mkconfig
+
+TARG=\
+	Adler32.dis\
+	CheckedInputStream.dis\
+	CheckedOutputStream.dis\
+	Checksum.dis\
+	CRC32.dis\
+	DataFormatException.dis\
+	Deflater.dis\
+	DeflaterInputStream.dis\
+	DeflaterOutputStream.dis\
+	GZIPInputStream.dis\
+	GZIPOutputStream.dis\
+	Inflater.dis\
+	InflaterInputStream.dis\
+	InflaterOutputStream.dis\
+	ZipCoder.dis\
+	ZipConstants.dis\
+	ZipConstants64.dis\
+	ZipEntry.dis\
+	ZipError.dis\
+	ZipException.dis\
+	ZipFile.dis\
+	ZipInputStream.dis\
+	ZipOutputStream.dis\
+	ZStreamRef.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/zip
+
+<$ROOT/mkfiles/mkjava

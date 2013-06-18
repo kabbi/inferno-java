@@ -1,0 +1,14 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	FileLoginModule.dis\
+	JMXPluggableAuthenticator.dis\
+	JMXSubjectDomainCombiner.dis\
+	MBeanServerAccessController.dis\
+	MBeanServerFileAccessController.dis\
+	NotificationAccessController.dis\
+	SubjectDelegator.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/remote/security
+
+<$ROOT/mkfiles/mkjava

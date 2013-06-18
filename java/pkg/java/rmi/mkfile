@@ -1,0 +1,34 @@
+<../../../../mkconfig
+
+DIRS=\
+	activation\
+	dgc\
+	registry\
+	server\
+
+TARG=\
+	AccessException.dis\
+	AlreadyBoundException.dis\
+	ConnectException.dis\
+	ConnectIOException.dis\
+	MarshalException.dis\
+	MarshalledObject.dis\
+	Naming.dis\
+	NoSuchObjectException.dis\
+	NotBoundException.dis\
+	Remote.dis\
+	RemoteException.dis\
+	RMISecurityException.dis\
+	RMISecurityManager.dis\
+	ServerError.dis\
+	ServerException.dis\
+	ServerRuntimeException.dis\
+	StubNotFoundException.dis\
+	UnexpectedException.dis\
+	UnknownHostException.dis\
+	UnmarshalException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/rmi
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,6 @@
+<../../../../mkconfig
+
+DIRS=\
+	crypto\
+
+<$ROOT/mkfiles/mksubdirs

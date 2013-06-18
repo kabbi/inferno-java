@@ -1,0 +1,11 @@
+<../../../../../../mkconfig
+
+TARG=\
+	GSSContextSpi.dis\
+	GSSCredentialSpi.dis\
+	GSSNameSpi.dis\
+	MechanismFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/jgss/spi
+
+<$ROOT/mkfiles/mkjava

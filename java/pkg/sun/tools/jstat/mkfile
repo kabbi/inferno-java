@@ -1,0 +1,40 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	Alignment.dis\
+	Arguments.dis\
+	AscendingMonitorComparator.dis\
+	Closure.dis\
+	ColumnFormat.dis\
+	DescendingMonitorComparator.dis\
+	Expression.dis\
+	ExpressionEvaluator.dis\
+	ExpressionExecuter.dis\
+	ExpressionResolver.dis\
+	HeaderClosure.dis\
+	Identifier.dis\
+	Jstat.dis\
+	JStatLogger.dis\
+	Literal.dis\
+	Operator.dis\
+	OptionFinder.dis\
+	OptionFormat.dis\
+	OptionLister.dis\
+	OptionOutputFormatter.dis\
+	OutputFormatter.dis\
+	Parser.dis\
+	ParserException.dis\
+	RawOutputFormatter.dis\
+	RowClosure.dis\
+	Scale.dis\
+	SymbolResolutionClosure.dis\
+	SyntaxException.dis\
+	Token.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jstat
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

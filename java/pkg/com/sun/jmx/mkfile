@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+DIRS=\
+	defaults\
+	interceptor\
+	mbeanserver\
+	remote\
+	snmp\
+
+<$ROOT/mkfiles/mksubdirs

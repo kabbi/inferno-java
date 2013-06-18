@@ -1,0 +1,24 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	SnmpAccessControlModel.dis\
+	SnmpAccessControlSubSystem.dis\
+	SnmpDecryptedPdu.dis\
+	SnmpEngineImpl.dis\
+	SnmpIncomingRequest.dis\
+	SnmpIncomingResponse.dis\
+	SnmpLcd.dis\
+	SnmpModel.dis\
+	SnmpModelLcd.dis\
+	SnmpMsgProcessingModel.dis\
+	SnmpMsgProcessingSubSystem.dis\
+	SnmpOutgoingRequest.dis\
+	SnmpSecurityCache.dis\
+	SnmpSecurityModel.dis\
+	SnmpSecuritySubSystem.dis\
+	SnmpSubSystem.dis\
+	SnmpTools.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp/internal
+
+<$ROOT/mkfiles/mkjava

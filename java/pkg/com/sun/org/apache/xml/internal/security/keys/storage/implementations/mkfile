@@ -1,0 +1,10 @@
+<../../../../../../../../../../../../mkconfig
+
+TARG=\
+	CertsInFilesystemDirectoryResolver.dis\
+	KeyStoreResolver.dis\
+	SingleCertificateResolver.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/storage/implementations
+
+<$ROOT/mkfiles/mkjava

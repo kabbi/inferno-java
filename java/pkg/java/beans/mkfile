@@ -1,0 +1,54 @@
+<../../../../mkconfig
+
+DIRS=\
+	beancontext\
+
+TARG=\
+	AppletInitializer.dis\
+	BeanDescriptor.dis\
+	BeanInfo.dis\
+	Beans.dis\
+	ChangeListenerMap.dis\
+	ConstructorProperties.dis\
+	Customizer.dis\
+	DefaultPersistenceDelegate.dis\
+	DesignMode.dis\
+	Encoder.dis\
+	EventHandler.dis\
+	EventSetDescriptor.dis\
+	ExceptionListener.dis\
+	Expression.dis\
+	FeatureDescriptor.dis\
+	IndexedPropertyChangeEvent.dis\
+	IndexedPropertyDescriptor.dis\
+	IntrospectionException.dis\
+	Introspector.dis\
+	MetaData.dis\
+	MethodDescriptor.dis\
+	NameGenerator.dis\
+	ParameterDescriptor.dis\
+	PersistenceDelegate.dis\
+	PropertyChangeEvent.dis\
+	PropertyChangeListener.dis\
+	PropertyChangeListenerProxy.dis\
+	PropertyChangeSupport.dis\
+	PropertyDescriptor.dis\
+	PropertyEditor.dis\
+	PropertyEditorManager.dis\
+	PropertyEditorSupport.dis\
+	PropertyVetoException.dis\
+	ReflectionUtils.dis\
+	SimpleBeanInfo.dis\
+	Statement.dis\
+	Transient.dis\
+	VetoableChangeListener.dis\
+	VetoableChangeListenerProxy.dis\
+	VetoableChangeSupport.dis\
+	Visibility.dis\
+	XMLDecoder.dis\
+	XMLEncoder.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/beans
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

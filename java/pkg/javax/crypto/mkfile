@@ -1,0 +1,44 @@
+<../../../../mkconfig
+
+DIRS=\
+	interfaces\
+	spec\
+
+TARG=\
+	AEADBadTagException.dis\
+	BadPaddingException.dis\
+	Cipher.dis\
+	CipherInputStream.dis\
+	CipherOutputStream.dis\
+	CipherSpi.dis\
+	CryptoAllPermission.dis\
+	CryptoPermission.dis\
+	CryptoPermissions.dis\
+	CryptoPolicyParser.dis\
+	EncryptedPrivateKeyInfo.dis\
+	ExemptionMechanism.dis\
+	ExemptionMechanismException.dis\
+	ExemptionMechanismSpi.dis\
+	IllegalBlockSizeException.dis\
+	JarVerifier.dis\
+	JceSecurity.dis\
+	JceSecurityManager.dis\
+	KeyAgreement.dis\
+	KeyAgreementSpi.dis\
+	KeyGenerator.dis\
+	KeyGeneratorSpi.dis\
+	Mac.dis\
+	MacSpi.dis\
+	NoSuchPaddingException.dis\
+	NullCipher.dis\
+	NullCipherSpi.dis\
+	SealedObject.dis\
+	SecretKey.dis\
+	SecretKeyFactory.dis\
+	SecretKeyFactorySpi.dis\
+	ShortBufferException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/crypto
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

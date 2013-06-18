@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	CharsetProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/charset/spi
+
+<$ROOT/mkfiles/mkjava

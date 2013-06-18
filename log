@@ -1,0 +1,1971 @@
+wm: cannot load $Draw: module not built-in
+; java/jvm -d Test
+[The Voice of the System] [loader.c]: link returned from JavaClassLoader, module flags: 60
+[The Voice of the System] [loader.c]: link returned from $Sys, module flags: 0
+[The Voice of the System] [loader.c]: link returned from JNI, module flags: 40
+count = 1 + 0
+load class Test
+Switching class Test state to NEW
+[Test]
+"Test.dis"
+Switching class Test state to HIER
+Switching class java/lang/Object state to NEW
+[java/lang/Object]
+"/dis/java/java/java/lang/Object.dis"
+Switching class java/lang/Object state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Object, module flags: 2
+Getmethod of java/lang/Object: <init>, ()V, 1
+registerNatives: static method
+Getmethod of java/lang/Object: registerNatives, ()V, 327946
+"/dis/java/java/java/lang/Object_L.dis"
+[The Voice of the System] [loader.c]: link returned from Object_L, module flags: 40
+registerNatives: static method
+getClass: new method
+hashCode: new method
+equals: new method
+clone: new method
+toString: new method
+notify: new method
+notifyAll: new method
+wait: new method
+wait: new method
+wait: new method
+finalize: new method
+Getmethod of java/lang/Object: <clinit>, ()V, 8
+Getmethod of java/lang/Object: <clone>, ()V, 8
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: finalize, ()V, 4
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: wait, ()V, 17
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: wait, (JI)V, 17
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: wait, (J)V, 393489
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: notifyAll, ()V, 273
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: notify, ()V, 273
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: toString, ()Ljava/lang/String;, 1
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: clone, ()Ljava/lang/Object;, 260
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: equals, (Ljava/lang/Object;)Z, 1
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: hashCode, ()I, 393473
+Makevmtable for java/lang/Object, 11
+Getmethod of java/lang/Object: getClass, ()Ljava/lang/Class;, 393489
+Switching class Test state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from Test, module flags: 2
+Getmethod of Test: <init>, ()V, 1
+main: static method
+Getmethod of Test: main, ([Ljava/lang/String;)V, 9
+main: static method
+Getmethod of Test: <clone>, ()V, 8
+reloc java/lang/Object
+Switching class java/lang/String state to NEW
+[java/lang/String]
+"/dis/java/java/java/lang/String.dis"
+Switching class java/lang/String state to HIER
+Switching class java/lang/String state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/String, module flags: 2
+value: new data
+offset: new data
+count: new data
+hash: new data
+serialVersionUID: static data
+serialPersistentFields: static data
+CASE_INSENSITIVE_ORDER: static data
+Getmethod of java/lang/String: <init>, ()V, 1
+Getmethod of java/lang/String: <init>, (Ljava/lang/String;)V, 1
+Getmethod of java/lang/String: <init>, ([C)V, 1310721
+Getmethod of java/lang/String: <init>, ([CII)V, 1310721
+Getmethod of java/lang/String: <init>, ([III)V, 1
+Getmethod of java/lang/String: <init>, ([BIII)V, 1310721
+Getmethod of java/lang/String: <init>, ([BI)V, 1
+checkBounds: static method
+Getmethod of java/lang/String: checkBounds, ([BII)V, 10
+checkBounds: static method
+Getmethod of java/lang/String: <init>, ([BIILjava/lang/String;)V, 1310721
+Getmethod of java/lang/String: <init>, ([BIILjava/nio/charset/Charset;)V, 1310721
+Getmethod of java/lang/String: <init>, ([BLjava/lang/String;)V, 1
+Getmethod of java/lang/String: <init>, ([BLjava/nio/charset/Charset;)V, 1
+Getmethod of java/lang/String: <init>, ([BII)V, 1310721
+Getmethod of java/lang/String: <init>, ([B)V, 1
+Getmethod of java/lang/String: <init>, (Ljava/lang/StringBuffer;)V, 1
+Getmethod of java/lang/String: <init>, (Ljava/lang/StringBuilder;)V, 1
+Getmethod of java/lang/String: <init>, (II[C)V, 1310720
+length: new method
+isEmpty: new method
+charAt: new method
+codePointAt: new method
+codePointBefore: new method
+codePointCount: new method
+offsetByCodePoints: new method
+getChars: new method
+getChars: new method
+getBytes: new method
+getBytes: new method
+getBytes: new method
+getBytes: new method
+equals: overriden method
+contentEquals: new method
+contentEquals: new method
+equalsIgnoreCase: new method
+compareTo: new method
+compareToIgnoreCase: new method
+regionMatches: new method
+regionMatches: new method
+startsWith: new method
+startsWith: new method
+endsWith: new method
+hashCode: overriden method
+indexOf: new method
+indexOf: new method
+indexOfSupplementary: static method
+Getmethod of java/lang/String: indexOfSupplementary, (II)I, 2
+indexOfSupplementary: private method
+lastIndexOf: new method
+lastIndexOf: new method
+lastIndexOfSupplementary: static method
+Getmethod of java/lang/String: lastIndexOfSupplementary, (II)I, 2
+lastIndexOfSupplementary: private method
+indexOf: new method
+indexOf: new method
+indexOf: static method
+Getmethod of java/lang/String: indexOf, ([CII[CIII)I, 8
+indexOf: static method
+lastIndexOf: new method
+lastIndexOf: new method
+lastIndexOf: static method
+Getmethod of java/lang/String: lastIndexOf, ([CII[CIII)I, 8
+lastIndexOf: static method
+substring: new method
+substring: new method
+subSequence: new method
+concat: new method
+replace: new method
+matches: new method
+contains: new method
+replaceFirst: new method
+replaceAll: new method
+replace: new method
+split: new method
+split: new method
+toLowerCase: new method
+toLowerCase: new method
+toUpperCase: new method
+toUpperCase: new method
+trim: new method
+toString: overriden method
+toCharArray: new method
+format: static method
+Getmethod of java/lang/String: format, (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;, 137
+format: static method
+format: static method
+Getmethod of java/lang/String: format, (Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;, 137
+format: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (Ljava/lang/Object;)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, ([C)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, ([CII)Ljava/lang/String;, 9
+valueOf: static method
+copyValueOf: static method
+Getmethod of java/lang/String: copyValueOf, ([CII)Ljava/lang/String;, 9
+copyValueOf: static method
+copyValueOf: static method
+Getmethod of java/lang/String: copyValueOf, ([C)Ljava/lang/String;, 9
+copyValueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (Z)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (C)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (I)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (J)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (F)Ljava/lang/String;, 9
+valueOf: static method
+valueOf: static method
+Getmethod of java/lang/String: valueOf, (D)Ljava/lang/String;, 9
+valueOf: static method
+intern: new method
+compareTo: new method
+Getmethod of java/lang/String: <clinit>, ()V, 8
+Getmethod of java/lang/String: <clone>, ()V, 8
+Getmethod of java/lang/String: <init>, ([BIII)V, 262145
+Getmethod of java/lang/String: <init>, ([BIILjava/lang/String;)V, 262145
+Getmethod of java/lang/String: <init>, ([BIILjava/nio/charset/Charset;)V, 262145
+Getmethod of java/lang/String: <init>, ([BII)V, 262145
+Getmethod of java/lang/String: <init>, (II[C)V, 262144
+Getmethod of java/lang/String: <init>, ([C)V, 262145
+Getmethod of java/lang/String: <init>, ([CII)V, 262145
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: compareTo, (Ljava/lang/Object;)I, 4161
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: intern, ()Ljava/lang/String;, 257
+"/dis/java/java/java/lang/String_L.dis"
+[The Voice of the System] [loader.c]: link returned from String_L, module flags: 40
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: toCharArray, ()[C, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: toString, ()Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: trim, ()Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: toUpperCase, ()Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: toUpperCase, (Ljava/util/Locale;)Ljava/lang/String;, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: toLowerCase, ()Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: toLowerCase, (Ljava/util/Locale;)Ljava/lang/String;, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: split, (Ljava/lang/String;)[Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: split, (Ljava/lang/String;I)[Ljava/lang/String;, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: replace, (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: replaceAll, (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: replaceFirst, (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: contains, (Ljava/lang/CharSequence;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: matches, (Ljava/lang/String;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: replace, (CC)Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: concat, (Ljava/lang/String;)Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: subSequence, (II)Ljava/lang/CharSequence;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: substring, (II)Ljava/lang/String;, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: substring, (I)Ljava/lang/String;, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: lastIndexOf, (Ljava/lang/String;I)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: lastIndexOf, (Ljava/lang/String;)I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: indexOf, (Ljava/lang/String;I)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: indexOf, (Ljava/lang/String;)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: lastIndexOf, (II)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: lastIndexOf, (I)I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: indexOf, (II)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: indexOf, (I)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: hashCode, ()I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: endsWith, (Ljava/lang/String;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: startsWith, (Ljava/lang/String;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: startsWith, (Ljava/lang/String;I)Z, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: regionMatches, (ZILjava/lang/String;II)Z, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: regionMatches, (ILjava/lang/String;II)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: compareToIgnoreCase, (Ljava/lang/String;)I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: compareTo, (Ljava/lang/String;)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: equalsIgnoreCase, (Ljava/lang/String;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: contentEquals, (Ljava/lang/CharSequence;)Z, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: contentEquals, (Ljava/lang/StringBuffer;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: equals, (Ljava/lang/Object;)Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: getBytes, ()[B, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: getBytes, (Ljava/nio/charset/Charset;)[B, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: getBytes, (Ljava/lang/String;)[B, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: getBytes, (II[BI)V, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: getChars, (II[CI)V, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: getChars, ([CI)V, 0
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: offsetByCodePoints, (II)I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: codePointCount, (II)I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: codePointBefore, (I)I, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: codePointAt, (I)I, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: charAt, (I)C, 393217
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: isEmpty, ()Z, 1
+Makevmtable for java/lang/String, 62
+Getmethod of java/lang/String: length, ()I, 393217
+inter java/lang/String 3
+Switching class java/io/Serializable state to NEW
+[java/io/Serializable]
+"/dis/java/java/java/io/Serializable.dis"
+Switching class java/io/Serializable state to HIER
+Switching class java/io/Serializable state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/io/Serializable, module flags: 2
+Switching class java/lang/Comparable state to NEW
+[java/lang/Comparable]
+"/dis/java/java/java/lang/Comparable.dis"
+Switching class java/lang/Comparable state to HIER
+Switching class java/lang/Comparable state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Comparable, module flags: 2
+compareTo: new method
+Makevmtable for java/lang/Comparable, 12
+Getmethod of java/lang/Comparable: compareTo, (Ljava/lang/Object;)I, 1025
+Switching class java/lang/CharSequence state to NEW
+[java/lang/CharSequence]
+"/dis/java/java/java/lang/CharSequence.dis"
+Switching class java/lang/CharSequence state to HIER
+Switching class java/lang/CharSequence state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/CharSequence, module flags: 2
+length: new method
+charAt: new method
+subSequence: new method
+toString: overriden method
+Makevmtable for java/lang/CharSequence, 14
+Getmethod of java/lang/CharSequence: toString, ()Ljava/lang/String;, 1025
+Makevmtable for java/lang/CharSequence, 14
+Getmethod of java/lang/CharSequence: subSequence, (II)Ljava/lang/CharSequence;, 1025
+Makevmtable for java/lang/CharSequence, 14
+Getmethod of java/lang/CharSequence: charAt, (I)C, 1025
+Makevmtable for java/lang/CharSequence, 14
+Getmethod of java/lang/CharSequence: length, ()I, 1025
+Switching class java/lang/Class state to NEW
+[java/lang/Class]
+"/dis/java/java/java/lang/Class.dis"
+Switching class java/lang/Class state to HIER
+Switching class java/lang/Class state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Class, module flags: 2
+ANNOTATION: static data
+ENUM: static data
+SYNTHETIC: static data
+cachedConstructor: new data
+newInstanceCallerCache: new data
+name: new data
+allPermDomain: static data
+useCaches: static data
+declaredFields: new data
+publicFields: new data
+declaredMethods: new data
+publicMethods: new data
+declaredConstructors: new data
+publicConstructors: new data
+declaredPublicFields: new data
+declaredPublicMethods: new data
+classRedefinedCount: new data
+lastRedefinedCount: new data
+genericInfo: new data
+serialVersionUID: static data
+serialPersistentFields: static data
+reflectionFactory: static data
+initted: static data
+enumConstants: new data
+enumConstantDirectory: new data
+annotations: new data
+declaredAnnotations: new data
+annotationType: new data
+registerNatives: static method
+Getmethod of java/lang/Class: registerNatives, ()V, 327946
+"/dis/java/java/java/lang/Class_L.dis"
+[The Voice of the System] [loader.c]: link returned from Class_L, module flags: 60
+registerNatives: static method
+Getmethod of java/lang/Class: <init>, ()V, 2
+toString: overriden method
+forName: static method
+Getmethod of java/lang/Class: forName, (Ljava/lang/String;)Ljava/lang/Class;, 9
+forName: static method
+forName: static method
+Getmethod of java/lang/Class: forName, (Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;, 9
+forName: static method
+forName0: static method
+Getmethod of java/lang/Class: forName0, (Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;, 327946
+forName0: static method
+newInstance: new method
+newInstance0: static method
+Getmethod of java/lang/Class: newInstance0, ()Ljava/lang/Object;, 2
+newInstance0: private method
+isInstance: new method
+isAssignableFrom: new method
+isInterface: new method
+isArray: new method
+isPrimitive: new method
+isAnnotation: new method
+isSynthetic: new method
+getName: new method
+getName0: static method
+Getmethod of java/lang/Class: getName0, ()Ljava/lang/String;, 262402
+getName0: private method
+getClassLoader: new method
+getClassLoader0: new method
+getTypeParameters: new method
+getSuperclass: new method
+getGenericSuperclass: new method
+getPackage: new method
+getInterfaces: new method
+getGenericInterfaces: new method
+getComponentType: new method
+getModifiers: new method
+getSigners: new method
+setSigners: new method
+getEnclosingMethod: new method
+getEnclosingMethod0: static method
+Getmethod of java/lang/Class: getEnclosingMethod0, ()[Ljava/lang/Object;, 262402
+getEnclosingMethod0: private method
+getEnclosingMethodInfo: static method
+Getmethod of java/lang/Class: getEnclosingMethodInfo, ()Ljava/lang/Class$EnclosingMethodInfo;, 2
+getEnclosingMethodInfo: private method
+toClass: static method
+Getmethod of java/lang/Class: toClass, (Ljava/lang/reflect/Type;)Ljava/lang/Class;, 10
+toClass: static method
+getEnclosingConstructor: new method
+getDeclaringClass: new method
+getEnclosingClass: new method
+getSimpleName: new method
+isAsciiDigit: static method
+Getmethod of java/lang/Class: isAsciiDigit, (C)Z, 10
+isAsciiDigit: static method
+getCanonicalName: new method
+isAnonymousClass: new method
+isLocalClass: new method
+isMemberClass: new method
+getSimpleBinaryName: static method
+Getmethod of java/lang/Class: getSimpleBinaryName, ()Ljava/lang/String;, 2
+getSimpleBinaryName: private method
+isLocalOrAnonymousClass: static method
+Getmethod of java/lang/Class: isLocalOrAnonymousClass, ()Z, 2
+isLocalOrAnonymousClass: private method
+getClasses: new method
+getFields: new method
+getMethods: new method
+getConstructors: new method
+getField: new method
+getMethod: new method
+getConstructor: new method
+getDeclaredClasses: new method
+getDeclaredFields: new method
+getDeclaredMethods: new method
+getDeclaredConstructors: new method
+getDeclaredField: new method
+getDeclaredMethod: new method
+getDeclaredConstructor: new method
+getResourceAsStream: new method
+getResource: new method
+getProtectionDomain: new method
+getProtectionDomain0: static method
+Getmethod of java/lang/Class: getProtectionDomain0, ()Ljava/security/ProtectionDomain;, 262402
+getProtectionDomain0: private method
+setProtectionDomain0: new method
+getPrimitiveClass: static method
+Getmethod of java/lang/Class: getPrimitiveClass, (Ljava/lang/String;)Ljava/lang/Class;, 264
+getPrimitiveClass: static method
+checkMemberAccess: static method
+Getmethod of java/lang/Class: checkMemberAccess, (ILjava/lang/ClassLoader;)V, 2
+checkMemberAccess: private method
+resolveName: static method
+Getmethod of java/lang/Class: resolveName, (Ljava/lang/String;)Ljava/lang/String;, 2
+resolveName: private method
+clearCachesOnClassRedefinition: static method
+Getmethod of java/lang/Class: clearCachesOnClassRedefinition, ()V, 2
+clearCachesOnClassRedefinition: private method
+getGenericSignature: static method
+Getmethod of java/lang/Class: getGenericSignature, ()Ljava/lang/String;, 262402
+getGenericSignature: private method
+getFactory: static method
+Getmethod of java/lang/Class: getFactory, ()Lsun/reflect/generics/factory/GenericsFactory;, 2
+getFactory: private method
+getGenericInfo: static method
+Getmethod of java/lang/Class: getGenericInfo, ()Lsun/reflect/generics/repository/ClassRepository;, 2
+getGenericInfo: private method
+getRawAnnotations: static method
+Getmethod of java/lang/Class: getRawAnnotations, ()[B, 262402
+getRawAnnotations: private method
+getConstantPool: new method
+privateGetDeclaredFields: static method
+Getmethod of java/lang/Class: privateGetDeclaredFields, (Z)[Ljava/lang/reflect/Field;, 2
+privateGetDeclaredFields: private method
+privateGetPublicFields: static method
+Getmethod of java/lang/Class: privateGetPublicFields, (Ljava/util/Set;)[Ljava/lang/reflect/Field;, 2
+privateGetPublicFields: private method
+addAll: static method
+Getmethod of java/lang/Class: addAll, (Ljava/util/Collection;[Ljava/lang/reflect/Field;)V, 10
+addAll: static method
+privateGetDeclaredConstructors: static method
+Getmethod of java/lang/Class: privateGetDeclaredConstructors, (Z)[Ljava/lang/reflect/Constructor;, 2
+privateGetDeclaredConstructors: private method
+privateGetDeclaredMethods: static method
+Getmethod of java/lang/Class: privateGetDeclaredMethods, (Z)[Ljava/lang/reflect/Method;, 2
+privateGetDeclaredMethods: private method
+privateGetPublicMethods: static method
+Getmethod of java/lang/Class: privateGetPublicMethods, ()[Ljava/lang/reflect/Method;, 2
+privateGetPublicMethods: private method
+searchFields: static method
+Getmethod of java/lang/Class: searchFields, ([Ljava/lang/reflect/Field;Ljava/lang/String;)Ljava/lang/reflect/Field;, 2
+searchFields: private method
+getField0: static method
+Getmethod of java/lang/Class: getField0, (Ljava/lang/String;)Ljava/lang/reflect/Field;, 2
+getField0: private method
+searchMethods: static method
+Getmethod of java/lang/Class: searchMethods, ([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;, 10
+searchMethods: static method
+getMethod0: static method
+Getmethod of java/lang/Class: getMethod0, (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;, 2
+getMethod0: private method
+getConstructor0: static method
+Getmethod of java/lang/Class: getConstructor0, ([Ljava/lang/Class;I)Ljava/lang/reflect/Constructor;, 2
+getConstructor0: private method
+arrayContentsEq: static method
+Getmethod of java/lang/Class: arrayContentsEq, ([Ljava/lang/Object;[Ljava/lang/Object;)Z, 10
+arrayContentsEq: static method
+copyFields: static method
+Getmethod of java/lang/Class: copyFields, ([Ljava/lang/reflect/Field;)[Ljava/lang/reflect/Field;, 10
+copyFields: static method
+copyMethods: static method
+Getmethod of java/lang/Class: copyMethods, ([Ljava/lang/reflect/Method;)[Ljava/lang/reflect/Method;, 10
+copyMethods: static method
+copyConstructors: static method
+Getmethod of java/lang/Class: copyConstructors, ([Ljava/lang/reflect/Constructor;)[Ljava/lang/reflect/Constructor;, 10
+copyConstructors: static method
+getDeclaredFields0: static method
+Getmethod of java/lang/Class: getDeclaredFields0, (Z)[Ljava/lang/reflect/Field;, 262402
+getDeclaredFields0: private method
+getDeclaredMethods0: static method
+Getmethod of java/lang/Class: getDeclaredMethods0, (Z)[Ljava/lang/reflect/Method;, 262402
+getDeclaredMethods0: private method
+getDeclaredConstructors0: static method
+Getmethod of java/lang/Class: getDeclaredConstructors0, (Z)[Ljava/lang/reflect/Constructor;, 262402
+getDeclaredConstructors0: private method
+getDeclaredClasses0: static method
+Getmethod of java/lang/Class: getDeclaredClasses0, ()[Ljava/lang/Class;, 262402
+getDeclaredClasses0: private method
+argumentTypesToString: static method
+Getmethod of java/lang/Class: argumentTypesToString, ([Ljava/lang/Class;)Ljava/lang/String;, 10
+argumentTypesToString: static method
+desiredAssertionStatus: new method
+desiredAssertionStatus0: static method
+Getmethod of java/lang/Class: desiredAssertionStatus0, (Ljava/lang/Class;)Z, 327946
+desiredAssertionStatus0: static method
+isEnum: new method
+getReflectionFactory: static method
+Getmethod of java/lang/Class: getReflectionFactory, ()Lsun/reflect/ReflectionFactory;, 10
+getReflectionFactory: static method
+checkInitted: static method
+Getmethod of java/lang/Class: checkInitted, ()V, 10
+checkInitted: static method
+getEnumConstants: new method
+getEnumConstantsShared: new method
+enumConstantDirectory: new method
+cast: new method
+cannotCastMsg: static method
+Getmethod of java/lang/Class: cannotCastMsg, (Ljava/lang/Object;)Ljava/lang/String;, 2
+cannotCastMsg: private method
+asSubclass: new method
+getAnnotation: new method
+isAnnotationPresent: new method
+getAnnotations: new method
+getDeclaredAnnotations: new method
+initAnnotationsIfNecessary: static method
+Getmethod of java/lang/Class: initAnnotationsIfNecessary, ()V, 34
+initAnnotationsIfNecessary: private method
+setAnnotationType: new method
+getAnnotationType: new method
+access$100: static method
+Getmethod of java/lang/Class: access$100, ([Ljava/lang/Object;[Ljava/lang/Object;)Z, 4104
+access$100: static method
+access$202: static method
+Getmethod of java/lang/Class: access$202, (Z)Z, 4104
+access$202: static method
+access$302: static method
+Getmethod of java/lang/Class: access$302, (Z)Z, 4104
+access$302: static method
+Getmethod of java/lang/Class: <clinit>, ()V, 8
+Getmethod of java/lang/Class: <clone>, ()V, 8
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getAnnotationType, ()Lsun/reflect/annotation/AnnotationType;, 0
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: setAnnotationType, (Lsun/reflect/annotation/AnnotationType;)V, 0
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredAnnotations, ()[Ljava/lang/annotation/Annotation;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getAnnotations, ()[Ljava/lang/annotation/Annotation;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isAnnotationPresent, (Ljava/lang/Class;)Z, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getAnnotation, (Ljava/lang/Class;)Ljava/lang/annotation/Annotation;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: asSubclass, (Ljava/lang/Class;)Ljava/lang/Class;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: cast, (Ljava/lang/Object;)Ljava/lang/Object;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: enumConstantDirectory, ()Ljava/util/Map;, 0
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getEnumConstantsShared, ()[Ljava/lang/Object;, 393216
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getEnumConstants, ()[Ljava/lang/Object;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isEnum, ()Z, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: desiredAssertionStatus, ()Z, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getConstantPool, ()Lsun/reflect/ConstantPool;, 393472
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: setProtectionDomain0, (Ljava/security/ProtectionDomain;)V, 256
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getProtectionDomain, ()Ljava/security/ProtectionDomain;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getResource, (Ljava/lang/String;)Ljava/net/URL;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getResourceAsStream, (Ljava/lang/String;)Ljava/io/InputStream;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredConstructor, ([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;, 129
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredMethod, (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;, 129
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredField, (Ljava/lang/String;)Ljava/lang/reflect/Field;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredConstructors, ()[Ljava/lang/reflect/Constructor;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredMethods, ()[Ljava/lang/reflect/Method;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredFields, ()[Ljava/lang/reflect/Field;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaredClasses, ()[Ljava/lang/Class;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getConstructor, ([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;, 129
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getMethod, (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;, 393345
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getField, (Ljava/lang/String;)Ljava/lang/reflect/Field;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getConstructors, ()[Ljava/lang/reflect/Constructor;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getMethods, ()[Ljava/lang/reflect/Method;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getFields, ()[Ljava/lang/reflect/Field;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getClasses, ()[Ljava/lang/Class;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isMemberClass, ()Z, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isLocalClass, ()Z, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isAnonymousClass, ()Z, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getCanonicalName, ()Ljava/lang/String;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getSimpleName, ()Ljava/lang/String;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getEnclosingClass, ()Ljava/lang/Class;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getDeclaringClass, ()Ljava/lang/Class;, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getEnclosingConstructor, ()Ljava/lang/reflect/Constructor;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getEnclosingMethod, ()Ljava/lang/reflect/Method;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: setSigners, ([Ljava/lang/Object;)V, 256
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getSigners, ()[Ljava/lang/Object;, 257
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getModifiers, ()I, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getComponentType, ()Ljava/lang/Class;, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getGenericInterfaces, ()[Ljava/lang/reflect/Type;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getInterfaces, ()[Ljava/lang/Class;, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getPackage, ()Ljava/lang/Package;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getGenericSuperclass, ()Ljava/lang/reflect/Type;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getSuperclass, ()Ljava/lang/Class;, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getTypeParameters, ()[Ljava/lang/reflect/TypeVariable;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getClassLoader0, ()Ljava/lang/ClassLoader;, 393472
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getClassLoader, ()Ljava/lang/ClassLoader;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: getName, ()Ljava/lang/String;, 393217
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isSynthetic, ()Z, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isAnnotation, ()Z, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isPrimitive, ()Z, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isArray, ()Z, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isInterface, ()Z, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isAssignableFrom, (Ljava/lang/Class;)Z, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: isInstance, (Ljava/lang/Object;)Z, 393473
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: newInstance, ()Ljava/lang/Object;, 1
+Makevmtable for java/lang/Class, 73
+Getmethod of java/lang/Class: toString, ()Ljava/lang/String;, 393217
+inter java/lang/Class 4
+Switching class java/lang/reflect/GenericDeclaration state to NEW
+[java/lang/reflect/GenericDeclaration]
+"/dis/java/java/java/lang/reflect/GenericDeclaration.dis"
+Switching class java/lang/reflect/GenericDeclaration state to HIER
+Switching class java/lang/reflect/GenericDeclaration state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/reflect/GenericDeclaration, module flags: 2
+getTypeParameters: new method
+Makevmtable for java/lang/reflect/GenericDeclaration, 12
+Getmethod of java/lang/reflect/GenericDeclaration: getTypeParameters, ()[Ljava/lang/reflect/TypeVariable;, 1025
+Switching class java/lang/reflect/Type state to NEW
+[java/lang/reflect/Type]
+"/dis/java/java/java/lang/reflect/Type.dis"
+Switching class java/lang/reflect/Type state to HIER
+Switching class java/lang/reflect/Type state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/reflect/Type, module flags: 2
+Switching class java/lang/reflect/AnnotatedElement state to NEW
+[java/lang/reflect/AnnotatedElement]
+"/dis/java/java/java/lang/reflect/AnnotatedElement.dis"
+Switching class java/lang/reflect/AnnotatedElement state to HIER
+Switching class java/lang/reflect/AnnotatedElement state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/reflect/AnnotatedElement, module flags: 2
+isAnnotationPresent: new method
+getAnnotation: new method
+getAnnotations: new method
+getDeclaredAnnotations: new method
+Makevmtable for java/lang/reflect/AnnotatedElement, 15
+Getmethod of java/lang/reflect/AnnotatedElement: getDeclaredAnnotations, ()[Ljava/lang/annotation/Annotation;, 1025
+Makevmtable for java/lang/reflect/AnnotatedElement, 15
+Getmethod of java/lang/reflect/AnnotatedElement: getAnnotations, ()[Ljava/lang/annotation/Annotation;, 1025
+Makevmtable for java/lang/reflect/AnnotatedElement, 15
+Getmethod of java/lang/reflect/AnnotatedElement: getAnnotation, (Ljava/lang/Class;)Ljava/lang/annotation/Annotation;, 1025
+Makevmtable for java/lang/reflect/AnnotatedElement, 15
+Getmethod of java/lang/reflect/AnnotatedElement: isAnnotationPresent, (Ljava/lang/Class;)Z, 1025
+relocate(java/lang/Object) enter
+java/lang/Object data 252 reloc 128
+	124 bytes at 64
+	149 instrs
+relocate(java/lang/Object) exit
+reloc java/lang/reflect/AnnotatedElement
+relocate(java/lang/reflect/AnnotatedElement) enter
+java/lang/reflect/AnnotatedElement data 160 reloc 160
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/reflect/AnnotatedElement) exit
+reloc java/lang/reflect/Type
+relocate(java/lang/reflect/Type) enter
+java/lang/reflect/Type data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/reflect/Type) exit
+reloc java/lang/reflect/GenericDeclaration
+relocate(java/lang/reflect/GenericDeclaration) enter
+java/lang/reflect/GenericDeclaration data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/reflect/GenericDeclaration) exit
+reloc java/lang/Class
+Switching class java/util/Iterator state to NEW
+[java/util/Iterator]
+"/dis/java/java/java/util/Iterator.dis"
+Switching class java/util/Iterator state to HIER
+Switching class java/util/Iterator state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/Iterator, module flags: 2
+hasNext: new method
+next: new method
+remove: new method
+Makevmtable for java/util/Iterator, 14
+Getmethod of java/util/Iterator: remove, ()V, 1025
+Makevmtable for java/util/Iterator, 14
+Getmethod of java/util/Iterator: next, ()Ljava/lang/Object;, 1025
+Makevmtable for java/util/Iterator, 14
+Getmethod of java/util/Iterator: hasNext, ()Z, 1025
+Switching class java/util/List state to NEW
+[java/util/List]
+"/dis/java/java/java/util/List.dis"
+Switching class java/util/List state to HIER
+Switching class java/util/List state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/List, module flags: 2
+size: new method
+isEmpty: new method
+contains: new method
+iterator: new method
+toArray: new method
+toArray: new method
+add: new method
+remove: new method
+containsAll: new method
+addAll: new method
+addAll: new method
+removeAll: new method
+retainAll: new method
+clear: new method
+equals: overriden method
+hashCode: overriden method
+get: new method
+set: new method
+add: new method
+remove: new method
+indexOf: new method
+lastIndexOf: new method
+listIterator: new method
+listIterator: new method
+subList: new method
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: subList, (II)Ljava/util/List;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: listIterator, (I)Ljava/util/ListIterator;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: listIterator, ()Ljava/util/ListIterator;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: lastIndexOf, (Ljava/lang/Object;)I, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: indexOf, (Ljava/lang/Object;)I, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: remove, (I)Ljava/lang/Object;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: add, (ILjava/lang/Object;)V, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: set, (ILjava/lang/Object;)Ljava/lang/Object;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: get, (I)Ljava/lang/Object;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: hashCode, ()I, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: equals, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: clear, ()V, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: retainAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: removeAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: addAll, (ILjava/util/Collection;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: addAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: containsAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: remove, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: add, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: toArray, ([Ljava/lang/Object;)[Ljava/lang/Object;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: toArray, ()[Ljava/lang/Object;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: iterator, ()Ljava/util/Iterator;, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: contains, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: isEmpty, ()Z, 1025
+Makevmtable for java/util/List, 34
+Getmethod of java/util/List: size, ()I, 1025
+inter java/util/List 1
+Switching class java/util/Collection state to NEW
+[java/util/Collection]
+"/dis/java/java/java/util/Collection.dis"
+Switching class java/util/Collection state to HIER
+Switching class java/util/Collection state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/Collection, module flags: 2
+size: new method
+isEmpty: new method
+contains: new method
+iterator: new method
+toArray: new method
+toArray: new method
+add: new method
+remove: new method
+containsAll: new method
+addAll: new method
+removeAll: new method
+retainAll: new method
+clear: new method
+equals: overriden method
+hashCode: overriden method
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: hashCode, ()I, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: equals, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: clear, ()V, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: retainAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: removeAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: addAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: containsAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: remove, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: add, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: toArray, ([Ljava/lang/Object;)[Ljava/lang/Object;, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: toArray, ()[Ljava/lang/Object;, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: iterator, ()Ljava/util/Iterator;, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: contains, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: isEmpty, ()Z, 1025
+Makevmtable for java/util/Collection, 24
+Getmethod of java/util/Collection: size, ()I, 1025
+inter java/util/Collection 1
+Switching class java/lang/Iterable state to NEW
+[java/lang/Iterable]
+"/dis/java/java/java/lang/Iterable.dis"
+Switching class java/lang/Iterable state to HIER
+Switching class java/lang/Iterable state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Iterable, module flags: 2
+iterator: new method
+Makevmtable for java/lang/Iterable, 12
+Getmethod of java/lang/Iterable: iterator, ()Ljava/util/Iterator;, 1025
+Switching class java/util/Set state to NEW
+[java/util/Set]
+"/dis/java/java/java/util/Set.dis"
+Switching class java/util/Set state to HIER
+Switching class java/util/Set state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/Set, module flags: 2
+size: new method
+isEmpty: new method
+contains: new method
+iterator: new method
+toArray: new method
+toArray: new method
+add: new method
+remove: new method
+containsAll: new method
+addAll: new method
+retainAll: new method
+removeAll: new method
+clear: new method
+equals: overriden method
+hashCode: overriden method
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: hashCode, ()I, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: equals, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: clear, ()V, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: removeAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: retainAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: addAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: containsAll, (Ljava/util/Collection;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: remove, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: add, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: toArray, ([Ljava/lang/Object;)[Ljava/lang/Object;, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: toArray, ()[Ljava/lang/Object;, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: iterator, ()Ljava/util/Iterator;, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: contains, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: isEmpty, ()Z, 1025
+Makevmtable for java/util/Set, 24
+Getmethod of java/util/Set: size, ()I, 1025
+inter java/util/Set 1
+Switching class inferno/vm/Array state to NEW
+[inferno/vm/Array]
+"/dis/java/java/inferno/vm/Array.dis"
+Switching class inferno/vm/Array state to HIER
+Switching class inferno/vm/Array state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from inferno/vm/Array, module flags: 2
+data: new data
+ndim: new data
+adt: new data
+etype: new data
+Getmethod of inferno/vm/Array: <init>, ()V, 1
+inter inferno/vm/Array 2
+Switching class java/lang/Cloneable state to NEW
+[java/lang/Cloneable]
+"/dis/java/java/java/lang/Cloneable.dis"
+Switching class java/lang/Cloneable state to HIER
+Switching class java/lang/Cloneable state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Cloneable, module flags: 2
+Switching class java/util/Map$Entry state to NEW
+[java/util/Map$Entry]
+"/dis/java/java/java/util/Map$Entry.dis"
+Switching class java/util/Map$Entry state to HIER
+Switching class java/util/Map$Entry state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/Map$Entry, module flags: 2
+getKey: new method
+getValue: new method
+setValue: new method
+equals: overriden method
+hashCode: overriden method
+Makevmtable for java/util/Map$Entry, 14
+Getmethod of java/util/Map$Entry: hashCode, ()I, 1025
+Makevmtable for java/util/Map$Entry, 14
+Getmethod of java/util/Map$Entry: equals, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Map$Entry, 14
+Getmethod of java/util/Map$Entry: setValue, (Ljava/lang/Object;)Ljava/lang/Object;, 1025
+Makevmtable for java/util/Map$Entry, 14
+Getmethod of java/util/Map$Entry: getValue, ()Ljava/lang/Object;, 1025
+Makevmtable for java/util/Map$Entry, 14
+Getmethod of java/util/Map$Entry: getKey, ()Ljava/lang/Object;, 1025
+Switching class java/util/Map state to NEW
+[java/util/Map]
+"/dis/java/java/java/util/Map.dis"
+Switching class java/util/Map state to HIER
+Switching class java/util/Map state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/Map, module flags: 2
+size: new method
+isEmpty: new method
+containsKey: new method
+containsValue: new method
+get: new method
+put: new method
+remove: new method
+putAll: new method
+clear: new method
+keySet: new method
+values: new method
+entrySet: new method
+equals: overriden method
+hashCode: overriden method
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: hashCode, ()I, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: equals, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: entrySet, ()Ljava/util/Set;, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: values, ()Ljava/util/Collection;, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: keySet, ()Ljava/util/Set;, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: clear, ()V, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: putAll, (Ljava/util/Map;)V, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: remove, (Ljava/lang/Object;)Ljava/lang/Object;, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: put, (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: get, (Ljava/lang/Object;)Ljava/lang/Object;, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: containsValue, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: containsKey, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: isEmpty, ()Z, 1025
+Makevmtable for java/util/Map, 23
+Getmethod of java/util/Map: size, ()I, 1025
+Switching class java/lang/reflect/GenericArrayType state to NEW
+[java/lang/reflect/GenericArrayType]
+"/dis/java/java/java/lang/reflect/GenericArrayType.dis"
+Switching class java/lang/reflect/GenericArrayType state to HIER
+Switching class java/lang/reflect/GenericArrayType state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/reflect/GenericArrayType, module flags: 2
+getGenericComponentType: new method
+Makevmtable for java/lang/reflect/GenericArrayType, 12
+Getmethod of java/lang/reflect/GenericArrayType: getGenericComponentType, ()Ljava/lang/reflect/Type;, 1025
+inter java/lang/reflect/GenericArrayType 1
+relocate(java/lang/Class) enter
+java/lang/Class data 2204 reloc 704
+	1500 bytes at 128
+Skipping instruction 4610
+Skipping instruction 4612
+Skipping instruction 4618
+Skipping instruction 4614
+Skipping instruction 4615
+Skipping instruction 4614
+Skipping instruction 4611
+Skipping instruction 4613
+Skipping instruction 4611
+Skipping instruction 4613
+	4628 instrs
+relocate(java/lang/Class) exit
+reloc java/lang/reflect/GenericArrayType
+relocate(java/lang/reflect/GenericArrayType) enter
+java/lang/reflect/GenericArrayType data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/reflect/GenericArrayType) exit
+reloc java/util/Map
+relocate(java/util/Map) enter
+java/util/Map data 224 reloc 224
+	0 bytes at 64
+	0 instrs
+relocate(java/util/Map) exit
+reloc java/util/Map$Entry
+relocate(java/util/Map$Entry) enter
+java/util/Map$Entry data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/util/Map$Entry) exit
+reloc java/lang/Cloneable
+relocate(java/lang/Cloneable) enter
+java/lang/Cloneable data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/Cloneable) exit
+reloc inferno/vm/Array
+relocate(inferno/vm/Array) enter
+inferno/vm/Array data 128 reloc 128
+	0 bytes at 64
+	4 instrs
+relocate(inferno/vm/Array) exit
+reloc java/util/Set
+relocate(java/util/Set) enter
+java/util/Set data 224 reloc 224
+	0 bytes at 64
+	0 instrs
+relocate(java/util/Set) exit
+reloc java/lang/Iterable
+relocate(java/lang/Iterable) enter
+java/lang/Iterable data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/Iterable) exit
+reloc java/util/Collection
+relocate(java/util/Collection) enter
+java/util/Collection data 224 reloc 224
+	0 bytes at 64
+	0 instrs
+relocate(java/util/Collection) exit
+reloc java/util/List
+relocate(java/util/List) enter
+java/util/List data 288 reloc 288
+	0 bytes at 64
+	0 instrs
+relocate(java/util/List) exit
+reloc java/util/Iterator
+relocate(java/util/Iterator) enter
+java/util/Iterator data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/util/Iterator) exit
+reloc java/lang/CharSequence
+relocate(java/lang/CharSequence) enter
+java/lang/CharSequence data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/CharSequence) exit
+reloc java/lang/Comparable
+relocate(java/lang/Comparable) enter
+java/lang/Comparable data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/Comparable) exit
+reloc java/io/Serializable
+relocate(java/io/Serializable) enter
+java/io/Serializable data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/io/Serializable) exit
+reloc java/lang/String
+Switching class java/util/Comparator state to NEW
+[java/util/Comparator]
+"/dis/java/java/java/util/Comparator.dis"
+Switching class java/util/Comparator state to HIER
+Switching class java/util/Comparator state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/util/Comparator, module flags: 2
+compare: new method
+equals: overriden method
+Makevmtable for java/util/Comparator, 12
+Getmethod of java/util/Comparator: equals, (Ljava/lang/Object;)Z, 1025
+Makevmtable for java/util/Comparator, 12
+Getmethod of java/util/Comparator: compare, (Ljava/lang/Object;Ljava/lang/Object;)I, 1025
+Switching class java/lang/StringBuffer state to NEW
+[java/lang/StringBuffer]
+"/dis/java/java/java/lang/StringBuffer.dis"
+Switching class java/lang/StringBuffer state to HIER
+Switching class java/lang/AbstractStringBuilder state to NEW
+[java/lang/AbstractStringBuilder]
+"/dis/java/java/java/lang/AbstractStringBuilder.dis"
+Switching class java/lang/AbstractStringBuilder state to HIER
+Switching class java/lang/AbstractStringBuilder state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/AbstractStringBuilder, module flags: 2
+value: new data
+count: new data
+Getmethod of java/lang/AbstractStringBuilder: <init>, ()V, 0
+Getmethod of java/lang/AbstractStringBuilder: <init>, (I)V, 0
+length: new method
+capacity: new method
+ensureCapacity: new method
+ensureCapacityInternal: static method
+Getmethod of java/lang/AbstractStringBuilder: ensureCapacityInternal, (I)V, 2
+ensureCapacityInternal: private method
+expandCapacity: new method
+trimToSize: new method
+setLength: new method
+charAt: new method
+codePointAt: new method
+codePointBefore: new method
+codePointCount: new method
+offsetByCodePoints: new method
+getChars: new method
+setCharAt: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+delete: new method
+appendCodePoint: new method
+deleteCharAt: new method
+replace: new method
+substring: new method
+subSequence: new method
+substring: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+indexOf: new method
+indexOf: new method
+lastIndexOf: new method
+lastIndexOf: new method
+reverse: new method
+toString: overriden method
+getValue: new method
+append: new method
+append: new method
+append: new method
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/CharSequence;)Ljava/lang/Appendable;, 4161
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/CharSequence;II)Ljava/lang/Appendable;, 4161
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (C)Ljava/lang/Appendable;, 4161
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: getValue, ()[C, 16
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: toString, ()Ljava/lang/String;, 1025
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: reverse, ()Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: lastIndexOf, (Ljava/lang/String;I)I, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: lastIndexOf, (Ljava/lang/String;)I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: indexOf, (Ljava/lang/String;I)I, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: indexOf, (Ljava/lang/String;)I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (ID)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (IF)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (IJ)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (II)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (IC)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (IZ)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (ILjava/lang/CharSequence;II)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (ILjava/lang/CharSequence;)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (I[C)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (ILjava/lang/String;)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (ILjava/lang/Object;)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: insert, (I[CII)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: substring, (II)Ljava/lang/String;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: subSequence, (II)Ljava/lang/CharSequence;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: substring, (I)Ljava/lang/String;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: replace, (IILjava/lang/String;)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: deleteCharAt, (I)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: appendCodePoint, (I)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: delete, (II)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (D)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (F)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (J)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (I)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (C)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Z)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, ([CII)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, ([C)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/CharSequence;II)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/CharSequence;)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/StringBuffer;)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;, 393217
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: append, (Ljava/lang/Object;)Ljava/lang/AbstractStringBuilder;, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: setCharAt, (IC)V, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: getChars, (II[CI)V, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: offsetByCodePoints, (II)I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: codePointCount, (II)I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: codePointBefore, (I)I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: codePointAt, (I)I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: charAt, (I)C, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: setLength, (I)V, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: trimToSize, ()V, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: expandCapacity, (I)V, 393216
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: ensureCapacity, (I)V, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: capacity, ()I, 1
+Makevmtable for java/lang/AbstractStringBuilder, 65
+Getmethod of java/lang/AbstractStringBuilder: length, ()I, 393217
+inter java/lang/AbstractStringBuilder 2
+Switching class java/lang/Appendable state to NEW
+[java/lang/Appendable]
+"/dis/java/java/java/lang/Appendable.dis"
+Switching class java/lang/Appendable state to HIER
+Switching class java/lang/Appendable state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Appendable, module flags: 2
+append: new method
+append: new method
+append: new method
+Makevmtable for java/lang/Appendable, 14
+Getmethod of java/lang/Appendable: append, (C)Ljava/lang/Appendable;, 1025
+Makevmtable for java/lang/Appendable, 14
+Getmethod of java/lang/Appendable: append, (Ljava/lang/CharSequence;II)Ljava/lang/Appendable;, 1025
+Makevmtable for java/lang/Appendable, 14
+Getmethod of java/lang/Appendable: append, (Ljava/lang/CharSequence;)Ljava/lang/Appendable;, 1025
+Switching class java/lang/StringBuffer state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/StringBuffer, module flags: 2
+serialVersionUID: static data
+serialPersistentFields: static data
+Getmethod of java/lang/StringBuffer: <init>, ()V, 1
+Getmethod of java/lang/StringBuffer: <init>, (I)V, 1310721
+Getmethod of java/lang/StringBuffer: <init>, (Ljava/lang/String;)V, 1
+Getmethod of java/lang/StringBuffer: <init>, (Ljava/lang/CharSequence;)V, 1
+length: overriden method
+capacity: overriden method
+ensureCapacity: overriden method
+trimToSize: overriden method
+setLength: overriden method
+charAt: overriden method
+codePointAt: overriden method
+codePointBefore: overriden method
+codePointCount: overriden method
+offsetByCodePoints: overriden method
+getChars: overriden method
+setCharAt: overriden method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+append: new method
+appendCodePoint: new method
+append: new method
+append: new method
+append: new method
+delete: new method
+deleteCharAt: new method
+replace: new method
+substring: overriden method
+subSequence: overriden method
+substring: overriden method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+insert: new method
+indexOf: overriden method
+indexOf: overriden method
+lastIndexOf: overriden method
+lastIndexOf: overriden method
+reverse: new method
+toString: overriden method
+writeObject: static method
+Getmethod of java/lang/StringBuffer: writeObject, (Ljava/io/ObjectOutputStream;)V, 34
+writeObject: private method
+readObject: static method
+Getmethod of java/lang/StringBuffer: readObject, (Ljava/io/ObjectInputStream;)V, 2
+readObject: private method
+reverse: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+insert: overriden method
+replace: overriden method
+deleteCharAt: overriden method
+appendCodePoint: overriden method
+delete: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+append: overriden method
+Getmethod of java/lang/StringBuffer: <clinit>, ()V, 8
+Getmethod of java/lang/StringBuffer: <clone>, ()V, 8
+Getmethod of java/lang/StringBuffer: <init>, (I)V, 262145
+count: new data
+value: new data
+expandCapacity: overriden method
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: expandCapacity, (I)V, 393216
+JLD:e3:java/lang/StringBuffer: method 60000 expandCapacity '(I)V' expandCapacity(I)V not found
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/CharSequence;)Ljava/lang/Appendable;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/CharSequence;II)Ljava/lang/Appendable;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (C)Ljava/lang/Appendable;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/Object;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/StringBuffer;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/CharSequence;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/CharSequence;II)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, ([C)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, ([CII)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Z)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (C)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (I)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (J)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (F)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (D)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: delete, (II)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: appendCodePoint, (I)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: deleteCharAt, (I)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: replace, (IILjava/lang/String;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (I[CII)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/Object;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/String;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (I[C)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/CharSequence;)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/CharSequence;II)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IZ)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IC)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (II)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IJ)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IF)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ID)Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: reverse, ()Ljava/lang/AbstractStringBuilder;, 4161
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: toString, ()Ljava/lang/String;, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: reverse, ()Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: lastIndexOf, (Ljava/lang/String;I)I, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: lastIndexOf, (Ljava/lang/String;)I, 1
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: indexOf, (Ljava/lang/String;I)I, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: indexOf, (Ljava/lang/String;)I, 1
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ID)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IF)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IJ)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (II)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IC)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (IZ)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/CharSequence;II)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/CharSequence;)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (I[C)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/String;)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (ILjava/lang/Object;)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: insert, (I[CII)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: substring, (II)Ljava/lang/String;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: subSequence, (II)Ljava/lang/CharSequence;, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: substring, (I)Ljava/lang/String;, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: replace, (IILjava/lang/String;)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: deleteCharAt, (I)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: delete, (II)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (D)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (F)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (J)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: appendCodePoint, (I)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (I)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (C)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Z)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, ([CII)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, ([C)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/CharSequence;II)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/CharSequence;)Ljava/lang/StringBuffer;, 393217
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/String;)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: append, (Ljava/lang/Object;)Ljava/lang/StringBuffer;, 393249
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: setCharAt, (IC)V, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: getChars, (II[CI)V, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: offsetByCodePoints, (II)I, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: codePointCount, (II)I, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: codePointBefore, (I)I, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: codePointAt, (I)I, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: charAt, (I)C, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: setLength, (I)V, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: trimToSize, ()V, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: ensureCapacity, (I)V, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: capacity, ()I, 33
+Makevmtable for java/lang/StringBuffer, 95
+Getmethod of java/lang/StringBuffer: length, ()I, 33
+inter java/lang/StringBuffer 2
+relocate(java/lang/String) enter
+java/lang/String data 1560 reloc 608
+	952 bytes at 96
+Class: java/lang/StringBuffer, virtual methods: 95
+Started looking for method: toString, ()Ljava/lang/String;
+Class state: RESOLVE
+	3168 instrs
+relocate(java/lang/String) exit
+reloc java/lang/Appendable
+relocate(java/lang/Appendable) enter
+java/lang/Appendable data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/lang/Appendable) exit
+reloc java/lang/AbstractStringBuilder
+relocate(java/lang/AbstractStringBuilder) enter
+java/lang/AbstractStringBuilder data 1068 reloc 576
+	492 bytes at 96
+Class: java/lang/StringBuffer, virtual methods: 95
+Started looking for method: length, ()I
+Class state: RESOLVE
+Class: java/lang/StringBuffer, virtual methods: 95
+Started looking for method: getChars, (II[CI)V
+Class state: RESOLVE
+	2094 instrs
+relocate(java/lang/AbstractStringBuilder) exit
+reloc java/lang/StringBuffer
+relocate(java/lang/StringBuffer) enter
+java/lang/StringBuffer data 1176 reloc 960
+	216 bytes at 96
+	1411 instrs
+relocate(java/lang/StringBuffer) exit
+reloc java/util/Comparator
+relocate(java/util/Comparator) enter
+java/util/Comparator data 128 reloc 128
+	0 bytes at 64
+	0 instrs
+relocate(java/util/Comparator) exit
+reloc Test
+relocate(Test) enter
+Test data 128 reloc 128
+	0 bytes at 64
+	11 instrs
+relocate(Test) exit
+modpatch Test
+compile Test
+modpatch java/util/Comparator
+compile java/util/Comparator
+modpatch java/lang/StringBuffer
+compile java/lang/StringBuffer
+modpatch java/lang/AbstractStringBuilder
+compile java/lang/AbstractStringBuilder
+modpatch java/lang/Appendable
+compile java/lang/Appendable
+modpatch java/lang/String
+compile java/lang/String
+compile native java/lang/String
+modpatch java/io/Serializable
+compile java/io/Serializable
+modpatch java/lang/Comparable
+compile java/lang/Comparable
+modpatch java/lang/CharSequence
+compile java/lang/CharSequence
+modpatch java/util/Iterator
+compile java/util/Iterator
+modpatch java/util/List
+compile java/util/List
+modpatch java/util/Collection
+compile java/util/Collection
+modpatch java/lang/Iterable
+compile java/lang/Iterable
+modpatch java/util/Set
+compile java/util/Set
+modpatch inferno/vm/Array
+compile inferno/vm/Array
+modpatch java/lang/Cloneable
+compile java/lang/Cloneable
+modpatch java/util/Map$Entry
+compile java/util/Map$Entry
+modpatch java/util/Map
+compile java/util/Map
+modpatch java/lang/reflect/GenericArrayType
+compile java/lang/reflect/GenericArrayType
+modpatch java/lang/Class
+compile java/lang/Class
+compile native java/lang/Class
+modpatch java/lang/reflect/GenericDeclaration
+compile java/lang/reflect/GenericDeclaration
+modpatch java/lang/reflect/Type
+compile java/lang/reflect/Type
+modpatch java/lang/reflect/AnnotatedElement
+compile java/lang/reflect/AnnotatedElement
+modpatch java/lang/Object
+compile java/lang/Object
+compile native java/lang/Object
+Switching class java/lang/Object state to INITED
+java/lang/Object->init()
+done
+java/lang/Object-><clinit>()
+clinit done
+Switching class java/lang/Class state to INITED
+java/lang/Class->init()
+done
+java/lang/Class-><clinit>()
+Debug pring: registerNatives called
+clinit done
+Switching class java/lang/String state to INITED
+java/lang/String->init()
+String_L.init loading hash.m module
+[The Voice of the System] [xec.c]: loading module /dis/lib/hash.dis from N-java/lang/String(0)
+Some exception: obsolete dis exec
+JLD:e7:java/lang/String[unk]
+JLD:e7:java/lang/String[unk]
+ClassLoader: uncaught exception: JLD:e7:java/lang/String[unk]
+sysexception: / JLD:e7:java/lang/String[unk] /
+load class java/lang/ExceptionInInitializerError
+Switching class java/lang/ExceptionInInitializerError state to NEW
+[java/lang/ExceptionInInitializerError]
+"/dis/java/java/java/lang/ExceptionInInitializerError.dis"
+Switching class java/lang/ExceptionInInitializerError state to HIER
+Switching class java/lang/LinkageError state to NEW
+[java/lang/LinkageError]
+"/dis/java/java/java/lang/LinkageError.dis"
+Switching class java/lang/LinkageError state to HIER
+Switching class java/lang/Error state to NEW
+[java/lang/Error]
+"/dis/java/java/java/lang/Error.dis"
+Switching class java/lang/Error state to HIER
+Switching class java/lang/Throwable state to NEW
+[java/lang/Throwable]
+"/dis/java/java/java/lang/Throwable.dis"
+Switching class java/lang/Throwable state to HIER
+Switching class java/lang/Throwable state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Throwable, module flags: 2
+serialVersionUID: static data
+backtrace: new data
+detailMessage: new data
+UNASSIGNED_STACK: static data
+cause: new data
+stackTrace: new data
+SUPPRESSED_SENTINEL: static data
+suppressedExceptions: new data
+NULL_CAUSE_MESSAGE: static data
+SELF_SUPPRESSION_MESSAGE: static data
+CAUSE_CAPTION: static data
+SUPPRESSED_CAPTION: static data
+EMPTY_THROWABLE_ARRAY: static data
+$assertionsDisabled: static data
+Getmethod of java/lang/Throwable: <init>, ()V, 1
+Getmethod of java/lang/Throwable: <init>, (Ljava/lang/String;)V, 1
+Getmethod of java/lang/Throwable: <init>, (Ljava/lang/String;Ljava/lang/Throwable;)V, 1
+Getmethod of java/lang/Throwable: <init>, (Ljava/lang/Throwable;)V, 1
+Getmethod of java/lang/Throwable: <init>, (Ljava/lang/String;Ljava/lang/Throwable;ZZ)V, 4
+getMessage: new method
+getLocalizedMessage: new method
+getCause: new method
+initCause: new method
+toString: overriden method
+printStackTrace: new method
+printStackTrace: new method
+printStackTrace: static method
+Getmethod of java/lang/Throwable: printStackTrace, (Ljava/lang/Throwable$PrintStreamOrWriter;)V, 2
+printStackTrace: private method
+printEnclosedStackTrace: static method
+Getmethod of java/lang/Throwable: printEnclosedStackTrace, (Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V, 2
+printEnclosedStackTrace: private method
+printStackTrace: new method
+fillInStackTrace: new method
+fillInStackTrace: static method
+Getmethod of java/lang/Throwable: fillInStackTrace, (I)Ljava/lang/Throwable;, 262402
+Load native failed: '/dis/java/java/java/lang/Throwable_L.dis' does not exist
+fillInStackTrace: private method
+getStackTrace: new method
+getOurStackTrace: static method
+Getmethod of java/lang/Throwable: getOurStackTrace, ()[Ljava/lang/StackTraceElement;, 34
+getOurStackTrace: private method
+setStackTrace: new method
+getStackTraceDepth: new method
+getStackTraceElement: new method
+readObject: static method
+Getmethod of java/lang/Throwable: readObject, (Ljava/io/ObjectInputStream;)V, 2
+readObject: private method
+writeObject: static method
+Getmethod of java/lang/Throwable: writeObject, (Ljava/io/ObjectOutputStream;)V, 34
+writeObject: private method
+addSuppressed: new method
+getSuppressed: new method
+Getmethod of java/lang/Throwable: <clinit>, ()V, 8
+Getmethod of java/lang/Throwable: <clone>, ()V, 8
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getSuppressed, ()[Ljava/lang/Throwable;, 393265
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: addSuppressed, (Ljava/lang/Throwable;)V, 49
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getStackTraceElement, (I)Ljava/lang/StackTraceElement;, 393472
+Load native failed: '/dis/java/java/java/lang/Throwable_L.dis' does not exist
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getStackTraceDepth, ()I, 393472
+Load native failed: '/dis/java/java/java/lang/Throwable_L.dis' does not exist
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: setStackTrace, ([Ljava/lang/StackTraceElement;)V, 1
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getStackTrace, ()[Ljava/lang/StackTraceElement;, 1
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: fillInStackTrace, ()Ljava/lang/Throwable;, 393249
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: printStackTrace, (Ljava/io/PrintWriter;)V, 1
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: printStackTrace, (Ljava/io/PrintStream;)V, 393217
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: printStackTrace, ()V, 1
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: toString, ()Ljava/lang/String;, 393217
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: initCause, (Ljava/lang/Throwable;)Ljava/lang/Throwable;, 33
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getCause, ()Ljava/lang/Throwable;, 393249
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getLocalizedMessage, ()Ljava/lang/String;, 393217
+Makevmtable for java/lang/Throwable, 25
+Getmethod of java/lang/Throwable: getMessage, ()Ljava/lang/String;, 393217
+inter java/lang/Throwable 1
+Switching class java/lang/Error state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/Error, module flags: 2
+serialVersionUID: static data
+Getmethod of java/lang/Error: <init>, ()V, 1
+Getmethod of java/lang/Error: <init>, (Ljava/lang/String;)V, 1
+Getmethod of java/lang/Error: <init>, (Ljava/lang/String;Ljava/lang/Throwable;)V, 1
+Getmethod of java/lang/Error: <init>, (Ljava/lang/Throwable;)V, 1
+Getmethod of java/lang/Error: <init>, (Ljava/lang/String;Ljava/lang/Throwable;ZZ)V, 4
+Getmethod of java/lang/Error: <clinit>, ()V, 8
+Getmethod of java/lang/Error: <clone>, ()V, 8
+Switching class java/lang/LinkageError state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/LinkageError, module flags: 2
+serialVersionUID: static data
+Getmethod of java/lang/LinkageError: <init>, ()V, 1
+Getmethod of java/lang/LinkageError: <init>, (Ljava/lang/String;)V, 1
+Getmethod of java/lang/LinkageError: <init>, (Ljava/lang/String;Ljava/lang/Throwable;)V, 1
+Getmethod of java/lang/LinkageError: <clinit>, ()V, 8
+Getmethod of java/lang/LinkageError: <clone>, ()V, 8
+Switching class java/lang/ExceptionInInitializerError state to RESOLVE
+[The Voice of the System] [loader.c]: link returned from java/lang/ExceptionInInitializerError, module flags: 2
+serialVersionUID: static data
+exception: new data
+Getmethod of java/lang/ExceptionInInitializerError: <init>, ()V, 1
+Getmethod of java/lang/ExceptionInInitializerError: <init>, (Ljava/lang/Throwable;)V, 1
+Getmethod of java/lang/ExceptionInInitializerError: <init>, (Ljava/lang/String;)V, 1
+getException: new method
+getCause: overriden method
+Getmethod of java/lang/ExceptionInInitializerError: <clinit>, ()V, 8
+Getmethod of java/lang/ExceptionInInitializerError: <clone>, ()V, 8
+initCause: overriden method
+Makevmtable for java/lang/ExceptionInInitializerError, 26
+Getmethod of java/lang/ExceptionInInitializerError: initCause, (Ljava/lang/Throwable;)Ljava/lang/Throwable;, 393216
+JLD:e3:java/lang/ExceptionInInitializerError: method 60000 initCause '(Ljava/lang/Throwable;)Ljava/lang/Throwable;' initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable; not found
+Makevmtable for java/lang/ExceptionInInitializerError, 26
+Getmethod of java/lang/ExceptionInInitializerError: getCause, ()Ljava/lang/Throwable;, 1
+Makevmtable for java/lang/ExceptionInInitializerError, 26
+Getmethod of java/lang/ExceptionInInitializerError: getException, ()Ljava/lang/Throwable;, 1
+reloc java/lang/Throwable
+relocate(java/lang/Throwable) enter
+java/lang/Throwable data 804 reloc 288
+	516 bytes at 128
+	1573 instrs
+relocate(java/lang/Throwable) exit
+reloc java/lang/Error
+relocate(java/lang/Error) enter
+java/lang/Error data 264 reloc 256
+	8 bytes at 64
+	35 instrs
+relocate(java/lang/Error) exit
+reloc java/lang/LinkageError
+relocate(java/lang/LinkageError) enter
+java/lang/LinkageError data 264 reloc 256
+	8 bytes at 64
+	22 instrs
+relocate(java/lang/LinkageError) exit
+reloc java/lang/ExceptionInInitializerError
+relocate(java/lang/ExceptionInInitializerError) enter
+java/lang/ExceptionInInitializerError data 264 reloc 256
+	8 bytes at 64
+	48 instrs
+relocate(java/lang/ExceptionInInitializerError) exit
+modpatch java/lang/ExceptionInInitializerError
+compile java/lang/ExceptionInInitializerError
+modpatch java/lang/LinkageError
+compile java/lang/LinkageError
+modpatch java/lang/Error
+compile java/lang/Error
+modpatch java/lang/Throwable
+compile java/lang/Throwable
+Switching class java/lang/Throwable state to INITED
+java/lang/Throwable-><clinit>()
+Some exception: dereference of nil
+JLD:e7:java/lang/Throwable[unk]
+JLD:e7:java/lang/Throwable[unk]
+[JavaClassLoader] Broken: "JLD:e7:java/lang/Throwable[unk]"
+sh: 11 "JavaClassLoader":JLD:e7:java/lang/Throwable[unk]
+; 

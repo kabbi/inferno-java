@@ -1,0 +1,19 @@
+<../../../../mkconfig
+
+TARG=\
+	AudioData.dis\
+	AudioDataStream.dis\
+	AudioDevice.dis\
+	AudioPlayer.dis\
+	AudioSecurityAction.dis\
+	AudioSecurityExceptionAction.dis\
+	AudioStream.dis\
+	AudioStreamSequence.dis\
+	AudioTranslatorStream.dis\
+	ContinuousAudioDataStream.dis\
+	InvalidAudioFormatException.dis\
+	NativeAudioStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/audio
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ProxyInfo.dis\
+	ProxyService.dis\
+	ProxyServiceProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/browser/net
+
+<$ROOT/mkfiles/mkjava

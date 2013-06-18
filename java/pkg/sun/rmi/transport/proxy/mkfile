@@ -1,0 +1,21 @@
+<../../../../../../mkconfig
+
+TARG=\
+	CGIHandler.dis\
+	HttpAwareServerSocket.dis\
+	HttpInputStream.dis\
+	HttpOutputStream.dis\
+	HttpReceiveSocket.dis\
+	HttpSendInputStream.dis\
+	HttpSendOutputStream.dis\
+	HttpSendSocket.dis\
+	RMIDirectSocketFactory.dis\
+	RMIHttpToCGISocketFactory.dis\
+	RMIHttpToPortSocketFactory.dis\
+	RMIMasterSocketFactory.dis\
+	RMISocketInfo.dis\
+	WrappedSocket.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/transport/proxy
+
+<$ROOT/mkfiles/mkjava

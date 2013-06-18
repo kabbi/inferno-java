@@ -1,0 +1,20 @@
+<../../../../../mkconfig
+
+TARG=\
+	AbstractCalendar.dis\
+	BaseCalendar.dis\
+	CalendarDate.dis\
+	CalendarSystem.dis\
+	CalendarUtils.dis\
+	Era.dis\
+	Gregorian.dis\
+	ImmutableGregorianDate.dis\
+	JulianCalendar.dis\
+	LocalGregorianCalendar.dis\
+	TzIDOldMapping.dis\
+	ZoneInfo.dis\
+	ZoneInfoFile.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/util/calendar
+
+<$ROOT/mkfiles/mkjava

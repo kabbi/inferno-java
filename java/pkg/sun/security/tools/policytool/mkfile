@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	PolicyTool.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/tools/policytool
+
+<$ROOT/mkfiles/mkjava

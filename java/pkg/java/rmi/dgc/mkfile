@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	DGC.dis\
+	Lease.dis\
+	VMID.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/rmi/dgc
+
+<$ROOT/mkfiles/mkjava

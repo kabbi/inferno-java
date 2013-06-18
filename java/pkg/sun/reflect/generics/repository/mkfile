@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AbstractRepository.dis\
+	ClassRepository.dis\
+	ConstructorRepository.dis\
+	FieldRepository.dis\
+	GenericDeclRepository.dis\
+	MethodRepository.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/repository
+
+<$ROOT/mkfiles/mkjava

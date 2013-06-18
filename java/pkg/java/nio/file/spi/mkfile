@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	FileSystemProvider.dis\
+	FileTypeDetector.dis\
+	package-info.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/file/spi
+
+<$ROOT/mkfiles/mkjava

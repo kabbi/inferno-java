@@ -1,0 +1,18 @@
+<../../../../../mkconfig
+
+DIRS=\
+	impl\
+
+TARG=\
+	FtpClient.dis\
+	FtpClientProvider.dis\
+	FtpDirEntry.dis\
+	FtpDirParser.dis\
+	FtpLoginException.dis\
+	FtpProtocolException.dis\
+	FtpReplyCode.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/ftp
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

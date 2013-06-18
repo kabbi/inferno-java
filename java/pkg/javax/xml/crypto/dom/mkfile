@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	DOMCryptoContext.dis\
+	DOMStructure.dis\
+	DOMURIReference.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/xml/crypto/dom
+
+<$ROOT/mkfiles/mkjava

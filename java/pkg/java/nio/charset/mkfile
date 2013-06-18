@@ -1,0 +1,18 @@
+<../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	Charset.dis\
+	CoderMalfunctionError.dis\
+	CoderResult.dis\
+	CodingErrorAction.dis\
+	MalformedInputException.dis\
+	StandardCharsets.dis\
+	UnmappableCharacterException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/charset
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

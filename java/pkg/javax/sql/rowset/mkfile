@@ -1,0 +1,24 @@
+<../../../../../mkconfig
+
+DIRS=\
+	serial\
+	spi\
+
+TARG=\
+	BaseRowSet.dis\
+	CachedRowSet.dis\
+	FilteredRowSet.dis\
+	JdbcRowSet.dis\
+	Joinable.dis\
+	JoinRowSet.dis\
+	Predicate.dis\
+	RowSetFactory.dis\
+	RowSetMetaDataImpl.dis\
+	RowSetProvider.dis\
+	RowSetWarning.dis\
+	WebRowSet.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sql/rowset
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

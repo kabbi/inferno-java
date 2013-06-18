@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+TARG=\
+	ChannelBinding.dis\
+	GSSContext.dis\
+	GSSCredential.dis\
+	GSSException.dis\
+	GSSManager.dis\
+	GSSName.dis\
+	MessageProp.dis\
+	Oid.dis\
+
+DISBIN=$ROOT/java/dis/java/java/org/ietf/jgss
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,6 @@
+<../../../../../../../../../mkconfig
+
+DIRS=\
+	https\
+
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,9 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AbstractRegionPainter.dis\
+	NimbusLookAndFeel.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/swing/plaf/nimbus
+
+<$ROOT/mkfiles/mkjava

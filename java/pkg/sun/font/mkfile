@@ -1,0 +1,72 @@
+<../../../../mkconfig
+
+TARG=\
+	AttributeMap.dis\
+	AttributeValues.dis\
+	BidiUtils.dis\
+	CharToGlyphMapper.dis\
+	CMap.dis\
+	CompositeFont.dis\
+	CompositeFontDescriptor.dis\
+	CompositeGlyphMapper.dis\
+	CompositeStrike.dis\
+	CoreMetrics.dis\
+	CreatedFontTracker.dis\
+	Decoration.dis\
+	DelegatingShape.dis\
+	EAttribute.dis\
+	ExtendedTextLabel.dis\
+	ExtendedTextSourceLabel.dis\
+	FileFont.dis\
+	FileFontStrike.dis\
+	Font2D.dis\
+	Font2DHandle.dis\
+	FontAccess.dis\
+	FontDesignMetrics.dis\
+	FontFamily.dis\
+	FontLineMetrics.dis\
+	FontManager.dis\
+	FontManagerFactory.dis\
+	FontManagerForSGE.dis\
+	FontManagerNativeLibrary.dis\
+	FontResolver.dis\
+	FontRunIterator.dis\
+	FontScaler.dis\
+	FontScalerException.dis\
+	FontStrike.dis\
+	FontStrikeDesc.dis\
+	FontStrikeDisposer.dis\
+	FontUtilities.dis\
+	FreetypeFontScaler.dis\
+	GlyphDisposedListener.dis\
+	GlyphLayout.dis\
+	GlyphList.dis\
+	GraphicComponent.dis\
+	LayoutPathImpl.dis\
+	NullFontScaler.dis\
+	PhysicalFont.dis\
+	PhysicalStrike.dis\
+	Script.dis\
+	ScriptRun.dis\
+	ScriptRunData.dis\
+	StandardGlyphVector.dis\
+	StandardTextSource.dis\
+	StrikeCache.dis\
+	StrikeMetrics.dis\
+	SunFontManager.dis\
+	SunLayoutEngine.dis\
+	TextLabel.dis\
+	TextLabelFactory.dis\
+	TextLineComponent.dis\
+	TextRecord.dis\
+	TextSource.dis\
+	TextSourceLabel.dis\
+	TrueTypeFont.dis\
+	TrueTypeGlyphMapper.dis\
+	Type1Font.dis\
+	Type1GlyphMapper.dis\
+	Underline.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/font
+
+<$ROOT/mkfiles/mkjava

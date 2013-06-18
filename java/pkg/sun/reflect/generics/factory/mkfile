@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	CoreReflectionFactory.dis\
+	GenericsFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/factory
+
+<$ROOT/mkfiles/mkjava

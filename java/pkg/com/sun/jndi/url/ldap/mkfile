@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ldapURLContext.dis\
+	ldapURLContextFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/url/ldap
+
+<$ROOT/mkfiles/mkjava

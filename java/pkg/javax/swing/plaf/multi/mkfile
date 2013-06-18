@@ -1,0 +1,42 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	doc-files\
+
+TARG=\
+	MultiButtonUI.dis\
+	MultiColorChooserUI.dis\
+	MultiComboBoxUI.dis\
+	MultiDesktopIconUI.dis\
+	MultiDesktopPaneUI.dis\
+	MultiFileChooserUI.dis\
+	MultiInternalFrameUI.dis\
+	MultiLabelUI.dis\
+	MultiListUI.dis\
+	MultiLookAndFeel.dis\
+	MultiMenuBarUI.dis\
+	MultiMenuItemUI.dis\
+	MultiOptionPaneUI.dis\
+	MultiPanelUI.dis\
+	MultiPopupMenuUI.dis\
+	MultiProgressBarUI.dis\
+	MultiRootPaneUI.dis\
+	MultiScrollBarUI.dis\
+	MultiScrollPaneUI.dis\
+	MultiSeparatorUI.dis\
+	MultiSliderUI.dis\
+	MultiSpinnerUI.dis\
+	MultiSplitPaneUI.dis\
+	MultiTabbedPaneUI.dis\
+	MultiTableHeaderUI.dis\
+	MultiTableUI.dis\
+	MultiTextUI.dis\
+	MultiToolBarUI.dis\
+	MultiToolTipUI.dis\
+	MultiTreeUI.dis\
+	MultiViewportUI.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/plaf/multi
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

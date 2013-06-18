@@ -1,0 +1,138 @@
+<../../../../mkconfig
+
+DIRS=\
+	event\
+	datatransfer\
+	image\
+	peer\
+
+TARG=\
+	AWTError.dis\
+	AWTEvent.dis\
+	AWTEventMulticaster.dis\
+	AWTException.dis\
+	ActionInputPreferred.dis\
+	Adjustable.dis\
+	BorderLayout.dis\
+	Button.dis\
+	Canvas.dis\
+	CardLayout.dis\
+	Checkbox.dis\
+	CheckboxGroup.dis\
+	CheckboxMenuItem.dis\
+	Choice.dis\
+	Choice\$MenuWindow.dis\
+	Color.dis\
+	Component.dis\
+# for Component\$NativeInLightFixer.dis\
+	uU+tI9EeZru56jt4ABTyZ.dis\
+	Container.dis\
+	Cursor.dis\
+	Dialog.dis\
+	Dimension.dis\
+	Event.dis\
+	EventDispatchThread.dis\
+	EventQueue.dis\
+	EventQueueItem.dis\
+	FileDialog.dis\
+	FlowLayout.dis\
+	FocusManager.dis\
+	Font.dis\
+	FontMetrics.dis\
+	Frame.dis\
+	Graphics.dis\
+	GridBagConstraints.dis\
+	GridBagLayout.dis\
+	GridBagLayoutInfo.dis\
+	GridLayout.dis\
+# for IllegalComponentStateException.dis\
+	0xdZMaDu4YDn6Gv1ojXOi.dis\
+	Image.dis\
+	ImageMediaEntry.dis\
+	Insets.dis\
+	ItemSelectable.dis\
+# for KeyboardInputPreferred.dis\
+	tZW2Nc+oIyd6dX0M-UilD.dis\
+	Label.dis\
+	LayoutManager.dis\
+	LayoutManager2.dis\
+	LightweightDispatcher.dis\
+	LightweightPeer.dis\
+	List.dis\
+	MediaEntry.dis\
+	MediaTracker.dis\
+	Menu.dis\
+	MenuBar.dis\
+	MenuComponent.dis\
+	MenuContainer.dis\
+	MenuItem.dis\
+	MenuShortcut.dis\
+	Misc.dis\
+	NoInputPreferred.dis\
+	Panel.dis\
+	Point.dis\
+	Polygon.dis\
+	PopupMenu.dis\
+# for PositionalInputPreferred.dis\
+	8AdFAaM7LI8fj1v6d+cNK.dis\
+	PrintGraphics.dis\
+	PrintJob.dis\
+	Rectangle.dis\
+	ScrollPane.dis\
+	ScrollPane\$PeerFixer.dis\
+	ScrollPaneAdjustable.dis\
+	Scrollbar.dis\
+	Shape.dis\
+	SystemColor.dis\
+	TextArea.dis\
+	TextComponent.dis\
+	TextField.dis\
+	Toolkit.dis\
+	Window.dis\
+
+DISBIN=$ROOT/java/dis/java/java/awt
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs
+
+Choice\$MenuWindow.dis:	Choice.class
+	j2d Choice\$MenuWindow.class
+
+uU+tI9EeZru56jt4ABTyZ.dis:	Component.class
+	j2d Component\$NativeInLightFixer.class
+
+LightweightDispatcher.dis:	Container.class
+	j2d LightweightDispatcher.class
+
+EventQueueItem.dis:	EventQueue.class
+	j2d EventQueueItem.class
+
+GridBagLayoutInfo.dis:	GridBagLayout.class
+	j2d GridBagLayoutInfo.class
+
+0xdZMaDu4YDn6Gv1ojXOi.dis:	IllegalComponentStateException.class
+	j2d $prereq
+
+tZW2Nc+oIyd6dX0M-UilD.dis:	KeyboardInputPreferred.class
+	j2d $prereq
+
+ImageMediaEntry.dis:	MediaTracker.class
+	j2d ImageMediaEntry.class
+
+MediaEntry.dis:	MediaTracker.class
+	j2d MediaEntry.class
+
+8AdFAaM7LI8fj1v6d+cNK.dis:	PositionalInputPreferred.class
+	j2d $prereq
+
+ScrollPane\$PeerFixer.dis:	ScrollPane.class
+	j2d ScrollPane\$PeerFixer.class
+
+ScrollPaneAdjustable.dis:	ScrollPane.class
+	j2d ScrollPaneAdjustable.class
+
+LightweightPeer.dis:	Toolkit.class
+	j2d LightweightPeer.class
+
+FocusManager.dis:	Window.class
+	j2d FocusManager.class

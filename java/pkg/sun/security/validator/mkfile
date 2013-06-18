@@ -1,0 +1,13 @@
+<../../../../../mkconfig
+
+TARG=\
+	EndEntityChecker.dis\
+	KeyStores.dis\
+	PKIXValidator.dis\
+	SimpleValidator.dis\
+	Validator.dis\
+	ValidatorException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/validator
+
+<$ROOT/mkfiles/mkjava

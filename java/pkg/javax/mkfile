@@ -1,0 +1,20 @@
+<../../../mkconfig
+
+DIRS=\
+	accessibility\
+	crypto\
+	imageio\
+	management\
+	naming\
+	net\
+	print\
+	rmi\
+	script\
+	security\
+	smartcardio\
+	sound\
+	sql\
+	swing\
+	xml\
+
+<$ROOT/mkfiles/mksubdirs

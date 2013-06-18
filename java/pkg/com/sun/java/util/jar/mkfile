@@ -1,0 +1,6 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	pack\
+
+<$ROOT/mkfiles/mksubdirs

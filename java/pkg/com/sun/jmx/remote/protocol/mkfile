@@ -1,0 +1,7 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	iiop\
+	rmi\
+
+<$ROOT/mkfiles/mksubdirs

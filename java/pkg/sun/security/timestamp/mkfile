@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+TARG=\
+	HttpTimestamper.dis\
+	Timestamper.dis\
+	TimestampToken.dis\
+	TSRequest.dis\
+	TSResponse.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/timestamp
+
+<$ROOT/mkfiles/mkjava

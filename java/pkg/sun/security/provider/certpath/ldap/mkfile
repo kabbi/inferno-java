@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	LDAPCertStore.dis\
+	LDAPCertStoreHelper.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/provider/certpath/ldap
+
+<$ROOT/mkfiles/mkjava

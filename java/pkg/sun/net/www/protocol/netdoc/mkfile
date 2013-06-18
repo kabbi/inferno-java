@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Handler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/netdoc
+
+<$ROOT/mkfiles/mkjava

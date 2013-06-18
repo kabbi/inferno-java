@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	IdentityArrayList.dis\
+	IdentityLinkedList.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt/util
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,34 @@
+<../../../../../mkconfig
+
+TARG=\
+	AlgorithmParameterSpec.dis\
+	DSAParameterSpec.dis\
+	DSAPrivateKeySpec.dis\
+	DSAPublicKeySpec.dis\
+	ECField.dis\
+	ECFieldF2m.dis\
+	ECFieldFp.dis\
+	ECGenParameterSpec.dis\
+	ECParameterSpec.dis\
+	ECPoint.dis\
+	ECPrivateKeySpec.dis\
+	ECPublicKeySpec.dis\
+	EllipticCurve.dis\
+	EncodedKeySpec.dis\
+	InvalidKeySpecException.dis\
+	InvalidParameterSpecException.dis\
+	KeySpec.dis\
+	MGF1ParameterSpec.dis\
+	PKCS8EncodedKeySpec.dis\
+	PSSParameterSpec.dis\
+	RSAKeyGenParameterSpec.dis\
+	RSAMultiPrimePrivateCrtKeySpec.dis\
+	RSAOtherPrimeInfo.dis\
+	RSAPrivateCrtKeySpec.dis\
+	RSAPrivateKeySpec.dis\
+	RSAPublicKeySpec.dis\
+	X509EncodedKeySpec.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/security/spec
+
+<$ROOT/mkfiles/mkjava

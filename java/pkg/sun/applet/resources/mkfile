@@ -1,0 +1,18 @@
+<../../../../../mkconfig
+
+TARG=\
+	MsgAppletViewer.dis\
+	MsgAppletViewer_de.dis\
+	MsgAppletViewer_es.dis\
+	MsgAppletViewer_fr.dis\
+	MsgAppletViewer_it.dis\
+	MsgAppletViewer_ja.dis\
+	MsgAppletViewer_ko.dis\
+	MsgAppletViewer_pt_BR.dis\
+	MsgAppletViewer_sv.dis\
+	MsgAppletViewer_zh_CN.dis\
+	MsgAppletViewer_zh_TW.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/applet/resources
+
+<$ROOT/mkfiles/mkjava

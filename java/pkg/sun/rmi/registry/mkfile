@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	RegistryImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/registry
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

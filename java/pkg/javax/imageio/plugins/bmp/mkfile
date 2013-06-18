@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	BMPImageWriteParam.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio/plugins/bmp
+
+<$ROOT/mkfiles/mkjava

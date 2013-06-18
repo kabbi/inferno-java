@@ -1,0 +1,26 @@
+<../../../../../mkconfig
+
+TARG=\
+	AbstractAclFileAttributeView.dis\
+	AbstractBasicFileAttributeView.dis\
+	AbstractFileSystemProvider.dis\
+	AbstractFileTypeDetector.dis\
+	AbstractPath.dis\
+	AbstractPoller.dis\
+	AbstractUserDefinedFileAttributeView.dis\
+	AbstractWatchKey.dis\
+	AbstractWatchService.dis\
+	BasicFileAttributesHolder.dis\
+	Cancellable.dis\
+	DynamicFileAttributeView.dis\
+	FileOwnerAttributeViewImpl.dis\
+	Globs.dis\
+	NativeBuffer.dis\
+	NativeBuffers.dis\
+	PollingWatchService.dis\
+	Reflect.dis\
+	Util.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/nio/fs
+
+<$ROOT/mkfiles/mkjava

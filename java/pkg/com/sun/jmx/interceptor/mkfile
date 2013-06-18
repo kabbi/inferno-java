@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	DefaultMBeanServerInterceptor.dis\
+	MBeanServerInterceptor.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/interceptor
+
+<$ROOT/mkfiles/mkjava

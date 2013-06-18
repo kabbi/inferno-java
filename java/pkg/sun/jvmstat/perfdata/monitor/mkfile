@@ -1,0 +1,32 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	protocol\
+	v1_0\
+	v2_0\
+
+TARG=\
+	AbstractMonitoredVm.dis\
+	AbstractPerfDataBuffer.dis\
+	AbstractPerfDataBufferPrologue.dis\
+	AliasFileParser.dis\
+	CountedTimerTask.dis\
+	CountedTimerTaskUtils.dis\
+	MonitorDataException.dis\
+	MonitorStatus.dis\
+	MonitorStructureException.dis\
+	MonitorTypeException.dis\
+	MonitorVersionException.dis\
+	PerfByteArrayMonitor.dis\
+	PerfDataBufferImpl.dis\
+	PerfIntegerMonitor.dis\
+	PerfLongMonitor.dis\
+	PerfStringConstantMonitor.dis\
+	PerfStringMonitor.dis\
+	PerfStringVariableMonitor.dis\
+	SyntaxException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/perfdata/monitor
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

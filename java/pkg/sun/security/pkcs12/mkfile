@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	MacData.dis\
+	PKCS12KeyStore.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/pkcs12
+
+<$ROOT/mkfiles/mkjava

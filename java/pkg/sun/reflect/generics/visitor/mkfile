@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	Reifier.dis\
+	TypeTreeVisitor.dis\
+	Visitor.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/visitor
+
+<$ROOT/mkfiles/mkjava

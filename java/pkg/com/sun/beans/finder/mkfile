@@ -1,0 +1,19 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AbstractFinder.dis\
+	BeanInfoFinder.dis\
+	ClassFinder.dis\
+	ConstructorFinder.dis\
+	FieldFinder.dis\
+	InstanceFinder.dis\
+	MethodFinder.dis\
+	PersistenceDelegateFinder.dis\
+	PrimitiveTypeMap.dis\
+	PrimitiveWrapperMap.dis\
+	PropertyEditorFinder.dis\
+	Signature.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/beans/finder
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+TARG=\
+	CurrencyNameProvider.dis\
+	LocaleNameProvider.dis\
+	LocaleServiceProvider.dis\
+	TimeZoneNameProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/spi
+
+<$ROOT/mkfiles/mkjava

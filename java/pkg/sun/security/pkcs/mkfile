@@ -1,0 +1,20 @@
+<../../../../../mkconfig
+
+TARG=\
+	ContentInfo.dis\
+	EncodingException.dis\
+	EncryptedPrivateKeyInfo.dis\
+	ParsingException.dis\
+	PKCS10.dis\
+	PKCS10Attribute.dis\
+	PKCS10Attributes.dis\
+	PKCS7.dis\
+	PKCS8Key.dis\
+	PKCS9Attribute.dis\
+	PKCS9Attributes.dis\
+	SignerInfo.dis\
+	SigningCertificateInfo.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/pkcs
+
+<$ROOT/mkfiles/mkjava

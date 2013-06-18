@@ -1,0 +1,9 @@
+<../../../../mkconfig
+
+TARG=\
+	InstrumentationImpl.dis\
+	TransformerManager.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/instrument
+
+<$ROOT/mkfiles/mkjava

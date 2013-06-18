@@ -1,0 +1,26 @@
+<../../../../../mkconfig
+
+TARG=\
+	ConsoleHandler.dis\
+	ErrorManager.dis\
+	FileHandler.dis\
+	Filter.dis\
+	Formatter.dis\
+	Handler.dis\
+	Level.dis\
+	Logger.dis\
+	Logging.dis\
+	LoggingMXBean.dis\
+	LoggingPermission.dis\
+	LoggingProxyImpl.dis\
+	LogManager.dis\
+	LogRecord.dis\
+	MemoryHandler.dis\
+	SimpleFormatter.dis\
+	SocketHandler.dis\
+	StreamHandler.dis\
+	XMLFormatter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/logging
+
+<$ROOT/mkfiles/mkjava

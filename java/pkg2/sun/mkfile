@@ -1,0 +1,10 @@
+<../../../mkconfig
+
+DIRS=\
+	awt\
+	io\
+	misc\
+	net\
+	security\
+
+<$ROOT/mkfiles/mksubdirs

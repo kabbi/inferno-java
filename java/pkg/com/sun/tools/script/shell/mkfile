@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Main.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/script/shell
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+DIRS=\
+	factory\
+	parser\
+	reflectiveObjects\
+	repository\
+	scope\
+	tree\
+	visitor\
+
+<$ROOT/mkfiles/mksubdirs

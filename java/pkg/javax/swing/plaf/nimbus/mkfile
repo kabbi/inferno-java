@@ -1,0 +1,30 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	doc-files\
+
+TARG=\
+	AbstractRegionPainter.dis\
+	DerivedColor.dis\
+	DropShadowEffect.dis\
+	Effect.dis\
+	EffectUtils.dis\
+	ImageCache.dis\
+	ImageScalingHelper.dis\
+	InnerGlowEffect.dis\
+	InnerShadowEffect.dis\
+	LoweredBorder.dis\
+	NimbusIcon.dis\
+	NimbusLookAndFeel.dis\
+	NimbusStyle.dis\
+	OuterGlowEffect.dis\
+	ShadowEffect.dis\
+	State.dis\
+	SynthPainterImpl.dis\
+	TableScrollPaneCorner.dis\
+	ToolBarSeparatorPainter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/plaf/nimbus
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,44 @@
+<../../../../../mkconfig
+
+TARG=\
+	CertPathTrustManagerParameters.dis\
+	ExtendedSSLSession.dis\
+	HandshakeCompletedEvent.dis\
+	HandshakeCompletedListener.dis\
+	HostnameVerifier.dis\
+	HttpsURLConnection.dis\
+	KeyManager.dis\
+	KeyManagerFactory.dis\
+	KeyManagerFactorySpi.dis\
+	KeyStoreBuilderParameters.dis\
+	ManagerFactoryParameters.dis\
+	SSLContext.dis\
+	SSLContextSpi.dis\
+	SSLEngine.dis\
+	SSLEngineResult.dis\
+	SSLException.dis\
+	SSLHandshakeException.dis\
+	SSLKeyException.dis\
+	SSLParameters.dis\
+	SSLPeerUnverifiedException.dis\
+	SSLPermission.dis\
+	SSLProtocolException.dis\
+	SSLServerSocket.dis\
+	SSLServerSocketFactory.dis\
+	SSLSession.dis\
+	SSLSessionBindingEvent.dis\
+	SSLSessionBindingListener.dis\
+	SSLSessionContext.dis\
+	SSLSocket.dis\
+	SSLSocketFactory.dis\
+	TrustManager.dis\
+	TrustManagerFactory.dis\
+	TrustManagerFactorySpi.dis\
+	X509ExtendedKeyManager.dis\
+	X509ExtendedTrustManager.dis\
+	X509KeyManager.dis\
+	X509TrustManager.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/net/ssl
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	DialogCallbackHandler.dis\
+	TextCallbackHandler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/auth/callback
+
+<$ROOT/mkfiles/mkjava

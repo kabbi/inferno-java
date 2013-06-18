@@ -1,0 +1,150 @@
+<../../../../mkconfig
+
+TARG=\
+	BufferedInputStream.dis\
+	BufferedOutputStream.dis\
+	BufferedReader.dis\
+	BufferedWriter.dis\
+	ByteArrayInputStream.dis\
+	ByteArrayOutputStream.dis\
+	CharArrayReader.dis\
+	CharArrayWriter.dis\
+# for CharConversionException.dis\
+	oF8WXXue0VYZof82fzj4L.dis\
+	DataInput.dis\
+	DataInputStream.dis\
+	DataOutput.dis\
+	DataOutputStream.dis\
+	EOFException.dis\
+	Externalizable.dis\
+	File.dis\
+	FileDescriptor.dis\
+	FileInputStream.dis\
+	FileNotFoundException.dis\
+	FileOutputStream.dis\
+	FileReader.dis\
+	FileWriter.dis\
+	FilenameFilter.dis\
+	FilterInputStream.dis\
+	FilterOutputStream.dis\
+	FilterReader.dis\
+	FilterWriter.dis\
+	IOException.dis\
+	InputStream.dis\
+	InputStreamReader.dis\
+# for InterruptedIOException.dis\
+	Udmf2Su14O7L1V-QzaTq3.dis\
+	InvalidClassException.dis\
+# for InvalidObjectException.dis\
+	PjqhaWOg4nDK5hla7XFmv.dis\
+	LineNumberInputStream.dis\
+	LineNumberReader.dis\
+	NotActiveException.dis\
+# for NotSerializableException.dis\
+	YBCI4zMUNV+Uc45idEPcv.dis\
+	ObjectInput.dis\
+	ObjectInputStream.dis\
+	ObjectInputValidation.dis\
+	ObjectOutput.dis\
+	ObjectOutputStream.dis\
+	ObjectStreamClass.dis\
+# for ObjectStreamClassEntry.dis\
+	6T1LdH4wdbOUJeqUfASeI.dis\
+	ObjectStreamConstants.dis\
+	ObjectStreamException.dis\
+	ObjectStreamField.dis\
+	OptionalDataException.dis\
+	OutputStream.dis\
+	OutputStreamWriter.dis\
+	PipedInputStream.dis\
+	PipedOutputStream.dis\
+	PipedReader.dis\
+	PipedWriter.dis\
+	PrintStream.dis\
+	PrintWriter.dis\
+	PushbackInputStream.dis\
+	PushbackReader.dis\
+	RandomAccessFile.dis\
+	Reader.dis\
+	SequenceInputStream.dis\
+	Serializable.dis\
+# for StreamCorruptedException.dis\
+	7Ev9-si8zsgglOEBSxbM3.dis\
+	StreamTokenizer.dis\
+# for StringBufferInputStream.dis\
+	O+cE9tcuJ1-znyckKtvEt.dis\
+	StringReader.dis\
+	StringWriter.dis\
+	SyncFailedException.dis\
+# for UTFDataFormatException.dis\
+	VgQ9w-N7w2YXJglmrtjzJ.dis\
+# for UnsupportedEncodingException.dis\
+	34nQVDtVtK+3NDDpbkN7j.dis\
+	ValidationCallback.dis\
+	WriteAbortedException.dis\
+	Writer.dis\
+# Limbo code\
+	FileDescriptor_L.dis\
+	FileInputStream_L.dis\
+	FileOutputStream_L.dis\
+	File_L.dis\
+	ObjectInputStream_L.dis\
+	ObjectOutputStream_L.dis\
+	ObjectStreamClass_L.dis\
+	RandomAccessFile_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	FileDescriptor_L.m\
+	FileInputStream_L.m\
+	FileOutputStream_L.m\
+	File_L.m\
+	ObjectInputStream_L.m\
+	ObjectOutputStream_L.m\
+	ObjectStreamClass_L.m\
+	RandomAccessFile_L.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/io
+
+<$ROOT/mkfiles/mkjava
+
+oF8WXXue0VYZof82fzj4L.dis:	CharConversionException.class
+	j2d CharConversionException.class
+
+Udmf2Su14O7L1V-QzaTq3.dis:	InterruptedIOException.class
+	j2d InterruptedIOException.class
+
+PjqhaWOg4nDK5hla7XFmv.dis:	InvalidObjectException.class
+	j2d InvalidObjectException.class
+
+YBCI4zMUNV+Uc45idEPcv.dis:	NotSerializableException.class
+	j2d NotSerializableException.class
+
+6T1LdH4wdbOUJeqUfASeI.dis:	ObjectStreamClass.class
+	j2d ObjectStreamClassEntry.class
+
+7Ev9-si8zsgglOEBSxbM3.dis:	StreamCorruptedException.class
+	j2d StreamCorruptedException.class
+
+O+cE9tcuJ1-znyckKtvEt.dis:	StringBufferInputStream.class
+	j2d StringBufferInputStream.class
+
+VgQ9w-N7w2YXJglmrtjzJ.dis:	UTFDataFormatException.class
+	j2d UTFDataFormatException.class
+
+34nQVDtVtK+3NDDpbkN7j.dis:	UnsupportedEncodingException.class
+	j2d UnsupportedEncodingException.class
+
+ValidationCallback.dis:	ObjectInputStream.class
+	j2d ValidationCallback.class

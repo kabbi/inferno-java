@@ -1,0 +1,56 @@
+<../../../../mkconfig
+
+DIRS=\
+	directory\
+	event\
+	ldap\
+	spi\
+
+TARG=\
+	AuthenticationException.dis\
+	AuthenticationNotSupportedException.dis\
+	BinaryRefAddr.dis\
+	Binding.dis\
+	CannotProceedException.dis\
+	CommunicationException.dis\
+	CompositeName.dis\
+	CompoundName.dis\
+	ConfigurationException.dis\
+	Context.dis\
+	ContextNotEmptyException.dis\
+	InitialContext.dis\
+	InsufficientResourcesException.dis\
+	InterruptedNamingException.dis\
+	InvalidNameException.dis\
+	LimitExceededException.dis\
+	LinkException.dis\
+	LinkLoopException.dis\
+	LinkRef.dis\
+	MalformedLinkException.dis\
+	Name.dis\
+	NameAlreadyBoundException.dis\
+	NameClassPair.dis\
+	NameImpl.dis\
+	NameNotFoundException.dis\
+	NameParser.dis\
+	NamingEnumeration.dis\
+	NamingException.dis\
+	NamingSecurityException.dis\
+	NoInitialContextException.dis\
+	NoPermissionException.dis\
+	NotContextException.dis\
+	OperationNotSupportedException.dis\
+	PartialResultException.dis\
+	RefAddr.dis\
+	Reference.dis\
+	Referenceable.dis\
+	ReferralException.dis\
+	ServiceUnavailableException.dis\
+	SizeLimitExceededException.dis\
+	StringRefAddr.dis\
+	TimeLimitExceededException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/naming
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

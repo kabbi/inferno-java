@@ -1,0 +1,37 @@
+<../../../../../mkconfig
+
+TARG=\
+	ActionEvent.dis\
+	ActionListener.dis\
+	AdjustmentEvent.dis\
+	AdjustmentListener.dis\
+	ComponentAdapter.dis\
+	ComponentEvent.dis\
+	ComponentListener.dis\
+	ContainerAdapter.dis\
+	ContainerEvent.dis\
+	ContainerListener.dis\
+	FocusAdapter.dis\
+	FocusEvent.dis\
+	FocusListener.dis\
+	InputEvent.dis\
+	ItemEvent.dis\
+	ItemListener.dis\
+	KeyAdapter.dis\
+	KeyEvent.dis\
+	KeyListener.dis\
+	MouseAdapter.dis\
+	MouseEvent.dis\
+	MouseListener.dis\
+	MouseMotionAdapter.dis\
+	MouseMotionListener.dis\
+	PaintEvent.dis\
+	TextEvent.dis\
+	TextListener.dis\
+	WindowAdapter.dis\
+	WindowEvent.dis\
+	WindowListener.dis\
+
+DISBIN=$ROOT/java/dis/java/java/awt/event
+
+<$ROOT/mkfiles/mkjava

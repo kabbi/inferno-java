@@ -1,0 +1,9 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	NegotiateCallbackHandler.dis\
+	NegotiatorImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/http/spnego
+
+<$ROOT/mkfiles/mkjava

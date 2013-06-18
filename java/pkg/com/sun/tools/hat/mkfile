@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	internal\
+	resources\
+
+TARG=\
+	Main.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/hat
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,12 @@
+<../../../../../../mkconfig
+
+TARG=\
+	FactoryEnumeration.dis\
+	NamedWeakReference.dis\
+	ResourceManager.dis\
+	VersionHelper.dis\
+	VersionHelper12.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/naming/internal
+
+<$ROOT/mkfiles/mkjava

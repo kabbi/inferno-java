@@ -1,0 +1,22 @@
+<../../../../../mkconfig
+
+DIRS=\
+	content\
+	http\
+	protocol\
+
+TARG=\
+	ApplicationLaunchException.dis\
+	HeaderParser.dis\
+	MessageHeader.dis\
+	MeteredStream.dis\
+	MimeEntry.dis\
+	MimeLauncher.dis\
+	MimeTable.dis\
+	ParseUtil.dis\
+	URLConnection.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

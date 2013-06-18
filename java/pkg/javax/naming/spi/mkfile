@@ -1,0 +1,20 @@
+<../../../../../mkconfig
+
+TARG=\
+	ContinuationContext.dis\
+	ContinuationDirContext.dis\
+	DirectoryManager.dis\
+	DirObjectFactory.dis\
+	DirStateFactory.dis\
+	InitialContextFactory.dis\
+	InitialContextFactoryBuilder.dis\
+	NamingManager.dis\
+	ObjectFactory.dis\
+	ObjectFactoryBuilder.dis\
+	Resolver.dis\
+	ResolveResult.dis\
+	StateFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/naming/spi
+
+<$ROOT/mkfiles/mkjava

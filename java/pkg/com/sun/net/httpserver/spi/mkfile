@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	HttpServerProvider.dis\
+	package-info.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/net/httpserver/spi
+
+<$ROOT/mkfiles/mkjava

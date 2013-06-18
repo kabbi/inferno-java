@@ -1,0 +1,14 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	FileReadBuffer.dis\
+	HprofReader.dis\
+	MappedReadBuffer.dis\
+	PositionDataInputStream.dis\
+	PositionInputStream.dis\
+	ReadBuffer.dis\
+	Reader.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/hat/internal/parser
+
+<$ROOT/mkfiles/mkjava

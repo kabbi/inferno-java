@@ -1,0 +1,15 @@
+<../../../../../../mkconfig
+
+TARG=\
+	DelegationPermission.dis\
+	JavaxSecurityAuthKerberosAccessImpl.dis\
+	KerberosKey.dis\
+	KerberosPrincipal.dis\
+	KerberosTicket.dis\
+	KeyImpl.dis\
+	KeyTab.dis\
+	ServicePermission.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/auth/kerberos
+
+<$ROOT/mkfiles/mkjava

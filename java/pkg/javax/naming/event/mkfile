@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	EventContext.dis\
+	EventDirContext.dis\
+	NamespaceChangeListener.dis\
+	NamingEvent.dis\
+	NamingExceptionEvent.dis\
+	NamingListener.dis\
+	ObjectChangeListener.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/naming/event
+
+<$ROOT/mkfiles/mkjava

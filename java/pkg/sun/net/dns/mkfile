@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	ResolverConfiguration.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/dns
+
+<$ROOT/mkfiles/mkjava

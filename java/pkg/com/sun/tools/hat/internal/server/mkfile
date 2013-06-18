@@ -1,0 +1,26 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AllClassesQuery.dis\
+	AllRootsQuery.dis\
+	ClassQuery.dis\
+	FinalizerObjectsQuery.dis\
+	FinalizerSummaryQuery.dis\
+	HistogramQuery.dis\
+	HttpReader.dis\
+	InstancesCountQuery.dis\
+	InstancesQuery.dis\
+	ObjectQuery.dis\
+	OQLHelp.dis\
+	OQLQuery.dis\
+	PlatformClasses.dis\
+	QueryHandler.dis\
+	QueryListener.dis\
+	ReachableQuery.dis\
+	RefsByTypeQuery.dis\
+	RootsQuery.dis\
+	RootStackQuery.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/hat/internal/server
+
+<$ROOT/mkfiles/mkjava

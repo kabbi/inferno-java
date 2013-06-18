@@ -1,0 +1,20 @@
+<../../../../../../../../../../../mkconfig
+
+DIRS=\
+	keyvalues\
+	x509\
+
+TARG=\
+	KeyInfoContent.dis\
+	KeyName.dis\
+	KeyValue.dis\
+	MgmtData.dis\
+	PGPData.dis\
+	RetrievalMethod.dis\
+	SPKIData.dis\
+	X509Data.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/content
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

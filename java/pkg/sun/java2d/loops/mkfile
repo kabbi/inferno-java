@@ -1,0 +1,38 @@
+<../../../../../mkconfig
+
+TARG=\
+	Blit.dis\
+	BlitBg.dis\
+	CompositeType.dis\
+	CustomComponent.dis\
+	DrawGlyphList.dis\
+	DrawGlyphListAA.dis\
+	DrawGlyphListLCD.dis\
+	DrawLine.dis\
+	DrawParallelogram.dis\
+	DrawPath.dis\
+	DrawPolygons.dis\
+	DrawRect.dis\
+	FillParallelogram.dis\
+	FillPath.dis\
+	FillRect.dis\
+	FillSpans.dis\
+	FontInfo.dis\
+	GeneralRenderer.dis\
+	GraphicsPrimitive.dis\
+	GraphicsPrimitiveMgr.dis\
+	GraphicsPrimitiveProxy.dis\
+	MaskBlit.dis\
+	MaskFill.dis\
+	ProcessPath.dis\
+	RenderCache.dis\
+	RenderLoops.dis\
+	ScaledBlit.dis\
+	SurfaceType.dis\
+	TransformBlit.dis\
+	TransformHelper.dis\
+	XORComposite.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/java2d/loops
+
+<$ROOT/mkfiles/mkjava

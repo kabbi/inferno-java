@@ -1,0 +1,79 @@
+<../../../../../mkconfig
+
+DIRS=\
+	connect\
+	doc-files\
+	event\
+	request\
+
+TARG=\
+	AbsentInformationException.dis\
+	Accessible.dis\
+	ArrayReference.dis\
+	ArrayType.dis\
+	BooleanType.dis\
+	BooleanValue.dis\
+	Bootstrap.dis\
+	ByteType.dis\
+	ByteValue.dis\
+	CharType.dis\
+	CharValue.dis\
+	ClassLoaderReference.dis\
+	ClassNotLoadedException.dis\
+	ClassNotPreparedException.dis\
+	ClassObjectReference.dis\
+	ClassType.dis\
+	DoubleType.dis\
+	DoubleValue.dis\
+	Field.dis\
+	FloatType.dis\
+	FloatValue.dis\
+	IncompatibleThreadStateException.dis\
+	InconsistentDebugInfoException.dis\
+	IntegerType.dis\
+	IntegerValue.dis\
+	InterfaceType.dis\
+	InternalException.dis\
+	InvalidCodeIndexException.dis\
+	InvalidLineNumberException.dis\
+	InvalidStackFrameException.dis\
+	InvalidTypeException.dis\
+	InvocationException.dis\
+	JDIPermission.dis\
+	LocalVariable.dis\
+	Locatable.dis\
+	Location.dis\
+	LongType.dis\
+	LongValue.dis\
+	Method.dis\
+	Mirror.dis\
+	MonitorInfo.dis\
+	NativeMethodException.dis\
+	ObjectCollectedException.dis\
+	ObjectReference.dis\
+	PathSearchingVirtualMachine.dis\
+	PrimitiveType.dis\
+	PrimitiveValue.dis\
+	ReferenceType.dis\
+	ShortType.dis\
+	ShortValue.dis\
+	StackFrame.dis\
+	StringReference.dis\
+	ThreadGroupReference.dis\
+	ThreadReference.dis\
+	Type.dis\
+	TypeComponent.dis\
+	Value.dis\
+	VirtualMachine.dis\
+	VirtualMachineManager.dis\
+	VMCannotBeModifiedException.dis\
+	VMDisconnectedException.dis\
+	VMMismatchException.dis\
+	VMOutOfMemoryException.dis\
+	VoidType.dis\
+	VoidValue.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jdi
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

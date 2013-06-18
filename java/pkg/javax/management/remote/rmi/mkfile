@@ -1,0 +1,16 @@
+<../../../../../../mkconfig
+
+TARG=\
+	NoCallStackClassLoader.dis\
+	RMIConnection.dis\
+	RMIConnectionImpl.dis\
+	RMIConnector.dis\
+	RMIConnectorServer.dis\
+	RMIIIOPServerImpl.dis\
+	RMIJRMPServerImpl.dis\
+	RMIServer.dis\
+	RMIServerImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/remote/rmi
+
+<$ROOT/mkfiles/mkjava

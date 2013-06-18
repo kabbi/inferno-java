@@ -32,6 +32,12 @@ Loader: module
 		tdesc:	int;
 	};
 
+	Import: adt
+	{
+		name:	string;
+		sig:	int;
+	};
+
 	Niladt: adt
 	{
 	};
@@ -42,6 +48,8 @@ Loader: module
 				inst: array of Inst, data: ref Niladt): Nilmod;
 	tnew:		fn(mp: Nilmod, size: int, map: array of byte): int;
 	link:		fn(mp: Nilmod): array of Link;
+	imports:	fn(mp: Nilmod): array of array of Import;
+	setimports:	fn(mp: Nilmod, imp: array of array of Import): int;
 	ext:		fn(mp: Nilmod, idx, pc: int, tdesc: int): int;
 	dnew:		fn(size: int, map: array of byte): ref Niladt;
 	compile:	fn(mp: Nilmod, flag: int): int;

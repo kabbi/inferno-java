@@ -1,0 +1,126 @@
+<../../../../mkconfig
+
+TARG=\
+	iDrawingSurfaceInfo.dis\
+	iFontMetrics.dis\
+	iFontPeer.dis\
+	iFramePeer.dis\
+	iGraphics.dis\
+	iImage.dis\
+	iImageConsumer.dis\
+	iImageRepresentation.dis\
+	iMenuBarPeer.dis\
+	iOffScreenImage.dis\
+	iPopupMenuPeer.dis\
+	iToolkit.dis\
+	iWindowPeer.dis\
+	zMenuWindow.dis\
+	zMenuDisplay.dis\
+	zMenuBarObject.dis\
+	zMenuObject.dis\
+	zMenuParent.dis\
+	zMenuSeparator.dis\
+	zMenuText.dis\
+	zPopupMenu.dis\
+	zPopupMenuDisplay.dis\
+	zPopupMenuObject.dis\
+	zPopupMenuParent.dis\
+	zPopupMenuSeparator.dis\
+	zPopupMenuText.dis\
+# Limbo code\
+	awt_Color.dis\
+	awt_Frame.dis\
+	awt_Graphics.dis\
+# broken\
+#	iDrawingSurfaceInfo_L.dis\
+	iFontMetrics_L.dis\
+	iFontPeer_L.dis\
+	iFramePeer_L.dis\
+	iGraphics_L.dis\
+	iImageRepresentation_L.dis\
+	iImage_L.dis\
+	iToolkit_L.dis\
+	iWindowPeer_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	awt_Color.m\
+	awt_Frame.m\
+	awt_Graphics.m\
+	awt_Image.m\
+	iDrawingSurfaceInfo_L.m\
+	iFontMetrics_L.m\
+	iFontPeer_L.m\
+	iFramePeer_L.m\
+	iGraphics_L.m\
+	iImageRepresentation_L.m\
+	iImage_L.m\
+	iToolkit_L.m\
+	iWindowPeer_L.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/inferno/awt
+
+<$ROOT/mkfiles/mkjava
+
+LIMBOINCL=\
+	$LIMBOINCL\
+	-I$ROOT/java/pkg\
+
+awt_Color.dis:		awt_Color.b
+	limbo $LIMBOINCL -gw awt_Color.b
+
+awt_Frame.dis:		awt_Frame.b
+	limbo $LIMBOINCL -gw awt_Frame.b
+
+awt_Graphics.dis:	awt_Graphics.b
+	limbo $LIMBOINCL -gw awt_Graphics.b
+
+zMenuWindow.dis:	iMenuBarPeer.class
+	j2d zMenuWindow.class
+
+zMenuDisplay.dis:	iMenuBarPeer.class
+	j2d zMenuDisplay.class
+
+zMenuBarObject.dis:	iMenuBarPeer.class
+	j2d zMenuBarObject.class
+
+zMenuObject.dis:	iMenuBarPeer.class
+	j2d zMenuObject.class
+
+zMenuParent.dis:	iMenuBarPeer.class
+	j2d zMenuParent.class
+
+zMenuSeparator.dis:	iMenuBarPeer.class
+	j2d zMenuSeparator.class
+
+zMenuText.dis:	iMenuBarPeer.class
+	j2d zMenuText.class
+
+zPopupMenu.dis:	iPopupMenuPeer.class
+	j2d zPopupMenu.class
+
+zPopupMenuDisplay.dis:	iPopupMenuPeer.class
+	j2d zPopupMenuDisplay.class
+
+zPopupMenuObject.dis:	iPopupMenuPeer.class
+	j2d zPopupMenuObject.class
+
+zPopupMenuParent.dis:	iPopupMenuPeer.class
+	j2d zPopupMenuParent.class
+
+zPopupMenuSeparator.dis:	iPopupMenuPeer.class
+	j2d zPopupMenuSeparator.class
+
+zPopupMenuText.dis:	iPopupMenuPeer.class
+	j2d zPopupMenuText.class

@@ -1,0 +1,40 @@
+<../../../../../mkconfig
+
+DIRS=\
+	certpath\
+
+TARG=\
+	ByteArrayAccess.dis\
+	ConfigSpiFile.dis\
+	DigestBase.dis\
+	DSA.dis\
+	DSAKeyFactory.dis\
+	DSAKeyPairGenerator.dis\
+	DSAParameterGenerator.dis\
+	DSAParameters.dis\
+	DSAPrivateKey.dis\
+	DSAPublicKey.dis\
+	DSAPublicKeyImpl.dis\
+	JavaKeyStore.dis\
+	KeyProtector.dis\
+	MD2.dis\
+	MD4.dis\
+	MD5.dis\
+	ParameterCache.dis\
+	PolicyFile.dis\
+	PolicyParser.dis\
+	PolicySpiFile.dis\
+	SecureRandom.dis\
+	SeedGenerator.dis\
+	SHA.dis\
+	SHA2.dis\
+	SHA5.dis\
+	Sun.dis\
+	SunEntries.dis\
+	VerificationProvider.dis\
+	X509Factory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/provider
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,20 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	BitFile.dis\
+	BogusColorSpace.dis\
+	I18N.dis\
+	I18NImpl.dis\
+	ImageUtil.dis\
+	InputStreamAdapter.dis\
+	LZWCompressor.dis\
+	LZWStringTable.dis\
+	PaletteBuilder.dis\
+	ReaderUtil.dis\
+	StandardMetadataFormat.dis\
+	StandardMetadataFormatResources.dis\
+	SubImageInputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/plugins/common
+
+<$ROOT/mkfiles/mkjava

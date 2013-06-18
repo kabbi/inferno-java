@@ -1,0 +1,18 @@
+<../../../../mkconfig
+
+TARG=\
+	Array.dis\
+	FD.dis\
+	boolean_p.dis\
+	byte_p.dis\
+	char_p.dis\
+	double_p.dis\
+	float_p.dis\
+	int_p.dis\
+	long_p.dis\
+	short_p.dis\
+	void_p.dis\
+
+DISBIN=$ROOT/java/dis/java/inferno/vm
+
+<$ROOT/mkfiles/mkjava

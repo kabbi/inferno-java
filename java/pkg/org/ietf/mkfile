@@ -1,0 +1,6 @@
+<../../../../mkconfig
+
+DIRS=\
+	jgss\
+
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,56 @@
+<../../../../mkconfig
+
+TARG=\
+	Array.dis\
+	BatchUpdateException.dis\
+	Blob.dis\
+	CallableStatement.dis\
+	ClientInfoStatus.dis\
+	Clob.dis\
+	Connection.dis\
+	DatabaseMetaData.dis\
+	DataTruncation.dis\
+	Date.dis\
+	Driver.dis\
+	DriverManager.dis\
+	DriverPropertyInfo.dis\
+	NClob.dis\
+	ParameterMetaData.dis\
+	PreparedStatement.dis\
+	PseudoColumnUsage.dis\
+	Ref.dis\
+	ResultSet.dis\
+	ResultSetMetaData.dis\
+	RowId.dis\
+	RowIdLifetime.dis\
+	Savepoint.dis\
+	SQLClientInfoException.dis\
+	SQLData.dis\
+	SQLDataException.dis\
+	SQLException.dis\
+	SQLFeatureNotSupportedException.dis\
+	SQLInput.dis\
+	SQLIntegrityConstraintViolationException.dis\
+	SQLInvalidAuthorizationSpecException.dis\
+	SQLNonTransientConnectionException.dis\
+	SQLNonTransientException.dis\
+	SQLOutput.dis\
+	SQLPermission.dis\
+	SQLRecoverableException.dis\
+	SQLSyntaxErrorException.dis\
+	SQLTimeoutException.dis\
+	SQLTransactionRollbackException.dis\
+	SQLTransientConnectionException.dis\
+	SQLTransientException.dis\
+	SQLWarning.dis\
+	SQLXML.dis\
+	Statement.dis\
+	Struct.dis\
+	Time.dis\
+	Timestamp.dis\
+	Types.dis\
+	Wrapper.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/sql
+
+<$ROOT/mkfiles/mkjava

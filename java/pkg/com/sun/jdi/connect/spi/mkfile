@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ClosedConnectionException.dis\
+	Connection.dis\
+	TransportService.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jdi/connect/spi
+
+<$ROOT/mkfiles/mkjava

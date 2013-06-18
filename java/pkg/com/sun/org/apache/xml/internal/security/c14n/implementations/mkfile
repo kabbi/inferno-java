@@ -1,0 +1,19 @@
+<../../../../../../../../../../../mkconfig
+
+TARG=\
+	Canonicalizer11.dis\
+	Canonicalizer11_OmitComments.dis\
+	Canonicalizer11_WithComments.dis\
+	Canonicalizer20010315.dis\
+	Canonicalizer20010315Excl.dis\
+	Canonicalizer20010315ExclOmitComments.dis\
+	Canonicalizer20010315ExclWithComments.dis\
+	Canonicalizer20010315OmitComments.dis\
+	Canonicalizer20010315WithComments.dis\
+	CanonicalizerBase.dis\
+	NameSpaceSymbTable.dis\
+	UtfHelpper.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/c14n/implementations
+
+<$ROOT/mkfiles/mkjava

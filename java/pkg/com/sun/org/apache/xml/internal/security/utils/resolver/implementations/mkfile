@@ -1,0 +1,12 @@
+<../../../../../../../../../../../../mkconfig
+
+TARG=\
+	ResolverAnonymous.dis\
+	ResolverDirectHTTP.dis\
+	ResolverFragment.dis\
+	ResolverLocalFilesystem.dis\
+	ResolverXPointer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/utils/resolver/implementations
+
+<$ROOT/mkfiles/mkjava

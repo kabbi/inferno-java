@@ -1,0 +1,19 @@
+<../../../../../../mkconfig
+
+TARG=\
+	DnsClient.dis\
+	DnsContext.dis\
+	DnsContextFactory.dis\
+	DnsName.dis\
+	DnsNameParser.dis\
+	DnsUrl.dis\
+	Header.dis\
+	NameNode.dis\
+	Resolver.dis\
+	ResourceRecord.dis\
+	ResourceRecords.dis\
+	ZoneNode.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/dns
+
+<$ROOT/mkfiles/mkjava

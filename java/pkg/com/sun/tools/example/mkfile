@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	debug\
+	doc\
+	trace\
+
+<$ROOT/mkfiles/mksubdirs

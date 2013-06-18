@@ -1,0 +1,37 @@
+<../../../../../../mkconfig
+
+TARG=\
+	JVM_MANAGEMENT_MIB_IMPL.dis\
+	JvmClassLoadingImpl.dis\
+	JvmCompilationImpl.dis\
+	JvmMemGCEntryImpl.dis\
+	JvmMemGCTableMetaImpl.dis\
+	JvmMemManagerEntryImpl.dis\
+	JvmMemManagerTableMetaImpl.dis\
+	JvmMemMgrPoolRelEntryImpl.dis\
+	JvmMemMgrPoolRelTableMetaImpl.dis\
+	JvmMemoryImpl.dis\
+	JvmMemoryMetaImpl.dis\
+	JvmMemPoolEntryImpl.dis\
+	JvmMemPoolTableMetaImpl.dis\
+	JvmOSImpl.dis\
+	JvmRTBootClassPathEntryImpl.dis\
+	JvmRTBootClassPathTableMetaImpl.dis\
+	JvmRTClassPathEntryImpl.dis\
+	JvmRTClassPathTableMetaImpl.dis\
+	JvmRTInputArgsEntryImpl.dis\
+	JvmRTInputArgsTableMetaImpl.dis\
+	JvmRTLibraryPathEntryImpl.dis\
+	JvmRTLibraryPathTableMetaImpl.dis\
+	JvmRuntimeImpl.dis\
+	JvmRuntimeMetaImpl.dis\
+	JvmThreadingImpl.dis\
+	JvmThreadingMetaImpl.dis\
+	JvmThreadInstanceEntryImpl.dis\
+	JvmThreadInstanceTableMetaImpl.dis\
+	NotificationTarget.dis\
+	NotificationTargetImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/snmp/jvminstr
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,13 @@
+<../../../../mkconfig
+
+DIRS=\
+	ssl\
+
+TARG=\
+	ServerSocketFactory.dis\
+	SocketFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/net
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

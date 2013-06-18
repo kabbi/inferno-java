@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	LoggingProxy.dis\
+	LoggingSupport.dis\
+	PlatformLogger.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/util/logging
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

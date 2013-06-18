@@ -1,0 +1,56 @@
+<../../../../../mkconfig
+
+DIRS=\
+	hw\
+
+TARG=\
+	AAShapePipe.dis\
+	AATextRenderer.dis\
+	AATileGenerator.dis\
+	AlphaColorPipe.dis\
+	AlphaPaintPipe.dis\
+	BufferedBufImgOps.dis\
+	BufferedContext.dis\
+	BufferedMaskBlit.dis\
+	BufferedMaskFill.dis\
+	BufferedOpCodes.dis\
+	BufferedPaints.dis\
+	BufferedRenderPipe.dis\
+	BufferedTextPipe.dis\
+	CompositePipe.dis\
+	DrawImage.dis\
+	DrawImagePipe.dis\
+	GeneralCompositePipe.dis\
+	GlyphListLoopPipe.dis\
+	GlyphListPipe.dis\
+	LCDTextRenderer.dis\
+	LoopBasedPipe.dis\
+	LoopPipe.dis\
+	NullPipe.dis\
+	OutlineTextRenderer.dis\
+	ParallelogramPipe.dis\
+	PixelDrawPipe.dis\
+	PixelFillPipe.dis\
+	PixelToParallelogramConverter.dis\
+	PixelToShapeConverter.dis\
+	Region.dis\
+	RegionClipSpanIterator.dis\
+	RegionIterator.dis\
+	RegionSpanIterator.dis\
+	RenderBuffer.dis\
+	RenderingEngine.dis\
+	RenderQueue.dis\
+	ShapeDrawPipe.dis\
+	ShapeSpanIterator.dis\
+	SolidTextRenderer.dis\
+	SpanClipRenderer.dis\
+	SpanIterator.dis\
+	SpanShapeRenderer.dis\
+	TextPipe.dis\
+	TextRenderer.dis\
+	ValidatePipe.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/java2d/pipe
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

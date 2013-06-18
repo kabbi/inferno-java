@@ -1,0 +1,18 @@
+<../../../../../../mkconfig
+
+TARG=\
+	BaseRow.dis\
+	CachedRowSetReader.dis\
+	CachedRowSetWriter.dis\
+	InsertRow.dis\
+	Row.dis\
+	SyncResolverImpl.dis\
+	WebRowSetXmlReader.dis\
+	WebRowSetXmlWriter.dis\
+	XmlErrorHandler.dis\
+	XmlReaderContentHandler.dis\
+	XmlResolver.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/rowset/internal
+
+<$ROOT/mkfiles/mkjava

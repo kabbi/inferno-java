@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	SnmpMsgTranslator.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp/mpm
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,33 @@
+<../../../../../mkconfig
+
+TARG=\
+	AuthFilter.dis\
+	ChunkedInputStream.dis\
+	ChunkedOutputStream.dis\
+	Code.dis\
+	ContextList.dis\
+	DefaultHttpServerProvider.dis\
+	Event.dis\
+	ExchangeImpl.dis\
+	FixedLengthInputStream.dis\
+	FixedLengthOutputStream.dis\
+	HttpConnection.dis\
+	HttpContextImpl.dis\
+	HttpError.dis\
+	HttpExchangeImpl.dis\
+	HttpServerImpl.dis\
+	HttpsExchangeImpl.dis\
+	HttpsServerImpl.dis\
+	LeftOverInputStream.dis\
+	Request.dis\
+	ServerConfig.dis\
+	ServerImpl.dis\
+	SSLStreams.dis\
+	StreamClosedException.dis\
+	TimeSource.dis\
+	UndefLengthOutputStream.dis\
+	UnmodifiableHeaders.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/httpserver
+
+<$ROOT/mkfiles/mkjava

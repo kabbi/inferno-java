@@ -1,0 +1,32 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AclEntry.dis\
+	AclEntryFlag.dis\
+	AclEntryPermission.dis\
+	AclEntryType.dis\
+	AclFileAttributeView.dis\
+	AttributeView.dis\
+	BasicFileAttributes.dis\
+	BasicFileAttributeView.dis\
+	DosFileAttributes.dis\
+	DosFileAttributeView.dis\
+	FileAttribute.dis\
+	FileAttributeView.dis\
+	FileOwnerAttributeView.dis\
+	FileStoreAttributeView.dis\
+	FileTime.dis\
+	GroupPrincipal.dis\
+	package-info.dis\
+	PosixFileAttributes.dis\
+	PosixFileAttributeView.dis\
+	PosixFilePermission.dis\
+	PosixFilePermissions.dis\
+	UserDefinedFileAttributeView.dis\
+	UserPrincipal.dis\
+	UserPrincipalLookupService.dis\
+	UserPrincipalNotFoundException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/file/attribute
+
+<$ROOT/mkfiles/mkjava

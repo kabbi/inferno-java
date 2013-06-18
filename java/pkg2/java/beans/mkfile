@@ -1,0 +1,63 @@
+<../../../../mkconfig
+
+TARG=\
+	BeanDescriptor.dis\
+	BeanInfo.dis\
+	Beans.dis\
+	BeansAppletContext.dis\
+	BeansAppletStub.dis\
+	Customizer.dis\
+	EventSetDescriptor.dis\
+	FeatureDescriptor.dis\
+	GenericBeanInfo.dis\
+# for IndexedPropertyDescriptor.dis\
+	ilsoQHwwPML2uGzS7a9sz.dis\
+# for IntrospectionException.dis\
+	kKxvl0RXJ9GHO1gHFFNvw.dis\
+	Introspector.dis\
+	MethodDescriptor.dis\
+# for ObjectInputStreamWithLoader.dis\
+	fOuvWMGaSExrtMuU8Cw+S.dis\
+	ParameterDescriptor.dis\
+	PropertyChangeEvent.dis\
+# for PropertyChangeListener.dis\
+	M7phJvk2kRU7An2nlvP+n.dis\
+	PropertyChangeSupport.dis\
+	PropertyDescriptor.dis\
+	PropertyEditor.dis\
+	PropertyEditorManager.dis\
+	PropertyEditorSupport.dis\
+	PropertyVetoException.dis\
+	SimpleBeanInfo.dis\
+# for VetoableChangeListener.dis\
+	QD20WmJQo8+7yc9BbLrqW.dis\
+	VetoableChangeSupport.dis\
+	Visibility.dis\
+
+DISBIN=$ROOT/java/dis/java/java/beans
+
+<$ROOT/mkfiles/mkjava
+
+BeansAppletContext.dis:	Beans.class
+	j2d BeansAppletContext.class
+
+BeansAppletStub.dis:	Beans.class
+	j2d BeansAppletStub.class
+
+fOuvWMGaSExrtMuU8Cw+S.dis:	Beans.class
+	j2d ObjectInputStreamWithLoader.class
+
+ilsoQHwwPML2uGzS7a9sz.dis:	IndexedPropertyDescriptor.class
+	j2d $prereq
+
+kKxvl0RXJ9GHO1gHFFNvw.dis:	IntrospectionException.class
+	j2d $prereq
+
+GenericBeanInfo.dis:	Introspector.class
+	j2d GenericBeanInfo.class
+
+M7phJvk2kRU7An2nlvP+n.dis:	PropertyChangeListener.class
+	j2d $prereq
+
+QD20WmJQo8+7yc9BbLrqW.dis:	VetoableChangeListener.class
+	j2d $prereq

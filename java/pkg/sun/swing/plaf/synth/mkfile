@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	DefaultSynthStyle.dis\
+	Paint9Painter.dis\
+	StyleAssociation.dis\
+	SynthFileChooserUI.dis\
+	SynthFileChooserUIImpl.dis\
+	SynthIcon.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing/plaf/synth
+
+<$ROOT/mkfiles/mkjava

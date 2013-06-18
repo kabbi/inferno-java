@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	FileImageInputStreamSpi.dis\
+	FileImageOutputStreamSpi.dis\
+	InputStreamImageInputStreamSpi.dis\
+	OutputStreamImageOutputStreamSpi.dis\
+	RAFImageInputStreamSpi.dis\
+	RAFImageOutputStreamSpi.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/spi
+
+<$ROOT/mkfiles/mkjava

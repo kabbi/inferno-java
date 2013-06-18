@@ -1,0 +1,34 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AccessWatchpointSpec.dis\
+	AmbiguousMethodException.dis\
+	BreakpointSpec.dis\
+	Commands.dis\
+	Env.dis\
+	EventHandler.dis\
+	EventNotifier.dis\
+	EventRequestSpec.dis\
+	EventRequestSpecList.dis\
+	ExceptionSpec.dis\
+	LineNotFoundException.dis\
+	MalformedMemberNameException.dis\
+	MessageOutput.dis\
+	ModificationWatchpointSpec.dis\
+	PatternReferenceTypeSpec.dis\
+	ReferenceTypeSpec.dis\
+	SourceMapper.dis\
+	ThreadGroupIterator.dis\
+	ThreadInfo.dis\
+	ThreadIterator.dis\
+	TTY.dis\
+	TTYResources.dis\
+	TTYResources_ja.dis\
+	TTYResources_zh_CN.dis\
+	VMConnection.dis\
+	VMNotConnectedException.dis\
+	WatchpointSpec.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/example/debug/tty
+
+<$ROOT/mkfiles/mkjava

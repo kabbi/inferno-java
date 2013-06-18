@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	DefaultTableCellHeaderRenderer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing/table
+
+<$ROOT/mkfiles/mkjava

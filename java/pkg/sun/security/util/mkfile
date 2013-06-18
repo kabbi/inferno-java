@@ -1,0 +1,55 @@
+<../../../../../mkconfig
+
+TARG=\
+	AuthResources.dis\
+	AuthResources_de.dis\
+	AuthResources_es.dis\
+	AuthResources_fr.dis\
+	AuthResources_it.dis\
+	AuthResources_ja.dis\
+	AuthResources_ko.dis\
+	AuthResources_pt_BR.dis\
+	AuthResources_sv.dis\
+	AuthResources_zh_CN.dis\
+	AuthResources_zh_TW.dis\
+	BigInt.dis\
+	BitArray.dis\
+	ByteArrayLexOrder.dis\
+	ByteArrayTagOrder.dis\
+	Cache.dis\
+	Debug.dis\
+	DerEncoder.dis\
+	DerIndefLenConverter.dis\
+	DerInputBuffer.dis\
+	DerInputStream.dis\
+	DerOutputStream.dis\
+	DerValue.dis\
+	DisabledAlgorithmConstraints.dis\
+	HostnameChecker.dis\
+	ManifestDigester.dis\
+	ManifestEntryVerifier.dis\
+	ObjectIdentifier.dis\
+	Password.dis\
+	PathList.dis\
+	PendingException.dis\
+	PermissionFactory.dis\
+	PolicyUtil.dis\
+	PropertyExpander.dis\
+	Resources.dis\
+	Resources_de.dis\
+	Resources_es.dis\
+	Resources_fr.dis\
+	Resources_it.dis\
+	Resources_ja.dis\
+	Resources_ko.dis\
+	Resources_pt_BR.dis\
+	Resources_sv.dis\
+	Resources_zh_CN.dis\
+	Resources_zh_TW.dis\
+	ResourcesMgr.dis\
+	SecurityConstants.dis\
+	SignatureFileVerifier.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/util
+
+<$ROOT/mkfiles/mkjava

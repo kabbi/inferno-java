@@ -1,0 +1,6 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	internal\
+
+<$ROOT/mkfiles/mksubdirs

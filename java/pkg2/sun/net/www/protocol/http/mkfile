@@ -1,0 +1,15 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AuthenticationInfo.dis\
+	EmptyInputStream.dis\
+	Handler.dis\
+	HttpAuthenticator.dis\
+	HttpURLConnection.dis\
+
+DISBIN=$ROOT/java/dis/java/sun/net/www/protocol/http
+
+<$ROOT/mkfiles/mkjava
+
+EmptyInputStream.dis:	HttpURLConnection.class
+	j2d EmptyInputStream.class

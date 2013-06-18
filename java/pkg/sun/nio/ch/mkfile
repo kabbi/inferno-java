@@ -1,0 +1,56 @@
+<../../../../../mkconfig
+
+TARG=\
+	AbstractPollArrayWrapper.dis\
+	AbstractPollSelectorImpl.dis\
+	AllocatedNativeObject.dis\
+	AsynchronousChannelGroupImpl.dis\
+	AsynchronousFileChannelImpl.dis\
+	AsynchronousServerSocketChannelImpl.dis\
+	AsynchronousSocketChannelImpl.dis\
+	Cancellable.dis\
+	ChannelInputStream.dis\
+	CompletedFuture.dis\
+	DatagramChannelImpl.dis\
+	DatagramSocketAdaptor.dis\
+	DevPollSelectorProvider.dis\
+	DirectBuffer.dis\
+	ExtendedSocketOption.dis\
+	FileChannelImpl.dis\
+	FileDispatcher.dis\
+	FileLockImpl.dis\
+	FileLockTable.dis\
+	Groupable.dis\
+	Interruptible.dis\
+	Invoker.dis\
+	IOStatus.dis\
+	IOUtil.dis\
+	IOVecWrapper.dis\
+	MembershipKeyImpl.dis\
+	MembershipRegistry.dis\
+	NativeDispatcher.dis\
+	NativeObject.dis\
+	NativeThreadSet.dis\
+	Net.dis\
+	OptionKey.dis\
+	PendingFuture.dis\
+	PollSelectorProvider.dis\
+	Reflect.dis\
+	SctpMessageInfoImpl.dis\
+	SctpStdSocketOption.dis\
+	Secrets.dis\
+	SelChImpl.dis\
+	SelectionKeyImpl.dis\
+	SelectorImpl.dis\
+	SelectorProviderImpl.dis\
+	ServerSocketAdaptor.dis\
+	ServerSocketChannelImpl.dis\
+	SimpleAsynchronousFileChannelImpl.dis\
+	SocketAdaptor.dis\
+	SocketChannelImpl.dis\
+	ThreadPool.dis\
+	Util.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/nio/ch
+
+<$ROOT/mkfiles/mkjava

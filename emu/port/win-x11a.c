@@ -294,7 +294,7 @@ copy32to32(Rectangle r)
 	int dx, width;
 	uchar *p, *ep, *cp;
 	u32int v, w, *dp, *wp, *edp, *lp;
-
+    
 	width = Dx(r);
 	dx = Xsize - width;
 	dp = (u32int*)(gscreendata + (r.min.y * Xsize + r.min.x) * 4);
@@ -313,21 +313,21 @@ copy32to32(Rectangle r)
 }
 
 static void
-copy8to32(Rectangle r)
+copy24to32(Rectangle r)
 {
 	int dx, width;
 	uchar *p, *ep, *lp;
 	u32int *wp;
 
-	width = Dx(r);
-	dx = Xsize - width;
-	p = gscreendata + r.min.y * Xsize + r.min.x;
+	width = Dx(r) * 3;
+	dx = (Xsize - width) * 3;
+	p = gscreendata + (r.min.y * Xsize + r.min.x) * 3;
 	wp = (u32int *)(xscreendata + (r.min.y * Xsize + r.min.x) * 4);
-	ep = gscreendata + r.max.y * Xsize + r.max.x;
+	ep = gscreendata + (r.max.y * Xsize + r.max.x) * 3;
 	while(p < ep) {
 		lp = p + width;
 		while(p < lp) 
-			*wp++ = infernotox11[*p++];
+			*wp++ = infernortox11[p[0]]<<16|infernogtox11[p[1]]<<8|infernobtox11[p[2]]<<0;
 		p += dx;
 		wp += dx;
 	}
@@ -435,6 +435,9 @@ flushmemscreen(Rectangle r)
 	case 32:
 		copy32to32(r);
 		break;
+    case 24:
+        copy32to32(r);
+        break;
 	case 8:
 		switch(xscreendepth){
 		case 24:

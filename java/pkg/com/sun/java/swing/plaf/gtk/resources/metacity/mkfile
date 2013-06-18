@@ -1,0 +1,6 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	SwingFallbackTheme\
+
+<$ROOT/mkfiles/mksubdirs

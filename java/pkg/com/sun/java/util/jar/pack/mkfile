@@ -1,0 +1,34 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AdaptiveCoding.dis\
+	Attribute.dis\
+	BandStructure.dis\
+	ClassReader.dis\
+	ClassWriter.dis\
+	Code.dis\
+	Coding.dis\
+	CodingChooser.dis\
+	CodingMethod.dis\
+	ConstantPool.dis\
+	Constants.dis\
+	Driver.dis\
+	DriverResource.dis\
+	FixedList.dis\
+	Fixups.dis\
+	Histogram.dis\
+	Instruction.dis\
+	NativeUnpack.dis\
+	Package.dis\
+	PackageReader.dis\
+	PackageWriter.dis\
+	PackerImpl.dis\
+	PopulationCoding.dis\
+	PropMap.dis\
+	TLGlobals.dis\
+	UnpackerImpl.dis\
+	Utils.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/util/jar/pack
+
+<$ROOT/mkfiles/mkjava

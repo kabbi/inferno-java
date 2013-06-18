@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	GopherClient.dis\
+	Handler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/gopher
+
+<$ROOT/mkfiles/mkjava
