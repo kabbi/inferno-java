@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	BufferedMonitoredVm.dis\
+	RemoteHost.dis\
+	RemoteVm.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/monitor/remote
+
+<$ROOT/mkfiles/mkjava

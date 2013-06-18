@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+TARG=\
+	DigraphNode.dis\
+	IIORegistry.dis\
+	IIOServiceProvider.dis\
+	ImageInputStreamSpi.dis\
+	ImageOutputStreamSpi.dis\
+	ImageReaderSpi.dis\
+	ImageReaderWriterSpi.dis\
+	ImageTranscoderSpi.dis\
+	ImageWriterSpi.dis\
+	PartiallyOrderedSet.dis\
+	RegisterableService.dis\
+	ServiceRegistry.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio/spi
+
+<$ROOT/mkfiles/mkjava

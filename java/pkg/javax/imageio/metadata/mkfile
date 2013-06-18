@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+DIRS=\
+	doc-files\
+
+TARG=\
+	IIOInvalidTreeException.dis\
+	IIOMetadata.dis\
+	IIOMetadataController.dis\
+	IIOMetadataFormat.dis\
+	IIOMetadataFormatImpl.dis\
+	IIOMetadataNode.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio/metadata
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

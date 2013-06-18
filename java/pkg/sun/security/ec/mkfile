@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	ECDHKeyAgreement.dis\
+	ECDSASignature.dis\
+	ECKeyFactory.dis\
+	ECKeyPairGenerator.dis\
+	ECParameters.dis\
+	ECPrivateKeyImpl.dis\
+	ECPublicKeyImpl.dis\
+	NamedCurve.dis\
+	SunEC.dis\
+	SunECEntries.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/ec
+
+<$ROOT/mkfiles/mkjava

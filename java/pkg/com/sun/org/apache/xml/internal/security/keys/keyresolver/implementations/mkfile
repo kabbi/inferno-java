@@ -1,0 +1,15 @@
+<../../../../../../../../../../../../mkconfig
+
+TARG=\
+	DSAKeyValueResolver.dis\
+	EncryptedKeyResolver.dis\
+	RetrievalMethodResolver.dis\
+	RSAKeyValueResolver.dis\
+	X509CertificateResolver.dis\
+	X509IssuerSerialResolver.dis\
+	X509SKIResolver.dis\
+	X509SubjectNameResolver.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/keyresolver/implementations
+
+<$ROOT/mkfiles/mkjava

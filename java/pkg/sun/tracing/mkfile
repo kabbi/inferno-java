@@ -1,0 +1,17 @@
+<../../../../mkconfig
+
+DIRS=\
+	dtrace\
+
+TARG=\
+	MultiplexProviderFactory.dis\
+	NullProviderFactory.dis\
+	package-info.dis\
+	PrintStreamProviderFactory.dis\
+	ProbeSkeleton.dis\
+	ProviderSkeleton.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tracing
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

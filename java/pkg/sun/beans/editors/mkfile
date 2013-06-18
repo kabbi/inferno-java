@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+TARG=\
+	BooleanEditor.dis\
+	ByteEditor.dis\
+	ColorEditor.dis\
+	DoubleEditor.dis\
+	EnumEditor.dis\
+	FloatEditor.dis\
+	FontEditor.dis\
+	IntegerEditor.dis\
+	LongEditor.dis\
+	NumberEditor.dis\
+	ShortEditor.dis\
+	StringEditor.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/beans/editors
+
+<$ROOT/mkfiles/mkjava

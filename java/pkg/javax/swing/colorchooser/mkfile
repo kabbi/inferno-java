@@ -1,0 +1,24 @@
+<../../../../../mkconfig
+
+TARG=\
+	AbstractColorChooserPanel.dis\
+	CenterLayout.dis\
+	ColorChooserComponentFactory.dis\
+	ColorChooserPanel.dis\
+	ColorModel.dis\
+	ColorModelCMYK.dis\
+	ColorModelHSL.dis\
+	ColorModelHSV.dis\
+	ColorPanel.dis\
+	ColorSelectionModel.dis\
+	DefaultColorSelectionModel.dis\
+	DefaultPreviewPanel.dis\
+	DefaultSwatchChooserPanel.dis\
+	DiagramComponent.dis\
+	SlidingSpinner.dis\
+	SmartGridLayout.dis\
+	ValueFormatter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/colorchooser
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,13 @@
+<../../../../../mkconfig
+
+TARG=\
+	BreakIteratorProvider.dis\
+	CollatorProvider.dis\
+	DateFormatProvider.dis\
+	DateFormatSymbolsProvider.dis\
+	DecimalFormatSymbolsProvider.dis\
+	NumberFormatProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/text/spi
+
+<$ROOT/mkfiles/mkjava

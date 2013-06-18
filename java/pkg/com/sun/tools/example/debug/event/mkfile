@@ -1,0 +1,23 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AbstractEventSet.dis\
+	AccessWatchpointEventSet.dis\
+	ClassPrepareEventSet.dis\
+	ClassUnloadEventSet.dis\
+	ExceptionEventSet.dis\
+	JDIAdapter.dis\
+	JDIListener.dis\
+	LocatableEventSet.dis\
+	LocationTriggerEventSet.dis\
+	ModificationWatchpointEventSet.dis\
+	ThreadDeathEventSet.dis\
+	ThreadStartEventSet.dis\
+	VMDeathEventSet.dis\
+	VMDisconnectEventSet.dis\
+	VMStartEventSet.dis\
+	WatchpointEventSet.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/example/debug/event
+
+<$ROOT/mkfiles/mkjava

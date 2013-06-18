@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AbstractInterruptibleChannel.dis\
+	AbstractSelectableChannel.dis\
+	AbstractSelectionKey.dis\
+	AbstractSelector.dis\
+	AsynchronousChannelProvider.dis\
+	SelectorProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio/channels/spi
+
+<$ROOT/mkfiles/mkjava

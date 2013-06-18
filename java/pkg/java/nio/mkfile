@@ -1,0 +1,18 @@
+<../../../../mkconfig
+
+DIRS=\
+	channels\
+	charset\
+	file\
+
+TARG=\
+	Bits.dis\
+	Buffer.dis\
+	ByteOrder.dis\
+	MappedByteBuffer.dis\
+	StringCharBuffer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/nio
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

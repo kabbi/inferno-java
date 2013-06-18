@@ -1,0 +1,34 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AccessorElementHandler.dis\
+	ArrayElementHandler.dis\
+	BooleanElementHandler.dis\
+	ByteElementHandler.dis\
+	CharElementHandler.dis\
+	ClassElementHandler.dis\
+	DocumentHandler.dis\
+	DoubleElementHandler.dis\
+	ElementHandler.dis\
+	FalseElementHandler.dis\
+	FieldElementHandler.dis\
+	FloatElementHandler.dis\
+	IntElementHandler.dis\
+	JavaElementHandler.dis\
+	LongElementHandler.dis\
+	MethodElementHandler.dis\
+	NewElementHandler.dis\
+	NullElementHandler.dis\
+	ObjectElementHandler.dis\
+	PropertyElementHandler.dis\
+	ShortElementHandler.dis\
+	StringElementHandler.dis\
+	TrueElementHandler.dis\
+	ValueObject.dis\
+	ValueObjectImpl.dis\
+	VarElementHandler.dis\
+	VoidElementHandler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/beans/decoder
+
+<$ROOT/mkfiles/mkjava

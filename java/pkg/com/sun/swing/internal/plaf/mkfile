@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	basic\
+	metal\
+	synth\
+
+<$ROOT/mkfiles/mksubdirs

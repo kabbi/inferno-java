@@ -1,0 +1,14 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	META-INF\
+
+TARG=\
+	LCMS.dis\
+	LCMSImageLayout.dis\
+	LCMSTransform.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/java2d/cmm/lcms
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

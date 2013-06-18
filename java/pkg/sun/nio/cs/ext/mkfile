@@ -1,0 +1,67 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	META-INF\
+
+TARG=\
+	Big5_HKSCS.dis\
+	Big5_HKSCS_2001.dis\
+	Big5_Solaris.dis\
+	DelegatableDecoder.dis\
+	DoubleByte.dis\
+	DoubleByteDecoder.dis\
+	DoubleByteEncoder.dis\
+	EUC_JP.dis\
+	EUC_JP_LINUX.dis\
+	EUC_JP_Open.dis\
+	EUC_TW.dis\
+	ExtendedCharsets.dis\
+	GB18030.dis\
+	HKSCS.dis\
+	IBM33722.dis\
+	IBM834.dis\
+	IBM942C.dis\
+	IBM943C.dis\
+	IBM949C.dis\
+	IBM964.dis\
+	ISCII91.dis\
+	ISO2022.dis\
+	ISO2022_CN.dis\
+	ISO2022_CN_CNS.dis\
+	ISO2022_CN_GB.dis\
+	ISO2022_JP.dis\
+	ISO2022_JP_2.dis\
+	ISO2022_KR.dis\
+	JIS_X_0201.dis\
+	JIS_X_0208.dis\
+	JIS_X_0208_Decoder.dis\
+	JIS_X_0208_Encoder.dis\
+	JIS_X_0208_MS5022X_Decoder.dis\
+	JIS_X_0208_MS5022X_Encoder.dis\
+	JIS_X_0208_MS932_Decoder.dis\
+	JIS_X_0208_MS932_Encoder.dis\
+	JIS_X_0208_Solaris_Decoder.dis\
+	JIS_X_0208_Solaris_Encoder.dis\
+	JIS_X_0212.dis\
+	JIS_X_0212_Decoder.dis\
+	JIS_X_0212_Encoder.dis\
+	JIS_X_0212_MS5022X_Decoder.dis\
+	JIS_X_0212_MS5022X_Encoder.dis\
+	JIS_X_0212_Solaris_Decoder.dis\
+	JIS_X_0212_Solaris_Encoder.dis\
+	JISAutoDetect.dis\
+	MS50220.dis\
+	MS50221.dis\
+	MS932_0213.dis\
+	MS950_HKSCS.dis\
+	MS950_HKSCS_XP.dis\
+	MSISO2022JP.dis\
+	PCK.dis\
+	SimpleEUCEncoder.dis\
+	SJIS.dis\
+	SJIS_0213.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/nio/cs/ext
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

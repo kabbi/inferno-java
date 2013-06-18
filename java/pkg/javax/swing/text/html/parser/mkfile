@@ -1,0 +1,20 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AttributeList.dis\
+	ContentModel.dis\
+	ContentModelState.dis\
+	DocumentParser.dis\
+	DTD.dis\
+	DTDConstants.dis\
+	Element.dis\
+	Entity.dis\
+	Parser.dis\
+	ParserDelegator.dis\
+	ResourceLoader.dis\
+	TagElement.dis\
+	TagStack.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/text/html/parser
+
+<$ROOT/mkfiles/mkjava

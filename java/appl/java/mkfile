@@ -1,0 +1,45 @@
+<../../../mkconfig
+
+TARG=\
+	cast.dis\
+	low.dis\
+	jni.dis\
+	classloader.dis\
+	javaassist.dis\
+	javatrace.dis\
+	javanative.dis\
+	jvm.dis\
+	jinfo.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java
+
+<$ROOT/mkfiles/mkdis
+
+LIMBOFLAGS=-I$MODDIR\
+	-I$ROOT/java/module\
+
+%.dis:	sign.sh
+
+%.dis:	%.base
+	chmod +x sign.sh
+	sh sign.sh ${stem}proto $stem
+
+classloader.dis:	classloader.b
+	limbo -z $LIMBOFLAGS -gw classloader.b
+
+clean-std:V:
+	rm -f *.dis *.sbl *.s sign.sed

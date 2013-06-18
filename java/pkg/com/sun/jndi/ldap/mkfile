@@ -1,0 +1,58 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	ext\
+	pool\
+	sasl\
+
+TARG=\
+	BasicControl.dis\
+	Ber.dis\
+	BerDecoder.dis\
+	BerEncoder.dis\
+	BindingWithControls.dis\
+	ClientId.dis\
+	Connection.dis\
+	DefaultResponseControlFactory.dis\
+	DigestClientId.dis\
+	EntryChangeResponseControl.dis\
+	EventQueue.dis\
+	EventSupport.dis\
+	Filter.dis\
+	LdapAttribute.dis\
+	LdapBindingEnumeration.dis\
+	LdapClient.dis\
+	LdapClientFactory.dis\
+	LdapCtx.dis\
+	LdapCtxFactory.dis\
+	LdapEntry.dis\
+	LdapName.dis\
+	LdapNameParser.dis\
+	LdapNamingEnumeration.dis\
+	LdapPoolManager.dis\
+	LdapReferralContext.dis\
+	LdapReferralException.dis\
+	LdapRequest.dis\
+	LdapResult.dis\
+	LdapSchemaCtx.dis\
+	LdapSchemaParser.dis\
+	LdapSearchEnumeration.dis\
+	LdapURL.dis\
+	ManageReferralControl.dis\
+	NameClassPairWithControls.dis\
+	NamingEventNotifier.dis\
+	NotifierArgs.dis\
+	Obj.dis\
+	PersistentSearchControl.dis\
+	ReferralEnumeration.dis\
+	SearchResultWithControls.dis\
+	ServiceLocator.dis\
+	SimpleClientId.dis\
+	UnsolicitedResponseImpl.dis\
+	VersionHelper.dis\
+	VersionHelper12.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/ldap
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

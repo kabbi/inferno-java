@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	MsgNative2ascii.dis\
+	MsgNative2ascii_ja.dis\
+	MsgNative2ascii_zh_CN.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/native2ascii/resources
+
+<$ROOT/mkfiles/mkjava

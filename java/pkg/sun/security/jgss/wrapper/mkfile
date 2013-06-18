@@ -1,0 +1,14 @@
+<../../../../../../mkconfig
+
+TARG=\
+	GSSCredElement.dis\
+	GSSLibStub.dis\
+	GSSNameElement.dis\
+	Krb5Util.dis\
+	NativeGSSContext.dis\
+	NativeGSSFactory.dis\
+	SunNativeProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/jgss/wrapper
+
+<$ROOT/mkfiles/mkjava

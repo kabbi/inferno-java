@@ -1,0 +1,16 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ConnectionDesc.dis\
+	Connections.dis\
+	ConnectionsRef.dis\
+	ConnectionsWeakRef.dis\
+	Pool.dis\
+	PoolCallback.dis\
+	PoolCleaner.dis\
+	PooledConnection.dis\
+	PooledConnectionFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/ldap/pool
+
+<$ROOT/mkfiles/mkjava

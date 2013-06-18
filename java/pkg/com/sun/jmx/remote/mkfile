@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	internal\
+	protocol\
+	security\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

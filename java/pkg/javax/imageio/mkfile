@@ -1,0 +1,26 @@
+<../../../../mkconfig
+
+DIRS=\
+	event\
+	metadata\
+	plugins\
+	spi\
+	stream\
+
+TARG=\
+	IIOException.dis\
+	IIOImage.dis\
+	IIOParam.dis\
+	IIOParamController.dis\
+	ImageIO.dis\
+	ImageReader.dis\
+	ImageReadParam.dis\
+	ImageTranscoder.dis\
+	ImageTypeSpecifier.dis\
+	ImageWriteParam.dis\
+	ImageWriter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

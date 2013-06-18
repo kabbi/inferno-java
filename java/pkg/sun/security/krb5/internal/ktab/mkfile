@@ -1,0 +1,12 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	KeyTab.dis\
+	KeyTabConstants.dis\
+	KeyTabEntry.dis\
+	KeyTabInputStream.dis\
+	KeyTabOutputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal/ktab
+
+<$ROOT/mkfiles/mkjava

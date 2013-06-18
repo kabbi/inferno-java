@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AbstractScope.dis\
+	ClassScope.dis\
+	ConstructorScope.dis\
+	DummyScope.dis\
+	MethodScope.dis\
+	Scope.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/scope
+
+<$ROOT/mkfiles/mkjava

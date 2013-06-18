@@ -1,0 +1,22 @@
+<../../../../../mkconfig
+
+TARG=\
+	DESedeKeySpec.dis\
+	DESKeySpec.dis\
+	DHGenParameterSpec.dis\
+	DHParameterSpec.dis\
+	DHPrivateKeySpec.dis\
+	DHPublicKeySpec.dis\
+	GCMParameterSpec.dis\
+	IvParameterSpec.dis\
+	OAEPParameterSpec.dis\
+	PBEKeySpec.dis\
+	PBEParameterSpec.dis\
+	PSource.dis\
+	RC2ParameterSpec.dis\
+	RC5ParameterSpec.dis\
+	SecretKeySpec.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/crypto/spec
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,16 @@
+<../../../../mkconfig
+
+TARG=\
+	REException.dis\
+	Ref.dis\
+	Regexp.dis\
+	RegexpNode.dis\
+	RegexpPool.dis\
+	RegexpTarget.dis\
+
+DISBIN=$ROOT/java/dis/java/sun/misc
+
+<$ROOT/mkfiles/mkjava
+
+RegexpNode.dis:	RegexpPool.class
+	j2d RegexpNode.class

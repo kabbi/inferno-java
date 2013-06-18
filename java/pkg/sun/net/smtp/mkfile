@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	SmtpClient.dis\
+	SmtpProtocolException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/smtp
+
+<$ROOT/mkfiles/mkjava

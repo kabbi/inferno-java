@@ -1,0 +1,20 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ByteArrayCounterSnapshot.dis\
+	InstrumentationException.dis\
+	LongArrayCounterSnapshot.dis\
+	LongCounterSnapshot.dis\
+	PerfByteArrayCounter.dis\
+	PerfDataEntry.dis\
+	PerfDataType.dis\
+	PerfInstrumentation.dis\
+	PerfLongArrayCounter.dis\
+	PerfLongCounter.dis\
+	PerfStringCounter.dis\
+	Prologue.dis\
+	StringCounterSnapshot.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/counter/perf
+
+<$ROOT/mkfiles/mkjava

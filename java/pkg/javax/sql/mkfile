@@ -1,0 +1,28 @@
+<../../../../mkconfig
+
+DIRS=\
+	rowset\
+
+TARG=\
+	CommonDataSource.dis\
+	ConnectionEvent.dis\
+	ConnectionEventListener.dis\
+	ConnectionPoolDataSource.dis\
+	DataSource.dis\
+	PooledConnection.dis\
+	RowSet.dis\
+	RowSetEvent.dis\
+	RowSetInternal.dis\
+	RowSetListener.dis\
+	RowSetMetaData.dis\
+	RowSetReader.dis\
+	RowSetWriter.dis\
+	StatementEvent.dis\
+	StatementEventListener.dis\
+	XAConnection.dis\
+	XADataSource.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sql
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,21 @@
+<../../../../../mkconfig
+
+TARG=\
+	Clipboard.dis\
+	ClipboardOwner.dis\
+	DataFlavor.dis\
+	FlavorEvent.dis\
+	FlavorListener.dis\
+	FlavorMap.dis\
+	FlavorTable.dis\
+	MimeType.dis\
+	MimeTypeParameterList.dis\
+	MimeTypeParseException.dis\
+	StringSelection.dis\
+	SystemFlavorMap.dis\
+	Transferable.dis\
+	UnsupportedFlavorException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/datatransfer
+
+<$ROOT/mkfiles/mkjava

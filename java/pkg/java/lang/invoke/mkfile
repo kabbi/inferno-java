@@ -1,0 +1,34 @@
+<../../../../../mkconfig
+
+TARG=\
+	AdapterMethodHandle.dis\
+	BoundMethodHandle.dis\
+	CallSite.dis\
+	ConstantCallSite.dis\
+	DirectMethodHandle.dis\
+	FilterGeneric.dis\
+	FilterOneArgument.dis\
+	FromGeneric.dis\
+	InvokeDynamic.dis\
+	InvokeGeneric.dis\
+	Invokers.dis\
+	MemberName.dis\
+	MethodHandle.dis\
+	MethodHandleImpl.dis\
+	MethodHandleNatives.dis\
+	MethodHandleProxies.dis\
+	MethodHandles.dis\
+	MethodHandleStatics.dis\
+	MethodType.dis\
+	MethodTypeForm.dis\
+	MutableCallSite.dis\
+	package-info.dis\
+	SpreadGeneric.dis\
+	SwitchPoint.dis\
+	ToGeneric.dis\
+	VolatileCallSite.dis\
+	WrongMethodTypeException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/lang/invoke
+
+<$ROOT/mkfiles/mkjava

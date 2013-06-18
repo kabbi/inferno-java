@@ -40,6 +40,7 @@ KERNEL_DIRS=\
 DIRS=\
 	$EMUDIRS\
 	appl\
+	java\
 
 foo:QV:
 	echo mk all, clean, install, installall or nuke

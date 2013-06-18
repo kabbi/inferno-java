@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	SdpSupport.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/sdp
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,12 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	gif.dis\
+	jpeg.dis\
+	png.dis\
+	x_xbitmap.dis\
+	x_xpixmap.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/content/image
+
+<$ROOT/mkfiles/mkjava

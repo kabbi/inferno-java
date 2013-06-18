@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+DIRS=\
+	lcms\
+
+TARG=\
+	CMSManager.dis\
+	ColorTransform.dis\
+	PCMM.dis\
+	ProfileActivator.dis\
+	ProfileDeferralInfo.dis\
+	ProfileDeferralMgr.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/java2d/cmm
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,73 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	doc-files\
+
+TARG=\
+	ColorType.dis\
+	DefaultSynthStyleFactory.dis\
+	ImagePainter.dis\
+	ParsedSynthStyle.dis\
+	Region.dis\
+	SynthArrowButton.dis\
+	SynthBorder.dis\
+	SynthButtonUI.dis\
+	SynthCheckBoxMenuItemUI.dis\
+	SynthCheckBoxUI.dis\
+	SynthColorChooserUI.dis\
+	SynthComboBoxUI.dis\
+	SynthComboPopup.dis\
+	SynthConstants.dis\
+	SynthContext.dis\
+	SynthDefaultLookup.dis\
+	SynthDesktopIconUI.dis\
+	SynthDesktopPaneUI.dis\
+	SynthEditorPaneUI.dis\
+	SynthFormattedTextFieldUI.dis\
+	SynthGraphicsUtils.dis\
+	SynthInternalFrameTitlePane.dis\
+	SynthInternalFrameUI.dis\
+	SynthLabelUI.dis\
+	SynthListUI.dis\
+	SynthLookAndFeel.dis\
+	SynthMenuBarUI.dis\
+	SynthMenuItemLayoutHelper.dis\
+	SynthMenuItemUI.dis\
+	SynthMenuLayout.dis\
+	SynthMenuUI.dis\
+	SynthOptionPaneUI.dis\
+	SynthPainter.dis\
+	SynthPanelUI.dis\
+	SynthParser.dis\
+	SynthPasswordFieldUI.dis\
+	SynthPopupMenuUI.dis\
+	SynthProgressBarUI.dis\
+	SynthRadioButtonMenuItemUI.dis\
+	SynthRadioButtonUI.dis\
+	SynthRootPaneUI.dis\
+	SynthScrollBarUI.dis\
+	SynthScrollPaneUI.dis\
+	SynthSeparatorUI.dis\
+	SynthSliderUI.dis\
+	SynthSpinnerUI.dis\
+	SynthSplitPaneDivider.dis\
+	SynthSplitPaneUI.dis\
+	SynthStyle.dis\
+	SynthStyleFactory.dis\
+	SynthTabbedPaneUI.dis\
+	SynthTableHeaderUI.dis\
+	SynthTableUI.dis\
+	SynthTextAreaUI.dis\
+	SynthTextFieldUI.dis\
+	SynthTextPaneUI.dis\
+	SynthToggleButtonUI.dis\
+	SynthToolBarUI.dis\
+	SynthToolTipUI.dis\
+	SynthTreeUI.dis\
+	SynthUI.dis\
+	SynthViewportUI.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/plaf/synth
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,64 @@
+<../../../../../../../../mkconfig
+
+DIRS=\
+	icons\
+	resources\
+
+TARG=\
+	AnimationController.dis\
+	DesktopProperty.dis\
+	TMSchema.dis\
+	WindowsBorders.dis\
+	WindowsButtonListener.dis\
+	WindowsButtonUI.dis\
+	WindowsCheckBoxMenuItemUI.dis\
+	WindowsCheckBoxUI.dis\
+	WindowsClassicLookAndFeel.dis\
+	WindowsComboBoxUI.dis\
+	WindowsDesktopIconUI.dis\
+	WindowsDesktopManager.dis\
+	WindowsDesktopPaneUI.dis\
+	WindowsEditorPaneUI.dis\
+	WindowsFileChooserUI.dis\
+	WindowsGraphicsUtils.dis\
+	WindowsIconFactory.dis\
+	WindowsInternalFrameTitlePane.dis\
+	WindowsInternalFrameUI.dis\
+	WindowsLabelUI.dis\
+	WindowsLookAndFeel.dis\
+	WindowsMenuBarUI.dis\
+	WindowsMenuItemUI.dis\
+	WindowsMenuItemUIAccessor.dis\
+	WindowsMenuUI.dis\
+	WindowsOptionPaneUI.dis\
+	WindowsPasswordFieldUI.dis\
+	WindowsPopupMenuSeparatorUI.dis\
+	WindowsPopupMenuUI.dis\
+	WindowsPopupWindow.dis\
+	WindowsProgressBarUI.dis\
+	WindowsRadioButtonMenuItemUI.dis\
+	WindowsRadioButtonUI.dis\
+	WindowsRootPaneUI.dis\
+	WindowsScrollBarUI.dis\
+	WindowsScrollPaneUI.dis\
+	WindowsSeparatorUI.dis\
+	WindowsSliderUI.dis\
+	WindowsSpinnerUI.dis\
+	WindowsSplitPaneDivider.dis\
+	WindowsSplitPaneUI.dis\
+	WindowsTabbedPaneUI.dis\
+	WindowsTableHeaderUI.dis\
+	WindowsTextAreaUI.dis\
+	WindowsTextFieldUI.dis\
+	WindowsTextPaneUI.dis\
+	WindowsTextUI.dis\
+	WindowsToggleButtonUI.dis\
+	WindowsToolBarSeparatorUI.dis\
+	WindowsToolBarUI.dis\
+	WindowsTreeUI.dis\
+	XPStyle.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/swing/plaf/windows
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

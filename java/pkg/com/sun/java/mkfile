@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+DIRS=\
+	browser\
+	swing\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

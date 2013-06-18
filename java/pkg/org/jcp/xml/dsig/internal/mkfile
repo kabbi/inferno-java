@@ -1,0 +1,14 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	dom\
+
+TARG=\
+	DigesterOutputStream.dis\
+	MacOutputStream.dis\
+	SignerOutputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/org/jcp/xml/dsig/internal
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

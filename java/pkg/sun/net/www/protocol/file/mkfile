@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	FileURLConnection.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/file
+
+<$ROOT/mkfiles/mkjava

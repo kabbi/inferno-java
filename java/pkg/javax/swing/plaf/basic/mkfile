@@ -1,0 +1,74 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	icons\
+
+TARG=\
+	BasicArrowButton.dis\
+	BasicBorders.dis\
+	BasicButtonListener.dis\
+	BasicButtonUI.dis\
+	BasicCheckBoxMenuItemUI.dis\
+	BasicCheckBoxUI.dis\
+	BasicColorChooserUI.dis\
+	BasicComboBoxEditor.dis\
+	BasicComboBoxRenderer.dis\
+	BasicComboBoxUI.dis\
+	BasicComboPopup.dis\
+	BasicDesktopIconUI.dis\
+	BasicDesktopPaneUI.dis\
+	BasicDirectoryModel.dis\
+	BasicEditorPaneUI.dis\
+	BasicFileChooserUI.dis\
+	BasicFormattedTextFieldUI.dis\
+	BasicGraphicsUtils.dis\
+	BasicHTML.dis\
+	BasicIconFactory.dis\
+	BasicInternalFrameTitlePane.dis\
+	BasicInternalFrameUI.dis\
+	BasicLabelUI.dis\
+	BasicListUI.dis\
+	BasicLookAndFeel.dis\
+	BasicMenuBarUI.dis\
+	BasicMenuItemUI.dis\
+	BasicMenuUI.dis\
+	BasicOptionPaneUI.dis\
+	BasicPanelUI.dis\
+	BasicPasswordFieldUI.dis\
+	BasicPopupMenuSeparatorUI.dis\
+	BasicPopupMenuUI.dis\
+	BasicProgressBarUI.dis\
+	BasicRadioButtonMenuItemUI.dis\
+	BasicRadioButtonUI.dis\
+	BasicRootPaneUI.dis\
+	BasicScrollBarUI.dis\
+	BasicScrollPaneUI.dis\
+	BasicSeparatorUI.dis\
+	BasicSliderUI.dis\
+	BasicSpinnerUI.dis\
+	BasicSplitPaneDivider.dis\
+	BasicSplitPaneUI.dis\
+	BasicTabbedPaneUI.dis\
+	BasicTableHeaderUI.dis\
+	BasicTableUI.dis\
+	BasicTextAreaUI.dis\
+	BasicTextFieldUI.dis\
+	BasicTextPaneUI.dis\
+	BasicTextUI.dis\
+	BasicToggleButtonUI.dis\
+	BasicToolBarSeparatorUI.dis\
+	BasicToolBarUI.dis\
+	BasicToolTipUI.dis\
+	BasicTransferable.dis\
+	BasicTreeUI.dis\
+	BasicViewportUI.dis\
+	CenterLayout.dis\
+	ComboPopup.dis\
+	DefaultMenuLayout.dis\
+	DragRecognitionSupport.dis\
+	LazyActionMap.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/plaf/basic
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

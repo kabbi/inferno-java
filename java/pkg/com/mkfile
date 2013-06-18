@@ -1,0 +1,7 @@
+<../../../mkconfig
+
+DIRS=\
+	oracle\
+	sun\
+
+<$ROOT/mkfiles/mksubdirs

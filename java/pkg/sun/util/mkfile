@@ -1,0 +1,20 @@
+<../../../../mkconfig
+
+DIRS=\
+	calendar\
+	locale\
+	logging\
+	resources\
+
+TARG=\
+	BuddhistCalendar.dis\
+	EmptyListResourceBundle.dis\
+	LocaleServiceProviderPool.dis\
+	PreHashedMap.dis\
+	ResourceBundleEnumeration.dis\
+	TimeZoneNameUtility.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/util
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

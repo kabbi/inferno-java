@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AuthTime.dis\
+	CacheTable.dis\
+	ReplayCache.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal/rcache
+
+<$ROOT/mkfiles/mkjava

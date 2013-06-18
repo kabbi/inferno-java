@@ -1,0 +1,8 @@
+<../../../../mkconfig
+
+TARG=\
+	Serializable.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sunw/io
+
+<$ROOT/mkfiles/mkjava

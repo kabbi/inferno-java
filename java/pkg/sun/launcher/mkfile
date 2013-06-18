@@ -1,0 +1,12 @@
+<../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	LauncherHelper.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/launcher
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

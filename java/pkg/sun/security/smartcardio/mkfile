@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	CardImpl.dis\
+	ChannelImpl.dis\
+	PCSC.dis\
+	PCSCException.dis\
+	PCSCTerminals.dis\
+	SunPCSC.dis\
+	TerminalImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/smartcardio
+
+<$ROOT/mkfiles/mkjava

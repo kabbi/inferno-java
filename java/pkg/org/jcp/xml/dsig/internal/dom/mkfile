@@ -1,0 +1,48 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	ApacheCanonicalizer.dis\
+	ApacheData.dis\
+	ApacheNodeSetData.dis\
+	ApacheOctetStreamData.dis\
+	ApacheTransform.dis\
+	DOMBase64Transform.dis\
+	DOMCanonicalizationMethod.dis\
+	DOMCanonicalXMLC14N11Method.dis\
+	DOMCanonicalXMLC14NMethod.dis\
+	DOMCryptoBinary.dis\
+	DOMDigestMethod.dis\
+	DOMEnvelopedTransform.dis\
+	DOMExcC14NMethod.dis\
+	DOMHMACSignatureMethod.dis\
+	DOMKeyInfo.dis\
+	DOMKeyInfoFactory.dis\
+	DOMKeyName.dis\
+	DOMKeyValue.dis\
+	DOMManifest.dis\
+	DOMPGPData.dis\
+	DOMReference.dis\
+	DOMRetrievalMethod.dis\
+	DOMSignatureMethod.dis\
+	DOMSignatureProperties.dis\
+	DOMSignatureProperty.dis\
+	DOMSignedInfo.dis\
+	DOMStructure.dis\
+	DOMSubTreeData.dis\
+	DOMTransform.dis\
+	DOMURIDereferencer.dis\
+	DOMUtils.dis\
+	DOMX509Data.dis\
+	DOMX509IssuerSerial.dis\
+	DOMXMLObject.dis\
+	DOMXMLSignature.dis\
+	DOMXMLSignatureFactory.dis\
+	DOMXPathFilter2Transform.dis\
+	DOMXPathTransform.dis\
+	DOMXSLTTransform.dis\
+	Utils.dis\
+	XMLDSigRI.dis\
+
+DISBIN=$ROOT/java/dis/java/java/org/jcp/xml/dsig/internal/dom
+
+<$ROOT/mkfiles/mkjava

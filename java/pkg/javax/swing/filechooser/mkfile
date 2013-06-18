@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+TARG=\
+	FileFilter.dis\
+	FileNameExtensionFilter.dis\
+	FileSystemView.dis\
+	FileView.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/filechooser
+
+<$ROOT/mkfiles/mkjava

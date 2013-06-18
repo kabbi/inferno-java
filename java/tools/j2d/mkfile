@@ -1,0 +1,45 @@
+<../../../mkconfig
+
+LIBS=\
+	bio\
+	crypt\
+	math\
+	9
+
+TARG=j2d
+
+OFILES=\
+	asm.$O\
+	bb.$O\
+	datarloc.$O\
+	desc.$O\
+	dis.$O\
+	entry.$O\
+	finally.$O\
+	frame.$O\
+	javadas.$O\
+	javatbl.$O\
+	links.$O\
+	loader.$O\
+	ltreloc.$O\
+	main.$O\
+	mdata.$O\
+	module.$O\
+	patch.$O\
+	rtreloc.$O\
+	sbl.$O\
+	simjvm.$O\
+	unify.$O\
+	util.$O\
+	xlate.$O
+
+HFILES=\
+	java.h\
+	$ROOT/include/bio.h\
+	$ROOT/include/isa.h\
+#	$ROOT/include/libcrypt.h\
+	$ROOT/$OBJDIR/include/lib9.h
+
+BIN=$ROOT/$OBJDIR/bin
+
+<$ROOT/mkfiles/mkone-$SHELLTYPE

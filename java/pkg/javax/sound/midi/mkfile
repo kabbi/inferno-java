@@ -1,0 +1,37 @@
+<../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	ControllerEventListener.dis\
+	Instrument.dis\
+	InvalidMidiDataException.dis\
+	MetaEventListener.dis\
+	MetaMessage.dis\
+	MidiChannel.dis\
+	MidiDevice.dis\
+	MidiDeviceReceiver.dis\
+	MidiDeviceTransmitter.dis\
+	MidiEvent.dis\
+	MidiFileFormat.dis\
+	MidiMessage.dis\
+	MidiSystem.dis\
+	MidiUnavailableException.dis\
+	Patch.dis\
+	Receiver.dis\
+	Sequence.dis\
+	Sequencer.dis\
+	ShortMessage.dis\
+	Soundbank.dis\
+	SoundbankResource.dis\
+	Synthesizer.dis\
+	SysexMessage.dis\
+	Track.dis\
+	Transmitter.dis\
+	VoiceStatus.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sound/midi
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

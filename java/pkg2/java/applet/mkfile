@@ -1,0 +1,11 @@
+<../../../../mkconfig
+
+TARG=\
+	Applet.dis\
+	AppletContext.dis\
+	AppletStub.dis\
+	AudioClip.dis\
+
+DISBIN=$ROOT/java/dis/java/java/applet
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,21 @@
+<../../../../../mkconfig
+
+TARG=\
+	Activatable.dis\
+	ActivateFailedException.dis\
+	ActivationDesc.dis\
+	ActivationException.dis\
+	ActivationGroup.dis\
+	ActivationGroupDesc.dis\
+	ActivationGroupID.dis\
+	ActivationID.dis\
+	ActivationInstantiator.dis\
+	ActivationMonitor.dis\
+	ActivationSystem.dis\
+	Activator.dis\
+	UnknownGroupException.dis\
+	UnknownObjectException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/rmi/activation
+
+<$ROOT/mkfiles/mkjava

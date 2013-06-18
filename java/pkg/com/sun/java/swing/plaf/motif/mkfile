@@ -1,0 +1,55 @@
+<../../../../../../../../mkconfig
+
+DIRS=\
+	icons\
+	resources\
+
+TARG=\
+	MotifBorders.dis\
+	MotifButtonListener.dis\
+	MotifButtonUI.dis\
+	MotifCheckBoxMenuItemUI.dis\
+	MotifCheckBoxUI.dis\
+	MotifComboBoxUI.dis\
+	MotifDesktopIconUI.dis\
+	MotifDesktopPaneUI.dis\
+	MotifEditorPaneUI.dis\
+	MotifFileChooserUI.dis\
+	MotifGraphicsUtils.dis\
+	MotifIconFactory.dis\
+	MotifInternalFrameTitlePane.dis\
+	MotifInternalFrameUI.dis\
+	MotifLabelUI.dis\
+	MotifLookAndFeel.dis\
+	MotifMenuBarUI.dis\
+	MotifMenuItemUI.dis\
+	MotifMenuMouseListener.dis\
+	MotifMenuMouseMotionListener.dis\
+	MotifMenuUI.dis\
+	MotifOptionPaneUI.dis\
+	MotifPasswordFieldUI.dis\
+	MotifPopupMenuSeparatorUI.dis\
+	MotifPopupMenuUI.dis\
+	MotifProgressBarUI.dis\
+	MotifRadioButtonMenuItemUI.dis\
+	MotifRadioButtonUI.dis\
+	MotifScrollBarButton.dis\
+	MotifScrollBarUI.dis\
+	MotifScrollPaneUI.dis\
+	MotifSeparatorUI.dis\
+	MotifSliderUI.dis\
+	MotifSplitPaneDivider.dis\
+	MotifSplitPaneUI.dis\
+	MotifTabbedPaneUI.dis\
+	MotifTextAreaUI.dis\
+	MotifTextFieldUI.dis\
+	MotifTextPaneUI.dis\
+	MotifTextUI.dis\
+	MotifToggleButtonUI.dis\
+	MotifTreeCellRenderer.dis\
+	MotifTreeUI.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/java/swing/plaf/motif
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

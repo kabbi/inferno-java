@@ -1,0 +1,102 @@
+<../../../../mkconfig
+
+DIRS=\
+	loading\
+	modelmbean\
+	monitor\
+	openmbean\
+	relation\
+	remote\
+	timer\
+
+TARG=\
+	AndQueryExp.dis\
+	Attribute.dis\
+	AttributeChangeNotification.dis\
+	AttributeChangeNotificationFilter.dis\
+	AttributeList.dis\
+	AttributeNotFoundException.dis\
+	AttributeValueExp.dis\
+	BadAttributeValueExpException.dis\
+	BadBinaryOpValueExpException.dis\
+	BadStringOperationException.dis\
+	BetweenQueryExp.dis\
+	BinaryOpValueExp.dis\
+	BinaryRelQueryExp.dis\
+	BooleanValueExp.dis\
+	ClassAttributeValueExp.dis\
+	DefaultLoaderRepository.dis\
+	Descriptor.dis\
+	DescriptorAccess.dis\
+	DescriptorKey.dis\
+	DescriptorRead.dis\
+	DynamicMBean.dis\
+	ImmutableDescriptor.dis\
+	InQueryExp.dis\
+	InstanceAlreadyExistsException.dis\
+	InstanceNotFoundException.dis\
+	InstanceOfQueryExp.dis\
+	IntrospectionException.dis\
+	InvalidApplicationException.dis\
+	InvalidAttributeValueException.dis\
+	JMException.dis\
+	JMRuntimeException.dis\
+	JMX.dis\
+	ListenerNotFoundException.dis\
+	MalformedObjectNameException.dis\
+	MatchQueryExp.dis\
+	MBeanAttributeInfo.dis\
+	MBeanConstructorInfo.dis\
+	MBeanException.dis\
+	MBeanFeatureInfo.dis\
+	MBeanInfo.dis\
+	MBeanNotificationInfo.dis\
+	MBeanOperationInfo.dis\
+	MBeanParameterInfo.dis\
+	MBeanPermission.dis\
+	MBeanRegistration.dis\
+	MBeanRegistrationException.dis\
+	MBeanServer.dis\
+	MBeanServerBuilder.dis\
+	MBeanServerConnection.dis\
+	MBeanServerDelegate.dis\
+	MBeanServerDelegateMBean.dis\
+	MBeanServerFactory.dis\
+	MBeanServerInvocationHandler.dis\
+	MBeanServerNotification.dis\
+	MBeanServerPermission.dis\
+	MBeanTrustPermission.dis\
+	MXBean.dis\
+	NotCompliantMBeanException.dis\
+	Notification.dis\
+	NotificationBroadcaster.dis\
+	NotificationBroadcasterSupport.dis\
+	NotificationEmitter.dis\
+	NotificationFilter.dis\
+	NotificationFilterSupport.dis\
+	NotificationListener.dis\
+	NotQueryExp.dis\
+	NumericValueExp.dis\
+	ObjectInstance.dis\
+	ObjectName.dis\
+	OperationsException.dis\
+	OrQueryExp.dis\
+	PersistentMBean.dis\
+	QualifiedAttributeValueExp.dis\
+	Query.dis\
+	QueryEval.dis\
+	QueryExp.dis\
+	ReflectionException.dis\
+	RuntimeErrorException.dis\
+	RuntimeMBeanException.dis\
+	RuntimeOperationsException.dis\
+	ServiceNotFoundException.dis\
+	StandardEmitterMBean.dis\
+	StandardMBean.dis\
+	StringValueExp.dis\
+	ValueExp.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	BasicType.dis\
+	PerfDataBuffer.dis\
+	PerfDataBufferPrologue.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/perfdata/monitor/v1_0
+
+<$ROOT/mkfiles/mkjava

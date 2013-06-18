@@ -1,0 +1,67 @@
+<../../../../../mkconfig
+
+DIRS=\
+	krb5\
+
+TARG=\
+	Alerts.dis\
+	AppInputStream.dis\
+	AppOutputStream.dis\
+	BaseSSLSocketImpl.dis\
+	ByteBufferInputStream.dis\
+	CipherBox.dis\
+	CipherSuite.dis\
+	CipherSuiteList.dis\
+	ClientHandshaker.dis\
+	Debug.dis\
+	DHClientKeyExchange.dis\
+	DHCrypt.dis\
+	ECDHClientKeyExchange.dis\
+	ECDHCrypt.dis\
+	EngineArgs.dis\
+	EngineInputRecord.dis\
+	EngineOutputRecord.dis\
+	EngineWriter.dis\
+	EphemeralKeyManager.dis\
+	HandshakeHash.dis\
+	HandshakeInStream.dis\
+	HandshakeMessage.dis\
+	HandshakeOutStream.dis\
+	Handshaker.dis\
+	HelloExtensions.dis\
+	InputRecord.dis\
+	JsseJce.dis\
+	KerberosClientKeyExchange.dis\
+	KeyManagerFactoryImpl.dis\
+	Krb5Helper.dis\
+	Krb5Proxy.dis\
+	MAC.dis\
+	OutputRecord.dis\
+	ProtocolList.dis\
+	ProtocolVersion.dis\
+	RandomCookie.dis\
+	Record.dis\
+	RSAClientKeyExchange.dis\
+	RSASignature.dis\
+	ServerHandshaker.dis\
+	SessionId.dis\
+	SignatureAndHashAlgorithm.dis\
+	SSLAlgorithmConstraints.dis\
+	SSLContextImpl.dis\
+	SSLEngineImpl.dis\
+	SSLServerSocketFactoryImpl.dis\
+	SSLServerSocketImpl.dis\
+	SSLSessionContextImpl.dis\
+	SSLSessionImpl.dis\
+	SSLSocketFactoryImpl.dis\
+	SSLSocketImpl.dis\
+	SunJSSE.dis\
+	SunX509KeyManagerImpl.dis\
+	TrustManagerFactoryImpl.dis\
+	X509KeyManagerImpl.dis\
+	X509TrustManagerImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/ssl
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

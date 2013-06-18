@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+DIRS=\
+	jvminstr\
+	jvmmib\
+	util\
+
+TARG=\
+	AdaptorBootstrap.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/snmp
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

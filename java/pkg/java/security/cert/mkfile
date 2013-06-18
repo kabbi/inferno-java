@@ -1,0 +1,54 @@
+<../../../../../mkconfig
+
+TARG=\
+	Certificate.dis\
+	CertificateEncodingException.dis\
+	CertificateException.dis\
+	CertificateExpiredException.dis\
+	CertificateFactory.dis\
+	CertificateFactorySpi.dis\
+	CertificateNotYetValidException.dis\
+	CertificateParsingException.dis\
+	CertificateRevokedException.dis\
+	CertPath.dis\
+	CertPathBuilder.dis\
+	CertPathBuilderException.dis\
+	CertPathBuilderResult.dis\
+	CertPathBuilderSpi.dis\
+	CertPathHelperImpl.dis\
+	CertPathParameters.dis\
+	CertPathValidator.dis\
+	CertPathValidatorException.dis\
+	CertPathValidatorResult.dis\
+	CertPathValidatorSpi.dis\
+	CertSelector.dis\
+	CertStore.dis\
+	CertStoreException.dis\
+	CertStoreParameters.dis\
+	CertStoreSpi.dis\
+	CollectionCertStoreParameters.dis\
+	CRL.dis\
+	CRLException.dis\
+	CRLReason.dis\
+	CRLSelector.dis\
+	Extension.dis\
+	LDAPCertStoreParameters.dis\
+	PKIXBuilderParameters.dis\
+	PKIXCertPathBuilderResult.dis\
+	PKIXCertPathChecker.dis\
+	PKIXCertPathValidatorResult.dis\
+	PKIXParameters.dis\
+	PKIXReason.dis\
+	PolicyNode.dis\
+	PolicyQualifierInfo.dis\
+	TrustAnchor.dis\
+	X509Certificate.dis\
+	X509CertSelector.dis\
+	X509CRL.dis\
+	X509CRLEntry.dis\
+	X509CRLSelector.dis\
+	X509Extension.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/security/cert
+
+<$ROOT/mkfiles/mkjava

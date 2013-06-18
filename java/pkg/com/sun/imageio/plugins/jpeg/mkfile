@@ -1,0 +1,31 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AdobeMarkerSegment.dis\
+	COMMarkerSegment.dis\
+	DHTMarkerSegment.dis\
+	DQTMarkerSegment.dis\
+	DRIMarkerSegment.dis\
+	JFIFMarkerSegment.dis\
+	JPEG.dis\
+	JPEGBuffer.dis\
+	JPEGImageMetadataFormat.dis\
+	JPEGImageMetadataFormatResources.dis\
+	JPEGImageReader.dis\
+	JPEGImageReaderResources.dis\
+	JPEGImageReaderSpi.dis\
+	JPEGImageWriter.dis\
+	JPEGImageWriterResources.dis\
+	JPEGImageWriterSpi.dis\
+	JPEGMetadata.dis\
+	JPEGMetadataFormat.dis\
+	JPEGMetadataFormatResources.dis\
+	JPEGStreamMetadataFormat.dis\
+	JPEGStreamMetadataFormatResources.dis\
+	MarkerSegment.dis\
+	SOFMarkerSegment.dis\
+	SOSMarkerSegment.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/plugins/jpeg
+
+<$ROOT/mkfiles/mkjava

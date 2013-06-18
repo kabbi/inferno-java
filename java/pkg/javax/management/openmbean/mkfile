@@ -1,0 +1,32 @@
+<../../../../../mkconfig
+
+TARG=\
+	ArrayType.dis\
+	CompositeData.dis\
+	CompositeDataInvocationHandler.dis\
+	CompositeDataSupport.dis\
+	CompositeDataView.dis\
+	CompositeType.dis\
+	InvalidKeyException.dis\
+	InvalidOpenTypeException.dis\
+	KeyAlreadyExistsException.dis\
+	OpenDataException.dis\
+	OpenMBeanAttributeInfo.dis\
+	OpenMBeanAttributeInfoSupport.dis\
+	OpenMBeanConstructorInfo.dis\
+	OpenMBeanConstructorInfoSupport.dis\
+	OpenMBeanInfo.dis\
+	OpenMBeanInfoSupport.dis\
+	OpenMBeanOperationInfo.dis\
+	OpenMBeanOperationInfoSupport.dis\
+	OpenMBeanParameterInfo.dis\
+	OpenMBeanParameterInfoSupport.dis\
+	OpenType.dis\
+	SimpleType.dis\
+	TabularData.dis\
+	TabularDataSupport.dis\
+	TabularType.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/openmbean
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,20 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	charsets\
+
+TARG=\
+	AbstractFilter.dis\
+	Constants.dis\
+	MockAttributeSet.dis\
+	RTFAttribute.dis\
+	RTFAttributes.dis\
+	RTFEditorKit.dis\
+	RTFGenerator.dis\
+	RTFParser.dis\
+	RTFReader.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/text/rtf
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,10 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	FileMonitoredVm.dis\
+	MonitoredHostProvider.dis\
+	PerfDataBuffer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/perfdata/monitor/protocol/file
+
+<$ROOT/mkfiles/mkjava

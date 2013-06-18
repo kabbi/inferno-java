@@ -1,0 +1,55 @@
+<../../../../../mkconfig
+
+TARG=\
+	ByteArrayImageSource.dis\
+	FileImageSource.dis\
+	GifFrame.dis\
+	GifImageDecoder.dis\
+	Image.dis\
+	ImageConsumerQueue.dis\
+	ImageDecoder.dis\
+	ImageFetchable.dis\
+	ImageFetcher.dis\
+	ImageFormatException.dis\
+	ImageRepresentation.dis\
+	ImageWatched.dis\
+# for InputStreamImageSource.dis\
+	QcGo0tMs8LUVNEMaq-WB4.dis\
+	JPEGImageDecoder.dis\
+	OffScreenImageSource.dis\
+	PixelStore.dis\
+	PixelStore32.dis\
+	PixelStore8.dis\
+	URLImageSource.dis\
+	XbmImageDecoder.dis\
+# Limbo code\
+	GifImageDecoder_L.dis\
+	JPEGImageDecoder_L.dis\
+	OffScreenImageSource_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	GifImageDecoder_L.m\
+	JPEGImageDecoder_L.m\
+	OffScreenImageSource_L.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/sun/awt/image
+
+<$ROOT/mkfiles/mkjava
+
+GifFrame.dis:	GifImageDecoder.class
+	j2d GifFrame.class
+
+QcGo0tMs8LUVNEMaq-WB4.dis:	InputStreamImageSource.class
+	j2d InputStreamImageSource.class

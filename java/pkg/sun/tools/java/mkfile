@@ -1,0 +1,39 @@
+<../../../../../mkconfig
+
+TARG=\
+	AmbiguousClass.dis\
+	AmbiguousMember.dis\
+	ArrayType.dis\
+	BinaryAttribute.dis\
+	BinaryClass.dis\
+	BinaryCode.dis\
+	BinaryConstantPool.dis\
+	BinaryExceptionHandler.dis\
+	BinaryMember.dis\
+	ClassDeclaration.dis\
+	ClassDefinition.dis\
+	ClassFile.dis\
+	ClassNotFound.dis\
+	ClassPath.dis\
+	ClassType.dis\
+	CompilerError.dis\
+	Constants.dis\
+	Environment.dis\
+	Identifier.dis\
+	IdentifierToken.dis\
+	Imports.dis\
+	MemberDefinition.dis\
+	MethodSet.dis\
+	MethodType.dis\
+	Package.dis\
+	Parser.dis\
+	ParserActions.dis\
+	RuntimeConstants.dis\
+	Scanner.dis\
+	ScannerInputReader.dis\
+	SyntaxError.dis\
+	Type.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/java
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+TARG=\
+	AbstractTableModel.dis\
+	DefaultTableCellRenderer.dis\
+	DefaultTableColumnModel.dis\
+	DefaultTableModel.dis\
+	JTableHeader.dis\
+	TableCellEditor.dis\
+	TableCellRenderer.dis\
+	TableColumn.dis\
+	TableColumnModel.dis\
+	TableModel.dis\
+	TableRowSorter.dis\
+	TableStringConverter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/table
+
+<$ROOT/mkfiles/mkjava

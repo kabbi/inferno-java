@@ -1,0 +1,21 @@
+<../../../mkconfig
+
+TARG=\
+	FileMerge.class\
+	LimboGen.class\
+	javal.class\
+
+JROOT=$ROOT/java
+JPATH=$JROOT/pkg:$JROOT/tools
+
+all:V:		$TARG
+
+install:V:	all
+
+%.class:	%.java
+	$JAVAC -XDignore.symbol.file -classpath $JPATH $stem.java
+
+clean:V:
+	rm -f *.class
+
+nuke:V:		clean

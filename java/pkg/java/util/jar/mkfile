@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	Attributes.dis\
+	JarEntry.dis\
+	JarException.dis\
+	JarFile.dis\
+	JarInputStream.dis\
+	JarOutputStream.dis\
+	JarVerifier.dis\
+	JavaUtilJarAccessImpl.dis\
+	Manifest.dis\
+	Pack200.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/jar
+
+<$ROOT/mkfiles/mkjava

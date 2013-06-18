@@ -1,0 +1,57 @@
+<../../../../../mkconfig
+
+DIRS=\
+	basic\
+	metal\
+	multi\
+	nimbus\
+	synth\
+
+TARG=\
+	ActionMapUIResource.dis\
+	BorderUIResource.dis\
+	ButtonUI.dis\
+	ColorChooserUI.dis\
+	ColorUIResource.dis\
+	ComboBoxUI.dis\
+	ComponentInputMapUIResource.dis\
+	ComponentUI.dis\
+	DesktopIconUI.dis\
+	DesktopPaneUI.dis\
+	DimensionUIResource.dis\
+	FileChooserUI.dis\
+	FontUIResource.dis\
+	IconUIResource.dis\
+	InputMapUIResource.dis\
+	InsetsUIResource.dis\
+	InternalFrameUI.dis\
+	LabelUI.dis\
+	LayerUI.dis\
+	ListUI.dis\
+	MenuBarUI.dis\
+	MenuItemUI.dis\
+	OptionPaneUI.dis\
+	PanelUI.dis\
+	PopupMenuUI.dis\
+	ProgressBarUI.dis\
+	RootPaneUI.dis\
+	ScrollBarUI.dis\
+	ScrollPaneUI.dis\
+	SeparatorUI.dis\
+	SliderUI.dis\
+	SpinnerUI.dis\
+	SplitPaneUI.dis\
+	TabbedPaneUI.dis\
+	TableHeaderUI.dis\
+	TableUI.dis\
+	TextUI.dis\
+	ToolBarUI.dis\
+	ToolTipUI.dis\
+	TreeUI.dis\
+	UIResource.dis\
+	ViewportUI.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/plaf
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,65 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	ccache\
+	crypto\
+	ktab\
+	rcache\
+	util\
+
+TARG=\
+	APOptions.dis\
+	APRep.dis\
+	APReq.dis\
+	ASRep.dis\
+	ASReq.dis\
+	AuthContext.dis\
+	Authenticator.dis\
+	AuthorizationData.dis\
+	AuthorizationDataEntry.dis\
+	CredentialsUtil.dis\
+	EncAPRepPart.dis\
+	EncASRepPart.dis\
+	EncKDCRepPart.dis\
+	EncKrbCredPart.dis\
+	EncKrbPrivPart.dis\
+	EncTGSRepPart.dis\
+	EncTicketPart.dis\
+	ETypeInfo.dis\
+	ETypeInfo2.dis\
+	HostAddress.dis\
+	HostAddresses.dis\
+	KdcErrException.dis\
+	KDCOptions.dis\
+	KDCRep.dis\
+	KDCReq.dis\
+	KDCReqBody.dis\
+	KerberosTime.dis\
+	Krb5.dis\
+	KrbApErrException.dis\
+	KRBCred.dis\
+	KrbCredInfo.dis\
+	KrbErrException.dis\
+	KRBError.dis\
+	KRBPriv.dis\
+	KRBSafe.dis\
+	KRBSafeBody.dis\
+	LastReq.dis\
+	LastReqEntry.dis\
+	LocalSeqNumber.dis\
+	LoginOptions.dis\
+	MethodData.dis\
+	NetClient.dis\
+	PAData.dis\
+	PAEncTSEnc.dis\
+	SeqNumber.dis\
+	TGSRep.dis\
+	TGSReq.dis\
+	Ticket.dis\
+	TicketFlags.dis\
+	TransitedEncoding.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

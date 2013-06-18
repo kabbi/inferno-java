@@ -1,0 +1,34 @@
+<../../../../../mkconfig
+
+TARG=\
+	ExportException.dis\
+	LoaderHandler.dis\
+	LogStream.dis\
+	ObjID.dis\
+	Operation.dis\
+	RemoteCall.dis\
+	RemoteObject.dis\
+	RemoteObjectInvocationHandler.dis\
+	RemoteRef.dis\
+	RemoteServer.dis\
+	RemoteStub.dis\
+	RMIClassLoader.dis\
+	RMIClassLoaderSpi.dis\
+	RMIClientSocketFactory.dis\
+	RMIFailureHandler.dis\
+	RMIServerSocketFactory.dis\
+	RMISocketFactory.dis\
+	ServerCloneException.dis\
+	ServerNotActiveException.dis\
+	ServerRef.dis\
+	Skeleton.dis\
+	SkeletonMismatchException.dis\
+	SkeletonNotFoundException.dis\
+	SocketSecurityException.dis\
+	UID.dis\
+	UnicastRemoteObject.dis\
+	Unreferenced.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/rmi/server
+
+<$ROOT/mkfiles/mkjava

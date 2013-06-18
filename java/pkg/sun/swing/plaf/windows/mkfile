@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ClassicSortArrowIcon.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing/plaf/windows
+
+<$ROOT/mkfiles/mkjava

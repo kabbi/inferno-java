@@ -1,0 +1,19 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	AttachingConnector.dis\
+	Connector.dis\
+	IllegalConnectorArgumentsException.dis\
+	LaunchingConnector.dis\
+	ListeningConnector.dis\
+	Transport.dis\
+	TransportTimeoutException.dis\
+	VMStartException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jdi/connect
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

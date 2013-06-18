@@ -1,0 +1,8 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	X509V1CertImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/cert/internal/x509
+
+<$ROOT/mkfiles/mkjava

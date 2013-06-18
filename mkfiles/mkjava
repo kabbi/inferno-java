@@ -30,10 +30,11 @@ $DISBIN/%.dis:	%.dis
 #	limbo $LIMBOFLAGS $LIMBOINCL -w -G -S $stem.b
 
 %.class:    %.java
-	$JAVAC -classpath $JPATH $stem.java
+	$JAVAC -XDignore.symbol.file -classpath $JPATH $stem.java
 
 %.dis: %.class
-	j2d $stem.class
+	touch $stem.dis
+#	j2d $stem.class
 
 %.install:V:	$DISBIN/%.dis
 %.installall:V:	$DISBIN/%.dis

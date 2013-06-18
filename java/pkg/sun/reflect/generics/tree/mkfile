@@ -1,0 +1,33 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ArrayTypeSignature.dis\
+	BaseType.dis\
+	BooleanSignature.dis\
+	BottomSignature.dis\
+	ByteSignature.dis\
+	CharSignature.dis\
+	ClassSignature.dis\
+	ClassTypeSignature.dis\
+	DoubleSignature.dis\
+	FieldTypeSignature.dis\
+	FloatSignature.dis\
+	FormalTypeParameter.dis\
+	IntSignature.dis\
+	LongSignature.dis\
+	MethodTypeSignature.dis\
+	ReturnType.dis\
+	ShortSignature.dis\
+	Signature.dis\
+	SimpleClassTypeSignature.dis\
+	Tree.dis\
+	TypeArgument.dis\
+	TypeSignature.dis\
+	TypeTree.dis\
+	TypeVariableSignature.dis\
+	VoidDescriptor.dis\
+	Wildcard.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/tree
+
+<$ROOT/mkfiles/mkjava

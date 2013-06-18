@@ -1,0 +1,22 @@
+<../../../../../../../../../../mkconfig
+
+TARG=\
+	InvalidDigestValueException.dis\
+	InvalidSignatureValueException.dis\
+	Manifest.dis\
+	MissingResourceFailureException.dis\
+	NodeFilter.dis\
+	ObjectContainer.dis\
+	Reference.dis\
+	ReferenceNotInitializedException.dis\
+	SignatureProperties.dis\
+	SignatureProperty.dis\
+	SignedInfo.dis\
+	XMLSignature.dis\
+	XMLSignatureException.dis\
+	XMLSignatureInput.dis\
+	XMLSignatureInputDebugger.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/signature
+
+<$ROOT/mkfiles/mkjava

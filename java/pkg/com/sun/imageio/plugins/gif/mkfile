@@ -1,0 +1,20 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	GIFImageMetadata.dis\
+	GIFImageMetadataFormat.dis\
+	GIFImageMetadataFormatResources.dis\
+	GIFImageReader.dis\
+	GIFImageReaderSpi.dis\
+	GIFImageWriter.dis\
+	GIFImageWriterSpi.dis\
+	GIFMetadata.dis\
+	GIFStreamMetadata.dis\
+	GIFStreamMetadataFormat.dis\
+	GIFStreamMetadataFormatResources.dis\
+	GIFWritableImageMetadata.dis\
+	GIFWritableStreamMetadata.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/plugins/gif
+
+<$ROOT/mkfiles/mkjava

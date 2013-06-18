@@ -1,0 +1,13 @@
+<../../../../../mkconfig
+
+TARG=\
+	ASCII.dis\
+	Matcher.dis\
+	MatchResult.dis\
+	Pattern.dis\
+	PatternSyntaxException.dis\
+	UnicodeProp.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/regex
+
+<$ROOT/mkfiles/mkjava

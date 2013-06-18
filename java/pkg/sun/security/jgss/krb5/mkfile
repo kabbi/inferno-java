@@ -1,0 +1,26 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AcceptSecContextToken.dis\
+	CipherHelper.dis\
+	InitialToken.dis\
+	InitSecContextToken.dis\
+	Krb5AcceptCredential.dis\
+	Krb5Context.dis\
+	Krb5CredElement.dis\
+	Krb5InitCredential.dis\
+	Krb5MechFactory.dis\
+	Krb5NameElement.dis\
+	Krb5Token.dis\
+	Krb5Util.dis\
+	MessageToken.dis\
+	MessageToken_v2.dis\
+	MicToken.dis\
+	MicToken_v2.dis\
+	SubjectComber.dis\
+	WrapToken.dis\
+	WrapToken_v2.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/jgss/krb5
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,33 @@
+<../../../../mkconfig
+
+DIRS=\
+	icon\
+	plaf\
+	table\
+	text\
+
+TARG=\
+	AccumulativeRunnable.dis\
+	BakedArrayList.dis\
+	CachedPainter.dis\
+	DefaultLayoutStyle.dis\
+	DefaultLookup.dis\
+	FilePane.dis\
+	ImageCache.dis\
+	ImageIconUIResource.dis\
+	MenuItemCheckIconFactory.dis\
+	MenuItemLayoutHelper.dis\
+	PrintColorUIResource.dis\
+	PrintingStatus.dis\
+	StringUIClientPropertyKey.dis\
+	SwingAccessor.dis\
+	SwingLazyValue.dis\
+	SwingUtilities2.dis\
+	UIAction.dis\
+	UIClientPropertyKey.dis\
+	WindowsPlacesBar.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

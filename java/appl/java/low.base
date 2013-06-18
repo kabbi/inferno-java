@@ -1,0 +1,140 @@
+#0
+# SetByte
+	addw	32(fp),36(fp),44(fp)
+	movb    40(fp),0(44(fp))
+	ret
+#3
+# SetInt
+	addw	32(fp),36(fp),44(fp)
+	movw	40(fp),0(44(fp))
+	ret
+#6
+# SetBig
+	addw	32(fp),36(fp),48(fp)
+	movl	40(fp),0(48(fp))
+	ret
+#9	
+# SetReal
+	addw	32(fp),36(fp),48(fp)
+	movf	40(fp),0(48(fp))
+	ret
+#12
+# SetObj
+	addw	32(fp),36(fp),44(fp)
+	movp	40(fp),0(44(fp))
+	ret
+#15
+# GetByte
+	addw	32(fp),36(fp),40(fp)
+	movb	0(40(fp)),0(16(fp))
+	ret
+#18
+# GetInt
+	addw	32(fp),36(fp),40(fp)
+	movw	0(40(fp)),0(16(fp))
+	ret
+#21
+# GetBig
+	addw	32(fp),36(fp),40(fp)
+	movl	0(40(fp)),0(16(fp))
+	ret
+#24
+# GetReal
+	addw	32(fp),36(fp),40(fp)
+	movf	0(40(fp)),0(16(fp))
+	ret
+#27
+# GetObj
+	addw	32(fp),36(fp),40(fp)
+	movp	0(40(fp)),0(16(fp))
+	ret
+#30
+#CallMethod: frame size==80  map==0x00b840
+# params
+#   module ptr: 32(fp)  ptr
+#   method idx: 36(fp)
+#   this ptr:   40(fp)  ptr
+#   args:       44(fp)  ptr
+#   ret-val:    48(fp)  ptr
+# local vars used: 
+#   frame:      52(fp)  not-marked
+#   frame-slot: 56(fp)
+#   loop index: 60(fp)
+#   tmp:        64(fp)  -- used for array idexing & alignment ck
+#   pick-tmp:   68(fp)  ptr
+#   array len:  72(fp)
+#
+	mframe	32(fp),36(fp),52(fp)
+	addw	52(fp),$32,56(fp)		#compute slot address for arg
+	beqw	0(mp),40(fp),$35        #if static then 'this' is nil
+	movp	40(fp),0(56(fp))		#move 'this' into frame
+	addw	$4,56(fp)               #next slot
+#35
+	# move args into frame
+	# for(idx:=0; idx <len args; idx++ )
+	movw	$0,60(fp)				#initialize loop idx
+	lena	44(fp),72(fp)			#length of array
+#37
+	blew	72(fp),60(fp),$60		#loop condition
+	indw	44(fp),64(fp),60(fp)	#index the array
+	movp	0(64(fp)),68(fp)		#grab the array element; its a ref pick-adt
+	case	0(68(fp)),4(mp)			#switch off of the 'pick' id
+#41
+	movp	4(68(fp)),0(56(fp))		#  object param
+	jmp	$57
+#43
+	movw	4(68(fp)),0(56(fp))     #  word param (byte,short,char,boolean,int)
+	jmp	$57
+#45
+	andw	56(fp),$7,64(fp)        #  check for 8-byte alignment
+	beqw	64(fp),$0,$48           #  branch if already aligned
+	addw	$4,56(fp)               #  next slot is aligned
+	movl	8(68(fp)),0(56(fp))     #  big param (long)
+	addw	$8,56(fp)               #  next param slot
+	jmp	$58
+#51
+	andw	56(fp),$7,64(fp)        #  check for 8-byte alignment
+	beqw	64(fp),$0,$54           #  branch if already aligned
+	addw	$4,56(fp)               #  next slot is aligned
+	movf	8(68(fp)),0(56(fp))     #  real param (float,double)
+	addw	$8,56(fp)               #  next param slot
+	jmp	$58
+#57
+	addw	$4,56(fp)               #  next slot
+#58
+	addw	$1,60(fp)				#inc loop index
+	jmp	$37                         #end-for
+#60
+	# setup return value if one exists
+	beqw	0(mp),48(fp),$65        #if nil then no functional return
+	case	0(48(fp)),60(mp)        #switch off pick field of ret-value
+#62
+	lea		4(48(fp)),16(52(fp))    #4-byte aligned return addr
+	jmp	$65
+	lea		8(48(fp)),16(52(fp))    #8-byte aligned return addr
+#65
+	mcall	52(fp),36(fp),32(fp)	
+	ret
+#
+# change the following with care
+#
+	desc	$0,92,"80"
+	desc	$1,48,"00a0"
+	desc	$2,40,"0080"
+	desc	$3,48,"0080"
+	desc	$4,80,"00b840"
+	var	@mp,92
+	word	@mp+4,4,0,1,41,1,6,43,6,7,45,7,9,51,66
+	word	@mp+60,2,0,6,62,6,9,64,66
+	module	Low
+	link	3,0, 0xaaaaaaaa,"SetByte"
+	link	3,3, 0xaaaaaaaa,"SetInt"
+	link	3,6, 0xaaaaaaaa,"SetBig"
+	link	3,9 ,0xaaaaaaaa,"SetReal"
+	link	1,12,0xaaaaaaaa,"SetObj"
+	link	2,15,0xaaaaaaaa,"GetByte"
+	link	2,18,0xaaaaaaaa,"GetInt"
+	link	2,21,0xaaaaaaaa,"GetBig"
+	link	2,24,0xaaaaaaaa,"GetReal"
+	link	2,27,0xaaaaaaaa,"GetObj"
+	link	4,30,0xaaaaaaaa,"CallMethod"

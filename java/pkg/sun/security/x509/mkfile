@@ -1,0 +1,86 @@
+<../../../../../mkconfig
+
+TARG=\
+	AccessDescription.dis\
+	AlgIdDSA.dis\
+	AlgorithmId.dis\
+	AttributeNameEnumeration.dis\
+	AuthorityInfoAccessExtension.dis\
+	AuthorityKeyIdentifierExtension.dis\
+	AVA.dis\
+	BasicConstraintsExtension.dis\
+	CertAndKeyGen.dis\
+	CertAttrSet.dis\
+	CertException.dis\
+	CertificateAlgorithmId.dis\
+	CertificateExtensions.dis\
+	CertificateIssuerExtension.dis\
+	CertificateIssuerName.dis\
+	CertificateIssuerUniqueIdentity.dis\
+	CertificatePoliciesExtension.dis\
+	CertificatePolicyId.dis\
+	CertificatePolicyMap.dis\
+	CertificatePolicySet.dis\
+	CertificateSerialNumber.dis\
+	CertificateSubjectName.dis\
+	CertificateSubjectUniqueIdentity.dis\
+	CertificateValidity.dis\
+	CertificateVersion.dis\
+	CertificateX509Key.dis\
+	CertParseError.dis\
+	CRLDistributionPointsExtension.dis\
+	CRLExtensions.dis\
+	CRLNumberExtension.dis\
+	CRLReasonCodeExtension.dis\
+	DeltaCRLIndicatorExtension.dis\
+	DistributionPoint.dis\
+	DistributionPointName.dis\
+	DNSName.dis\
+	EDIPartyName.dis\
+	ExtendedKeyUsageExtension.dis\
+	Extension.dis\
+	FreshestCRLExtension.dis\
+	GeneralName.dis\
+	GeneralNameInterface.dis\
+	GeneralNames.dis\
+	GeneralSubtree.dis\
+	GeneralSubtrees.dis\
+	InhibitAnyPolicyExtension.dis\
+	InvalidityDateExtension.dis\
+	IPAddressName.dis\
+	IssuerAlternativeNameExtension.dis\
+	IssuingDistributionPointExtension.dis\
+	KeyIdentifier.dis\
+	KeyUsageExtension.dis\
+	NameConstraintsExtension.dis\
+	NetscapeCertTypeExtension.dis\
+	OCSPNoCheckExtension.dis\
+	OIDMap.dis\
+	OIDName.dis\
+	OtherName.dis\
+	PKIXExtensions.dis\
+	PolicyConstraintsExtension.dis\
+	PolicyInformation.dis\
+	PolicyMappingsExtension.dis\
+	PrivateKeyUsageExtension.dis\
+	RDN.dis\
+	ReasonFlags.dis\
+	RFC822Name.dis\
+	SerialNumber.dis\
+	SubjectAlternativeNameExtension.dis\
+	SubjectInfoAccessExtension.dis\
+	SubjectKeyIdentifierExtension.dis\
+	UniqueIdentity.dis\
+	URIName.dis\
+	X400Address.dis\
+	X500Name.dis\
+	X509AttributeName.dis\
+	X509CertImpl.dis\
+	X509CertInfo.dis\
+	X509CRLEntryImpl.dis\
+	X509CRLImpl.dis\
+	X509Key.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/x509
+
+<$ROOT/mkfiles/mkjava

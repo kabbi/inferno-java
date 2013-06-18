@@ -1,0 +1,42 @@
+<../../../../../../mkconfig
+
+TARG=\
+	CK_AES_CTR_PARAMS.dis\
+	CK_ATTRIBUTE.dis\
+	CK_C_INITIALIZE_ARGS.dis\
+	CK_CREATEMUTEX.dis\
+	CK_DATE.dis\
+	CK_DESTROYMUTEX.dis\
+	CK_ECDH1_DERIVE_PARAMS.dis\
+	CK_ECDH2_DERIVE_PARAMS.dis\
+	CK_INFO.dis\
+	CK_LOCKMUTEX.dis\
+	CK_MECHANISM.dis\
+	CK_MECHANISM_INFO.dis\
+	CK_NOTIFY.dis\
+	CK_PBE_PARAMS.dis\
+	CK_PKCS5_PBKD2_PARAMS.dis\
+	CK_RSA_PKCS_OAEP_PARAMS.dis\
+	CK_RSA_PKCS_PSS_PARAMS.dis\
+	CK_SESSION_INFO.dis\
+	CK_SLOT_INFO.dis\
+	CK_SSL3_KEY_MAT_OUT.dis\
+	CK_SSL3_KEY_MAT_PARAMS.dis\
+	CK_SSL3_MASTER_KEY_DERIVE_PARAMS.dis\
+	CK_SSL3_RANDOM_DATA.dis\
+	CK_TLS_PRF_PARAMS.dis\
+	CK_TOKEN_INFO.dis\
+	CK_UNLOCKMUTEX.dis\
+	CK_VERSION.dis\
+	CK_X9_42_DH1_DERIVE_PARAMS.dis\
+	CK_X9_42_DH2_DERIVE_PARAMS.dis\
+	Constants.dis\
+	Functions.dis\
+	PKCS11.dis\
+	PKCS11Constants.dis\
+	PKCS11Exception.dis\
+	PKCS11RuntimeException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/pkcs11/wrapper
+
+<$ROOT/mkfiles/mkjava

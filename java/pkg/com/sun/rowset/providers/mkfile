@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	RIOptimisticProvider.dis\
+	RIXMLProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/rowset/providers
+
+<$ROOT/mkfiles/mkjava

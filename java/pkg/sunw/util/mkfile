@@ -1,0 +1,9 @@
+<../../../../mkconfig
+
+TARG=\
+	EventListener.dis\
+	EventObject.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sunw/util
+
+<$ROOT/mkfiles/mkjava

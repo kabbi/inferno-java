@@ -1,0 +1,84 @@
+<../../../../mkconfig
+
+DIRS=\
+	doc-files\
+
+TARG=\
+	AbstractPlainDatagramSocketImpl.dis\
+	AbstractPlainSocketImpl.dis\
+	Authenticator.dis\
+	BindException.dis\
+	CacheRequest.dis\
+	CacheResponse.dis\
+	ConnectException.dis\
+	ContentHandler.dis\
+	ContentHandlerFactory.dis\
+	CookieHandler.dis\
+	CookieManager.dis\
+	CookiePolicy.dis\
+	CookieStore.dis\
+	DatagramPacket.dis\
+	DatagramSocket.dis\
+	DatagramSocketImpl.dis\
+	DatagramSocketImplFactory.dis\
+	FileNameMap.dis\
+	HttpCookie.dis\
+	HttpRetryException.dis\
+	HttpURLConnection.dis\
+	IDN.dis\
+	Inet4Address.dis\
+	Inet4AddressImpl.dis\
+	Inet6Address.dis\
+	Inet6AddressImpl.dis\
+	InetAddress.dis\
+	InetAddressImpl.dis\
+	InetSocketAddress.dis\
+	InMemoryCookieStore.dis\
+	InterfaceAddress.dis\
+	JarURLConnection.dis\
+	MalformedURLException.dis\
+	MulticastSocket.dis\
+	NetPermission.dis\
+	NetworkInterface.dis\
+	NoRouteToHostException.dis\
+	PasswordAuthentication.dis\
+	PortUnreachableException.dis\
+	ProtocolException.dis\
+	ProtocolFamily.dis\
+	Proxy.dis\
+	ProxySelector.dis\
+	ResponseCache.dis\
+	SdpSocketImpl.dis\
+	SecureCacheResponse.dis\
+	ServerSocket.dis\
+	Socket.dis\
+	SocketAddress.dis\
+	SocketException.dis\
+	SocketImpl.dis\
+	SocketImplFactory.dis\
+	SocketInputStream.dis\
+	SocketOption.dis\
+	SocketOptions.dis\
+	SocketOutputStream.dis\
+	SocketPermission.dis\
+	SocketTimeoutException.dis\
+	SocksConsts.dis\
+	SocksSocketImpl.dis\
+	StandardProtocolFamily.dis\
+	StandardSocketOptions.dis\
+	UnknownHostException.dis\
+	UnknownServiceException.dis\
+	URI.dis\
+	URISyntaxException.dis\
+	URL.dis\
+	URLClassLoader.dis\
+	URLConnection.dis\
+	URLDecoder.dis\
+	URLEncoder.dis\
+	URLStreamHandler.dis\
+	URLStreamHandlerFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/net
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

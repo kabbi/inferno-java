@@ -1,0 +1,11 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AudioFileReader.dis\
+	AudioFileWriter.dis\
+	FormatConversionProvider.dis\
+	MixerProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sound/sampled/spi
+
+<$ROOT/mkfiles/mkjava

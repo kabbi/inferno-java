@@ -1,0 +1,39 @@
+<../../../../../mkconfig
+
+TARG=\
+	ButtonPeer.dis\
+	CanvasPeer.dis\
+	CheckboxMenuItemPeer.dis\
+	CheckboxPeer.dis\
+	ChoicePeer.dis\
+	ComponentPeer.dis\
+	ContainerPeer.dis\
+	DesktopPeer.dis\
+	DialogPeer.dis\
+	FileDialogPeer.dis\
+	FontPeer.dis\
+	FramePeer.dis\
+	KeyboardFocusManagerPeer.dis\
+	LabelPeer.dis\
+	LightweightPeer.dis\
+	ListPeer.dis\
+	MenuBarPeer.dis\
+	MenuComponentPeer.dis\
+	MenuItemPeer.dis\
+	MenuPeer.dis\
+	MouseInfoPeer.dis\
+	PanelPeer.dis\
+	PopupMenuPeer.dis\
+	RobotPeer.dis\
+	ScrollbarPeer.dis\
+	ScrollPanePeer.dis\
+	SystemTrayPeer.dis\
+	TextAreaPeer.dis\
+	TextComponentPeer.dis\
+	TextFieldPeer.dis\
+	TrayIconPeer.dis\
+	WindowPeer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/peer
+
+<$ROOT/mkfiles/mkjava

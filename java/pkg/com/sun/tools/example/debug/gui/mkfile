@@ -1,0 +1,38 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	ApplicationTool.dis\
+	ClassManager.dis\
+	ClassTreeTool.dis\
+	CommandInterpreter.dis\
+	CommandTool.dis\
+	ContextListener.dis\
+	ContextManager.dis\
+	CurrentFrameChangedEvent.dis\
+	Environment.dis\
+	GUI.dis\
+	Icons.dis\
+	JDBFileFilter.dis\
+	JDBMenuBar.dis\
+	JDBToolBar.dis\
+	LaunchTool.dis\
+	MonitorListModel.dis\
+	MonitorTool.dis\
+	OutputSink.dis\
+	SearchPath.dis\
+	SingleLeafTreeSelectionModel.dis\
+	SourceListener.dis\
+	SourceManager.dis\
+	SourceModel.dis\
+	SourcepathChangedEvent.dis\
+	SourceTool.dis\
+	SourceTreeTool.dis\
+	StackTraceTool.dis\
+	ThreadTreeTool.dis\
+	TypeScript.dis\
+	TypeScriptOutputListener.dis\
+	TypeScriptWriter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/example/debug/gui
+
+<$ROOT/mkfiles/mkjava

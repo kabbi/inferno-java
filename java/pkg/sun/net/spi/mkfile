@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+DIRS=\
+	nameservice\
+
+TARG=\
+	DefaultProxySelector.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/spi
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

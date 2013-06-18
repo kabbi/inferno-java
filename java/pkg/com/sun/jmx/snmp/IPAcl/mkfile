@@ -1,0 +1,54 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AclEntryImpl.dis\
+	AclImpl.dis\
+	ASCII_CharStream.dis\
+	GroupImpl.dis\
+	Host.dis\
+	JDMAccess.dis\
+	JDMAclBlock.dis\
+	JDMAclItem.dis\
+	JDMCommunities.dis\
+	JDMCommunity.dis\
+	JDMEnterprise.dis\
+	JDMHost.dis\
+	JDMHostInform.dis\
+	JDMHostName.dis\
+	JDMHostTrap.dis\
+	JDMInformBlock.dis\
+	JDMInformCommunity.dis\
+	JDMInformInterestedHost.dis\
+	JDMInformItem.dis\
+	JDMIpAddress.dis\
+	JDMIpMask.dis\
+	JDMIpV6Address.dis\
+	JDMManagers.dis\
+	JDMNetMask.dis\
+	JDMNetMaskV6.dis\
+	JDMSecurityDefs.dis\
+	JDMTrapBlock.dis\
+	JDMTrapCommunity.dis\
+	JDMTrapInterestedHost.dis\
+	JDMTrapItem.dis\
+	JDMTrapNum.dis\
+	JJTParserState.dis\
+	NetMaskImpl.dis\
+	Node.dis\
+	OwnerImpl.dis\
+	ParseError.dis\
+	ParseException.dis\
+	Parser.dis\
+	ParserConstants.dis\
+	ParserTokenManager.dis\
+	ParserTreeConstants.dis\
+	PermissionImpl.dis\
+	PrincipalImpl.dis\
+	SimpleNode.dis\
+	SnmpAcl.dis\
+	Token.dis\
+	TokenMgrError.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/snmp/IPAcl
+
+<$ROOT/mkfiles/mkjava

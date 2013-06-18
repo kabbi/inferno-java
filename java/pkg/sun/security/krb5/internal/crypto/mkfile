@@ -1,0 +1,38 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	dk\
+
+TARG=\
+	Aes128.dis\
+	Aes128CtsHmacSha1EType.dis\
+	Aes256.dis\
+	Aes256CtsHmacSha1EType.dis\
+	ArcFourHmac.dis\
+	ArcFourHmacEType.dis\
+	CksumType.dis\
+	crc32.dis\
+	Crc32CksumType.dis\
+	Des.dis\
+	Des3.dis\
+	Des3CbcHmacSha1KdEType.dis\
+	DesCbcCrcEType.dis\
+	DesCbcEType.dis\
+	DesCbcMd5EType.dis\
+	DesMacCksumType.dis\
+	DesMacKCksumType.dis\
+	EType.dis\
+	HmacMd5ArcFourCksumType.dis\
+	HmacSha1Aes128CksumType.dis\
+	HmacSha1Aes256CksumType.dis\
+	HmacSha1Des3KdCksumType.dis\
+	KeyUsage.dis\
+	Nonce.dis\
+	NullEType.dis\
+	RsaMd5CksumType.dis\
+	RsaMd5DesCksumType.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal/crypto
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

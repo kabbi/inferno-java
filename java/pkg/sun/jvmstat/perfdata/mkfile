@@ -1,0 +1,7 @@
+<../../../../../mkconfig
+
+DIRS=\
+	monitor\
+	resources\
+
+<$ROOT/mkfiles/mksubdirs

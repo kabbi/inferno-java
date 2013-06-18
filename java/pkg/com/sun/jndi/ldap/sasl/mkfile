@@ -1,0 +1,11 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	DefaultCallbackHandler.dis\
+	LdapSasl.dis\
+	SaslInputStream.dis\
+	SaslOutputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/ldap/sasl
+
+<$ROOT/mkfiles/mkjava

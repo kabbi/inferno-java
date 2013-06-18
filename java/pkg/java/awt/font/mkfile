@@ -1,0 +1,29 @@
+<../../../../../mkconfig
+
+TARG=\
+	CharArrayIterator.dis\
+	FontRenderContext.dis\
+	GlyphJustificationInfo.dis\
+	GlyphMetrics.dis\
+	GlyphVector.dis\
+	GraphicAttribute.dis\
+	ImageGraphicAttribute.dis\
+	LayoutPath.dis\
+	LineBreakMeasurer.dis\
+	LineMetrics.dis\
+	MultipleMaster.dis\
+	NumericShaper.dis\
+	OpenType.dis\
+	ShapeGraphicAttribute.dis\
+	StyledParagraph.dis\
+	TextAttribute.dis\
+	TextHitInfo.dis\
+	TextJustifier.dis\
+	TextLayout.dis\
+	TextLine.dis\
+	TextMeasurer.dis\
+	TransformAttribute.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/font
+
+<$ROOT/mkfiles/mkjava

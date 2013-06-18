@@ -1,0 +1,38 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AbstractJavaHeapObjectVisitor.dis\
+	ArrayTypeCodes.dis\
+	HackJavaValue.dis\
+	JavaBoolean.dis\
+	JavaByte.dis\
+	JavaChar.dis\
+	JavaClass.dis\
+	JavaDouble.dis\
+	JavaField.dis\
+	JavaFloat.dis\
+	JavaHeapObject.dis\
+	JavaHeapObjectVisitor.dis\
+	JavaInt.dis\
+	JavaLazyReadObject.dis\
+	JavaLong.dis\
+	JavaObject.dis\
+	JavaObjectArray.dis\
+	JavaObjectRef.dis\
+	JavaShort.dis\
+	JavaStatic.dis\
+	JavaThing.dis\
+	JavaValue.dis\
+	JavaValueArray.dis\
+	ReachableExcludes.dis\
+	ReachableExcludesImpl.dis\
+	ReachableObjects.dis\
+	ReferenceChain.dis\
+	Root.dis\
+	Snapshot.dis\
+	StackFrame.dis\
+	StackTrace.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/hat/internal/model
+
+<$ROOT/mkfiles/mkjava

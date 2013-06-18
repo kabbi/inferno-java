@@ -1,0 +1,7 @@
+<../../../../mkconfig
+
+DIRS=\
+	monitor\
+	perfdata\
+
+<$ROOT/mkfiles/mksubdirs

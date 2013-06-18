@@ -1,0 +1,17 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AbstractOwnableSynchronizer.dis\
+	AbstractQueuedLongSynchronizer.dis\
+	AbstractQueuedSynchronizer.dis\
+	Condition.dis\
+	Lock.dis\
+	LockSupport.dis\
+	package-info.dis\
+	ReadWriteLock.dis\
+	ReentrantLock.dis\
+	ReentrantReadWriteLock.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/concurrent/locks
+
+<$ROOT/mkfiles/mkjava

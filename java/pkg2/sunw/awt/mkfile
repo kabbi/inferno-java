@@ -1,0 +1,20 @@
+<../../../../mkconfig
+
+TARG=\
+	ActionInputPreferred.dis\
+	DoubleBuffering.dis\
+# for KeyboardInputPreferred.dis\
+	tZW2Nc+oIyd6dX0M-UilD.dis\
+	NoInputPreferred.dis\
+# for PositionalInputPreferred.dis\
+	8AdFAaM7LI8fj1v6d+cNK.dis\
+
+DISBIN=$ROOT/java/dis/java/sunw/awt
+
+<$ROOT/mkfiles/mkjava
+
+tZW2Nc+oIyd6dX0M-UilD.dis:	KeyboardInputPreferred.class
+	j2d $prereq
+
+8AdFAaM7LI8fj1v6d+cNK.dis:	PositionalInputPreferred.class
+	j2d $prereq

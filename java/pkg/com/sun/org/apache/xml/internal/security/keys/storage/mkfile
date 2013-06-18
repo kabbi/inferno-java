@@ -1,0 +1,14 @@
+<../../../../../../../../../../../mkconfig
+
+DIRS=\
+	implementations\
+
+TARG=\
+	StorageResolver.dis\
+	StorageResolverException.dis\
+	StorageResolverSpi.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/storage
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

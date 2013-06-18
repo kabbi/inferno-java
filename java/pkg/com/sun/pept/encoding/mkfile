@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	Decoder.dis\
+	Encoder.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/pept/encoding
+
+<$ROOT/mkfiles/mkjava

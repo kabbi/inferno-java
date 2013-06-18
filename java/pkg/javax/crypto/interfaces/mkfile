@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+TARG=\
+	DHKey.dis\
+	DHPrivateKey.dis\
+	DHPublicKey.dis\
+	PBEKey.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/crypto/interfaces
+
+<$ROOT/mkfiles/mkjava

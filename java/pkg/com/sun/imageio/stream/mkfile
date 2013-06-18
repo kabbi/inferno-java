@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	CloseableDisposerRecord.dis\
+	StreamCloser.dis\
+	StreamFinalizer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/stream
+
+<$ROOT/mkfiles/mkjava

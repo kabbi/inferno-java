@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	JmxProperties.dis\
+	ServiceName.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/defaults
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,34 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	callback\
+	login\
+	module\
+
+TARG=\
+	LdapPrincipal.dis\
+	NTDomainPrincipal.dis\
+	NTNumericCredential.dis\
+	NTSid.dis\
+	NTSidDomainPrincipal.dis\
+	NTSidGroupPrincipal.dis\
+	NTSidPrimaryGroupPrincipal.dis\
+	NTSidUserPrincipal.dis\
+	NTUserPrincipal.dis\
+	PolicyFile.dis\
+	PolicyParser.dis\
+	PrincipalComparator.dis\
+	SolarisNumericGroupPrincipal.dis\
+	SolarisNumericUserPrincipal.dis\
+	SolarisPrincipal.dis\
+	SubjectCodeSource.dis\
+	UnixNumericGroupPrincipal.dis\
+	UnixNumericUserPrincipal.dis\
+	UnixPrincipal.dis\
+	UserPrincipal.dis\
+	X500Principal.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/auth
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

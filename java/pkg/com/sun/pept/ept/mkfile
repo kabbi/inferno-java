@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	Acceptor.dis\
+	ContactInfo.dis\
+	ContactInfoList.dis\
+	ContactInfoListIterator.dis\
+	EPTFactory.dis\
+	MessageInfo.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/pept/ept
+
+<$ROOT/mkfiles/mkjava

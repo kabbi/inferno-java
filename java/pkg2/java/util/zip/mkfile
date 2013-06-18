@@ -1,0 +1,38 @@
+<../../../../../mkconfig
+
+TARG=\
+	CRC32.dis\
+	CheckedInputStream.dis\
+	CheckedOutputStream.dis\
+	Checksum.dis\
+	DataFormatException.dis\
+	GZIPInputStream.dis\
+	Inflater.dis\
+	InflaterInputStream.dis\
+	ZipConstants.dis\
+	ZipEntry.dis\
+	ZipException.dis\
+	ZipInputStream.dis\
+# Limbo code\
+	CRC32_L.dis\
+	Inflater_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	CRC32_L.m\
+	Inflater_L.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/util/zip
+
+<$ROOT/mkfiles/mkjava

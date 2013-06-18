@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	Empty.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/invoke/empty
+
+<$ROOT/mkfiles/mkjava

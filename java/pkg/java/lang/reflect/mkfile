@@ -1,0 +1,30 @@
+<../../../../../mkconfig
+
+TARG=\
+	AccessibleObject.dis\
+	AnnotatedElement.dis\
+	Array.dis\
+	Constructor.dis\
+	Field.dis\
+	GenericArrayType.dis\
+	GenericDeclaration.dis\
+	GenericSignatureFormatError.dis\
+	InvocationHandler.dis\
+	InvocationTargetException.dis\
+	MalformedParameterizedTypeException.dis\
+	Member.dis\
+	Method.dis\
+	Modifier.dis\
+	package-info.dis\
+	ParameterizedType.dis\
+	Proxy.dis\
+	ReflectAccess.dis\
+	ReflectPermission.dis\
+	Type.dis\
+	TypeVariable.dis\
+	UndeclaredThrowableException.dis\
+	WildcardType.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/lang/reflect
+
+<$ROOT/mkfiles/mkjava

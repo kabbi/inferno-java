@@ -1,0 +1,30 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	dom\
+	keyinfo\
+	spec\
+
+TARG=\
+	CanonicalizationMethod.dis\
+	DigestMethod.dis\
+	Manifest.dis\
+	Reference.dis\
+	SignatureMethod.dis\
+	SignatureProperties.dis\
+	SignatureProperty.dis\
+	SignedInfo.dis\
+	Transform.dis\
+	TransformException.dis\
+	TransformService.dis\
+	XMLObject.dis\
+	XMLSignature.dis\
+	XMLSignatureException.dis\
+	XMLSignatureFactory.dis\
+	XMLSignContext.dis\
+	XMLValidateContext.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/xml/crypto/dsig
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

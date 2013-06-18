@@ -1,0 +1,42 @@
+<../../../../../mkconfig
+
+DIRS=\
+	wrapper\
+
+TARG=\
+	Config.dis\
+	KeyCache.dis\
+	P11Cipher.dis\
+	P11DHKeyFactory.dis\
+	P11Digest.dis\
+	P11DSAKeyFactory.dis\
+	P11ECDHKeyAgreement.dis\
+	P11ECKeyFactory.dis\
+	P11Key.dis\
+	P11KeyAgreement.dis\
+	P11KeyFactory.dis\
+	P11KeyGenerator.dis\
+	P11KeyPairGenerator.dis\
+	P11KeyStore.dis\
+	P11Mac.dis\
+	P11RSACipher.dis\
+	P11RSAKeyFactory.dis\
+	P11SecretKeyFactory.dis\
+	P11SecureRandom.dis\
+	P11Signature.dis\
+	P11TlsKeyMaterialGenerator.dis\
+	P11TlsMasterSecretGenerator.dis\
+	P11TlsPrfGenerator.dis\
+	P11TlsRsaPremasterSecretGenerator.dis\
+	P11Util.dis\
+	Secmod.dis\
+	Session.dis\
+	SessionManager.dis\
+	SunPKCS11.dis\
+	TemplateManager.dis\
+	Token.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/pkcs11
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

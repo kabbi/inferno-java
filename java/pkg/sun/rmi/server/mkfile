@@ -1,0 +1,27 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	ActivatableRef.dis\
+	ActivatableServerRef.dis\
+	Activation.dis\
+	ActivationGroupImpl.dis\
+	ActivationGroupInit.dis\
+	Dispatcher.dis\
+	InactiveGroupException.dis\
+	LoaderHandler.dis\
+	MarshalInputStream.dis\
+	MarshalOutputStream.dis\
+	UnicastRef.dis\
+	UnicastRef2.dis\
+	UnicastServerRef.dis\
+	UnicastServerRef2.dis\
+	Util.dis\
+	WeakClassHashMap.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/server
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

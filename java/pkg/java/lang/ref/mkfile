@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	Finalizer.dis\
+	FinalReference.dis\
+	PhantomReference.dis\
+	Reference.dis\
+	ReferenceQueue.dis\
+	SoftReference.dis\
+	WeakReference.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/lang/ref
+
+<$ROOT/mkfiles/mkjava

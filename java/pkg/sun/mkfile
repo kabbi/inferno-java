@@ -1,0 +1,30 @@
+<../../../mkconfig
+
+DIRS=\
+	applet\
+	audio\
+	awt\
+	beans\
+	dc\
+	font\
+	instrument\
+	invoke\
+	io\
+	java2d\
+	jvmstat\
+	launcher\
+	management\
+	misc\
+	net\
+	nio\
+	print\
+	reflect\
+	rmi\
+	security\
+	swing\
+	text\
+	tools\
+	tracing\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

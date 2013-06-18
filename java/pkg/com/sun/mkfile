@@ -1,0 +1,31 @@
+<../../../../mkconfig
+
+DIRS=\
+	accessibility\
+	awt\
+	beans\
+	crypto\
+	demo\
+	imageio\
+	jarsigner\
+	java\
+	jdi\
+	jmx\
+	jndi\
+	management\
+	media\
+	naming\
+	net\
+	nio\
+	org\
+	pept\
+	rmi\
+	rowset\
+	script\
+	security\
+	servicetag\
+	swing\
+	tools\
+	tracing\
+
+<$ROOT/mkfiles/mksubdirs

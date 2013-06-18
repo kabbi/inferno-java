@@ -1,0 +1,51 @@
+<../../../../../mkconfig
+
+TARG=\
+	BadDepthException.dis\
+	BufferedImageDevice.dis\
+	BufferedImageGraphicsConfig.dis\
+	BufImgSurfaceData.dis\
+	BufImgSurfaceManager.dis\
+	BufImgVolatileSurfaceManager.dis\
+	ByteArrayImageSource.dis\
+	ByteBandedRaster.dis\
+	ByteComponentRaster.dis\
+	ByteInterleavedRaster.dis\
+	BytePackedRaster.dis\
+	DataBufferNative.dis\
+	FileImageSource.dis\
+	GifImageDecoder.dis\
+	ImageAccessException.dis\
+	ImageConsumerQueue.dis\
+	ImageDecoder.dis\
+	ImageFetchable.dis\
+	ImageFetcher.dis\
+	ImageFormatException.dis\
+	ImageRepresentation.dis\
+	ImageWatched.dis\
+	ImagingLib.dis\
+	InputStreamImageSource.dis\
+	IntegerComponentRaster.dis\
+	IntegerInterleavedRaster.dis\
+	JPEGImageDecoder.dis\
+	NativeLibLoader.dis\
+	OffScreenImage.dis\
+	OffScreenImageSource.dis\
+	PixelConverter.dis\
+	PNGImageDecoder.dis\
+	ShortBandedRaster.dis\
+	ShortComponentRaster.dis\
+	ShortInterleavedRaster.dis\
+	SunVolatileImage.dis\
+	SunWritableRaster.dis\
+	SurfaceManager.dis\
+	ToolkitImage.dis\
+	URLImageSource.dis\
+	VolatileSurfaceManager.dis\
+	VSyncedBSManager.dis\
+	WritableRasterNative.dis\
+	XbmImageDecoder.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt/image
+
+<$ROOT/mkfiles/mkjava

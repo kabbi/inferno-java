@@ -1,0 +1,6 @@
+<../../../../mkconfig
+
+DIRS=\
+	net\
+
+<$ROOT/mkfiles/mksubdirs

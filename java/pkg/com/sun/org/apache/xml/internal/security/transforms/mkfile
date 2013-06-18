@@ -1,0 +1,18 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	implementations\
+	params\
+
+TARG=\
+	InvalidTransformException.dis\
+	Transform.dis\
+	TransformationException.dis\
+	TransformParam.dis\
+	Transforms.dis\
+	TransformSpi.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/transforms
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

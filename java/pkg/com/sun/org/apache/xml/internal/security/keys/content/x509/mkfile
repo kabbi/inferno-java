@@ -1,0 +1,13 @@
+<../../../../../../../../../../../../mkconfig
+
+TARG=\
+	XMLX509Certificate.dis\
+	XMLX509CRL.dis\
+	XMLX509DataContent.dis\
+	XMLX509IssuerSerial.dis\
+	XMLX509SKI.dis\
+	XMLX509SubjectName.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/content/x509
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,25 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	Authenticator.dis\
+	BasicAuthenticator.dis\
+	Filter.dis\
+	Headers.dis\
+	HttpContext.dis\
+	HttpExchange.dis\
+	HttpHandler.dis\
+	HttpPrincipal.dis\
+	HttpsConfigurator.dis\
+	HttpServer.dis\
+	HttpsExchange.dis\
+	HttpsParameters.dis\
+	HttpsServer.dis\
+	package-info.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/net/httpserver
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

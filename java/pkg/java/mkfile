@@ -1,0 +1,18 @@
+<../../../mkconfig
+
+DIRS=\
+	applet\
+	awt\
+	beans\
+	io\
+	lang\
+	math\
+	net\
+	nio\
+	rmi\
+	security\
+	sql\
+	text\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

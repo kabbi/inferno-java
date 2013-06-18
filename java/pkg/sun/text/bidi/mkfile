@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	BidiBase.dis\
+	BidiLine.dis\
+	BidiRun.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/text/bidi
+
+<$ROOT/mkfiles/mkjava

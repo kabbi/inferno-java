@@ -1,0 +1,8 @@
+<../../../mkconfig
+
+DIRS=\
+	awt\
+	lang\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

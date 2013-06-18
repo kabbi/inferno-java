@@ -1,0 +1,28 @@
+<../../../../../mkconfig
+
+TARG=\
+	BufferPoolMXBean.dis\
+	ClassLoadingMXBean.dis\
+	CompilationMXBean.dis\
+	GarbageCollectorMXBean.dis\
+	LockInfo.dis\
+	ManagementFactory.dis\
+	ManagementPermission.dis\
+	MemoryManagerMXBean.dis\
+	MemoryMXBean.dis\
+	MemoryNotificationInfo.dis\
+	MemoryPoolMXBean.dis\
+	MemoryType.dis\
+	MemoryUsage.dis\
+	MonitorInfo.dis\
+	OperatingSystemMXBean.dis\
+	PlatformComponent.dis\
+	PlatformLoggingMXBean.dis\
+	PlatformManagedObject.dis\
+	RuntimeMXBean.dis\
+	ThreadInfo.dis\
+	ThreadMXBean.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/lang/management
+
+<$ROOT/mkfiles/mkjava

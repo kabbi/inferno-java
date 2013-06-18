@@ -1,0 +1,17 @@
+<../../../../../../mkconfig
+
+TARG=\
+	Callback.dis\
+	CallbackHandler.dis\
+	ChoiceCallback.dis\
+	ConfirmationCallback.dis\
+	LanguageCallback.dis\
+	NameCallback.dis\
+	PasswordCallback.dis\
+	TextInputCallback.dis\
+	TextOutputCallback.dis\
+	UnsupportedCallbackException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/auth/callback
+
+<$ROOT/mkfiles/mkjava

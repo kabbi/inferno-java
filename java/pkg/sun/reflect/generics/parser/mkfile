@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	SignatureParser.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/parser
+
+<$ROOT/mkfiles/mkjava

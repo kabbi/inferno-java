@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	BatchEnvironment.dis\
+	BatchParser.dis\
+	CompilerMember.dis\
+	ErrorConsumer.dis\
+	ErrorMessage.dis\
+	Main.dis\
+	SourceClass.dis\
+	SourceMember.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/javac
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,49 @@
+<../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	Annotation.dis\
+	AttributedCharacterIterator.dis\
+	AttributedString.dis\
+	Bidi.dis\
+	BreakDictionary.dis\
+	BreakIterator.dis\
+	CalendarBuilder.dis\
+	CharacterIterator.dis\
+	CharacterIteratorFieldDelegate.dis\
+	ChoiceFormat.dis\
+	CollationElementIterator.dis\
+	CollationKey.dis\
+	CollationRules.dis\
+	Collator.dis\
+	DateFormat.dis\
+	DateFormatSymbols.dis\
+	DecimalFormat.dis\
+	DecimalFormatSymbols.dis\
+	DictionaryBasedBreakIterator.dis\
+	DigitList.dis\
+	DontCareFieldPosition.dis\
+	EntryPair.dis\
+	FieldPosition.dis\
+	Format.dis\
+	MergeCollation.dis\
+	MessageFormat.dis\
+	Normalizer.dis\
+	NumberFormat.dis\
+	ParseException.dis\
+	ParsePosition.dis\
+	PatternEntry.dis\
+	RBCollationTables.dis\
+	RBTableBuilder.dis\
+	RuleBasedBreakIterator.dis\
+	RuleBasedCollationKey.dis\
+	RuleBasedCollator.dis\
+	SimpleDateFormat.dis\
+	StringCharacterIterator.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/text
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

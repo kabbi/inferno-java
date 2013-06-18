@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+TARG=\
+	Punycode.dis\
+	StringPrep.dis\
+	StringPrepDataReader.dis\
+	UCharacterDirection.dis\
+	UCharacterEnums.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/idn
+
+<$ROOT/mkfiles/mkjava

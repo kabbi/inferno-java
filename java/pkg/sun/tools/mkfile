@@ -1,0 +1,21 @@
+<../../../../mkconfig
+
+DIRS=\
+	asm\
+	attach\
+	jar\
+	java\
+	javac\
+	jconsole\
+	jinfo\
+	jmap\
+	jps\
+	jstack\
+	jstat\
+	jstatd\
+	native2ascii\
+	serialver\
+	tree\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

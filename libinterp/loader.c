@@ -12,6 +12,8 @@ static uchar	Tdescmap[] = Loader_Typedesc_map;
 static Type*	Tdesc;
 static uchar	Tlinkmap[] = Loader_Link_map;
 static Type*	Tlink;
+static uchar	Importmap[] = Loader_Import_map;
+static Type*	Timport;
 
 void
 loadermodinit(void)
@@ -21,6 +23,7 @@ loadermodinit(void)
 	Tinst = dtype(freeheap, sizeof(Loader_Inst), Instmap, sizeof(Instmap));
 	Tdesc = dtype(freeheap, sizeof(Loader_Typedesc), Tdescmap, sizeof(Tdescmap));
 	Tlink = dtype(freeheap, sizeof(Loader_Link), Tlinkmap, sizeof(Tlinkmap));
+	Timport = dtype(freeheap, sizeof(Loader_Import), Importmap, sizeof(Importmap));
 }
 
 static void
@@ -169,7 +172,97 @@ Loader_link(void *a)
 		}
 	}
 
+	//m->rt |= HASLDT;
+	//error("hi, world");
+	print("[The Voice of the System] [loader.c]: link returned from %s, module flags: %x\n", m->name, m->rt);
+
 	*f->ret = ar;
+}
+
+void
+Loader_imports(void *a)
+{
+	F_Loader_imports *f;
+	Import *i1, **i2;
+	Module *m;
+	Array *ar, *ai;
+	Loader_Import *li;
+	Heap *h;
+	int nimports, datalen;
+
+	f = a;
+	destroy(*f->ret);
+	*f->ret = H;
+
+	if(f->mp == H)
+		return;
+	m = f->mp->m;
+	if(m == H)
+		return;
+	if (m->ldt == nil)
+		return;
+
+	datalen = 0;
+	nimports = 0;
+	for(i2 = m->ldt; *i2 != nil; i2++){
+		nimports++;
+		for(i1 = *i2; i1->name != nil; i1++)
+			datalen += sizeof(Loader_Import);
+	}
+
+	h = heaparray(&Tarray, nimports);
+	ar = H2D(Array*, h);
+
+	ai = (Array*)ar->data;
+	li = (Loader_Import*)(ar->data+nimports*sizeof(Array));
+	for(i2 = m->ldt; *i2 != nil; i2++){
+		ai->t = Timport;
+		ai->t->ref++;
+		ai->len = 0;
+		ai->root = ar;
+		ai->data = (uchar*)li;
+		for(i1 = *i2; i1->name != nil; i1++){
+			ai->len++;
+			li->name = c2string(i1->name, strlen(i1->name));
+			li->sig = i1->sig;
+			li++;
+		}
+		ai++;
+	}
+
+	// li = (Loader_Import*)ar->data;
+	// for(i2 = m->ldt; *i2 != nil; i2++){
+	// 	for(i1 = *i2; i1->name != nil; i1++){
+	// 		li->name = c2string(i1->name, strlen(i1->name));
+	// 		li->sig = i1->sig;
+	//		li++;
+	// 	}
+	// }
+
+	*f->ret = ar;
+}
+
+void
+Loader_setimports(void *fp)
+{
+	F_Loader_setimports *f;
+	Module *m;
+
+	f = fp;
+
+	*f->ret = -1;
+	if(f->mp == H || f->imp == H)
+		return;
+	m = f->mp->m;
+	if(m == H)
+		return;
+	if(m->compiled) {
+		kwerrstr("compiled module");
+		return;
+	}
+
+	m->rt |= HASLDT;
+
 }
 
 void

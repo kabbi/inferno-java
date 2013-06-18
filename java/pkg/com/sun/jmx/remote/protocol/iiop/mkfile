@@ -1,0 +1,11 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	ClientProvider.dis\
+	IIOPProxyImpl.dis\
+	ProxyInputStream.dis\
+	ServerProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/remote/protocol/iiop
+
+<$ROOT/mkfiles/mkjava

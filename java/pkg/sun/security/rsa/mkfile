@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	RSACore.dis\
+	RSAKeyFactory.dis\
+	RSAKeyPairGenerator.dis\
+	RSAPadding.dis\
+	RSAPrivateCrtKeyImpl.dis\
+	RSAPrivateKeyImpl.dis\
+	RSAPublicKeyImpl.dis\
+	RSASignature.dis\
+	SunRsaSign.dis\
+	SunRsaSignEntries.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/rsa
+
+<$ROOT/mkfiles/mkjava

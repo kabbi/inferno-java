@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	Log.dis\
+	NewThreadAction.dis\
+	RuntimeUtil.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/runtime
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,9 @@
+<../../../../../../../../../../../mkconfig
+
+TARG=\
+	AttrCompare.dis\
+	C14nHelper.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/c14n/helper
+
+<$ROOT/mkfiles/mkjava

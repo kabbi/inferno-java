@@ -1,0 +1,13 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AbstractDelegateHttpsURLConnection.dis\
+	DefaultHostnameVerifier.dis\
+	DelegateHttpsURLConnection.dis\
+	Handler.dis\
+	HttpsClient.dis\
+	HttpsURLConnectionImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/https
+
+<$ROOT/mkfiles/mkjava

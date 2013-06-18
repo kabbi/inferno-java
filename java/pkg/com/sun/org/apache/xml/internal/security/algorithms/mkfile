@@ -1,0 +1,16 @@
+<../../../../../../../../../../mkconfig
+
+DIRS=\
+	implementations\
+
+TARG=\
+	Algorithm.dis\
+	JCEMapper.dis\
+	MessageDigestAlgorithm.dis\
+	SignatureAlgorithm.dis\
+	SignatureAlgorithmSpi.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/algorithms
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

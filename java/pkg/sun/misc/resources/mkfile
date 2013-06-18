@@ -1,0 +1,18 @@
+<../../../../../mkconfig
+
+TARG=\
+	Messages.dis\
+	Messages_de.dis\
+	Messages_es.dis\
+	Messages_fr.dis\
+	Messages_it.dis\
+	Messages_ja.dis\
+	Messages_ko.dis\
+	Messages_pt_BR.dis\
+	Messages_sv.dis\
+	Messages_zh_CN.dis\
+	Messages_zh_TW.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/misc/resources
+
+<$ROOT/mkfiles/mkjava

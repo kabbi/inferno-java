@@ -1,0 +1,56 @@
+<../../../../mkconfig
+
+TARG=\
+	ByteToCharConverter.dis\
+	CharToByteConverter.dis\
+# for ConversionBufferFullException.dis\
+	e8qs57CKpIM-VZwCZbkEI.dis\
+# for MalformedInputException.dis\
+	55Uus+S-BCDlHki7jbEa-.dis\
+# for UnknownCharacterException.dis\
+	YOYWFQbDtF53Nsspp15bT.dis\
+# Limbo code\
+	ByteToCharConverter_L.dis\
+	CharToByteConverter_L.dis\
+	Cvt8859_1.dis\
+	CvtDefault.dis\
+	encoderalias.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	ByteToCharConverter_L.m\
+	CharToByteConverter_L.m\
+	converter.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/sun/io
+
+<$ROOT/mkfiles/mkjava
+
+CvtDefault.dis:		CvtDefault.b
+	limbo $LIMBOINCL -gw CvtDefault.b
+
+Cvt8859_1.dis:		Cvt8859_1.b
+	limbo $LIMBOINCL -gw Cvt8859_1.b
+
+encoderalias.dis:	encoderalias.b
+	limbo $LIMBOINCL -gw encoderalias.b
+
+e8qs57CKpIM-VZwCZbkEI.dis:	ConversionBufferFullException.class
+	j2d ConversionBufferFullException.class
+
+55Uus+S-BCDlHki7jbEa-.dis:	MalformedInputException.class
+	j2d MalformedInputException.class
+
+YOYWFQbDtF53Nsspp15bT.dis:	UnknownCharacterException.class
+	j2d UnknownCharacterException.class

@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	AbstractSaslImpl.dis\
+	PolicyUtils.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/sasl/util
+
+<$ROOT/mkfiles/mkjava

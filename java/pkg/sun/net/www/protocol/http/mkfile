@@ -1,0 +1,28 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	logging\
+	ntlm\
+	spnego\
+
+TARG=\
+	AuthCache.dis\
+	AuthCacheImpl.dis\
+	AuthCacheValue.dis\
+	AuthenticationHeader.dis\
+	AuthenticationInfo.dis\
+	AuthScheme.dis\
+	BasicAuthentication.dis\
+	DigestAuthentication.dis\
+	Handler.dis\
+	HttpAuthenticator.dis\
+	HttpCallerInfo.dis\
+	HttpURLConnection.dis\
+	NegotiateAuthentication.dis\
+	Negotiator.dis\
+	NTLMAuthenticationProxy.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net/www/protocol/http
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

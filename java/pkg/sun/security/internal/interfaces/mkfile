@@ -1,0 +1,8 @@
+<../../../../../../mkconfig
+
+TARG=\
+	TlsMasterSecret.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/internal/interfaces
+
+<$ROOT/mkfiles/mkjava

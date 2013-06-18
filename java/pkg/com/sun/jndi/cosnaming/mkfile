@@ -1,0 +1,16 @@
+<../../../../../../mkconfig
+
+TARG=\
+	CNBindingEnumeration.dis\
+	CNCtx.dis\
+	CNCtxFactory.dis\
+	CNNameParser.dis\
+	CorbanameUrl.dis\
+	ExceptionMapper.dis\
+	IiopUrl.dis\
+	OrbReuseTracker.dis\
+	RemoteToCorba.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/cosnaming
+
+<$ROOT/mkfiles/mkjava

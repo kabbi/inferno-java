@@ -1,0 +1,31 @@
+<../../../../mkconfig
+
+DIRS=\
+	attribute\
+	event\
+
+TARG=\
+	AttributeException.dis\
+	CancelablePrintJob.dis\
+	Doc.dis\
+	DocFlavor.dis\
+	DocPrintJob.dis\
+	FlavorException.dis\
+	MimeType.dis\
+	MultiDoc.dis\
+	MultiDocPrintJob.dis\
+	MultiDocPrintService.dis\
+	PrintException.dis\
+	PrintService.dis\
+	PrintServiceLookup.dis\
+	ServiceUI.dis\
+	ServiceUIFactory.dis\
+	SimpleDoc.dis\
+	StreamPrintService.dis\
+	StreamPrintServiceFactory.dis\
+	URIException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/print
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

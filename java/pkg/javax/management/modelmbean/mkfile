@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+TARG=\
+	DescriptorSupport.dis\
+	InvalidTargetObjectTypeException.dis\
+	ModelMBean.dis\
+	ModelMBeanAttributeInfo.dis\
+	ModelMBeanConstructorInfo.dis\
+	ModelMBeanInfo.dis\
+	ModelMBeanInfoSupport.dis\
+	ModelMBeanNotificationBroadcaster.dis\
+	ModelMBeanNotificationInfo.dis\
+	ModelMBeanOperationInfo.dis\
+	RequiredModelMBean.dis\
+	XMLParseException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/modelmbean
+
+<$ROOT/mkfiles/mkjava

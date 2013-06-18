@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+TARG=\
+	ConstructorUtil.dis\
+	FieldUtil.dis\
+	MethodUtil.dis\
+	ReflectUtil.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/misc
+
+<$ROOT/mkfiles/mkjava

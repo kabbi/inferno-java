@@ -1,0 +1,24 @@
+<../../../../mkconfig
+
+DIRS=\
+	acl\
+	action\
+	ec\
+	internal\
+	jca\
+	jgss\
+	krb5\
+	pkcs\
+	pkcs11\
+	pkcs12\
+	provider\
+	rsa\
+	smartcardio\
+	ssl\
+	timestamp\
+	tools\
+	util\
+	validator\
+	x509\
+
+<$ROOT/mkfiles/mksubdirs

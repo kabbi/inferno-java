@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+TARG=\
+	AclEntryImpl.dis\
+	AclImpl.dis\
+	AllPermissionsImpl.dis\
+	GroupImpl.dis\
+	OwnerImpl.dis\
+	PermissionImpl.dis\
+	PrincipalImpl.dis\
+	WorldGroupImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/acl
+
+<$ROOT/mkfiles/mkjava

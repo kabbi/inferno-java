@@ -1,0 +1,21 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	ArrayNotificationBuffer.dis\
+	ArrayQueue.dis\
+	ClientCommunicatorAdmin.dis\
+	ClientListenerInfo.dis\
+	ClientNotifForwarder.dis\
+	IIOPHelper.dis\
+	IIOPProxy.dis\
+	NotificationBuffer.dis\
+	NotificationBufferFilter.dis\
+	ProxyRef.dis\
+	RMIExporter.dis\
+	ServerCommunicatorAdmin.dis\
+	ServerNotifForwarder.dis\
+	Unmarshal.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/remote/internal
+
+<$ROOT/mkfiles/mkjava

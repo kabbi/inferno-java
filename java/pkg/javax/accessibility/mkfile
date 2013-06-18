@@ -1,0 +1,34 @@
+<../../../../mkconfig
+
+TARG=\
+	Accessible.dis\
+	AccessibleAction.dis\
+	AccessibleAttributeSequence.dis\
+	AccessibleBundle.dis\
+	AccessibleComponent.dis\
+	AccessibleContext.dis\
+	AccessibleEditableText.dis\
+	AccessibleExtendedComponent.dis\
+	AccessibleExtendedTable.dis\
+	AccessibleExtendedText.dis\
+	AccessibleHyperlink.dis\
+	AccessibleHypertext.dis\
+	AccessibleIcon.dis\
+	AccessibleKeyBinding.dis\
+	AccessibleRelation.dis\
+	AccessibleRelationSet.dis\
+	AccessibleResourceBundle.dis\
+	AccessibleRole.dis\
+	AccessibleSelection.dis\
+	AccessibleState.dis\
+	AccessibleStateSet.dis\
+	AccessibleStreamable.dis\
+	AccessibleTable.dis\
+	AccessibleTableModelChange.dis\
+	AccessibleText.dis\
+	AccessibleTextSequence.dis\
+	AccessibleValue.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/accessibility
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,44 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AccessWatchpointSpec.dis\
+	AmbiguousMethodException.dis\
+	BreakpointSpec.dis\
+	ChildSession.dis\
+	EvaluationException.dis\
+	EventRequestSpec.dis\
+	EventRequestSpecList.dis\
+	ExceptionSpec.dis\
+	ExecutionManager.dis\
+	FrameIndexOutOfBoundsException.dis\
+	InputListener.dis\
+	JDIEventSource.dis\
+	LineBreakpointSpec.dis\
+	LineNotFoundException.dis\
+	MalformedMemberNameException.dis\
+	MethodBreakpointSpec.dis\
+	MethodNotFoundException.dis\
+	ModificationWatchpointSpec.dis\
+	NoSessionException.dis\
+	NoThreadException.dis\
+	OutputListener.dis\
+	ParseException.dis\
+	PatternReferenceTypeSpec.dis\
+	ReferenceTypeSpec.dis\
+	Session.dis\
+	SessionListener.dis\
+	SourceNameReferenceTypeSpec.dis\
+	SpecErrorEvent.dis\
+	SpecEvent.dis\
+	SpecListener.dis\
+	ThreadGroupIterator.dis\
+	ThreadInfo.dis\
+	ThreadIterator.dis\
+	Utils.dis\
+	VMLaunchFailureException.dis\
+	VMNotInterruptedException.dis\
+	WatchpointSpec.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/example/debug/bdi
+
+<$ROOT/mkfiles/mkjava

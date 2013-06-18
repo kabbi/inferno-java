@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+DIRS=\
+	synth\
+	windows\
+
+TARG=\
+	GTKKeybindings.dis\
+	WindowsKeybindings.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/swing/plaf
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

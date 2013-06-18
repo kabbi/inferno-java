@@ -1,0 +1,20 @@
+<../../../../mkconfig
+
+DIRS=\
+	www\
+
+TARG=\
+	NetworkClient.dis\
+	ProgressData.dis\
+	ProgressEntry.dis\
+# for TransferProtocolClient.dis\
+	H-03z1cpuQVjJXNFm4UuZ.dis\
+	URLCanonicalizer.dis\
+
+DISBIN=$ROOT/java/dis/java/sun/net
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs
+
+H-03z1cpuQVjJXNFm4UuZ.dis:	TransferProtocolClient.class
+	j2d $prereq

@@ -1,0 +1,15 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	BMPConstants.dis\
+	BMPImageReader.dis\
+	BMPImageReaderSpi.dis\
+	BMPImageWriter.dis\
+	BMPImageWriterSpi.dis\
+	BMPMetadata.dis\
+	BMPMetadataFormat.dis\
+	BMPMetadataFormatResources.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/plugins/bmp
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,15 @@
+<../../../../../../mkconfig
+
+TARG=\
+	JvmContextFactory.dis\
+	MibLogger.dis\
+	SnmpCachedData.dis\
+	SnmpListTableCache.dis\
+	SnmpLoadedClassData.dis\
+	SnmpNamedListTableCache.dis\
+	SnmpTableCache.dis\
+	SnmpTableHandler.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/management/snmp/util
+
+<$ROOT/mkfiles/mkjava

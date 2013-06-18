@@ -1,0 +1,19 @@
+<../../../../mkconfig
+
+TARG=\
+	AbstractScriptEngine.dis\
+	Bindings.dis\
+	Compilable.dis\
+	CompiledScript.dis\
+	Invocable.dis\
+	ScriptContext.dis\
+	ScriptEngine.dis\
+	ScriptEngineFactory.dis\
+	ScriptEngineManager.dis\
+	ScriptException.dis\
+	SimpleBindings.dis\
+	SimpleScriptContext.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/script
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	GenericArrayTypeImpl.dis\
+	LazyReflectiveObjectGenerator.dis\
+	NotImplementedException.dis\
+	ParameterizedTypeImpl.dis\
+	TypeVariableImpl.dis\
+	WildcardTypeImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/reflect/generics/reflectiveObjects
+
+<$ROOT/mkfiles/mkjava

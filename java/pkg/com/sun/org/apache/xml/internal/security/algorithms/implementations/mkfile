@@ -1,0 +1,11 @@
+<../../../../../../../../../../../mkconfig
+
+TARG=\
+	IntegrityHmac.dis\
+	SignatureBaseRSA.dis\
+	SignatureDSA.dis\
+	SignatureECDSA.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/algorithms/implementations
+
+<$ROOT/mkfiles/mkjava

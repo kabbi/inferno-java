@@ -1,0 +1,25 @@
+<../../../../../mkconfig
+
+TARG=\
+	BeanContext.dis\
+	BeanContextChild.dis\
+	BeanContextChildComponentProxy.dis\
+	BeanContextChildSupport.dis\
+	BeanContextContainerProxy.dis\
+	BeanContextEvent.dis\
+	BeanContextMembershipEvent.dis\
+	BeanContextMembershipListener.dis\
+	BeanContextProxy.dis\
+	BeanContextServiceAvailableEvent.dis\
+	BeanContextServiceProvider.dis\
+	BeanContextServiceProviderBeanInfo.dis\
+	BeanContextServiceRevokedEvent.dis\
+	BeanContextServiceRevokedListener.dis\
+	BeanContextServices.dis\
+	BeanContextServicesListener.dis\
+	BeanContextServicesSupport.dis\
+	BeanContextSupport.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/beans/beancontext
+
+<$ROOT/mkfiles/mkjava

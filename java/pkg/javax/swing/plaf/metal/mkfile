@@ -1,0 +1,53 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	icons\
+	sounds\
+
+TARG=\
+	DefaultMetalTheme.dis\
+	MetalBorders.dis\
+	MetalBumps.dis\
+	MetalButtonUI.dis\
+	MetalCheckBoxIcon.dis\
+	MetalCheckBoxUI.dis\
+	MetalComboBoxButton.dis\
+	MetalComboBoxEditor.dis\
+	MetalComboBoxIcon.dis\
+	MetalComboBoxUI.dis\
+	MetalDesktopIconUI.dis\
+	MetalFileChooserUI.dis\
+	MetalFontDesktopProperty.dis\
+	MetalHighContrastTheme.dis\
+	MetalIconFactory.dis\
+	MetalInternalFrameTitlePane.dis\
+	MetalInternalFrameUI.dis\
+	MetalLabelUI.dis\
+	MetalLookAndFeel.dis\
+	MetalMenuBarUI.dis\
+	MetalPopupMenuSeparatorUI.dis\
+	MetalProgressBarUI.dis\
+	MetalRadioButtonUI.dis\
+	MetalRootPaneUI.dis\
+	MetalScrollBarUI.dis\
+	MetalScrollButton.dis\
+	MetalScrollPaneUI.dis\
+	MetalSeparatorUI.dis\
+	MetalSliderUI.dis\
+	MetalSplitPaneDivider.dis\
+	MetalSplitPaneUI.dis\
+	MetalTabbedPaneUI.dis\
+	MetalTextFieldUI.dis\
+	MetalTheme.dis\
+	MetalTitlePane.dis\
+	MetalToggleButtonUI.dis\
+	MetalToolBarUI.dis\
+	MetalToolTipUI.dis\
+	MetalTreeUI.dis\
+	MetalUtils.dis\
+	OceanTheme.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/plaf/metal
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

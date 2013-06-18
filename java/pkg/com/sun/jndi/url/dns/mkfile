@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	dnsURLContext.dis\
+	dnsURLContextFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/url/dns
+
+<$ROOT/mkfiles/mkjava

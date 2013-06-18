@@ -1,0 +1,17 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	jrmp\
+
+TARG=\
+	BatchEnvironment.dis\
+	Constants.dis\
+	Generator.dis\
+	IndentingWriter.dis\
+	Main.dis\
+	Resources.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/rmic/newrmic
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,31 @@
+<../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	AppletAudioClip.dis\
+	AppletClassLoader.dis\
+	AppletEvent.dis\
+	AppletEventMulticaster.dis\
+	AppletIllegalArgumentException.dis\
+	AppletImageRef.dis\
+	AppletIOException.dis\
+	AppletListener.dis\
+	AppletMessageHandler.dis\
+	AppletObjectInputStream.dis\
+	AppletPanel.dis\
+	AppletProps.dis\
+	AppletResourceLoader.dis\
+	AppletSecurity.dis\
+	AppletSecurityException.dis\
+	AppletThreadGroup.dis\
+	AppletViewer.dis\
+	AppletViewerFactory.dis\
+	AppletViewerPanel.dis\
+	Main.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/applet
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

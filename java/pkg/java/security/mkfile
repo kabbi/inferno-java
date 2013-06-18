@@ -1,0 +1,87 @@
+<../../../../mkconfig
+
+DIRS=\
+	acl\
+	cert\
+	interfaces\
+	spec\
+
+TARG=\
+	AccessControlContext.dis\
+	AccessControlException.dis\
+	AccessController.dis\
+	AlgorithmConstraints.dis\
+	AlgorithmParameterGenerator.dis\
+	AlgorithmParameterGeneratorSpi.dis\
+	AlgorithmParameters.dis\
+	AlgorithmParametersSpi.dis\
+	AllPermission.dis\
+	AuthProvider.dis\
+	BasicPermission.dis\
+	Certificate.dis\
+	CodeSigner.dis\
+	CodeSource.dis\
+	CryptoPrimitive.dis\
+	DigestException.dis\
+	DigestInputStream.dis\
+	DigestOutputStream.dis\
+	DomainCombiner.dis\
+	GeneralSecurityException.dis\
+	Guard.dis\
+	GuardedObject.dis\
+	Identity.dis\
+	IdentityScope.dis\
+	InvalidAlgorithmParameterException.dis\
+	InvalidKeyException.dis\
+	InvalidParameterException.dis\
+	Key.dis\
+	KeyException.dis\
+	KeyFactory.dis\
+	KeyFactorySpi.dis\
+	KeyManagementException.dis\
+	KeyPair.dis\
+	KeyPairGenerator.dis\
+	KeyPairGeneratorSpi.dis\
+	KeyRep.dis\
+	KeyStore.dis\
+	KeyStoreException.dis\
+	KeyStoreSpi.dis\
+	MessageDigest.dis\
+	MessageDigestSpi.dis\
+	NoSuchAlgorithmException.dis\
+	NoSuchProviderException.dis\
+	Permission.dis\
+	PermissionCollection.dis\
+	Permissions.dis\
+	Policy.dis\
+	PolicySpi.dis\
+	Principal.dis\
+	PrivateKey.dis\
+	PrivilegedAction.dis\
+	PrivilegedActionException.dis\
+	PrivilegedExceptionAction.dis\
+	ProtectionDomain.dis\
+	Provider.dis\
+	ProviderException.dis\
+	PublicKey.dis\
+	SecureClassLoader.dis\
+	SecureRandom.dis\
+	SecureRandomSpi.dis\
+	Security.dis\
+	SecurityPermission.dis\
+	Signature.dis\
+	SignatureException.dis\
+	SignatureSpi.dis\
+	SignedObject.dis\
+	Signer.dis\
+	Timestamp.dis\
+	UnrecoverableEntryException.dis\
+	UnrecoverableKeyException.dis\
+	UnresolvedPermission.dis\
+	UnresolvedPermissionCollection.dis\
+	URIParameter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/security
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

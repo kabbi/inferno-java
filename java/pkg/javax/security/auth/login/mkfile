@@ -1,0 +1,20 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AccountException.dis\
+	AccountExpiredException.dis\
+	AccountLockedException.dis\
+	AccountNotFoundException.dis\
+	AppConfigurationEntry.dis\
+	Configuration.dis\
+	ConfigurationSpi.dis\
+	CredentialException.dis\
+	CredentialExpiredException.dis\
+	CredentialNotFoundException.dis\
+	FailedLoginException.dis\
+	LoginContext.dis\
+	LoginException.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/auth/login
+
+<$ROOT/mkfiles/mkjava

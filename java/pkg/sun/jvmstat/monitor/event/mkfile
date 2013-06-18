@@ -1,0 +1,13 @@
+<../../../../../../mkconfig
+
+TARG=\
+	HostEvent.dis\
+	HostListener.dis\
+	MonitorStatusChangeEvent.dis\
+	VmEvent.dis\
+	VmListener.dis\
+	VmStatusChangeEvent.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/monitor/event
+
+<$ROOT/mkfiles/mkjava

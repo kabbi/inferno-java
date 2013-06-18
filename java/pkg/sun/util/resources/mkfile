@@ -1,0 +1,31 @@
+<../../../../../mkconfig
+
+TARG=\
+	CurrencyNames_zh_HK.dis\
+	CurrencyNames_zh_SG.dis\
+	LocaleData.dis\
+	LocaleNames_zh_HK.dis\
+	LocaleNamesBundle.dis\
+	OpenListResourceBundle.dis\
+	TimeZoneNames.dis\
+	TimeZoneNames_de.dis\
+	TimeZoneNames_en.dis\
+	TimeZoneNames_en_CA.dis\
+	TimeZoneNames_en_GB.dis\
+	TimeZoneNames_en_IE.dis\
+	TimeZoneNames_es.dis\
+	TimeZoneNames_fr.dis\
+	TimeZoneNames_hi.dis\
+	TimeZoneNames_it.dis\
+	TimeZoneNames_ja.dis\
+	TimeZoneNames_ko.dis\
+	TimeZoneNames_pt_BR.dis\
+	TimeZoneNames_sv.dis\
+	TimeZoneNames_zh_CN.dis\
+	TimeZoneNames_zh_HK.dis\
+	TimeZoneNames_zh_TW.dis\
+	TimeZoneNamesBundle.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/util/resources
+
+<$ROOT/mkfiles/mkjava

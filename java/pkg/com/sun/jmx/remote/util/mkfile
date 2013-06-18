@@ -1,0 +1,12 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	CacheMap.dis\
+	ClassLoaderWithRepository.dis\
+	ClassLogger.dis\
+	EnvHelp.dis\
+	OrderClassLoaders.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/remote/util
+
+<$ROOT/mkfiles/mkjava

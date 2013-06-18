@@ -1,0 +1,11 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	bmp\
+	common\
+	gif\
+	jpeg\
+	png\
+	wbmp\
+
+<$ROOT/mkfiles/mksubdirs

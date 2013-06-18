@@ -1,0 +1,21 @@
+<../../../../../../../../../../../mkconfig
+
+TARG=\
+	FuncHere.dis\
+	FuncHereContext.dis\
+	TransformBase64Decode.dis\
+	TransformC14N.dis\
+	TransformC14N11.dis\
+	TransformC14N11_WithComments.dis\
+	TransformC14NExclusive.dis\
+	TransformC14NExclusiveWithComments.dis\
+	TransformC14NWithComments.dis\
+	TransformEnvelopedSignature.dis\
+	TransformXPath.dis\
+	TransformXPath2Filter.dis\
+	TransformXPointer.dis\
+	TransformXSLT.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/transforms/implementations
+
+<$ROOT/mkfiles/mkjava

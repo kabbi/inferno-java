@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	JInfo.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jinfo
+
+<$ROOT/mkfiles/mkjava

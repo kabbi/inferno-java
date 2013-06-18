@@ -1,0 +1,6 @@
+<../../../../../../../../../mkconfig
+
+DIRS=\
+	metacity\
+
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,40 @@
+<../../../../../mkconfig
+
+DIRS=\
+	ext\
+
+TARG=\
+	AbstractCharsetProvider.dis\
+	ArrayDecoder.dis\
+	ArrayEncoder.dis\
+	CharsetMapping.dis\
+	FastCharsetProvider.dis\
+	HistoricallyNamedCharset.dis\
+	ISO_8859_1.dis\
+	SingleByte.dis\
+	SingleByteDecoder.dis\
+	SingleByteEncoder.dis\
+	StreamDecoder.dis\
+	StreamEncoder.dis\
+	Surrogate.dis\
+	ThreadLocalCoders.dis\
+	Unicode.dis\
+	UnicodeDecoder.dis\
+	UnicodeEncoder.dis\
+	US_ASCII.dis\
+	UTF_16.dis\
+	UTF_16BE.dis\
+	UTF_16LE.dis\
+	UTF_16LE_BOM.dis\
+	UTF_32.dis\
+	UTF_32BE.dis\
+	UTF_32BE_BOM.dis\
+	UTF_32Coder.dis\
+	UTF_32LE.dis\
+	UTF_32LE_BOM.dis\
+	UTF_8.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/nio/cs
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

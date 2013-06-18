@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	Tracker.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/demo/jvmti/hprof
+
+<$ROOT/mkfiles/mkjava

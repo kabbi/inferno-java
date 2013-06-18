@@ -1,0 +1,7 @@
+<../../../mkconfig
+
+DIRS=\
+	io\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

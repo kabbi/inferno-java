@@ -1,0 +1,6 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	ocean\
+
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,38 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ClassLoaderRepositorySupport.dis\
+	ConvertingMethod.dis\
+	DefaultMXBeanMappingFactory.dis\
+	DescriptorCache.dis\
+	DynamicMBean2.dis\
+	GetPropertyAction.dis\
+	Introspector.dis\
+	JmxMBeanServer.dis\
+	JmxMBeanServerBuilder.dis\
+	MBeanAnalyzer.dis\
+	MBeanInstantiator.dis\
+	MBeanIntrospector.dis\
+	MBeanServerDelegateImpl.dis\
+	MBeanSupport.dis\
+	ModifiableClassLoaderRepository.dis\
+	MXBeanIntrospector.dis\
+	MXBeanLookup.dis\
+	MXBeanMapping.dis\
+	MXBeanMappingFactory.dis\
+	MXBeanProxy.dis\
+	MXBeanSupport.dis\
+	NamedObject.dis\
+	ObjectInputStreamWithLoader.dis\
+	PerInterface.dis\
+	Repository.dis\
+	SecureClassLoaderRepository.dis\
+	StandardMBeanIntrospector.dis\
+	StandardMBeanSupport.dis\
+	SunJmxMBeanServer.dis\
+	Util.dis\
+	WeakIdentityHashMap.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jmx/mbeanserver
+
+<$ROOT/mkfiles/mkjava

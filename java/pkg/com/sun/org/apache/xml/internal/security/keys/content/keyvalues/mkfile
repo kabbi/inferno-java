@@ -1,0 +1,10 @@
+<../../../../../../../../../../../../mkconfig
+
+TARG=\
+	DSAKeyValue.dis\
+	KeyValueContent.dis\
+	RSAKeyValue.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/org/apache/xml/internal/security/keys/content/keyvalues
+
+<$ROOT/mkfiles/mkjava

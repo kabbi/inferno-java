@@ -1,0 +1,8 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	iiopnameURLContextFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/jndi/url/iiopname
+
+<$ROOT/mkfiles/mkjava

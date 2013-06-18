@@ -1,0 +1,15 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	ASCII_UCodeESC_CharStream.dis\
+	ExpressionParser.dis\
+	ExpressionParserConstants.dis\
+	ExpressionParserTokenManager.dis\
+	LValue.dis\
+	ParseException.dis\
+	Token.dis\
+	TokenMgrError.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/example/debug/expr
+
+<$ROOT/mkfiles/mkjava

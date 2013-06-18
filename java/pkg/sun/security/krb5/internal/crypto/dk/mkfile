@@ -1,0 +1,11 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	AesDkCrypto.dis\
+	ArcFourCrypto.dis\
+	Des3DkCrypto.dis\
+	DkCrypto.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5/internal/crypto/dk
+
+<$ROOT/mkfiles/mkjava

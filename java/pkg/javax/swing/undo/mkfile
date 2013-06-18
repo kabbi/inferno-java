@@ -1,0 +1,20 @@
+<../../../../../mkconfig
+
+DIRS=\
+	doc-files\
+
+TARG=\
+	AbstractUndoableEdit.dis\
+	CannotRedoException.dis\
+	CannotUndoException.dis\
+	CompoundEdit.dis\
+	StateEdit.dis\
+	StateEditable.dis\
+	UndoableEdit.dis\
+	UndoableEditSupport.dis\
+	UndoManager.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/undo
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

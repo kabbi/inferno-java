@@ -1,0 +1,15 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	KeyInfo.dis\
+	KeyInfoFactory.dis\
+	KeyName.dis\
+	KeyValue.dis\
+	PGPData.dis\
+	RetrievalMethod.dis\
+	X509Data.dis\
+	X509IssuerSerial.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/xml/crypto/dsig/keyinfo
+
+<$ROOT/mkfiles/mkjava

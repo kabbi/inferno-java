@@ -1,0 +1,6 @@
+<../../../../mkconfig
+
+DIRS=\
+	xml\
+
+<$ROOT/mkfiles/mksubdirs

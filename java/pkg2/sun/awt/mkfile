@@ -1,0 +1,20 @@
+<../../../../mkconfig
+
+DIRS=\
+	image
+
+TARG=\
+	AWTFinalizeable.dis\
+	AWTFinalizer.dis\
+	DrawingSurface.dis\
+	DrawingSurfaceInfo.dis\
+# for PhysicalDrawingSurface.dis\
+	V2g75a4Eiqj2G8HechSG8.dis\
+
+DISBIN=$ROOT/java/dis/java/sun/awt
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs
+
+V2g75a4Eiqj2G8HechSG8.dis:	PhysicalDrawingSurface.class
+	j2d $prereq

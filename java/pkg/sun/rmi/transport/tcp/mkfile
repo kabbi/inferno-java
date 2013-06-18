@@ -1,0 +1,15 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ConnectionMultiplexer.dis\
+	MultiplexConnectionInfo.dis\
+	MultiplexInputStream.dis\
+	MultiplexOutputStream.dis\
+	TCPChannel.dis\
+	TCPConnection.dis\
+	TCPEndpoint.dis\
+	TCPTransport.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/transport/tcp
+
+<$ROOT/mkfiles/mkjava

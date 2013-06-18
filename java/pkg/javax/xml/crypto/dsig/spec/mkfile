@@ -1,0 +1,17 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	C14NMethodParameterSpec.dis\
+	DigestMethodParameterSpec.dis\
+	ExcC14NParameterSpec.dis\
+	HMACParameterSpec.dis\
+	SignatureMethodParameterSpec.dis\
+	TransformParameterSpec.dis\
+	XPathFilter2ParameterSpec.dis\
+	XPathFilterParameterSpec.dis\
+	XPathType.dis\
+	XSLTTransformParameterSpec.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/xml/crypto/dsig/spec
+
+<$ROOT/mkfiles/mkjava

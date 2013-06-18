@@ -1,0 +1,10 @@
+<../../../../../../mkconfig
+
+TARG=\
+	InputMethod.dis\
+	InputMethodContext.dis\
+	InputMethodDescriptor.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/im/spi
+
+<$ROOT/mkfiles/mkjava

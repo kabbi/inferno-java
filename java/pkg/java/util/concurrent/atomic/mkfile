@@ -1,0 +1,20 @@
+<../../../../../../mkconfig
+
+TARG=\
+	AtomicBoolean.dis\
+	AtomicInteger.dis\
+	AtomicIntegerArray.dis\
+	AtomicIntegerFieldUpdater.dis\
+	AtomicLong.dis\
+	AtomicLongArray.dis\
+	AtomicLongFieldUpdater.dis\
+	AtomicMarkableReference.dis\
+	AtomicReference.dis\
+	AtomicReferenceArray.dis\
+	AtomicReferenceFieldUpdater.dis\
+	AtomicStampedReference.dis\
+	package-info.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util/concurrent/atomic
+
+<$ROOT/mkfiles/mkjava

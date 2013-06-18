@@ -1,0 +1,25 @@
+<../../../../../mkconfig
+
+TARG=\
+	Attribute.dis\
+	AttributeInUseException.dis\
+	AttributeModificationException.dis\
+	Attributes.dis\
+	BasicAttribute.dis\
+	BasicAttributes.dis\
+	DirContext.dis\
+	InitialDirContext.dis\
+	InvalidAttributeIdentifierException.dis\
+	InvalidAttributesException.dis\
+	InvalidAttributeValueException.dis\
+	InvalidSearchControlsException.dis\
+	InvalidSearchFilterException.dis\
+	ModificationItem.dis\
+	NoSuchAttributeException.dis\
+	SchemaViolationException.dis\
+	SearchControls.dis\
+	SearchResult.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/naming/directory
+
+<$ROOT/mkfiles/mkjava

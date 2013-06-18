@@ -1,0 +1,6 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	http\
+
+<$ROOT/mkfiles/mksubdirs

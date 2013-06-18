@@ -1,1 +1,15 @@
 # emu sh initialisation here
+#setup environment
+bind /locale/Moscow /locale/timezone
+cd
+
+#start core services
+ndb/cs
+
+#run other scripts
+load std
+and {ftest -e namespace} {nsbuild}
+and {ftest -e profile} {run profile}
+
+#start wm
+wm/wm

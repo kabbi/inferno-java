@@ -1,0 +1,53 @@
+#0
+	movp	32(fp),0(16(fp))
+	ret
+	desc  $0,0,""
+	desc	$1,40,"0080"
+	var	@mp,0
+	module	Cast
+# cast to JObject
+	link	1,0,0xaaaaaaaa,"FromJArray"
+	link	1,0,0xaaaaaaaa,"FromJClass"
+	link	1,0,0xaaaaaaaa,"FromJString"
+# cast JArray* to JArray
+	link	1,0,0xaaaaaaaa,"ByteToJArray"
+	link	1,0,0xaaaaaaaa,"IntToJArray"
+	link	1,0,0xaaaaaaaa,"BigToJArray"
+	link	1,0,0xaaaaaaaa,"RealToJArray"
+	link	1,0,0xaaaaaaaa,"ClassToJArray"
+	link	1,0,0xaaaaaaaa,"StringToJArray"
+	link	1,0,0xaaaaaaaa,"ObjectToJArray"
+# cast JArray to JArray*
+	link	1,0,0xaaaaaaaa,"JArrayToByte"
+	link	1,0,0xaaaaaaaa,"JArrayToInt"
+	link	1,0,0xaaaaaaaa,"JArrayToBig"
+	link	1,0,0xaaaaaaaa,"JArrayToReal"
+	link	1,0,0xaaaaaaaa,"JArrayToClass"
+	link	1,0,0xaaaaaaaa,"JArrayToString"
+	link	1,0,0xaaaaaaaa,"JArrayToObject"
+
+# cast from JObject
+	link	1,0,0xaaaaaaaa,"ToJArray"
+	link	1,0,0xaaaaaaaa,"ToJArrayB"
+	link	1,0,0xaaaaaaaa,"ToJArrayC"
+	link	1,0,0xaaaaaaaa,"ToJArrayS"
+	link	1,0,0xaaaaaaaa,"ToJArrayI"
+	link	1,0,0xaaaaaaaa,"ToJArrayJ"
+	link	1,0,0xaaaaaaaa,"ToJArrayF"
+	link	1,0,0xaaaaaaaa,"ToJArrayD"
+	link	1,0,0xaaaaaaaa,"ToJArrayZ"
+	link	1,0,0xaaaaaaaa,"ToJArrayJString"
+	link	1,0,0xaaaaaaaa,"ToJArrayJObject"
+	link	1,0,0xaaaaaaaa,"ToJClass"
+	link	1,0,0xaaaaaaaa,"ToJString"
+
+# cast thread data
+	link	1,0,0xaaaaaaaa,"JObjToJThd"
+	link	1,0,0xaaaaaaaa,"JThdToJObj"
+
+# misc cast
+	link	1,0,0xaaaaaaaa,"Class2Niladt"
+	link	1,0,0xaaaaaaaa,"Obj2Niladt"
+	link	1,0,0xaaaaaaaa,"JNI2Nilmod"
+	link	1,0,0xaaaaaaaa,"JArrayToHolder"
+

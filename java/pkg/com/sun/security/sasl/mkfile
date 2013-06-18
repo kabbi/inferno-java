@@ -1,0 +1,22 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	digest\
+	gsskerb\
+	ntlm\
+	util\
+
+TARG=\
+	ClientFactoryImpl.dis\
+	CramMD5Base.dis\
+	CramMD5Client.dis\
+	CramMD5Server.dis\
+	ExternalClient.dis\
+	PlainClient.dis\
+	Provider.dis\
+	ServerFactoryImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/security/sasl
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

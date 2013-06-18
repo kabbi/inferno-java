@@ -1,0 +1,47 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	ldap\
+
+TARG=\
+	AdaptableX509CertSelector.dis\
+	AdjacencyList.dis\
+	AlgorithmChecker.dis\
+	BasicChecker.dis\
+	Builder.dis\
+	BuildStep.dis\
+	CertId.dis\
+	CertPathHelper.dis\
+	CertStoreHelper.dis\
+	CollectionCertStore.dis\
+	ConstraintsChecker.dis\
+	CrlRevocationChecker.dis\
+	DistributionPointFetcher.dis\
+	ForwardBuilder.dis\
+	ForwardState.dis\
+	IndexedCollectionCertStore.dis\
+	KeyChecker.dis\
+	OCSP.dis\
+	OCSPChecker.dis\
+	OCSPRequest.dis\
+	OCSPResponse.dis\
+	PKIXCertPathValidator.dis\
+	PKIXMasterCertPathValidator.dis\
+	PolicyChecker.dis\
+	PolicyNodeImpl.dis\
+	ReverseBuilder.dis\
+	ReverseState.dis\
+	State.dis\
+	SunCertPathBuilder.dis\
+	SunCertPathBuilderException.dis\
+	SunCertPathBuilderParameters.dis\
+	SunCertPathBuilderResult.dis\
+	URICertStore.dis\
+	Vertex.dis\
+	X509CertificatePair.dis\
+	X509CertPath.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/provider/certpath
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

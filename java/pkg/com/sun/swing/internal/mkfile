@@ -1,0 +1,6 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	plaf\
+
+<$ROOT/mkfiles/mksubdirs

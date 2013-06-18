@@ -1,0 +1,22 @@
+<../../../../mkconfig
+
+TARG=\
+	DigestException.dis\
+	DigestOutputStream.dis\
+	MessageDigest.dis\
+# for NoSuchAlgorithmException.dis\
+	RnrbF1WrtSRsKMq-afpiR.dis\
+# for NoSuchProviderException.dis\
+	5GZfzesuxCFJ93DgPnKzv.dis\
+	Provider.dis\
+	Security.dis\
+
+DISBIN=$ROOT/java/dis/java/java/security
+
+<$ROOT/mkfiles/mkjava
+
+RnrbF1WrtSRsKMq-afpiR.dis:	NoSuchAlgorithmException.class
+	j2d $prereq
+
+5GZfzesuxCFJ93DgPnKzv.dis:	NoSuchProviderException.class
+	j2d $prereq

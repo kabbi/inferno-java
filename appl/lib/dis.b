@@ -359,7 +359,7 @@ loadobj(disfile: string): (ref Mod, string)
 	}
 
 	if(m.rt & Dis->HASLDT0)
-		raise "obsolete dis";
+		raise "obsolete dis [dis.m]";
 
 	if(m.rt & Dis->HASLDT){
 		nl := operand();

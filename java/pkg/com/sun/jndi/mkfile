@@ -1,0 +1,11 @@
+<../../../../../mkconfig
+
+DIRS=\
+	cosnaming\
+	dns\
+	ldap\
+	rmi\
+	toolkit\
+	url\
+
+<$ROOT/mkfiles/mksubdirs

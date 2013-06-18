@@ -1,0 +1,13 @@
+<../../../../../../../mkconfig
+
+TARG=\
+	WBMPImageReader.dis\
+	WBMPImageReaderSpi.dis\
+	WBMPImageWriter.dis\
+	WBMPImageWriterSpi.dis\
+	WBMPMetadata.dis\
+	WBMPMetadataFormat.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/imageio/plugins/wbmp
+
+<$ROOT/mkfiles/mkjava

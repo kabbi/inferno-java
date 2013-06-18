@@ -1,0 +1,38 @@
+<../../../../../mkconfig
+
+DIRS=\
+	internal\
+
+TARG=\
+	Asn1Exception.dis\
+	Checksum.dis\
+	Config.dis\
+	Confounder.dis\
+	Credentials.dis\
+	EncryptedData.dis\
+	EncryptionKey.dis\
+	KdcComm.dis\
+	KrbAppMessage.dis\
+	KrbApRep.dis\
+	KrbApReq.dis\
+	KrbAsRep.dis\
+	KrbAsReq.dis\
+	KrbAsReqBuilder.dis\
+	KrbCred.dis\
+	KrbCryptoException.dis\
+	KrbException.dis\
+	KrbKdcRep.dis\
+	KrbPriv.dis\
+	KrbSafe.dis\
+	KrbServiceLocator.dis\
+	KrbTgsRep.dis\
+	KrbTgsReq.dis\
+	PrincipalName.dis\
+	Realm.dis\
+	RealmException.dis\
+	ServiceName.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/krb5
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

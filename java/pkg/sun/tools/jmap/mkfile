@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	JMap.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jmap
+
+<$ROOT/mkfiles/mkjava

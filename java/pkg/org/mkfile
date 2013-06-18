@@ -1,0 +1,7 @@
+<../../../mkconfig
+
+DIRS=\
+	ietf\
+	jcp\
+
+<$ROOT/mkfiles/mksubdirs

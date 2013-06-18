@@ -1,0 +1,16 @@
+<../../../../../mkconfig
+
+TARG=\
+	ClassLoaderRepository.dis\
+	DefaultLoaderRepository.dis\
+	MLet.dis\
+	MLetContent.dis\
+	MLetMBean.dis\
+	MLetObjectInputStream.dis\
+	MLetParser.dis\
+	PrivateClassLoader.dis\
+	PrivateMLet.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/management/loading
+
+<$ROOT/mkfiles/mkjava

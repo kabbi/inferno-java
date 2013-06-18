@@ -1,0 +1,25 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	internal\
+
+TARG=\
+	HostnameVerifier.dis\
+	HttpsURLConnection.dis\
+	KeyManager.dis\
+	KeyManagerFactory.dis\
+	KeyManagerFactorySpi.dis\
+	SSLContext.dis\
+	SSLContextSpi.dis\
+	SSLPermission.dis\
+	SSLSecurity.dis\
+	TrustManager.dis\
+	TrustManagerFactory.dis\
+	TrustManagerFactorySpi.dis\
+	X509KeyManager.dis\
+	X509TrustManager.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/net/ssl
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

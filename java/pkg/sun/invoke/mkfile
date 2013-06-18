@@ -1,0 +1,15 @@
+<../../../../mkconfig
+
+DIRS=\
+	anon\
+	empty\
+	util\
+
+TARG=\
+	package-info.dis\
+	WrapperInstance.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/invoke
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

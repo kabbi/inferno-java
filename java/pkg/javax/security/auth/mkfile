@@ -1,0 +1,24 @@
+<../../../../../mkconfig
+
+DIRS=\
+	callback\
+	kerberos\
+	login\
+	spi\
+	x500\
+
+TARG=\
+	AuthPermission.dis\
+	Destroyable.dis\
+	DestroyFailedException.dis\
+	Policy.dis\
+	PrivateCredentialPermission.dis\
+	Refreshable.dis\
+	RefreshFailedException.dis\
+	Subject.dis\
+	SubjectDomainCombiner.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/security/auth
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

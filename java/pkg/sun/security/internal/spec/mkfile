@@ -1,0 +1,12 @@
+<../../../../../../mkconfig
+
+TARG=\
+	TlsKeyMaterialParameterSpec.dis\
+	TlsKeyMaterialSpec.dis\
+	TlsMasterSecretParameterSpec.dis\
+	TlsPrfParameterSpec.dis\
+	TlsRsaPremasterSecretParameterSpec.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/security/internal/spec
+
+<$ROOT/mkfiles/mkjava

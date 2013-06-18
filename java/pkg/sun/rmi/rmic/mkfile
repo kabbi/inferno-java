@@ -1,0 +1,22 @@
+<../../../../../mkconfig
+
+DIRS=\
+	newrmic\
+	resources\
+
+TARG=\
+	BatchEnvironment.dis\
+	Constants.dis\
+	Generator.dis\
+	IndentingWriter.dis\
+	Main.dis\
+	Names.dis\
+	RemoteClass.dis\
+	RMIConstants.dis\
+	RMIGenerator.dis\
+	Util.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/rmi/rmic
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

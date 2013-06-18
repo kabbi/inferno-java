@@ -1,0 +1,11 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ExtendedCopyOption.dis\
+	ExtendedOpenOption.dis\
+	ExtendedWatchEventModifier.dis\
+	SensitivityWatchEventModifier.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/nio/file
+
+<$ROOT/mkfiles/mkjava

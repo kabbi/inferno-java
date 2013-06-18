@@ -1,0 +1,43 @@
+<../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	AttributeUpdater.dis\
+	BackgroundLookupListener.dis\
+	BackgroundServiceLookup.dis\
+	CustomMediaSizeName.dis\
+	CustomMediaTray.dis\
+	DialogOwner.dis\
+	ImagePrinter.dis\
+	OpenBook.dis\
+	PageableDoc.dis\
+	PathGraphics.dis\
+	PeekGraphics.dis\
+	PeekMetrics.dis\
+	PrinterGraphicsConfig.dis\
+	PrinterGraphicsDevice.dis\
+	PrintJob2D.dis\
+	PrintJobAttributeException.dis\
+	PrintJobFlavorException.dis\
+	ProxyGraphics.dis\
+	ProxyGraphics2D.dis\
+	ProxyPrintGraphics.dis\
+	PSPathGraphics.dis\
+	PSPrinterJob.dis\
+	PSStreamPrinterFactory.dis\
+	PSStreamPrintJob.dis\
+	PSStreamPrintService.dis\
+	RasterPrinterJob.dis\
+	ServiceDialog.dis\
+	ServiceNotifier.dis\
+	SunAlternateMedia.dis\
+	SunMinMaxPage.dis\
+	SunPageSelection.dis\
+	SunPrinterJobService.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/print
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

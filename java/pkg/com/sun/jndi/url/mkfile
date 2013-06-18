@@ -1,0 +1,12 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	corbaname\
+	dns\
+	iiop\
+	iiopname\
+	ldap\
+	ldaps\
+	rmi\
+
+<$ROOT/mkfiles/mksubdirs

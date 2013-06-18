@@ -1,0 +1,88 @@
+<../../../../mkconfig
+
+DIRS=\
+	zip\
+
+TARG=\
+	BitSet.dis\
+	Calendar.dis\
+	Date.dis\
+	Dictionary.dis\
+	EmptyStackException.dis\
+	Enumeration.dis\
+	EventListener.dis\
+	EventObject.dis\
+	GregorianCalendar.dis\
+	Hashtable.dis\
+	HashtableEntry.dis\
+	HashtableEnumerator.dis\
+	ListResourceBundle.dis\
+	Locale.dis\
+# for MissingResourceException.dis\
+	PyLHKaRk2knKuXdPtclNZ.dis\
+# for NoSuchElementException.dis\
+	FgHgFAyr+lOIx-Hx5tg1g.dis\
+	Observable.dis\
+	Observer.dis\
+	Properties.dis\
+# for PropertyResourceBundle.dis\
+	hXReUGvcTPP+3SdqzAFLN.dis\
+	Random.dis\
+	ResourceBundle.dis\
+	SimpleTimeZone.dis\
+	Stack.dis\
+	StringTokenizer.dis\
+	SystemClassLoader.dis\
+	TimeZone.dis\
+# for TooManyListenersException.dis\
+	ofB3vewCQyrpHPDk+jZyy.dis\
+	Vector.dis\
+	VectorEnumerator.dis\
+# Limbo code\
+	Date_L.dis\
+	ResourceBundle_L.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	Date_L.m\
+	ResourceBundle_L.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/util
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs
+
+HashtableEntry.dis:	Hashtable.class
+	j2d HashtableEntry.class
+
+HashtableEnumerator.dis:	Hashtable.class
+	j2d HashtableEnumerator.class
+
+VectorEnumerator.dis:	Vector.class
+	j2d VectorEnumerator.class
+
+PyLHKaRk2knKuXdPtclNZ.dis:	MissingResourceException.class
+	j2d MissingResourceException.class
+
+FgHgFAyr+lOIx-Hx5tg1g.dis:	NoSuchElementException.class
+	j2d NoSuchElementException.class
+
+SystemClassLoader.dis:	ResourceBundle.class
+	j2d SystemClassLoader.class
+
+hXReUGvcTPP+3SdqzAFLN.dis:	PropertyResourceBundle.class
+	j2d PropertyResourceBundle.class
+
+ofB3vewCQyrpHPDk+jZyy.dis:	TooManyListenersException.class
+	j2d TooManyListenersException.class

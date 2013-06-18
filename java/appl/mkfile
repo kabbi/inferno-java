@@ -1,0 +1,7 @@
+<../../mkconfig
+
+DIRS=\
+	j2d\
+	java\
+
+<$ROOT/mkfiles/mksubdirs

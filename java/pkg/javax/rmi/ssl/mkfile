@@ -1,0 +1,9 @@
+<../../../../../mkconfig
+
+TARG=\
+	SslRMIClientSocketFactory.dis\
+	SslRMIServerSocketFactory.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/rmi/ssl
+
+<$ROOT/mkfiles/mkjava

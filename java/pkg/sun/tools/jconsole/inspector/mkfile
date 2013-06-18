@@ -1,0 +1,31 @@
+<../../../../../../mkconfig
+
+TARG=\
+	IconManager.dis\
+	OperationEntry.dis\
+	TableSorter.dis\
+	ThreadDialog.dis\
+	Utils.dis\
+	XArrayDataViewer.dis\
+	XDataViewer.dis\
+	XMBean.dis\
+	XMBeanAttributes.dis\
+	XMBeanInfo.dis\
+	XMBeanNotifications.dis\
+	XMBeanOperations.dis\
+	XNodeInfo.dis\
+	XObject.dis\
+	XOpenTypeViewer.dis\
+	XOperations.dis\
+	XPlotter.dis\
+	XPlottingViewer.dis\
+	XSheet.dis\
+	XTable.dis\
+	XTextField.dis\
+	XTextFieldEditor.dis\
+	XTree.dis\
+	XTreeRenderer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jconsole/inspector
+
+<$ROOT/mkfiles/mkjava

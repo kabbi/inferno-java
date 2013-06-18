@@ -1,0 +1,19 @@
+<../../../../../mkconfig
+
+TARG=\
+	FileCacheImageInputStream.dis\
+	FileCacheImageOutputStream.dis\
+	FileImageInputStream.dis\
+	FileImageOutputStream.dis\
+	IIOByteBuffer.dis\
+	ImageInputStream.dis\
+	ImageInputStreamImpl.dis\
+	ImageOutputStream.dis\
+	ImageOutputStreamImpl.dis\
+	MemoryCache.dis\
+	MemoryCacheImageInputStream.dis\
+	MemoryCacheImageOutputStream.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio/stream
+
+<$ROOT/mkfiles/mkjava

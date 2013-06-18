@@ -1,0 +1,8 @@
+<../mkconfig
+
+DIRS=\
+#	tools\
+#	pkg\
+	appl\
+
+<$ROOT/mkfiles/mksubdirs

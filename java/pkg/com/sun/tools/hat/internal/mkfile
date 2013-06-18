@@ -1,0 +1,10 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	model\
+	oql\
+	parser\
+	server\
+	util\
+
+<$ROOT/mkfiles/mksubdirs

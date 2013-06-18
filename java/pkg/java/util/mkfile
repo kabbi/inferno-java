@@ -1,0 +1,117 @@
+<../../../../mkconfig
+
+DIRS=\
+	concurrent\
+	jar\
+	logging\
+	prefs\
+	regex\
+	spi\
+	zip\
+
+TARG=\
+	AbstractCollection.dis\
+	AbstractList.dis\
+	AbstractMap.dis\
+	AbstractQueue.dis\
+	AbstractSequentialList.dis\
+	AbstractSet.dis\
+	ArrayDeque.dis\
+	ArrayList.dis\
+	Arrays.dis\
+	BitSet.dis\
+	Calendar.dis\
+	Collection.dis\
+	Collections.dis\
+	ComparableTimSort.dis\
+	Comparator.dis\
+	ConcurrentModificationException.dis\
+	Currency.dis\
+	Date.dis\
+	Deque.dis\
+	Dictionary.dis\
+	DualPivotQuicksort.dis\
+	DuplicateFormatFlagsException.dis\
+	EmptyStackException.dis\
+	Enumeration.dis\
+	EnumMap.dis\
+	EnumSet.dis\
+	EventListener.dis\
+	EventListenerProxy.dis\
+	EventObject.dis\
+	FormatFlagsConversionMismatchException.dis\
+	Formattable.dis\
+	FormattableFlags.dis\
+	Formatter.dis\
+	FormatterClosedException.dis\
+	GregorianCalendar.dis\
+	HashMap.dis\
+	HashSet.dis\
+	Hashtable.dis\
+	IdentityHashMap.dis\
+	IllegalFormatCodePointException.dis\
+	IllegalFormatConversionException.dis\
+	IllegalFormatException.dis\
+	IllegalFormatFlagsException.dis\
+	IllegalFormatPrecisionException.dis\
+	IllegalFormatWidthException.dis\
+	IllformedLocaleException.dis\
+	InputMismatchException.dis\
+	InvalidPropertiesFormatException.dis\
+	Iterator.dis\
+	JapaneseImperialCalendar.dis\
+	JumboEnumSet.dis\
+	LinkedHashMap.dis\
+	LinkedHashSet.dis\
+	LinkedList.dis\
+	List.dis\
+	ListIterator.dis\
+	ListResourceBundle.dis\
+	Locale.dis\
+	LocaleISOData.dis\
+	Map.dis\
+	MissingFormatArgumentException.dis\
+	MissingFormatWidthException.dis\
+	MissingResourceException.dis\
+	NavigableMap.dis\
+	NavigableSet.dis\
+	NoSuchElementException.dis\
+	Objects.dis\
+	Observable.dis\
+	Observer.dis\
+	PriorityQueue.dis\
+	Properties.dis\
+	PropertyPermission.dis\
+	PropertyResourceBundle.dis\
+	Queue.dis\
+	Random.dis\
+	RandomAccess.dis\
+	RegularEnumSet.dis\
+	ResourceBundle.dis\
+	Scanner.dis\
+	ServiceConfigurationError.dis\
+	ServiceLoader.dis\
+	Set.dis\
+	SimpleTimeZone.dis\
+	SortedMap.dis\
+	SortedSet.dis\
+	Stack.dis\
+	StringTokenizer.dis\
+	Timer.dis\
+	TimerTask.dis\
+	TimeZone.dis\
+	TimSort.dis\
+	TooManyListenersException.dis\
+	TreeMap.dis\
+	TreeSet.dis\
+	UnknownFormatConversionException.dis\
+	UnknownFormatFlagsException.dis\
+	UUID.dis\
+	Vector.dis\
+	WeakHashMap.dis\
+	XMLUtils.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/util
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

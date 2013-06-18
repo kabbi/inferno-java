@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+TARG=\
+	IIOReadProgressListener.dis\
+	IIOReadUpdateListener.dis\
+	IIOReadWarningListener.dis\
+	IIOWriteProgressListener.dis\
+	IIOWriteWarningListener.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/imageio/event
+
+<$ROOT/mkfiles/mkjava

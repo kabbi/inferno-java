@@ -1,0 +1,78 @@
+<../../../../mkconfig
+
+DIRS=\
+	datatransfer\
+	dnd\
+	event\
+	geom\
+	im\
+	image\
+	resources\
+	shell\
+	util\
+
+TARG=\
+	AppContext.dis\
+	AWTAccessor.dis\
+	AWTAutoShutdown.dis\
+	AWTCharset.dis\
+	AWTPermissionFactory.dis\
+	AWTSecurityManager.dis\
+	CausedFocusEvent.dis\
+	CharsetString.dis\
+	ComponentFactory.dis\
+	ConstrainableGraphics.dis\
+	CustomCursor.dis\
+	DebugSettings.dis\
+	DefaultMouseInfoPeer.dis\
+	DesktopBrowse.dis\
+	DisplayChangedListener.dis\
+	EmbeddedFrame.dis\
+	EventListenerAggregate.dis\
+	EventQueueDelegate.dis\
+	EventQueueItem.dis\
+	ExtendedKeyCodes.dis\
+	FocusingTextField.dis\
+	FontConfiguration.dis\
+	FontDescriptor.dis\
+	GlobalCursorManager.dis\
+	Graphics2Delegate.dis\
+	HeadlessToolkit.dis\
+	HKSCS.dis\
+	HorizBagLayout.dis\
+	HToolkit.dis\
+	InputMethodSupport.dis\
+	KeyboardFocusManagerPeerImpl.dis\
+	KeyboardFocusManagerPeerProvider.dis\
+	ModalExclude.dis\
+	ModalityEvent.dis\
+	ModalityListener.dis\
+	Mutex.dis\
+	NativeLibLoader.dis\
+	NullComponentPeer.dis\
+	OrientableFlowLayout.dis\
+	OSInfo.dis\
+	PaintEventDispatcher.dis\
+	PeerEvent.dis\
+	PlatformFont.dis\
+	RepaintArea.dis\
+	RequestFocusController.dis\
+	ScrollPaneWheelScroller.dis\
+	SubRegionShowable.dis\
+	SunDisplayChanger.dis\
+	SunGraphicsCallback.dis\
+	SunHints.dis\
+	SunToolkit.dis\
+	Symbol.dis\
+	TracedEventQueue.dis\
+	UngrabEvent.dis\
+	VariableGridLayout.dis\
+	VerticalBagLayout.dis\
+	WindowClosingListener.dis\
+	WindowClosingSupport.dis\
+	WindowIDProvider.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

@@ -1,0 +1,83 @@
+<../../../../../mkconfig
+
+DIRS=\
+	doc-files\
+	html\
+	rtf\
+
+TARG=\
+	AbstractDocument.dis\
+	AbstractWriter.dis\
+	AsyncBoxView.dis\
+	AttributeSet.dis\
+	BadLocationException.dis\
+	BoxView.dis\
+	Caret.dis\
+	ChangedCharSetException.dis\
+	ComponentView.dis\
+	CompositeView.dis\
+	DateFormatter.dis\
+	DefaultCaret.dis\
+	DefaultEditorKit.dis\
+	DefaultFormatter.dis\
+	DefaultFormatterFactory.dis\
+	DefaultHighlighter.dis\
+	DefaultStyledDocument.dis\
+	DefaultTextUI.dis\
+	Document.dis\
+	DocumentFilter.dis\
+	EditorKit.dis\
+	Element.dis\
+	ElementIterator.dis\
+	FieldView.dis\
+	FlowView.dis\
+	GapContent.dis\
+	GapVector.dis\
+	GlyphPainter1.dis\
+	GlyphPainter2.dis\
+	GlyphView.dis\
+	Highlighter.dis\
+	IconView.dis\
+	InternationalFormatter.dis\
+	JTextComponent.dis\
+	Keymap.dis\
+	LabelView.dis\
+	LayeredHighlighter.dis\
+	LayoutQueue.dis\
+	MaskFormatter.dis\
+	MutableAttributeSet.dis\
+	NavigationFilter.dis\
+	NumberFormatter.dis\
+	ParagraphView.dis\
+	PasswordView.dis\
+	PlainDocument.dis\
+	PlainView.dis\
+	Position.dis\
+	Segment.dis\
+	SegmentCache.dis\
+	SimpleAttributeSet.dis\
+	StateInvariantError.dis\
+	StringContent.dis\
+	Style.dis\
+	StyleConstants.dis\
+	StyleContext.dis\
+	StyledDocument.dis\
+	StyledEditorKit.dis\
+	TabableView.dis\
+	TabExpander.dis\
+	TableView.dis\
+	TabSet.dis\
+	TabStop.dis\
+	TextAction.dis\
+	TextLayoutStrategy.dis\
+	Utilities.dis\
+	View.dis\
+	ViewFactory.dis\
+	WhitespaceBasedBreakIterator.dis\
+	WrappedPlainView.dis\
+	ZoneView.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/swing/text
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

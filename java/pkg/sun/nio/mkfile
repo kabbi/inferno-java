@@ -1,0 +1,14 @@
+<../../../../mkconfig
+
+DIRS=\
+	ch\
+	cs\
+	fs\
+
+TARG=\
+	ByteBuffered.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/nio
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

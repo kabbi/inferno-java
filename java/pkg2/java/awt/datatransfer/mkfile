@@ -1,0 +1,17 @@
+<../../../../../mkconfig
+
+TARG=\
+	Clipboard.dis\
+	ClipboardOwner.dis\
+	DataFlavor.dis\
+	StringSelection.dis\
+	Transferable.dis\
+# for UnsupportedFlavorException.dis\
+	XJ67lvo7CEuYBAk8ihSb4.dis\
+
+DISBIN=$ROOT/java/dis/java/java/awt/datatransfer
+
+<$ROOT/mkfiles/mkjava
+
+XJ67lvo7CEuYBAk8ihSb4.dis:	UnsupportedFlavorException.class
+	j2d $prereq

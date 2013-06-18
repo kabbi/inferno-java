@@ -1,0 +1,12 @@
+<../../../../../mkconfig
+
+TARG=\
+	ClipboardTransferable.dis\
+	DataTransferer.dis\
+	SunClipboard.dis\
+	ToolkitThreadBlockedHandler.dis\
+	TransferableProxy.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt/datatransfer
+
+<$ROOT/mkfiles/mkjava

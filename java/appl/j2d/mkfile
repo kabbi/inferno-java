@@ -1,0 +1,49 @@
+<../../../mkconfig
+
+TARG=j2d.dis\
+
+MODULES=\
+	java.m\
+	javaisa.m\
+	reloc.m\
+	$ROOT/appl/cmd/limbo/arg.m\
+	$ROOT/appl/cmd/limbo/isa.m\
+	asm.b\
+	bb.b\
+	datarloc.b\
+	desc.b\
+	dis.b\
+	entry.b\
+	finally.b\
+	frame.b\
+	j2d.b\
+	javadas.b\
+	javatbl.b\
+	links.b\
+	loader.b\
+	ltreloc.b\
+	main.b\
+	mdata.b\
+	module.b\
+	patch.b\
+	rtreloc.b\
+	sbl.b\
+	simjvm.b\
+	unify.b\
+	util.b\
+	xlate.b\
+
+SYSMODULES=\
+	bufio.m\
+	draw.m\
+	keyring.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java
+
+<$ROOT/mkfiles/mkdis
+
+LIMBOFLAGS=-I$MODDIR\
+	-I$ROOT/appl/cmd/limbo\

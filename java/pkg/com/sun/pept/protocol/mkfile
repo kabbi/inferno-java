@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	Interceptors.dis\
+	MessageDispatcher.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/pept/protocol
+
+<$ROOT/mkfiles/mkjava

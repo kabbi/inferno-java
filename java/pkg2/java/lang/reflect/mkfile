@@ -1,0 +1,46 @@
+<../../../../../mkconfig
+
+TARG=\
+	Array.dis\
+	Constructor.dis\
+	Field.dis\
+# for InvocationTargetException.dis\
+	esaAWjdsByqq9cEPQZTRT.dis\
+	Member.dis\
+	Method.dis\
+	Modifier.dis\
+# Limbo code\
+	Array_L.dis\
+	Constructor_L.dis\
+	Field_L.dis\
+	Method_L.dis\
+	reflect.dis\
+
+MODULES=\
+	$ROOT/java/module/classloader.m\
+	$ROOT/java/module/jni.m\
+	$ROOT/java/module/cast.m\
+	Array_L.m\
+	Constructor_L.m\
+	Field_L.m\
+	Method_L.m\
+	reflect.m\
+
+SYSMODULES=\
+	draw.m\
+	hash.m\
+	keyring.m\
+	loader.m\
+	math.m\
+	string.m\
+	sys.m\
+
+DISBIN=$ROOT/java/dis/java/java/lang/reflect
+
+<$ROOT/mkfiles/mkjava
+
+reflect.dis:	reflect.b
+	limbo $LIMBOINCL -gw reflect.b
+
+esaAWjdsByqq9cEPQZTRT.dis:	InvocationTargetException.class
+	j2d InvocationTargetException.class

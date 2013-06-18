@@ -1,0 +1,9 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	gtk\
+	motif\
+	nimbus\
+	windows\
+
+<$ROOT/mkfiles/mksubdirs

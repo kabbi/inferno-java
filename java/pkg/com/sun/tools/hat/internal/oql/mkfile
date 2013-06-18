@@ -1,0 +1,11 @@
+<../../../../../../../../mkconfig
+
+TARG=\
+	ObjectVisitor.dis\
+	OQLEngine.dis\
+	OQLException.dis\
+	OQLQuery.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/hat/internal/oql
+
+<$ROOT/mkfiles/mkjava

@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+DIRS=\
+	spi\
+
+TARG=\
+	InputContext.dis\
+	InputMethodHighlight.dis\
+	InputMethodRequests.dis\
+	InputSubset.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/awt/im
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

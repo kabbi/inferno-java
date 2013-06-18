@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+TARG=\
+	BytecodeDescriptor.dis\
+	BytecodeName.dis\
+	package-info.dis\
+	ValueConversions.dis\
+	VerifyAccess.dis\
+	VerifyType.dis\
+	Wrapper.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/invoke/util
+
+<$ROOT/mkfiles/mkjava

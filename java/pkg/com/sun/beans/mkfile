@@ -1,0 +1,15 @@
+<../../../../../mkconfig
+
+DIRS=\
+	decoder\
+	finder\
+
+TARG=\
+	TypeResolver.dis\
+	WeakCache.dis\
+	WildcardTypeImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/beans
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

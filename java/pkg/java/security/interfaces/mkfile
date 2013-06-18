@@ -1,0 +1,20 @@
+<../../../../../mkconfig
+
+TARG=\
+	DSAKey.dis\
+	DSAKeyPairGenerator.dis\
+	DSAParams.dis\
+	DSAPrivateKey.dis\
+	DSAPublicKey.dis\
+	ECKey.dis\
+	ECPrivateKey.dis\
+	ECPublicKey.dis\
+	RSAKey.dis\
+	RSAMultiPrimePrivateCrtKey.dis\
+	RSAPrivateCrtKey.dis\
+	RSAPrivateKey.dis\
+	RSAPublicKey.dis\
+
+DISBIN=$ROOT/java/dis/java/java/java/security/interfaces
+
+<$ROOT/mkfiles/mkjava

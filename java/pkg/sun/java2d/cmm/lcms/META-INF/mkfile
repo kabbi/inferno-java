@@ -1,0 +1,6 @@
+<../../../../../../../mkconfig
+
+DIRS=\
+	services\
+
+<$ROOT/mkfiles/mksubdirs

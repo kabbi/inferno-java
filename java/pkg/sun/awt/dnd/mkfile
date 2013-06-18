@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	SunDragSourceContextPeer.dis\
+	SunDropTargetContextPeer.dis\
+	SunDropTargetEvent.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/awt/dnd
+
+<$ROOT/mkfiles/mkjava

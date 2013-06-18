@@ -1,0 +1,9 @@
+<../../../../../../mkconfig
+
+TARG=\
+	ExtCheck.dis\
+	Main.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/extcheck
+
+<$ROOT/mkfiles/mkjava

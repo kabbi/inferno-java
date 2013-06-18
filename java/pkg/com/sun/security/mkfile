@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+DIRS=\
+	auth\
+	cert\
+	jgss\
+	ntlm\
+	sasl\
+
+<$ROOT/mkfiles/mksubdirs

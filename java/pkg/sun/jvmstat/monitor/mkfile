@@ -1,0 +1,26 @@
+<../../../../../mkconfig
+
+DIRS=\
+	event\
+	remote\
+
+TARG=\
+	AbstractMonitor.dis\
+	ByteArrayMonitor.dis\
+	HostIdentifier.dis\
+	IntegerMonitor.dis\
+	LongMonitor.dis\
+	Monitor.dis\
+	MonitoredHost.dis\
+	MonitoredVm.dis\
+	MonitoredVmUtil.dis\
+	MonitorException.dis\
+	StringMonitor.dis\
+	Units.dis\
+	Variability.dis\
+	VmIdentifier.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/jvmstat/monitor
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

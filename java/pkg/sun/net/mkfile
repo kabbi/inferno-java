@@ -1,0 +1,38 @@
+<../../../../mkconfig
+
+DIRS=\
+	dns\
+	ftp\
+	httpserver\
+	idn\
+	sdp\
+	smtp\
+	spi\
+	util\
+	www\
+
+TARG=\
+	ApplicationProxy.dis\
+	ConnectionResetException.dis\
+	InetAddressCachePolicy.dis\
+	NetProperties.dis\
+	NetworkClient.dis\
+	NetworkServer.dis\
+	ProgressEvent.dis\
+	ProgressListener.dis\
+	ProgressMeteringPolicy.dis\
+	ProgressMonitor.dis\
+	ProgressSource.dis\
+	RegisteredDomain.dis\
+	ResourceManager.dis\
+	SocksProxy.dis\
+	TelnetInputStream.dis\
+	TelnetOutputStream.dis\
+	TelnetProtocolException.dis\
+	TransferProtocolClient.dis\
+	URLCanonicalizer.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/net
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

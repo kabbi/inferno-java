@@ -1,0 +1,15 @@
+<../../../../../../mkconfig
+
+TARG=\
+	SyncFactory.dis\
+	SyncFactoryException.dis\
+	SyncProvider.dis\
+	SyncProviderException.dis\
+	SyncResolver.dis\
+	TransactionalWriter.dis\
+	XmlReader.dis\
+	XmlWriter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/sql/rowset/spi
+
+<$ROOT/mkfiles/mkjava

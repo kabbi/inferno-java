@@ -1,0 +1,14 @@
+<../../../../../mkconfig
+
+DIRS=\
+	resources\
+
+TARG=\
+	A2NFilter.dis\
+	Main.dis\
+	N2AFilter.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/native2ascii
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

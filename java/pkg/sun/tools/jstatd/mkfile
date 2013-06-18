@@ -1,0 +1,10 @@
+<../../../../../mkconfig
+
+TARG=\
+	Jstatd.dis\
+	RemoteHostImpl.dis\
+	RemoteVmImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/tools/jstatd
+
+<$ROOT/mkfiles/mkjava

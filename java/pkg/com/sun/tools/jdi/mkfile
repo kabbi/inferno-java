@@ -1,0 +1,92 @@
+<../../../../../../mkconfig
+
+DIRS=\
+	META-INF\
+	resources\
+
+TARG=\
+	AbstractLauncher.dis\
+	ArrayReferenceImpl.dis\
+	ArrayTypeImpl.dis\
+	BaseLineInfo.dis\
+	BooleanTypeImpl.dis\
+	BooleanValueImpl.dis\
+	ByteTypeImpl.dis\
+	ByteValueImpl.dis\
+	CharTypeImpl.dis\
+	CharValueImpl.dis\
+	ClassLoaderReferenceImpl.dis\
+	ClassObjectReferenceImpl.dis\
+	ClassTypeImpl.dis\
+	CommandSender.dis\
+	ConcreteMethodImpl.dis\
+	ConnectorImpl.dis\
+	DoubleTypeImpl.dis\
+	DoubleValueImpl.dis\
+	EventQueueImpl.dis\
+	EventRequestManagerImpl.dis\
+	EventSetImpl.dis\
+	FieldImpl.dis\
+	FloatTypeImpl.dis\
+	FloatValueImpl.dis\
+	GenericAttachingConnector.dis\
+	GenericListeningConnector.dis\
+	IntegerTypeImpl.dis\
+	IntegerValueImpl.dis\
+	InterfaceTypeImpl.dis\
+	InternalEventHandler.dis\
+	JDWPException.dis\
+	JNITypeParser.dis\
+	LineInfo.dis\
+	LinkedHashMap.dis\
+	LocalVariableImpl.dis\
+	LocationImpl.dis\
+	LockObject.dis\
+	LongTypeImpl.dis\
+	LongValueImpl.dis\
+	MethodImpl.dis\
+	MirrorImpl.dis\
+	MonitorInfoImpl.dis\
+	NonConcreteMethodImpl.dis\
+	ObjectReferenceImpl.dis\
+	ObsoleteMethodImpl.dis\
+	Packet.dis\
+	PacketStream.dis\
+	PrimitiveTypeImpl.dis\
+	PrimitiveValueImpl.dis\
+	ProcessAttachingConnector.dis\
+	RawCommandLineLauncher.dis\
+	ReferenceTypeImpl.dis\
+	SDE.dis\
+	ShortTypeImpl.dis\
+	ShortValueImpl.dis\
+	SocketAttachingConnector.dis\
+	SocketListeningConnector.dis\
+	SocketTransportService.dis\
+	StackFrameImpl.dis\
+	StratumLineInfo.dis\
+	StringReferenceImpl.dis\
+	SunCommandLineLauncher.dis\
+	TargetVM.dis\
+	ThreadAction.dis\
+	ThreadGroupReferenceImpl.dis\
+	ThreadListener.dis\
+	ThreadReferenceImpl.dis\
+	TypeComponentImpl.dis\
+	TypeImpl.dis\
+	ValueContainer.dis\
+	ValueImpl.dis\
+	VirtualMachineImpl.dis\
+	VirtualMachineManagerImpl.dis\
+	VirtualMachineManagerService.dis\
+	VMAction.dis\
+	VMListener.dis\
+	VMModifiers.dis\
+	VMState.dis\
+	VoidTypeImpl.dis\
+	VoidValueImpl.dis\
+
+DISBIN=$ROOT/java/dis/java/java/com/sun/tools/jdi
+
+<$ROOT/mkfiles/mkjava
+<$ROOT/mkfiles/mksubdirs

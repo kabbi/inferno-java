@@ -1,0 +1,8 @@
+<../../../../../mkconfig
+
+TARG=\
+	ComponentBeanInfo.dis\
+
+DISBIN=$ROOT/java/dis/java/java/sun/beans/infos
+
+<$ROOT/mkfiles/mkjava

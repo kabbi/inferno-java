@@ -1,0 +1,30 @@
+<../../../../../mkconfig
+
+TARG=\
+	BasicControl.dis\
+	Control.dis\
+	ControlFactory.dis\
+	ExtendedRequest.dis\
+	ExtendedResponse.dis\
+	HasControls.dis\
+	InitialLdapContext.dis\
+	LdapContext.dis\
+	LdapName.dis\
+	LdapReferralException.dis\
+	ManageReferralControl.dis\
+	PagedResultsControl.dis\
+	PagedResultsResponseControl.dis\
+	Rdn.dis\
+	Rfc2253Parser.dis\
+	SortControl.dis\
+	SortKey.dis\
+	SortResponseControl.dis\
+	StartTlsRequest.dis\
+	StartTlsResponse.dis\
+	UnsolicitedNotification.dis\
+	UnsolicitedNotificationEvent.dis\
+	UnsolicitedNotificationListener.dis\
+
+DISBIN=$ROOT/java/dis/java/java/javax/naming/ldap
+
+<$ROOT/mkfiles/mkjava
