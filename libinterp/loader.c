@@ -156,9 +156,8 @@ Loader_link(void *a)
 	ar->root = H;
 	ar->data = (uchar*)ar+sizeof(Array);
 
-	ll = (Loader_Link*)ar->data + nlink;
+	ll = (Loader_Link*)ar->data;
 	for(p = m->ext; p->name; p++) {
-		ll--;
 		ll->name = c2string(p->name, strlen(p->name));
 		ll->sig = p->sig;
 		if(m->prog == nil) {
@@ -170,11 +169,11 @@ Loader_link(void *a)
 			for(t = m->type; *t != p->frame; t++)
 				ll->tdesc++;
 		}
+		ll++;
 	}
 
 	//m->rt |= HASLDT;
-	//error("hi, world");
-	print("[The Voice of the System] [loader.c]: link returned from %s, module flags: %x\n", m->name, m->rt);
+	//print("[The Voice of the System] [loader.c]: link returned from %s, module flags: %x\n", m->name, m->rt);
 
 	*f->ret = ar;
 }
@@ -184,11 +183,10 @@ Loader_imports(void *a)
 {
 	F_Loader_imports *f;
 	Import *i1, **i2;
-	Module *m;
-	Array *ar, *ai;
 	Loader_Import *li;
-	Heap *h;
-	int nimports, datalen;
+	Array *ar, **ai;
+	Module *m;
+	int nimports;
 
 	f = a;
 	destroy(*f->ret);
@@ -202,42 +200,28 @@ Loader_imports(void *a)
 	if (m->ldt == nil)
 		return;
 
-	datalen = 0;
 	nimports = 0;
 	for(i2 = m->ldt; *i2 != nil; i2++){
 		nimports++;
-		for(i1 = *i2; i1->name != nil; i1++)
-			datalen += sizeof(Loader_Import);
 	}
 
-	h = heaparray(&Tarray, nimports);
-	ar = H2D(Array*, h);
+	ar = H2D(Array*, heaparray(&Tptr, nimports));
+	ai = (Array**)ar->data;
 
-	ai = (Array*)ar->data;
-	li = (Loader_Import*)(ar->data+nimports*sizeof(Array));
 	for(i2 = m->ldt; *i2 != nil; i2++){
-		ai->t = Timport;
-		ai->t->ref++;
-		ai->len = 0;
-		ai->root = ar;
-		ai->data = (uchar*)li;
+		nimports = 0;
+		for(i1 = *i2; i1->name != nil; i1++)
+			nimports++;
+
+		*ai = H2D(Array*, heaparray(Timport, nimports));
+		li = (Loader_Import*)(*ai)->data;
 		for(i1 = *i2; i1->name != nil; i1++){
-			ai->len++;
 			li->name = c2string(i1->name, strlen(i1->name));
 			li->sig = i1->sig;
 			li++;
 		}
 		ai++;
 	}
-
-	// li = (Loader_Import*)ar->data;
-	// for(i2 = m->ldt; *i2 != nil; i2++){
-	// 	for(i1 = *i2; i1->name != nil; i1++){
-	// 		li->name = c2string(i1->name, strlen(i1->name));
-	// 		li->sig = i1->sig;
-	//		li++;
-	// 	}
-	// }
 
 	*f->ret = ar;
 }
@@ -246,7 +230,11 @@ void
 Loader_setimports(void *fp)
 {
 	F_Loader_setimports *f;
+	Loader_Import *li;
+	Import *i1, **i2;
+	Array **ar;
 	Module *m;
+	int i, j;
 
 	f = fp;
 
@@ -261,8 +249,46 @@ Loader_setimports(void *fp)
 		return;
 	}
 
+	// Free existing import table
+	if(m->ldt != nil){
+		for(i2 = m->ldt; *i2 != nil; i2++){
+			for(i1 = *i2; i1->name != nil; i1++)
+				free(i1->name);
+			free(*i2);
+		}
+		free(m->ldt);
+	}
+
+	// And set the new one
+	m->ldt = (Import**)malloc((f->imp->len+1)*sizeof(Import*));
+	if(m->ldt == nil){
+		kwerrstr(exNomem);
+		return;
+	}
+
+	ar = (Array**)f->imp->data;
+	for (i = 0; i < f->imp->len; i++){
+		if (ar[i] == H)
+			continue;
+
+		m->ldt[i] = (Import*)malloc((ar[i]->len+1)*sizeof(Import));
+		if (m->ldt[i] == nil){
+			free(m->ldt);
+			kwerrstr(exNomem);
+			return;
+		}
+
+		li = (Loader_Import*)ar[i]->data;
+		for (j = 0; j < ar[i]->len; j++){
+			m->ldt[i][j].name = strdup(string2c(li[j].name));
+			m->ldt[i][j].sig = li[j].sig;
+		}
+	}
+
+	// Don't forget to say the world we now have ldt
 	m->rt |= HASLDT;
 
+	*f->ret = 0;
 }
 
 void
