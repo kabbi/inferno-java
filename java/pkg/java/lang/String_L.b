@@ -74,11 +74,7 @@ init( jni_p : JNI )
     jni = jni_p;
     #>>extra initialization here
 	str = jni->str;
-	jni->sys->print("String_L.init loading hash.m module\n");
-	buf := array [1] of byte;
-	jni->sys->read(jni->sys->fildes(0), buf, 1);
 	hash = load Hash Hash->PATH;
-	jni->sys->print("String_L.init load ok\n");
 	if ( hash == nil )
 		jni->InitError( jni->sys->sprint( "java.lang.String: could not load %s: %r", Hash->PATH ) );
     #<<
