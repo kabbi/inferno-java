@@ -14,7 +14,7 @@ ASFLAGS=
 
 ISYSROOT=	-isysroot /Developer/SDKs/MacOSX10.4u.sdk
 
-CC=		gcc -c
+CC=		gcc -c -g
 COPTFLAGS=	-Os
 CDEBUGFLAGS=
 CTHREADFLAGS=
@@ -29,7 +29,7 @@ CFLAGS= 	-arch i386\
 		-I$ROOT/include\
 		$COPTFLAGS $CDEBUGFLAGS\
 
-LD=		gcc -arch i386
+LD=		gcc -arch i386 -g
 LDFLAGS=\
 		-mmacosx-version-min=10.4\
 		-multiply_defined suppress
