@@ -8588,24 +8588,15 @@
 #J7	iconst_0
 #J8	anewarray 279
 #4610
-	#bnew	1040(mp),0(mp),$4614
-	#mframe	0(mp),$0,32(fp)
-	#lea	1040(mp),32(32(fp))
-	#mcall	32(fp),$0,0(mp)
-	#mnewz	0(mp),$0,36(fp)
-	#movp	0(0(mp)),0(36(fp))
-	#newa	$0,$6,4(36(fp))
-	#movw	$1,8(36(fp))
-	#movp	1048(mp),12(36(fp))
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
-	addb	32(fp),$0,32(fp)
+	bnew	1040(mp),0(mp),$4614
+	mframe	0(mp),$0,32(fp)
+	lea	1040(mp),32(32(fp))
+	mcall	32(fp),$0,0(mp)
+	mnewz	0(mp),$0,36(fp)
+	movp	0(0(mp)),0(36(fp))
+	newa	$0,$6,4(36(fp))
+	movw	$1,8(36(fp))
+	movp	1048(mp),12(36(fp))
 #J11	putstatic 280
 	addw	0(0(mp)),$0,32(fp)
 #4620
