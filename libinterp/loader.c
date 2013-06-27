@@ -172,9 +172,6 @@ Loader_link(void *a)
 		ll++;
 	}
 
-	//m->rt |= HASLDT;
-	//print("[The Voice of the System] [loader.c]: link returned from %s, module flags: %x\n", m->name, m->rt);
-
 	*f->ret = ar;
 }
 
@@ -283,6 +280,8 @@ Loader_setimports(void *fp)
 			m->ldt[i][j].name = strdup(string2c(li[j].name));
 			m->ldt[i][j].sig = li[j].sig;
 		}
+		// The end of links marker
+		m->ldt[i][ar[i]->len].name = nil;
 	}
 
 	// Don't forget to say the world we now have ldt
@@ -405,6 +404,9 @@ Loader_newmod(void *a)
 	}
 	m->entryt = nil;
 	m->entry = m->prog;
+
+	m->ext = (Link*)malloc(sizeof(Link));
+	m->ext->name = nil;
 
 	ml = mklinkmod(m, f->nlink);
 	ml->MP = m->origmp;
