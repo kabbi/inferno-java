@@ -12,6 +12,10 @@ keydb
 usr
 
 # Object files
+/MacOSX/386/bin/*
+/MacOSX/386/lib/*
+/emu/MacOSX/o.emu
+/emu/MacOSX/o.emu-g
 *.debug
 *.tab.[hc]
 *.dis
