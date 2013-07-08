@@ -31,6 +31,8 @@ RSYS:			con "@sys";
 # special class name
 RLOADER:		con "@Loader";
 
+RCLASSCLASS:		con "java/lang/Class";
+
 Ipatch: adt {
 	n:	int;			# no. of significant elts. in pinfo & i
 	max:	int;			# number of elements pinfo & i can hold
