@@ -1714,6 +1714,50 @@ xjavadup()
 		acqreg(code.j[J.src[1]].dst);
 }
 
+xgetclass(a: ref Addr, class: int)
+{
+	imframe, iindw, i: ref Inst;
+	n, rtflag: int;
+	rtc: ref RTClass;
+	cr: ref Creloc;
+	frm, frf: ref Freloc;
+	ai: ref ArrayInfo;
+
+	# Ensure that Class is loaded
+	rtc = getRTClass(RCLASSCLASS);
+	callrtload(rtc, RCLASSCLASS);
+
+	cr = getCreloc(RLOADER);
+	frm = getFreloc(cr, RMP, nil, 0);
+	frf = getFreloc(cr, "getclassclass", nil, 0);
+
+	imframe = loadermframe(frm, frf);
+
+	# 1st arg: our name
+
+	i = newi(IMOVP);
+	addrsind(i.s, Amp, mpstring(THISCLASS));
+	addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
+	datareloc(i);
+
+	# 2nd arg: the name of Class to load
+
+	i = newi(IMOVP);
+	addrsind(i.s, Amp, mpstring(CLASSNAME(class)));
+	addrdind(i.d, Afpind, imframe.d.offset, REGSIZE+IBY2WD);
+	datareloc(i);
+
+	# Result: Class object pointer
+
+	i = newi(ILEA);
+	dstreg(J.dst, DIS_P);
+	*i.s = *J.dst;
+	addrdind(i.d, Afpind, imframe.d.offset, REGRET*IBY2WD);
+
+	loadermcall(imframe, frf, frm);
+	relreg(imframe.d);
+}
+
 xldc()
 {
 	i: ref Inst;
@@ -1743,7 +1787,13 @@ xldc()
 		addDreloc(i, PSRC, PSIND);
 	CON_Class =>
 		# TODO: stub!
-		xjavaload(IMOVW);
+		#xjavanew("java/lang/String", J.dst);
+		#i = newi(IMOVP);
+		#*i.s = *J.movsrc;
+		#*i.d = *J.dst;
+		#sind2dind(i.d, STR_DISSTR);
+		#addDreloc(i, PSRC, PSIND);
+		xgetclass(J.dst, ix);
 	* =>
 		badpick("xldc[2]");
 	}
