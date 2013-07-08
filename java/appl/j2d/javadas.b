@@ -378,10 +378,6 @@ javadas(a: ref Attr): ref Code
 					CON_bits |= 1 << CON_MethodType | 1 << CON_MethodHandle;
 			Jldc2_w =>
 				CON_bits = 1 << CON_Long | 1 << CON_Double;
-				if (class.maj >= 50)
-					CON_bits |= 1 << CON_Class;
-				if (class.maj >= 51)
-					CON_bits |= 1 << CON_MethodType | 1 << CON_MethodHandle;
 				if(j.i == class.cp_count-1)
 					verifyerror(j);
 			Jgetstatic or
