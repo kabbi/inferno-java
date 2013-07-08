@@ -4,7 +4,7 @@ Class_L : module
 {
 
     init : fn( jni_p : JNI );
-    forName_rString_rClass : fn( p0 : JString) : JClass;
+    forName0_rString_Z_rClassLoader_rClass : fn( p0 : JString, p1 : int, p2 : JObject ) : JClass;
     newInstance_rObject : fn( this : JClass) : JObject;
     isInstance_rObject_Z : fn( this : JClass, p0 : JObject) : int;
     isAssignableFrom_rClass_Z : fn( this : JClass, p0 : JClass) : int;
@@ -12,7 +12,7 @@ Class_L : module
     isArray_Z : fn( this : JClass) : int;
     isPrimitive_Z : fn( this : JClass) : int;
     getName0_rString : fn( this : JClass) : JString;
-    getClassLoader_rClassLoader : fn( this : JClass) : JObject;
+    getClassLoader0_rClassLoader : fn( this : JClass) : JObject;
     getSuperclass_rClass : fn( this : JClass) : JClass;
     getInterfaces_aClass : fn( this : JClass) : JArrayJClass;
     getComponentType_rClass : fn( this : JClass) : JClass;

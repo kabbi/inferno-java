@@ -10,5 +10,5 @@ Object_L : module
 	notifyAll_V : fn( this : JObject );
     wait_J_V : fn( this : JObject, p0 : big);
     registerNatives_V : fn(  );
-
+    
 };
