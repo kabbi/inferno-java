@@ -73,5 +73,5 @@ wait_J_V( this : JObject, p0 : big)
 registerNatives_V(  )
 {#>>
     # currently empty...
-    # don't actually know what to do here
 }#<<
+

@@ -50,9 +50,10 @@ init( jni_p : JNI )
     #<<
 }
 
-forName_rString_rClass( p0 : JString) : JClass
+forName0_rString_Z_rClassLoader_rClass( p0 : JString, p1 : int, p2 : JObject ) : JClass
 {#>>
 	{
+		jni->sys->print("forName called for class %s\n", p0.str);
 		if ( p0.str != nil && p0.str[0] == '[' )
 			return( jni->LookupArrayClass(p0.str) );
 		else
@@ -138,7 +139,7 @@ getName0_rString( this : JClass) : JString
 	return( jni->NewString( name ) );
 }#<<
 
-getClassLoader_rClassLoader( this : JClass) : JObject
+getClassLoader0_rClassLoader( this : JClass) : JObject
 {#>>
 	junk := (this);
 	jni->FatalError( "getClassLoader() not implemented" );
@@ -781,6 +782,5 @@ splitSignature(sig : string) : (string, string)
 registerNatives_V(  )
 {#>>
     # currently empty...
-    jni->sys->print( "Debug pring: registerNatives called\n" );
 }#<<
 
