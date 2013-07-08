@@ -340,6 +340,7 @@ JavaClassLoader: module
 	suspend:	fn(t: ref ThreadData);
 	resume:		fn(t: ref ThreadData);
 	stop:		fn(t: ref ThreadData, o: ref Object);
+	getclassclass:	fn(caller: string, class: string): ref Object;
 
 	# math
 	lcmp:		fn(x: big, y: big): int;

@@ -433,12 +433,13 @@ doreloc()
 	}
 	exception e
 	{
-		"*" =>
+		"*disabled" =>
 			#NOTE: a raise is only expected from the init calls therefore
 			#      when we reach here we need to block and acquire
 			block(t);
 			acquire();
 			trace(JVERBOSE, sys->sprint("Some exception: %s", e));
+			raise e;
 			if ( str->prefix(JCLDREX+exceptionininitializer, e ) == 1 )
 				loaderror(exceptionininitializer, e ); #rethrow
 			else			
@@ -476,7 +477,7 @@ loader(name: string): ref Class
 	}
 	exception e
 	{
-		"*" =>
+		"*disabled" =>
 			if(released == 0) {
 				release();
 				unblock(t);
@@ -575,6 +576,7 @@ encodename(name: string): string
 #
 rtload(addr: int)
 {
+	trace(JVERBOSE, sys->sprint("rtload start"));
 	o := getabsint(addr + RTTHISOFFSET);
 	r := getabsint(addr - (o + WORDZ));
 	l := o + r;
@@ -623,6 +625,7 @@ rtload(addr: int)
 		o += WORDZ;
 	}
 	cur = nil;
+	trace(JVERBOSE, sys->sprint("rtload end"));
 #	if (errors)
 #		error("rtload failed");
 }
@@ -1503,6 +1506,34 @@ interrupt(t: ref ThreadData)
 }
 
 #
+#	Get Class object for the class
+#
+getclassclass(caller: string, class: string): ref Object
+{
+	c := getclass(caller);
+	if (c == nil)
+		sthrow("NullPointerException");
+
+	trace(JDEBUG, sys->sprint("Getclassclass called, %s asked for class %s", c.name, class));
+
+	# TODO: put those strings in header
+	# Prepare necessary classes
+	if (stringclass == nil)
+		loadstringclass();
+	cc := getclass("java/lang/Class");
+	if (cc == nil)
+		sthrow("NullPointerException");
+	f := cc.findsmethod("forName", "(Ljava/lang/String;)Ljava/lang/Class;");
+	if (f == nil)
+		error(sys->sprint("%s: %s: missing forName0 in Class", nosuchmethod, cc.name));
+	result := cc.call(f.value, JStoObject(ref JavaString(stringclass.moddata, class)));
+
+	trace(JDEBUG, sys->sprint("forName0 returned something, i think, %d", result != nil));
+
+	return result;
+}
+
+#
 #	Runtime hierarchy/type check routines.
 #
 
@@ -1746,24 +1777,25 @@ drem(x, y: real): real
 
 Class.run(c: self ref Class, args: list of string)
 {
-	m := c.findsmethod(MAINFIELD, MAINSIGNATURE);
+	m := c.findsmethod(MAINFIELD, VOIDSIGNATURE);
 	if (m == nil)
 		loaderror( nosuchmethod, sys->sprint("%s: missing static method main", c.name));
 	main = c;
-	if (arrayclass == nil)
-		loadarrayclass();
-	if (stringclass == nil)
-		loadstringclass();
-	n := len args;
-	h := array[n] of ref JavaString;
-	d := stringclass.moddata;
-	for (i := 0; i < n; i++) {
-		h[i] = ref JavaString(d, hd args);
-		args = tl args;
-	}
+	#if (arrayclass == nil)
+	#	loadarrayclass();
+	#if (stringclass == nil)
+	#	loadstringclass();
+	#n := len args;
+	#h := array[n] of ref JavaString;
+	#d := stringclass.moddata;
+	#for (i := 0; i < n; i++) {
+	#	h[i] = ref JavaString(d, hd args);
+	#	args = tl args;
+	#}
 	#c.xeq(m.value, ref Array(arraymd, h, 1, stringclass, 0));
 	getthreaddata();
-	r := jassist->mcalla(c.mod, m.value, ref Array(arraymd, h, 1, stringclass, 0));
+	#r := jassist->mcalla(c.mod, m.value, ref Array(arraymd, h, 1, stringclass, 0));
+	r := jassist->mcall0(c.mod, m.value);
 	delthreaddata();
 }
 
@@ -2291,7 +2323,9 @@ Class.relocate(c: self ref Class)
 	#	Install the links.
 	#
 	for (i = 0; i < len links; i++) {
-		if (ld->ext(c.mod, i, links[i].pc, links[i].tdesc) < 0)
+		trace(JDEBUG, sys->sprint("link %d pc %d tdesc %d name %s",
+			i, links[i].pc, links[i].tdesc, links[i].name));
+		if (ld->ext(c.mod, i, links[i].pc, links[i].tdesc) < 0) 
 			error(sys->sprint("ext failed: %r"));
 	}
 	#
@@ -2482,12 +2516,6 @@ Class.findvmethod(c: self ref Class, f, s: string): int
 {
 	a := c.virtualmethods;
 	n := len a;
-	if (c.name == "java/lang/StringBuffer") {
-		trace(JDEBUG, sys->sprint("Class: %s, virtual methods: %d", c.name, n));
-		trace(JDEBUG, sys->sprint("Started looking for method: %s, %s", f, s));
-		statenames := array [] of {"NEW", "HIER", "RESOLVE", "LOADED", "INITED"};
-		trace(JDEBUG, sys->sprint("Class state: %s", statenames[c.state]));
-	}
 	for (i := 0; i < n; i++) {
 		t := a[i].field;
 		if (t.field == f && t.signature == s)
@@ -2516,9 +2544,12 @@ Class.loadnative(c: self ref Class)
 	instrs := ld->ifetch(mod);
 	if (instrs == nil)
 		error(sys->sprint("%s: native ifetch failed: %r",unsatisfiedlink));
+	imports := ld->imports(mod);
+
 	nm := ld->newmod("N-" + c.name, STACKSIZE, len links, instrs, getmd(mod));
 	if (nm == nil)
 		error(sys->sprint("%s: native newmod failed: %r",unsatisfiedlink));
+
 	n := len types;
 	for (i := 1; i < n; i++) {
 		if (ld->tnew(nm, types[i].size, types[i].map) != i)
@@ -2529,6 +2560,8 @@ Class.loadnative(c: self ref Class)
 		if (ld->ext(nm, i, links[i].pc, links[i].tdesc) < 0)
 			error(sys->sprint("%s: native ext failed: %r",unsatisfiedlink));
 	}
+	if (ld->setimports(nm, imports) < 0)
+		error(sys->sprint("%s: native setimports failed: %r",unsatisfiedlink));
 	addmodclass(nm, c);
 	c.native = nm;
 }
@@ -2546,6 +2579,7 @@ Class.getmethod(c: self ref Class, f, s: string, flags: int): int
 			c.loadnative();
 		l = c.info.nlinks;
 		m = mangle(f, s);
+		trace(JDEBUG, sys->sprint("Mangled native name: %s", m));
 	} else {
 		l = c.info.links;
 		m = f + s;
@@ -2996,6 +3030,7 @@ loadkeys := array[] of
 	"rtload",
 	"throw",
 	"unrescue",
+	"getclassclass",
 };
 
 #
@@ -3003,6 +3038,9 @@ loadkeys := array[] of
 #
 loadhash(s: string): int
 {
+	# TODO: fix
+	if (s == "getclassclass")
+		return 1;
 	return ((s[len s - 1] + 49) * len s + 19 * s[0]) % LDHASH;
 }
 
@@ -3249,10 +3287,7 @@ ipatch(inst: array of Loader->Inst, p: array of byte, d: int)
 			x += t >> ISHIFT;
 			if (x < 0 || x >= l)
 				error("bad inst index");
-			if (inst[x].op == byte 57 && inst[x].mid == 0) {
-				trace(JVERBOSE, sys->sprint("Skipping instruction %d", x));
-				continue;
-			}
+			debugs := sys->sprint("ipatch inst[%d](%d, %d, %d)->", x, inst[x].src, inst[x].mid, inst[x].dst);
 			case t & (POP | PTYPE) {
 			PSRC | PIMM or PSRC | PSIND =>
 				inst[x].src += d;
@@ -3275,6 +3310,7 @@ ipatch(inst: array of Loader->Inst, p: array of byte, d: int)
 			* =>
 				error("bad reloc");
 			}
+			#trace(JDEBUG, sys->sprint("%sinst[%d](%d, %d, %d)", debugs, x, inst[x].src, inst[x].mid, inst[x].dst));
 		}
 	} else {
 		for (i := 0; i < n; i++) {
@@ -3439,7 +3475,7 @@ runmain( classloader : JavaClassLoader, classname : string, argv : list of strin
 	}
 	exception e
 	{
-		"*" =>
+		"*disabled" =>
 			m := sys->sprint("uncaught exception: %s", e);
 			mesg(m);
 			if ( (obj := culprit(e)) != nil) 
