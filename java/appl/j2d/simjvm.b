@@ -356,7 +356,7 @@ storechk(six: int, stype: int)
 				ltype = byte 'L';
 			}
 		}
-		if(lix == six && ltype == byte stype && j.movsrc.mode == byte Anone) {
+		if(lix == six && ltype == byte stype && j.movsrc != nil && j.movsrc.mode == byte Anone) {
 			*j.movsrc = *j.dst;
 			addrsind(j.dst, Afp, -1);
 		}
