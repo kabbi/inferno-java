@@ -110,14 +110,22 @@ import java.util.regex.PatternSyntaxException;
 public final class String
     implements java.io.Serializable, Comparable<String>, CharSequence
 {
+    // [Inferno] <
+
     /** The value is used for character storage. */
-    private final char value[];
+    //private final char value[];
 
     /** The offset is the first index of the storage that is used. */
-    private final int offset;
+    //private final int offset;
 
     /** The count is the number of characters in the String. */
-    private final int count;
+    //private final int count;
+
+    /** The first field represents internal dis string. It is used by
+        Inferno's jvm to store and manipulate the actual string data. */
+    private transient String disString;
+
+    // [Inferno] >
 
     /** Cache the hash code for the string */
     private int hash; // Default to 0
@@ -145,11 +153,10 @@ public final class String
      * an empty character sequence.  Note that use of this constructor is
      * unnecessary since Strings are immutable.
      */
+    // [Inferno] <
     public String() {
-        this.offset = 0;
-        this.count = 0;
-        this.value = new char[0];
     }
+    // [Inferno] >
 
     /**
      * Initializes a newly created {@code String} object so that it represents
@@ -162,23 +169,29 @@ public final class String
      *         A {@code String}
      */
     public String(String original) {
-        int size = original.count;
-        char[] originalValue = original.value;
-        char[] v;
-        if (originalValue.length > size) {
-            // The array representing the String is bigger than the new
-            // String itself.  Perhaps this constructor is being called
-            // in order to trim the baggage, so make a copy of the array.
-            int off = original.offset;
-            v = Arrays.copyOfRange(originalValue, off, off+size);
-        } else {
-            // The array representing the String is the same
-            // size as the String, so no point in making a copy.
-            v = originalValue;
-        }
-        this.offset = 0;
-        this.count = size;
-        this.value = v;
+        //int size = original.count;
+        //char[] originalValue = original.value;
+        //char[] v;
+        //if (originalValue.length > size) {
+        //    // The array representing the String is bigger than the new
+        //    // String itself.  Perhaps this constructor is being called
+        //    // in order to trim the baggage, so make a copy of the array.
+        //    int off = original.offset;
+        //    v = Arrays.copyOfRange(originalValue, off, off+size);
+        //} else {
+        //    // The array representing the String is the same
+        //    // size as the String, so no point in making a copy.
+        //    v = originalValue;
+        //}
+        //this.offset = 0;
+        //this.count = size;
+        //this.value = v;
+        if (original == null)
+            throw new NullPointerException();
+
+        // [Inferno] <
+        disString = original.disString;
+        // [Inferno] >
     }
 
     /**
@@ -191,10 +204,16 @@ public final class String
      *         The initial value of the string
      */
     public String(char value[]) {
-        int size = value.length;
-        this.offset = 0;
-        this.count = size;
-        this.value = Arrays.copyOf(value, size);
+        //int size = value.length;
+        //this.offset = 0;
+        //this.count = size;
+        //this.value = Arrays.copyOf(value, size);
+        if (value == null)
+            throw new NullPointerException();
+
+        // [Inferno] <
+        fill(value, 0, value.length);
+        // [Inferno] >
     }
 
     /**
@@ -229,9 +248,12 @@ public final class String
         if (offset > value.length - count) {
             throw new StringIndexOutOfBoundsException(offset + count);
         }
-        this.offset = 0;
-        this.count = count;
-        this.value = Arrays.copyOfRange(value, offset, offset+count);
+        //this.offset = 0;
+        //this.count = count;
+
+        // [Inferno] <
+        fill(value, offset, count);
+        // [Inferno] >
     }
 
     /**
@@ -298,9 +320,13 @@ public final class String
                 Character.toSurrogates(c, v, j++);
         }
 
-        this.value  = v;
-        this.count  = n;
-        this.offset = 0;
+        //this.value  = v;
+        //this.count  = n;
+        //this.offset = 0;
+
+        // [Inferno] <
+        fill(v, 0, v.length);
+        // [Inferno] >
     }
 
     /**
@@ -357,9 +383,13 @@ public final class String
                 value[i] = (char) (hibyte | (ascii[i + offset] & 0xff));
             }
         }
-        this.offset = 0;
-        this.count = count;
-        this.value = value;
+        //this.offset = 0;
+        //this.count = count;
+        //this.value = value;
+
+        // [Inferno] <
+        fill(value, 0, value.length);
+        // [Inferno] >
     }
 
     /**
@@ -429,7 +459,7 @@ public final class String
      *
      * @param  length
      *         The number of bytes to decode
-
+     *
      * @param  charsetName
      *         The name of a supported {@linkplain java.nio.charset.Charset
      *         charset}
@@ -450,9 +480,13 @@ public final class String
             throw new NullPointerException("charsetName");
         checkBounds(bytes, offset, length);
         char[] v = StringCoding.decode(charsetName, bytes, offset, length);
-        this.offset = 0;
-        this.count = v.length;
-        this.value = v;
+        //this.offset = 0;
+        //this.count = v.length;
+        //this.value = v;
+
+        // [Inferno] <
+        fill(v, 0, v.length);
+        // [Inferno] >
     }
 
     /**
@@ -490,9 +524,13 @@ public final class String
             throw new NullPointerException("charset");
         checkBounds(bytes, offset, length);
         char[] v = StringCoding.decode(charset, bytes, offset, length);
-        this.offset = 0;
-        this.count = v.length;
-        this.value = v;
+        //this.offset = 0;
+        //this.count = v.length;
+        //this.value = v;
+
+        // [Inferno] <
+        fill(v, 0, v.length);
+        // [Inferno] >
     }
 
     /**
@@ -577,9 +615,13 @@ public final class String
     public String(byte bytes[], int offset, int length) {
         checkBounds(bytes, offset, length);
         char[] v  = StringCoding.decode(bytes, offset, length);
-        this.offset = 0;
-        this.count = v.length;
-        this.value = v;
+        //this.offset = 0;
+        //this.count = v.length;
+        //this.value = v;
+
+        // [Inferno] <
+        fill(v, 0, v.length);
+        // [Inferno] >
     }
 
     /**
@@ -612,10 +654,9 @@ public final class String
      *         A {@code StringBuffer}
      */
     public String(StringBuffer buffer) {
-        String result = buffer.toString();
-        this.value = result.value;
-        this.count = result.count;
-        this.offset = result.offset;
+        // [Inferno] <
+        this(buffer.toString());
+        // [Inferno] >
     }
 
     /**
@@ -634,18 +675,19 @@ public final class String
      * @since  1.5
      */
     public String(StringBuilder builder) {
-        String result = builder.toString();
-        this.value = result.value;
-        this.count = result.count;
-        this.offset = result.offset;
+        // [Inferno] <
+        this(builder.toString());
+        // [Inferno] >
     }
 
 
     // Package private constructor which shares value array for speed.
     String(int offset, int count, char value[]) {
-        this.value = value;
-        this.offset = offset;
-        this.count = count;
+        // TODO: implement real sharing
+
+        // [Inferno] <
+        fill(value, offset, count);
+        // [Inferno] >
     }
 
     /**
@@ -656,9 +698,9 @@ public final class String
      * @return  the length of the sequence of characters represented by this
      *          object.
      */
-    public int length() {
-        return count;
-    }
+    // [Inferno] <
+    public native int length();
+    // [Inferno] >
 
     /**
      * Returns <tt>true</tt> if, and only if, {@link #length()} is <tt>0</tt>.
@@ -669,7 +711,9 @@ public final class String
      * @since 1.6
      */
     public boolean isEmpty() {
-        return count == 0;
+        // [Inferno] <
+        return length() == 0;
+        // [Inferno] >
     }
 
     /**
@@ -690,12 +734,9 @@ public final class String
      *             argument is negative or not less than the length of this
      *             string.
      */
-    public char charAt(int index) {
-        if ((index < 0) || (index >= count)) {
-            throw new StringIndexOutOfBoundsException(index);
-        }
-        return value[index + offset];
-    }
+    // [Inferno] <
+    public native char charAt(int index);
+    // [Inferno] >
 
     /**
      * Returns the character (Unicode code point) at the specified
@@ -720,10 +761,11 @@ public final class String
      * @since      1.5
      */
     public int codePointAt(int index) {
-        if ((index < 0) || (index >= count)) {
-            throw new StringIndexOutOfBoundsException(index);
-        }
-        return Character.codePointAtImpl(value, offset + index, offset + count);
+        //if ((index < 0) || (index >= count)) {
+        //    throw new StringIndexOutOfBoundsException(index);
+        //}
+        //return Character.codePointAtImpl(value, offset + index, offset + count);
+        return 0;
     }
 
     /**
@@ -749,11 +791,12 @@ public final class String
      * @since     1.5
      */
     public int codePointBefore(int index) {
-        int i = index - 1;
-        if ((i < 0) || (i >= count)) {
-            throw new StringIndexOutOfBoundsException(index);
-        }
-        return Character.codePointBeforeImpl(value, offset + index, offset);
+        //int i = index - 1;
+        //if ((i < 0) || (i >= count)) {
+        //    throw new StringIndexOutOfBoundsException(index);
+        //}
+        //return Character.codePointBeforeImpl(value, offset + index, offset);
+        return 0;
     }
 
     /**
@@ -778,10 +821,11 @@ public final class String
      * @since  1.5
      */
     public int codePointCount(int beginIndex, int endIndex) {
-        if (beginIndex < 0 || endIndex > count || beginIndex > endIndex) {
-            throw new IndexOutOfBoundsException();
-        }
-        return Character.codePointCountImpl(value, offset+beginIndex, endIndex-beginIndex);
+        //if (beginIndex < 0 || endIndex > count || beginIndex > endIndex) {
+        //    throw new IndexOutOfBoundsException();
+        //}
+        //return Character.codePointCountImpl(value, offset+beginIndex, endIndex-beginIndex);
+        return 0;
     }
 
     /**
@@ -805,11 +849,12 @@ public final class String
      * @since 1.5
      */
     public int offsetByCodePoints(int index, int codePointOffset) {
-        if (index < 0 || index > count) {
-            throw new IndexOutOfBoundsException();
-        }
-        return Character.offsetByCodePointsImpl(value, offset, count,
-                                                offset+index, codePointOffset) - offset;
+        //if (index < 0 || index > count) {
+        //    throw new IndexOutOfBoundsException();
+        //}
+        //return Character.offsetByCodePointsImpl(value, offset, count,
+        //                                        offset+index, codePointOffset) - offset;
+        return 0;
     }
 
     /**
@@ -817,7 +862,9 @@ public final class String
      * This method doesn't perform any range checking.
      */
     void getChars(char dst[], int dstBegin) {
-        System.arraycopy(value, offset, dst, dstBegin, count);
+        // [Inferno] <
+        getChars(0, length(), dst, dstBegin);
+        // [Inferno] >
     }
 
     /**
@@ -850,19 +897,7 @@ public final class String
      *            <li><code>dstBegin+(srcEnd-srcBegin)</code> is larger than
      *                <code>dst.length</code></ul>
      */
-    public void getChars(int srcBegin, int srcEnd, char dst[], int dstBegin) {
-        if (srcBegin < 0) {
-            throw new StringIndexOutOfBoundsException(srcBegin);
-        }
-        if (srcEnd > count) {
-            throw new StringIndexOutOfBoundsException(srcEnd);
-        }
-        if (srcBegin > srcEnd) {
-            throw new StringIndexOutOfBoundsException(srcEnd - srcBegin);
-        }
-        System.arraycopy(value, offset + srcBegin, dst, dstBegin,
-             srcEnd - srcBegin);
-    }
+    public native void getChars(int srcBegin, int srcEnd, char dst[], int dstBegin);
 
     /**
      * Copies characters from this string into the destination byte array. Each
@@ -912,16 +947,16 @@ public final class String
         if (srcBegin < 0) {
             throw new StringIndexOutOfBoundsException(srcBegin);
         }
-        if (srcEnd > count) {
+        if (srcEnd > length()) {
             throw new StringIndexOutOfBoundsException(srcEnd);
         }
         if (srcBegin > srcEnd) {
             throw new StringIndexOutOfBoundsException(srcEnd - srcBegin);
         }
         int j = dstBegin;
-        int n = offset + srcEnd;
-        int i = offset + srcBegin;
-        char[] val = value;   /* avoid getfield opcode */
+        int n = srcEnd;
+        int i = srcBegin;
+        char[] val = toCharArray();
 
         while (i < n) {
             dst[j++] = (byte)val[i++];
@@ -952,7 +987,7 @@ public final class String
         throws UnsupportedEncodingException
     {
         if (charsetName == null) throw new NullPointerException();
-        return StringCoding.encode(charsetName, value, offset, count);
+        return StringCoding.encode(charsetName, toCharArray(), 0, length());
     }
 
     /**
@@ -975,7 +1010,7 @@ public final class String
      */
     public byte[] getBytes(Charset charset) {
         if (charset == null) throw new NullPointerException();
-        return StringCoding.encode(charset, value, offset, count);
+        return StringCoding.encode(charset, toCharArray(), 0, length());
     }
 
     /**
@@ -992,7 +1027,7 @@ public final class String
      * @since      JDK1.1
      */
     public byte[] getBytes() {
-        return StringCoding.encode(value, offset, count);
+        return StringCoding.encode(toCharArray(), 0, length());
     }
 
     /**
@@ -1011,25 +1046,11 @@ public final class String
      * @see  #equalsIgnoreCase(String)
      */
     public boolean equals(Object anObject) {
-        if (this == anObject) {
-            return true;
-        }
-        if (anObject instanceof String) {
-            String anotherString = (String)anObject;
-            int n = count;
-            if (n == anotherString.count) {
-                char v1[] = value;
-                char v2[] = anotherString.value;
-                int i = offset;
-                int j = anotherString.offset;
-                while (n-- != 0) {
-                    if (v1[i++] != v2[j++])
-                        return false;
-                }
-                return true;
-            }
-        }
+        // [Inferno] <
+        if (anObject instanceof String)
+            return equality((String)anObject, false);
         return false;
+        // [Inferno] >
     }
 
     /**
@@ -1067,13 +1088,15 @@ public final class String
      * @since  1.5
      */
     public boolean contentEquals(CharSequence cs) {
+        // [Inferno] <
+        int count = length();
         if (count != cs.length())
             return false;
         // Argument is a StringBuffer, StringBuilder
         if (cs instanceof AbstractStringBuilder) {
-            char v1[] = value;
+            char v1[] = toCharArray();
             char v2[] = ((AbstractStringBuilder)cs).getValue();
-            int i = offset;
+            int i = 0;
             int j = 0;
             int n = count;
             while (n-- != 0) {
@@ -1086,8 +1109,8 @@ public final class String
         if (cs.equals(this))
             return true;
         // Argument is a generic CharSequence
-        char v1[] = value;
-        int i = offset;
+        char v1[] = toCharArray();
+        int i = 0;
         int j = 0;
         int n = count;
         while (n-- != 0) {
@@ -1095,6 +1118,7 @@ public final class String
                 return false;
         }
         return true;
+        // [Inferno] >
     }
 
     /**
@@ -1126,9 +1150,9 @@ public final class String
      * @see  #equals(Object)
      */
     public boolean equalsIgnoreCase(String anotherString) {
-        return (this == anotherString) ? true :
-               (anotherString != null) && (anotherString.count == count) &&
-               regionMatches(true, 0, anotherString, 0, count);
+        // [Inferno] <
+        return equality(anotherString, true);
+        // [Inferno] >
     }
 
     /**
@@ -1173,13 +1197,13 @@ public final class String
      *          lexicographically greater than the string argument.
      */
     public int compareTo(String anotherString) {
-        int len1 = count;
-        int len2 = anotherString.count;
+        int len1 = length();
+        int len2 = anotherString.length();
         int n = Math.min(len1, len2);
-        char v1[] = value;
-        char v2[] = anotherString.value;
-        int i = offset;
-        int j = anotherString.offset;
+        char v1[] = toCharArray();
+        char v2[] = anotherString.toCharArray();
+        int i = 0;
+        int j = 0;
 
         if (i == j) {
             int k = i;
@@ -1304,21 +1328,9 @@ public final class String
      */
     public boolean regionMatches(int toffset, String other, int ooffset,
                                  int len) {
-        char ta[] = value;
-        int to = offset + toffset;
-        char pa[] = other.value;
-        int po = other.offset + ooffset;
-        // Note: toffset, ooffset, or len might be near -1>>>1.
-        if ((ooffset < 0) || (toffset < 0) || (toffset > (long)count - len)
-            || (ooffset > (long)other.count - len)) {
-            return false;
-        }
-        while (len-- > 0) {
-            if (ta[to++] != pa[po++]) {
-                return false;
-            }
-        }
-        return true;
+        // [Inferno] <
+        return regionMatches(false, toffset, other, ooffset, len);
+        // [Inferno] >
     }
 
     /**
@@ -1348,7 +1360,7 @@ public final class String
      * integer <i>k</i> less than <tt>len</tt> such that:
      * <blockquote><pre>
      * Character.toLowerCase(this.charAt(toffset+k)) !=
-               Character.toLowerCase(other.charAt(ooffset+k))
+     *         Character.toLowerCase(other.charAt(ooffset+k))
      * </pre></blockquote>
      * and:
      * <blockquote><pre>
@@ -1371,45 +1383,10 @@ public final class String
      *          or case insensitive depends on the <code>ignoreCase</code>
      *          argument.
      */
-    public boolean regionMatches(boolean ignoreCase, int toffset,
-                           String other, int ooffset, int len) {
-        char ta[] = value;
-        int to = offset + toffset;
-        char pa[] = other.value;
-        int po = other.offset + ooffset;
-        // Note: toffset, ooffset, or len might be near -1>>>1.
-        if ((ooffset < 0) || (toffset < 0) || (toffset > (long)count - len) ||
-                (ooffset > (long)other.count - len)) {
-            return false;
-        }
-        while (len-- > 0) {
-            char c1 = ta[to++];
-            char c2 = pa[po++];
-            if (c1 == c2) {
-                continue;
-            }
-            if (ignoreCase) {
-                // If characters don't match but case may be ignored,
-                // try converting both characters to uppercase.
-                // If the results match, then the comparison scan should
-                // continue.
-                char u1 = Character.toUpperCase(c1);
-                char u2 = Character.toUpperCase(c2);
-                if (u1 == u2) {
-                    continue;
-                }
-                // Unfortunately, conversion to uppercase does not work properly
-                // for the Georgian alphabet, which has strange rules about case
-                // conversion.  So we need to make one last check before
-                // exiting.
-                if (Character.toLowerCase(u1) == Character.toLowerCase(u2)) {
-                    continue;
-                }
-            }
-            return false;
-        }
-        return true;
-    }
+    // [Inferno] <
+    public native boolean regionMatches(boolean ignoreCase, int toffset,
+                           String other, int ooffset, int len);
+    // [Inferno] >
 
     /**
      * Tests if the substring of this string beginning at the
@@ -1429,21 +1406,9 @@ public final class String
      *          </pre>
      */
     public boolean startsWith(String prefix, int toffset) {
-        char ta[] = value;
-        int to = offset + toffset;
-        char pa[] = prefix.value;
-        int po = prefix.offset;
-        int pc = prefix.count;
-        // Note: toffset might be near -1>>>1.
-        if ((toffset < 0) || (toffset > count - pc)) {
-            return false;
-        }
-        while (--pc >= 0) {
-            if (ta[to++] != pa[po++]) {
-                return false;
-            }
-        }
-        return true;
+        // [Inferno] <
+        return isPrefix(prefix, toffset);
+        // [Inferno] >
     }
 
     /**
@@ -1460,7 +1425,9 @@ public final class String
      * @since   1. 0
      */
     public boolean startsWith(String prefix) {
-        return startsWith(prefix, 0);
+        // [Inferno] <
+        return isPrefix(prefix, 0);
+        // [Inferno] >
     }
 
     /**
@@ -1475,7 +1442,9 @@ public final class String
      *          as determined by the {@link #equals(Object)} method.
      */
     public boolean endsWith(String suffix) {
-        return startsWith(suffix, count - suffix.count);
+        // [Inferno] <
+        return isSuffix(suffix);
+        // [Inferno] >
     }
 
     /**
@@ -1491,20 +1460,9 @@ public final class String
      *
      * @return  a hash code value for this object.
      */
-    public int hashCode() {
-        int h = hash;
-        if (h == 0 && count > 0) {
-            int off = offset;
-            char val[] = value;
-            int len = count;
-
-            for (int i = 0; i < len; i++) {
-                h = 31*h + val[off++];
-            }
-            hash = h;
-        }
-        return h;
-    }
+    // [Inferno] <
+    public native int hashCode();
+    // [Inferno] >
 
     /**
      * Returns the index within this string of the first occurrence of
@@ -1531,7 +1489,9 @@ public final class String
      *          <code>-1</code> if the character does not occur.
      */
     public int indexOf(int ch) {
-        return indexOf(ch, 0);
+        // [Inferno] <
+        return index(ch, 0);
+        // [Inferno] >
     }
 
     /**
@@ -1574,47 +1534,9 @@ public final class String
      *          if the character does not occur.
      */
     public int indexOf(int ch, int fromIndex) {
-        if (fromIndex < 0) {
-            fromIndex = 0;
-        } else if (fromIndex >= count) {
-            // Note: fromIndex might be near -1>>>1.
-            return -1;
-        }
-
-        if (ch < Character.MIN_SUPPLEMENTARY_CODE_POINT) {
-            // handle most cases here (ch is a BMP code point or a
-            // negative value (invalid code point))
-            final char[] value = this.value;
-            final int offset = this.offset;
-            final int max = offset + count;
-            for (int i = offset + fromIndex; i < max ; i++) {
-                if (value[i] == ch) {
-                    return i - offset;
-                }
-            }
-            return -1;
-        } else {
-            return indexOfSupplementary(ch, fromIndex);
-        }
-    }
-
-    /**
-     * Handles (rare) calls of indexOf with a supplementary character.
-     */
-    private int indexOfSupplementary(int ch, int fromIndex) {
-        if (Character.isValidCodePoint(ch)) {
-            final char[] value = this.value;
-            final int offset = this.offset;
-            final char hi = Character.highSurrogate(ch);
-            final char lo = Character.lowSurrogate(ch);
-            final int max = offset + count - 1;
-            for (int i = offset + fromIndex; i < max; i++) {
-                if (value[i] == hi && value[i+1] == lo) {
-                    return i - offset;
-                }
-            }
-        }
-        return -1;
+        // [Inferno] <
+        return index(ch, fromIndex);
+        // [Inferno] >
     }
 
     /**
@@ -1641,7 +1563,9 @@ public final class String
      *          <code>-1</code> if the character does not occur.
      */
     public int lastIndexOf(int ch) {
-        return lastIndexOf(ch, count - 1);
+        // [Inferno] <
+        return rindex(ch, 0, true);
+        // [Inferno] >
     }
 
     /**
@@ -1679,40 +1603,9 @@ public final class String
      *          if the character does not occur before that point.
      */
     public int lastIndexOf(int ch, int fromIndex) {
-        if (ch < Character.MIN_SUPPLEMENTARY_CODE_POINT) {
-            // handle most cases here (ch is a BMP code point or a
-            // negative value (invalid code point))
-            final char[] value = this.value;
-            final int offset = this.offset;
-            int i = offset + Math.min(fromIndex, count - 1);
-            for (; i >= offset ; i--) {
-                if (value[i] == ch) {
-                    return i - offset;
-                }
-            }
-            return -1;
-        } else {
-            return lastIndexOfSupplementary(ch, fromIndex);
-        }
-    }
-
-    /**
-     * Handles (rare) calls of lastIndexOf with a supplementary character.
-     */
-    private int lastIndexOfSupplementary(int ch, int fromIndex) {
-        if (Character.isValidCodePoint(ch)) {
-            final char[] value = this.value;
-            final int offset = this.offset;
-            char hi = Character.highSurrogate(ch);
-            char lo = Character.lowSurrogate(ch);
-            int i = offset + Math.min(fromIndex, count - 2);
-            for (; i >= offset; i--) {
-                if (value[i] == hi && value[i+1] == lo) {
-                    return i - offset;
-                }
-            }
-        }
-        return -1;
+        // [Inferno] <
+        return rindex(ch, fromIndex, false);
+        // [Inferno] >
     }
 
     /**
@@ -1730,7 +1623,9 @@ public final class String
      *          or {@code -1} if there is no such occurrence.
      */
     public int indexOf(String str) {
-        return indexOf(str, 0);
+        // [Inferno] <
+        return index(str, 0);
+        // [Inferno] >
     }
 
     /**
@@ -1750,8 +1645,9 @@ public final class String
      *          or {@code -1} if there is no such occurrence.
      */
     public int indexOf(String str, int fromIndex) {
-        return indexOf(value, offset, count,
-                       str.value, str.offset, str.count, fromIndex);
+        // [Inferno] <
+        return index(str, fromIndex);
+        // [Inferno] >
     }
 
     /**
@@ -1821,7 +1717,9 @@ public final class String
      *          or {@code -1} if there is no such occurrence.
      */
     public int lastIndexOf(String str) {
-        return lastIndexOf(str, count);
+        // [Inferno] <
+        return rindex(str, 0, true);
+        // [Inferno] >
     }
 
     /**
@@ -1841,8 +1739,9 @@ public final class String
      *          or {@code -1} if there is no such occurrence.
      */
     public int lastIndexOf(String str, int fromIndex) {
-        return lastIndexOf(value, offset, count,
-                           str.value, str.offset, str.count, fromIndex);
+        // [Inferno] <
+        return rindex(str, fromIndex, false);
+        // [Inferno] >
     }
 
     /**
@@ -1922,7 +1821,7 @@ public final class String
      *             length of this <code>String</code> object.
      */
     public String substring(int beginIndex) {
-        return substring(beginIndex, count);
+        return substring(beginIndex, length());
     }
 
     /**
@@ -1947,19 +1846,9 @@ public final class String
      *             <code>beginIndex</code> is larger than
      *             <code>endIndex</code>.
      */
-    public String substring(int beginIndex, int endIndex) {
-        if (beginIndex < 0) {
-            throw new StringIndexOutOfBoundsException(beginIndex);
-        }
-        if (endIndex > count) {
-            throw new StringIndexOutOfBoundsException(endIndex);
-        }
-        if (beginIndex > endIndex) {
-            throw new StringIndexOutOfBoundsException(endIndex - beginIndex);
-        }
-        return ((beginIndex == 0) && (endIndex == count)) ? this :
-            new String(offset + beginIndex, endIndex - beginIndex, value);
-    }
+    // [Inferno] <
+    public native String substring(int beginIndex, int endIndex);
+    // [Inferno] >
 
     /**
      * Returns a new character sequence that is a subsequence of this sequence.
@@ -2018,6 +1907,7 @@ public final class String
         if (otherLen == 0) {
             return this;
         }
+        int count = length();
         char buf[] = new char[count + otherLen];
         getChars(0, count, buf, 0);
         str.getChars(0, otherLen, buf, count);
@@ -2055,28 +1945,29 @@ public final class String
      */
     public String replace(char oldChar, char newChar) {
         if (oldChar != newChar) {
-            int len = count;
+            // [Inferno] <
             int i = -1;
-            char[] val = value; /* avoid getfield opcode */
-            int off = offset;   /* avoid getfield opcode */
+            int len = length();
+            char[] val = toCharArray();
 
             while (++i < len) {
-                if (val[off + i] == oldChar) {
+                if (val[i] == oldChar) {
                     break;
                 }
             }
             if (i < len) {
                 char buf[] = new char[len];
                 for (int j = 0 ; j < i ; j++) {
-                    buf[j] = val[off+j];
+                    buf[j] = val[j];
                 }
                 while (i < len) {
-                    char c = val[off + i];
+                    char c = val[i];
                     buf[i] = (c == oldChar) ? newChar : c;
                     i++;
                 }
                 return new String(0, len, buf);
             }
+            // [Inferno] >
         }
         return this;
     }
@@ -2317,7 +2208,9 @@ public final class String
               the second is not the ascii digit or ascii letter.
         */
         char ch = 0;
-        if (((regex.count == 1 &&
+        // [Inferno] <
+        int count = length();
+        if (((regex.length() == 1 &&
              ".$|()[{^?*+\\".indexOf(ch = regex.charAt(0)) == -1) ||
              (regex.length() == 2 &&
               regex.charAt(0) == '\\' &&
@@ -2359,6 +2252,7 @@ public final class String
             return list.subList(0, resultSize).toArray(result);
         }
         return Pattern.compile(regex).split(this, limit);
+        // [Inferno] >
     }
 
     /**
@@ -2456,97 +2350,9 @@ public final class String
      * @since   1.1
      */
     public String toLowerCase(Locale locale) {
-        if (locale == null) {
-            throw new NullPointerException();
-        }
-
-        int     firstUpper;
-
-        /* Now check if there are any characters that need to be changed. */
-        scan: {
-            for (firstUpper = 0 ; firstUpper < count; ) {
-                char c = value[offset+firstUpper];
-                if ((c >= Character.MIN_HIGH_SURROGATE) &&
-                    (c <= Character.MAX_HIGH_SURROGATE)) {
-                    int supplChar = codePointAt(firstUpper);
-                    if (supplChar != Character.toLowerCase(supplChar)) {
-                        break scan;
-                    }
-                    firstUpper += Character.charCount(supplChar);
-                } else {
-                    if (c != Character.toLowerCase(c)) {
-                        break scan;
-                    }
-                    firstUpper++;
-                }
-            }
-            return this;
-        }
-
-        char[]  result = new char[count];
-        int     resultOffset = 0;  /* result may grow, so i+resultOffset
-                                    * is the write location in result */
-
-        /* Just copy the first few lowerCase characters. */
-        System.arraycopy(value, offset, result, 0, firstUpper);
-
-        String lang = locale.getLanguage();
-        boolean localeDependent =
-            (lang == "tr" || lang == "az" || lang == "lt");
-        char[] lowerCharArray;
-        int lowerChar;
-        int srcChar;
-        int srcCount;
-        for (int i = firstUpper; i < count; i += srcCount) {
-            srcChar = (int)value[offset+i];
-            if ((char)srcChar >= Character.MIN_HIGH_SURROGATE &&
-                (char)srcChar <= Character.MAX_HIGH_SURROGATE) {
-                srcChar = codePointAt(i);
-                srcCount = Character.charCount(srcChar);
-            } else {
-                srcCount = 1;
-            }
-            if (localeDependent || srcChar == '\u03A3') { // GREEK CAPITAL LETTER SIGMA
-                lowerChar = ConditionalSpecialCasing.toLowerCaseEx(this, i, locale);
-            } else if (srcChar == '\u0130') { // LATIN CAPITAL LETTER I DOT
-                lowerChar = Character.ERROR;
-            } else {
-                lowerChar = Character.toLowerCase(srcChar);
-            }
-            if ((lowerChar == Character.ERROR) ||
-                (lowerChar >= Character.MIN_SUPPLEMENTARY_CODE_POINT)) {
-                if (lowerChar == Character.ERROR) {
-                     if (!localeDependent && srcChar == '\u0130') {
-                         lowerCharArray =
-                             ConditionalSpecialCasing.toLowerCaseCharArray(this, i, Locale.ENGLISH);
-                     } else {
-                        lowerCharArray =
-                            ConditionalSpecialCasing.toLowerCaseCharArray(this, i, locale);
-                     }
-                } else if (srcCount == 2) {
-                    resultOffset += Character.toChars(lowerChar, result, i + resultOffset) - srcCount;
-                    continue;
-                } else {
-                    lowerCharArray = Character.toChars(lowerChar);
-                }
-
-                /* Grow result if needed */
-                int mapLen = lowerCharArray.length;
-                if (mapLen > srcCount) {
-                    char[] result2 = new char[result.length + mapLen - srcCount];
-                    System.arraycopy(result, 0, result2, 0,
-                        i + resultOffset);
-                    result = result2;
-                }
-                for (int x=0; x<mapLen; ++x) {
-                    result[i+resultOffset+x] = lowerCharArray[x];
-                }
-                resultOffset += (mapLen - srcCount);
-            } else {
-                result[i+resultOffset] = (char)lowerChar;
-            }
-        }
-        return new String(0, count+resultOffset, result);
+        // [Inferno] <
+        return lowercase();
+        // [Inferno] >
     }
 
     /**
@@ -2569,7 +2375,7 @@ public final class String
      * @see     java.lang.String#toLowerCase(Locale)
      */
     public String toLowerCase() {
-        return toLowerCase(Locale.getDefault());
+        return lowercase();
     }
 
     /**
@@ -2621,95 +2427,9 @@ public final class String
      * @since   1.1
      */
     public String toUpperCase(Locale locale) {
-        if (locale == null) {
-            throw new NullPointerException();
-        }
-
-        int     firstLower;
-
-        /* Now check if there are any characters that need to be changed. */
-        scan: {
-            for (firstLower = 0 ; firstLower < count; ) {
-                int c = (int)value[offset+firstLower];
-                int srcCount;
-                if ((c >= Character.MIN_HIGH_SURROGATE) &&
-                    (c <= Character.MAX_HIGH_SURROGATE)) {
-                    c = codePointAt(firstLower);
-                    srcCount = Character.charCount(c);
-                } else {
-                    srcCount = 1;
-                }
-                int upperCaseChar = Character.toUpperCaseEx(c);
-                if ((upperCaseChar == Character.ERROR) ||
-                    (c != upperCaseChar)) {
-                    break scan;
-                }
-                firstLower += srcCount;
-            }
-            return this;
-        }
-
-        char[]  result       = new char[count]; /* may grow */
-        int     resultOffset = 0;  /* result may grow, so i+resultOffset
-                                    * is the write location in result */
-
-        /* Just copy the first few upperCase characters. */
-        System.arraycopy(value, offset, result, 0, firstLower);
-
-        String lang = locale.getLanguage();
-        boolean localeDependent =
-            (lang == "tr" || lang == "az" || lang == "lt");
-        char[] upperCharArray;
-        int upperChar;
-        int srcChar;
-        int srcCount;
-        for (int i = firstLower; i < count; i += srcCount) {
-            srcChar = (int)value[offset+i];
-            if ((char)srcChar >= Character.MIN_HIGH_SURROGATE &&
-                (char)srcChar <= Character.MAX_HIGH_SURROGATE) {
-                srcChar = codePointAt(i);
-                srcCount = Character.charCount(srcChar);
-            } else {
-                srcCount = 1;
-            }
-            if (localeDependent) {
-                upperChar = ConditionalSpecialCasing.toUpperCaseEx(this, i, locale);
-            } else {
-                upperChar = Character.toUpperCaseEx(srcChar);
-            }
-            if ((upperChar == Character.ERROR) ||
-                (upperChar >= Character.MIN_SUPPLEMENTARY_CODE_POINT)) {
-                if (upperChar == Character.ERROR) {
-                    if (localeDependent) {
-                        upperCharArray =
-                            ConditionalSpecialCasing.toUpperCaseCharArray(this, i, locale);
-                    } else {
-                        upperCharArray = Character.toUpperCaseCharArray(srcChar);
-                    }
-                } else if (srcCount == 2) {
-                    resultOffset += Character.toChars(upperChar, result, i + resultOffset) - srcCount;
-                    continue;
-                } else {
-                    upperCharArray = Character.toChars(upperChar);
-                }
-
-                /* Grow result if needed */
-                int mapLen = upperCharArray.length;
-                if (mapLen > srcCount) {
-                    char[] result2 = new char[result.length + mapLen - srcCount];
-                    System.arraycopy(result, 0, result2, 0,
-                        i + resultOffset);
-                    result = result2;
-                }
-                for (int x=0; x<mapLen; ++x) {
-                    result[i+resultOffset+x] = upperCharArray[x];
-                }
-                resultOffset += (mapLen - srcCount);
-            } else {
-                result[i+resultOffset] = (char)upperChar;
-            }
-        }
-        return new String(0, count+resultOffset, result);
+        // [Inferno] <
+        return uppercase();
+        // [Inferno] >
     }
 
     /**
@@ -2732,7 +2452,7 @@ public final class String
      * @see     java.lang.String#toUpperCase(Locale)
      */
     public String toUpperCase() {
-        return toUpperCase(Locale.getDefault());
+        return uppercase();
     }
 
     /**
@@ -2767,18 +2487,19 @@ public final class String
      *          trailing white space.
      */
     public String trim() {
-        int len = count;
+        // [Inferno] <
         int st = 0;
-        int off = offset;      /* avoid getfield opcode */
-        char[] val = value;    /* avoid getfield opcode */
+        int len = length();
+        char[] val = toCharArray();
 
-        while ((st < len) && (val[off + st] <= ' ')) {
+        while ((st < len) && (val[st] <= ' ')) {
             st++;
         }
-        while ((st < len) && (val[off + len - 1] <= ' ')) {
+        while ((st < len) && (val[len - 1] <= ' ')) {
             len--;
         }
-        return ((st > 0) || (len < count)) ? substring(st, len) : this;
+        return ((st > 0) || (len < length())) ? substring(st, len) : this;
+        // [Inferno] >
     }
 
     /**
@@ -2798,6 +2519,9 @@ public final class String
      *          the character sequence represented by this string.
      */
     public char[] toCharArray() {
+        // [Inferno] <
+        int count = length();
+        // [Inferno] >
         char result[] = new char[count];
         getChars(0, count, result, 0);
         return result;
@@ -3073,5 +2797,21 @@ public final class String
      *          guaranteed to be from a pool of unique strings.
      */
     public native String intern();
+
+    // [Inferno] Some native platform-specific methods
+
+    private native boolean equality(String other, boolean ignoreCase);
+
+    private native void fill(char[] chars, int idx, int count);
+    private native boolean isPrefix(String str, int index);
+    private native boolean isSuffix(String str);
+    private native String uppercase();
+    private native String lowercase();
+
+    private native int index(String str, int begin);
+    private native int index(int ch, int begin);
+
+    private native int rindex(String str, int begin, boolean fromend);
+    private native int rindex(int ch, int begin, boolean fromend);
 
 }
