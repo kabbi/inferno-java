@@ -1668,6 +1668,7 @@ multianewarray(ndim: int, c: ref Class, etype: int, bounds: array of int): ref A
 
 arraycopy(src: ref Array, sx: int, dst: ref Array, dx: int, n: int)
 {
+	trace(JDEBUG, sys->sprint("Arraycopy called: src[%d], dst[%d], %d, %d, %d", len src.holder, len dst.holder, sx, dx, n));
 	if (arrayclass == nil)
 		loadarrayclass();
 	if (src == nil || dst == nil)
@@ -1692,6 +1693,7 @@ arraycopy(src: ref Array, sx: int, dst: ref Array, dx: int, n: int)
 	if (sx < 0 || dx < 0 || n < 0 || sx + n > len src.holder || dx + n > len dst.holder || sx > 2147483647 - n || dx > 2147483647 - n)
 		sthrow("ArrayIndexOutOfBoundsException");
 	dst.holder[dx:] = sa[sx:sx + n];
+	trace(JDEBUG, "Arraycopy completed successfully");
 }
 
 #
@@ -1777,25 +1779,23 @@ drem(x, y: real): real
 
 Class.run(c: self ref Class, args: list of string)
 {
-	m := c.findsmethod(MAINFIELD, VOIDSIGNATURE);
+	m := c.findsmethod(MAINFIELD, MAINSIGNATURE);
 	if (m == nil)
 		loaderror( nosuchmethod, sys->sprint("%s: missing static method main", c.name));
 	main = c;
-	#if (arrayclass == nil)
-	#	loadarrayclass();
-	#if (stringclass == nil)
-	#	loadstringclass();
-	#n := len args;
-	#h := array[n] of ref JavaString;
-	#d := stringclass.moddata;
-	#for (i := 0; i < n; i++) {
-	#	h[i] = ref JavaString(d, hd args);
-	#	args = tl args;
-	#}
-	#c.xeq(m.value, ref Array(arraymd, h, 1, stringclass, 0));
+	if (arrayclass == nil)
+		loadarrayclass();
+	if (stringclass == nil)
+		loadstringclass();
+	n := len args;
+	h := array[n] of ref JavaString;
+	d := stringclass.moddata;
+	for (i := 0; i < n; i++) {
+		h[i] = ref JavaString(d, hd args);
+		args = tl args;
+	}
 	getthreaddata();
-	#r := jassist->mcalla(c.mod, m.value, ref Array(arraymd, h, 1, stringclass, 0));
-	r := jassist->mcall0(c.mod, m.value);
+	r := jassist->mcalla(c.mod, m.value, ref Array(arraymd, h, 1, stringclass, 0));
 	delthreaddata();
 }
 
@@ -1935,6 +1935,15 @@ Class.resolve(c: self ref Class)
 				sz += sizeof(t.signature);
 				sd = f :: sd;
 			} else {
+				superfield: ref Field;
+				if (c.super != nil)
+					superfield = c.super.findofield(t.field);
+				if (superfield != nil) {
+					trace(JDEBUG, sys->sprint("%s: superclass data", t.field));
+					p[i].what = PVALUE;
+					p[i].value = superfield.value;
+					continue;
+				}
 				trace(JDEBUG, sys->sprint("%s: new data", t.field));
 				oz = alignto(oz, t.signature);
 				p[i].what = PVALUE;
@@ -2059,24 +2068,28 @@ Class.makeobjtype(c: self ref Class)
 #
 Class.makevmtable(c: self ref Class, m: list of ref Field, z: int): array of Method
 {
+	trace(JDEBUG, sys->sprint("Makevmtable for %s, %d", c.name, z));
 	t := array[z] of Method;
 	if (c.super != nil) {
 		s := c.super.virtualmethods;
 		n := len s;
-		for (i := 0; i < n; i++)
+		for (i := 0; i < n; i++) {
+			trace(JDEBUG, sys->sprint("Makevmtable adding super method %s", s[i].field.field + s[i].field.signature));
 			t[i] = s[i];
+		}
 	}
 	while (m != nil) {
 		f := hd m;
 		n := f.value;
-		# TODO: check if we don't have this method in links, so just use parent class's one
-		trace(JDEBUG, sys->sprint("Makevmtable for %s, %d", c.name, z));
+		trace(JDEBUG, sys->sprint("Makevmtable checking %s %d %d", f.field + f.signature, n, f.flags));
 		{
 			f.value = c.getmethod(f.field, f.signature, f.flags);
 		}
 		exception e {
 			JCLDREX + nosuchmethod + "*" =>
-				; # silently ignore
+				# TODO: check if we really have it in superclass vmtable
+				m = tl m;
+				continue;
 		}
 		t[n].field = f;
 		t[n].class = c;
@@ -2589,6 +2602,8 @@ Class.getmethod(c: self ref Class, f, s: string, flags: int): int
 		if (l[i].name == m)
 			return i;
 	}
+	if (flags & ACC_NATIVE)
+		trace(JDEBUG, sys->sprint("Native method %s not found in %s", m, c.name));
 	if (!(flags & (ACC_ABSTRACT | ACC_NATIVE)))
 	{
 		loaderror( nosuchmethod, sys->sprint("method %x %s '%s' %s not found", flags, f, s, m) );
@@ -2753,7 +2768,7 @@ Class.resolvereloc(c: self ref Class, r, s: string, flags: int): (int, int)
 	f: ref Field;
 	case flags & Rmask {
 	Rgetputfield =>
-		f = findfield(c.objectdata, r);
+		f = c.findofield(r);
 		if (f == nil)
 			loaderror(nosuchfield, sys->sprint("%s not resolved in class %s", r, c.name));
 		else {
