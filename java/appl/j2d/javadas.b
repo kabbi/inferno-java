@@ -361,6 +361,8 @@ javadas(a: ref Attr): ref Code
 			j.i = int u1();
 			if(int j.op == Jldc) {
 				CON_bits = 1 << CON_Integer | 1 << CON_Float | 1 << CON_String;
+				if (class.maj >= 50)
+					CON_bits |= 1 << CON_Class;
 				verifycpindex(j, j.i, CON_bits);
 			}
 			l = 2;
