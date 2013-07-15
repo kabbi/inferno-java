@@ -36,7 +36,7 @@ public class Version {
         "@@java_version@@";
 
     private static final String java_runtime_name =
-	"@@java_runtime_name@@";
+        "@@java_runtime_name@@";
  
     private static final String java_runtime_version =
         "@@java_runtime_version@@";
@@ -90,23 +90,23 @@ public class Version {
         boolean isHeadless = false;
 
         /* Report that we're running headless if the property is true */
-	String headless = System.getProperty("java.awt.headless");
-	if ( (headless != null) && (headless.equalsIgnoreCase("true")) ) {
+        String headless = System.getProperty("java.awt.headless");
+        if ( (headless != null) && (headless.equalsIgnoreCase("true")) ) {
             isHeadless = true;
-	} 
+        } 
 
         /* First line: platform version. */
         ps.println(launcher_name + " version \"" + java_version + "\"");
 
         /* Second line: runtime version (ie, libraries). */
 
-	ps.print(java_runtime_name + " (build " + java_runtime_version);
+        ps.print(java_runtime_name + " (build " + java_runtime_version);
 
-	if (java_runtime_name.indexOf("Embedded") != -1 && isHeadless) {
-	    // embedded builds report headless state
-	    ps.print(", headless");
-	}
-	ps.println(')');
+        if (java_runtime_name.indexOf("Embedded") != -1 && isHeadless) {
+            // embedded builds report headless state
+            ps.print(", headless");
+        }
+        ps.println(')');
 
         /* Third line: JVM information. */
         String java_vm_name    = System.getProperty("java.vm.name");
@@ -333,9 +333,3 @@ public class Version {
     private static native void getJdkVersionInfo();
 
 }
-
-// Help Emacs a little because this file doesn't end in .java.
-//
-// Local Variables: ***
-// mode: java ***
-// End: ***
