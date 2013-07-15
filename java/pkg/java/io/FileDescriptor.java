@@ -48,11 +48,11 @@ package java.io;
  */
 public final class FileDescriptor {
 
-	public static FileDescriptor in = new FileDescriptor();
+    public static FileDescriptor in = new FileDescriptor();
 
-	public static FileDescriptor out = new FileDescriptor();
+    public static FileDescriptor out = new FileDescriptor();
 
-	public static FileDescriptor err = new FileDescriptor();
+    public static FileDescriptor err = new FileDescriptor();
 
     static {
         in = initSystemFD(in, 0);
