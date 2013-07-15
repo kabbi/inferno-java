@@ -12,13 +12,20 @@ keydb
 usr
 
 # Object files
-/MacOSX/386/bin/*
-/MacOSX/386/lib/*
-/emu/MacOSX/o.emu
-/emu/MacOSX/o.emu-g
+/java/pkg/**.s
+MacOSX/386/bin/*
+MacOSX/386/lib/*
+emu/MacOSX/o.emu
+emu/MacOSX/o.emu-g
 *.debug
 *.tab.[hc]
 *.dis
 *.sbl
 *.out
 *.o
+
+# Advanced regexp section
+syntax: regexp
+java/pkg/.*\.dis$
+java/pkg/.*\.s$
+java/pkg/.*\.sbl$
