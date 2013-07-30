@@ -1,0 +1,95 @@
+# generated file edit with care
+
+Unsafe_L : module
+{
+    Unsafe_obj : adt
+    {
+        cl_mod : ClassModule;
+    };
+
+    init : fn( jni_p : JNI );
+    allocateInstance_rClass_rObject : fn( this : ref Unsafe_obj, p0 : JClass) : JObject;
+    copyMemory_rObject_J_rObject_J_J_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject,p3 : big,p4 : big);
+    park_Z_J_V : fn( this : ref Unsafe_obj, p0 : byte,p1 : big);
+    unpark_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject);
+    getObject_rObject_J_rObject : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : JObject;
+    putObject_rObject_J_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject);
+    getBoolean_rObject_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
+    putBoolean_rObject_J_Z_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
+    getByte_J_B : fn( this : ref Unsafe_obj, p0 : big) : byte;
+    getByte_rObject_J_B : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
+    putByte_J_B_V : fn( this : ref Unsafe_obj, p0 : big,p1 : byte);
+    putByte_rObject_J_B_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
+    getShort_rObject_J_S : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    getShort_J_S : fn( this : ref Unsafe_obj, p0 : big) : int;
+    putShort_rObject_J_S_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    putShort_J_S_V : fn( this : ref Unsafe_obj, p0 : big,p1 : int);
+    getChar_J_C : fn( this : ref Unsafe_obj, p0 : big) : int;
+    getChar_rObject_J_C : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    putChar_J_C_V : fn( this : ref Unsafe_obj, p0 : big,p1 : int);
+    putChar_rObject_J_C_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    getInt_rObject_J_I : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    getInt_J_I : fn( this : ref Unsafe_obj, p0 : big) : int;
+    putInt_J_I_V : fn( this : ref Unsafe_obj, p0 : big,p1 : int);
+    putInt_rObject_J_I_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    getLong_rObject_J_J : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : big;
+    getLong_J_J : fn( this : ref Unsafe_obj, p0 : big) : big;
+    putLong_J_J_V : fn( this : ref Unsafe_obj, p0 : big,p1 : big);
+    putLong_rObject_J_J_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : big);
+    getFloat_J_F : fn( this : ref Unsafe_obj, p0 : big) : real;
+    getFloat_rObject_J_F : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : real;
+    putFloat_J_F_V : fn( this : ref Unsafe_obj, p0 : big,p1 : real);
+    putFloat_rObject_J_F_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : real);
+    getDouble_J_D : fn( this : ref Unsafe_obj, p0 : big) : real;
+    getDouble_rObject_J_D : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : real;
+    putDouble_J_D_V : fn( this : ref Unsafe_obj, p0 : big,p1 : real);
+    putDouble_rObject_J_D_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : real);
+    getObjectVolatile_rObject_J_rObject : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : JObject;
+    putObjectVolatile_rObject_J_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject);
+    getBooleanVolatile_rObject_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
+    putBooleanVolatile_rObject_J_Z_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
+    getByteVolatile_rObject_J_B : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
+    putByteVolatile_rObject_J_B_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
+    getShortVolatile_rObject_J_S : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    putShortVolatile_rObject_J_S_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    getCharVolatile_rObject_J_C : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    putCharVolatile_rObject_J_C_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    getIntVolatile_rObject_J_I : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    putIntVolatile_rObject_J_I_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    getLongVolatile_rObject_J_J : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : big;
+    putLongVolatile_rObject_J_J_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : big);
+    getFloatVolatile_rObject_J_F : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : real;
+    putFloatVolatile_rObject_J_F_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : real);
+    getDoubleVolatile_rObject_J_D : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : real;
+    putDoubleVolatile_rObject_J_D_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : real);
+    getAddress_J_J : fn( this : ref Unsafe_obj, p0 : big) : big;
+    putAddress_J_J_V : fn( this : ref Unsafe_obj, p0 : big,p1 : big);
+    compareAndSwapObject_rObject_J_rObject_rObject_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject,p3 : JObject) : byte;
+    compareAndSwapLong_rObject_J_J_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : big,p3 : big) : byte;
+    compareAndSwapInt_rObject_J_I_I_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int,p3 : int) : byte;
+    putOrderedObject_rObject_J_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject);
+    putOrderedLong_rObject_J_J_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : big);
+    putOrderedInt_rObject_J_I_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
+    registerNatives_V : fn( );
+    throwException_rThrowable_V : fn( this : ref Unsafe_obj, p0 : JObject);
+    defineClass_rString_aB_I_I_rClassLoader_rProtectionDomain_rClass : fn( this : ref Unsafe_obj, p0 : JString,p1 : JArrayB,p2 : int,p3 : int,p4 : JObject,p5 : JObject) : JClass;
+    defineClass_rString_aB_I_I_rClass : fn( this : ref Unsafe_obj, p0 : JString,p1 : JArrayB,p2 : int,p3 : int) : JClass;
+    objectFieldOffset_rField_J : fn( this : ref Unsafe_obj, p0 : JObject) : big;
+    staticFieldBase_rField_rObject : fn( this : ref Unsafe_obj, p0 : JObject) : JObject;
+    allocateMemory_J_J : fn( this : ref Unsafe_obj, p0 : big) : big;
+    reallocateMemory_J_J_J : fn( this : ref Unsafe_obj, p0 : big,p1 : big) : big;
+    setMemory_rObject_J_J_B_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : big,p3 : byte);
+    freeMemory_J_V : fn( this : ref Unsafe_obj, p0 : big);
+    staticFieldOffset_rField_J : fn( this : ref Unsafe_obj, p0 : JObject) : big;
+    ensureClassInitialized_rClass_V : fn( this : ref Unsafe_obj, p0 : JClass);
+    arrayBaseOffset_rClass_I : fn( this : ref Unsafe_obj, p0 : JClass) : int;
+    arrayIndexScale_rClass_I : fn( this : ref Unsafe_obj, p0 : JClass) : int;
+    addressSize_I : fn( this : ref Unsafe_obj) : int;
+    pageSize_I : fn( this : ref Unsafe_obj) : int;
+    defineAnonymousClass_rClass_aB_aObject_rClass : fn( this : ref Unsafe_obj, p0 : JClass,p1 : JArrayB,p2 : JArrayJObject) : JClass;
+    monitorEnter_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject);
+    monitorExit_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject);
+    tryMonitorEnter_rObject_Z : fn( this : ref Unsafe_obj, p0 : JObject) : byte;
+    getLoadAverage_aD_I_I : fn( this : ref Unsafe_obj, p0 : JArrayD,p1 : int) : int;
+
+};
