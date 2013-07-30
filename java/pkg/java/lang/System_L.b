@@ -19,7 +19,8 @@ include "jni.m";
         JArrayJClass,
         JArrayJString,
         JClass,
-        JObject : import jni;
+        JObject,
+        Value : import jni;
 
 #>> extra pre includes here
 
@@ -93,41 +94,76 @@ identityHashCode_rObject_I( p0 : JObject) : int
 	return( jni->IdentityHash(p0) );
 }#<<
 
+username(): string
+{
+	fd := jni->sys->open("#c/user", jni->sys->OREAD);
+	if(fd == nil)
+		return "unknown";
+
+	buf := array[128] of byte;
+	n := jni->sys->read(fd, buf, len buf);
+	if(n < 0)
+		return "unknown";
+
+	return string buf[:n];
+}
+
 GetUserName_rString( ) : JString
 {#>>
 	# return the current inferno user
 	# name as a Java String
-	#
-	user_name : string;
-
-	fd := jni->sys->open("#c/user", jni->sys->OREAD);
-	if(fd == nil)
-		user_name = "unknown";
-	else {
-		buf := array[128] of byte;
-		n := jni->sys->read(fd, buf, len buf);
-		if(n < 0)
-			user_name = "unknown";
-		else
-			user_name = string buf[:n];
-	}
 
 	# make java string from user name
-	return( jni->NewString( user_name ) );
+	return( jni->NewString( username() ) );
 }#<<
+
+wdir: Workdir;
+workingdir(): string
+{
+	if (wdir == nil) {
+		wdir = load Workdir Workdir->PATH;
+		if ( wdir == nil )
+			jni->InitError( jni->sys->sprint( "java.lang.System: could not load %s: %r", Workdir->PATH ) );
+	}
+	return wdir->init();
+}
 
 GetCWD_rString( ) : JString
 {#>>
 	# return the current working directory
 	# as a Java String
-	#
-	# this fct is really only called once so
-	# just load Workdir right here
-	wdir := load Workdir Workdir->PATH;
-	if ( wdir == nil )
-		jni->InitError( jni->sys->sprint( "java.lang.System: could not load %s: %r", Workdir->PATH ) );
 
-	return( jni->NewString( wdir->init() ) );
+	return( jni->NewString( workingdir() ) );
+}#<<
+
+initProperties_rProperties_rProperties( p0 : JObject ) : JObject
+{#>>
+	# Default properties
+	# TODO: ask Inferno when possible instead of hardcoded values
+	properties := array [] of {
+		("java.vendor", "Inferno project"),
+		("java.vendor.url", "http://www.vitanuova.com/inferno/"),
+		("java.home", "/java"),
+		("java.class.version", "50.0"),		# hopefully :)
+		("java.class.path", "/java/pkg"),
+		("os.name", "Inferno OS"),
+		("os.arch", "x86"),
+		("os.version", "4th edition"),
+		("file.separator", "/"),
+		("path.separator", ":"),
+		("line.separator", "\n"),
+		("user.home", workingdir()),
+		("user.name", username()),
+		("user.dir", "/usr/" + username())
+	};
+	for (i := 0; i < len properties; i++) {
+		(key, value) := properties[i];
+		args := array [2] of ref jni->Value;
+		args[0] = ref Value.TObject(jni->NewStringObject(key));
+		args[1] = ref Value.TObject(jni->NewStringObject(value));
+		(val, err) := jni->CallMethod(p0, "setProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", args);
+	}
+	return p0;
 }#<<
 
 registerNatives_V(  )
