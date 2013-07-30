@@ -48,6 +48,11 @@ package java.io;
  */
 public final class FileDescriptor {
 
+    // [Inferno] <
+    private Object fd;
+    private int useCount = 0;
+    // [Inferno] >
+
     public static FileDescriptor in = new FileDescriptor();
 
     public static FileDescriptor out = new FileDescriptor();
@@ -82,5 +87,21 @@ public final class FileDescriptor {
      * Means nothing in Inferno, as all the operations are synchronous.
      */
     public final native void sync();
+
+    /*
+     * Just the usage counter, as one FileDescriptor may be opened by multiple
+     * streams.
+     */
+    public int incrementAndGetUseCount() {
+        return ++useCount;
+    }
+
+    /*
+     * Just the usage counter, as one FileDescriptor may be opened by multiple
+     * streams.
+     */
+    public int decrementAndGetUseCount() {
+        return --useCount;
+    }
 
 }
