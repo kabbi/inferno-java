@@ -205,6 +205,13 @@ class TargetLoader extends ClassLoader
 			return( findSystemClass( name ) );
 		}
 
+		if ( name.startsWith("java/") )
+		{
+			System.out.println( "Warning: we can't load " + name + " due to java security policy" );
+			System.out.println( "Warning: we will use the system (already loaded) class instead" );
+			return( findSystemClass( name.replaceAll("/", ".") ) );
+		}
+
 		// otherwise do our one time load from a disk file
 
 		// read from the current directory the file "name".java
