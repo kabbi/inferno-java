@@ -1,0 +1,53 @@
+This project is intended to run Java 7 apps natively in inferno,
+by converting class files to dis and linking them at runtime.
+
+Currently working features:
+	- not many of them really, see problem list below
+	- although jvm runtime loader and linker is supposed to
+	work with java 1.4 classes (there was no chance to get
+	those sources, as java released only 1.5 ones and later)
+	sources are needed to provide native part of the JCL
+
+TODO:
+	- reworkd j2d to support modern exception handling in dis
+	- implement support for new bytecode instructions:
+		- DONE - ldc, ldc2, ldcw_2, ldc2_w: those will accept
+		more argument types, see http://docs.oracle.com/
+		javase/specs/jvms/se7/html/jvms-4.html#jvms-4.10.1.9.ldc
+		since class file version 49.0
+		- invokedynamic, completely new since 49.0
+	- prepare the pkg dir that would contain all the JCL classes
+	from the OpenJDK (as they come with GPL license), compiled and
+	translated into dis
+	- implement proper makefiles to compile JCL and native classes
+	- more to come later...
+
+Current tasks:
+	- correct exception handling in dis code
+		- just translate the addresses and write them directly
+		to dis 'handlers' section at the end
+	- support for new const types (CONSTANT_MethodHandle,
+	CONSTANT_MethodType, CONSTANT_InvokeDynamic):
+		-DONE- internal structures (java.m)
+		-DONE- loading from class files (loader.b)
+		- verification (loader.b)
+		- debug output (loader.b)
+	- support for new instruction behaviuor
+		- DONE - ldc, ldc_w (new argument types):
+			- DONE - loading and verification (javadas.b)
+			- DONE - simulation (simjvm.b)
+			- DONE - translation (xlate.b)
+			- DONE - runtime support (classloader.b) - NOT COMPLETELY TESTED
+			- note: the ldc since 50.0 supports Class refs loading for
+			classes, so we need a way to obtain that class from the loader
+			and push it to the stack
+		- invokedynamic
+			- loading from class files
+			- verification
+			- translation
+			- runtime support (?)
+
+Unimplemented or not fully implemented native classes:
+	- java/lang/Class - some reflection functions
+	- sun/misc/Unsafe - currently completely unimplemented
+	- 
