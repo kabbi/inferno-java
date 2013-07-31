@@ -44,7 +44,7 @@ init( jni_p : JNI )
     #<<
 }
 
-open_rString_V( this : ref FileOutputStream_obj, p0 : JString)
+open_rString_Z_V( this : ref FileOutputStream_obj, p0 : JString, p1 : int)
 {#>>
 	# open file pointed to by p0. If it does not exists, create it and 
 	# and open it with mode of 644.
@@ -55,20 +55,12 @@ open_rString_V( this : ref FileOutputStream_obj, p0 : JString)
         this.fd.fd = sys->create(p0.str, sys->OWRITE, 8r666);
         if(this.fd.fd == nil)
                 jni->ThrowException("java.io.IOException", sys->sprint("%r"));
+
+        if (p1)
+                sys->seek(this.fd.fd, big 0, sys->SEEKEND);
 }#<<
 
-openAppend_rString_V( this : ref FileOutputStream_obj, p0 : JString)
-{#>>
-        if ((p0 == nil) || (p0.str == nil))
-                jni->ThrowException("java.lang.NullPointerException", "null filename");
-
-        this.fd.fd = sys->open(p0.str, sys->OWRITE);
-        if(this.fd.fd == nil)
-                jni->ThrowException("java.io.IOException", sys->sprint("%r"));
-        sys->seek(this.fd.fd, big 0, sys->SEEKEND);
-}#<<
-
-write_I_V( this : ref FileOutputStream_obj, p0 : int)
+write_I_Z_V( this : ref FileOutputStream_obj, p0 : int, p1 : int)
 {#>>
 	# p0 == character to write
 	c := array[1] of byte;
@@ -77,11 +69,14 @@ write_I_V( this : ref FileOutputStream_obj, p0 : int)
         if ((this.fd == nil) || (this.fd.fd == nil))
                 jni->ThrowException("java.lang.NullPointerException", "null FileDescriptor");
 
+        if (p1)
+                sys->seek(this.fd.fd, big 0, sys->SEEKEND);
+
         if (sys->write(this.fd.fd, c, 1) != 1)
                 jni->ThrowException("java.io.IOException", sys->sprint("%r"));
 }#<<
 
-writeBytes_aB_I_I_V( this : ref FileOutputStream_obj, p0 : JArrayB,p1 : int,p2 : int)
+writeBytes_aB_I_I_Z_V( this : ref FileOutputStream_obj, p0 : JArrayB,p1 : int,p2 : int, p3 : int)
 {#>>
 	# p0 == buffer array to write from
 	# p1 == offset in buffer
@@ -93,6 +88,9 @@ writeBytes_aB_I_I_V( this : ref FileOutputStream_obj, p0 : JArrayB,p1 : int,p2 :
                 jni->ThrowException("java.lang.NullPointerException", nil);
         if ((p1 < 0) || (p2 < 0) || (p1 > (len p0.ary)))
                 jni->ThrowException("java.lang.ArrayIndexOutOfBoundsException", nil);
+
+        if (p3)
+                sys->seek(this.fd.fd, big 0, sys->SEEKEND);
 
         n := 0;
         while (p2 > 0) {
