@@ -1,31 +1,36 @@
-# javal v1.2 generated file: edit with care
+# generated file edit with care
 
 Class_L : module
 {
 
     init : fn( jni_p : JNI );
-    forName0_rString_Z_rClassLoader_rClass : fn( p0 : JString, p1 : int, p2 : JObject ) : JClass;
-    newInstance_rObject : fn( this : JClass) : JObject;
-    isInstance_rObject_Z : fn( this : JClass, p0 : JObject) : int;
+    forName0_rString_Z_rClassLoader_rClass : fn( p0 : JString,p1 : int,p2 : JObject) : JClass;
     isAssignableFrom_rClass_Z : fn( this : JClass, p0 : JClass) : int;
+    isInstance_rObject_Z : fn( this : JClass, p0 : JObject) : int;
+    getModifiers_I : fn( this : JClass) : int;
     isInterface_Z : fn( this : JClass) : int;
     isArray_Z : fn( this : JClass) : int;
     isPrimitive_Z : fn( this : JClass) : int;
+    getSuperclass_rClass : fn( this : JClass) : JClass;
+    getComponentType_rClass : fn( this : JClass) : JClass;
+    registerNatives_V : fn( );
     getName0_rString : fn( this : JClass) : JString;
     getClassLoader0_rClassLoader : fn( this : JClass) : JObject;
-    getSuperclass_rClass : fn( this : JClass) : JClass;
     getInterfaces_aClass : fn( this : JClass) : JArrayJClass;
-    getComponentType_rClass : fn( this : JClass) : JClass;
-    getModifiers_I : fn( this : JClass) : int;
     getSigners_aObject : fn( this : JClass) : JArrayJObject;
     setSigners_aObject_V : fn( this : JClass, p0 : JArrayJObject);
+    getEnclosingMethod0_aObject : fn( this : JClass) : JArrayJObject;
+    getDeclaringClass_rClass : fn( this : JClass) : JClass;
+    getProtectionDomain0_rProtectionDomain : fn( this : JClass) : JObject;
+    setProtectionDomain0_rProtectionDomain_V : fn( this : JClass, p0 : JObject);
     getPrimitiveClass_rString_rClass : fn( p0 : JString) : JClass;
-    getFields0_I_aField : fn( this : JClass, p0 : int) : JArrayJObject;
-    getMethods0_I_aMethod : fn( this : JClass, p0 : int) : JArrayJObject;
-    getConstructors0_I_aConstructor : fn( this : JClass, p0 : int) : JArrayJObject;
-    getField0_rString_I_rField : fn( this : JClass, p0 : JString,p1 : int) : JObject;
-    getMethod0_rString_aClass_I_rMethod : fn( this : JClass, p0 : JString,p1 : JArrayJClass,p2 : int) : JObject;
-    getConstructor0_aClass_I_rConstructor : fn( this : JClass, p0 : JArrayJClass,p1 : int) : JObject;
-    registerNatives_V : fn(  );
+    getGenericSignature_rString : fn( this : JClass) : JString;
+    getRawAnnotations_aB : fn( this : JClass) : JArrayB;
+    getConstantPool_rConstantPool : fn( this : JClass) : JObject;
+    getDeclaredFields0_Z_aField : fn( this : JClass, p0 : int) : JArrayJObject;
+    getDeclaredMethods0_Z_aMethod : fn( this : JClass, p0 : int) : JArrayJObject;
+    getDeclaredConstructors0_Z_aConstructor : fn( this : JClass, p0 : int) : JArrayJObject;
+    getDeclaredClasses0_aClass : fn( this : JClass) : JArrayJClass;
+    desiredAssertionStatus0_rClass_Z : fn( p0 : JClass) : int;
 
 };

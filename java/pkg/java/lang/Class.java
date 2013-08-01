@@ -183,7 +183,10 @@ public final
      */
     public static Class<?> forName(String className)
                 throws ClassNotFoundException {
-        return forName0(className, true, ClassLoader.getCallerClassLoader());
+        // [Inferno] No need to getCallerClassLoader here, it's not currently implemented <
+        //return forName0(className, true, ClassLoader.getCallerClassLoader());
+        return forName0(className, true, null);
+        // [Inferno] >
     }
 
 
