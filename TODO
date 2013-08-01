@@ -67,14 +67,14 @@ Java Class Library native modules implementation status:
 	mkfiles all the MISSING will be turned to STUB. But now it's better to implement
 	them manually one-by-one, at least the bootstrap ones
 
-	- MISSING -	awt/iDrawingSurfaceInfo.java
-	- MISSING -	awt/iFontMetrics.java
-	- MISSING -	awt/iFontPeer.java
-	- MISSING -	awt/iFramePeer.java
-	- MISSING -	awt/iGraphics.java
-	- MISSING -	awt/iImageRepresentation.java
-	- MISSING -	awt/iToolkit.java
-	- MISSING -	awt/iWindowPeer.java
+	- PARTIAL -	awt/iDrawingSurfaceInfo.java
+	- PARTIAL -	awt/iFontMetrics.java
+	- PARTIAL -	awt/iFontPeer.java
+	- PARTIAL -	awt/iFramePeer.java
+	- PARTIAL -	awt/iGraphics.java
+	- PARTIAL -	awt/iImageRepresentation.java
+	- PARTIAL -	awt/iToolkit.java
+	- PARTIAL -	awt/iWindowPeer.java
 	- MISSING -	com/sun/awt/AWTUtilities.java
 	- MISSING -	com/sun/demo/jvmti/hprof/Tracker.java
 	- MISSING -	com/sun/imageio/plugins/bmp/BMPImageReaderSpi.java
@@ -298,23 +298,22 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/beans/PersistenceDelegate.java
 	- MISSING -	java/beans/XMLEncoder.java
 	- MISSING -	java/io/Console.java
-	- MISSING -	java/io/File.java
-	- DONE -	java/io/FileDescriptor.java
-	- DONE -	java/io/FileInputStream.java
+	[BOOTSTRAP] - DONE -	java/io/FileDescriptor.java
+	[BOOTSTRAP] - DONE -	java/io/FileInputStream.java
 	- MISSING -	java/io/FileNotFoundException.java
-	- DONE -	java/io/FileOutputStream.java
+	[BOOTSTRAP] - DONE -	java/io/FileOutputStream.java
 	- MISSING -	java/io/FileSystem.java
 	- MISSING -	java/io/ObjectInputStream.java
 	- MISSING -	java/io/ObjectOutputStream.java
 	- MISSING -	java/io/ObjectStreamClass.java
 	- MISSING -	java/io/RandomAccessFile.java
 	- MISSING -	java/io/Serializable.java
-	- PARTIAL -	java/lang/Class.java
-	- PARTIAL -	java/lang/ClassLoader.java
+	[BOOTSTRAP] - PARTIAL -	java/lang/Class.java
+	[BOOTSTRAP] - PARTIAL -	java/lang/ClassLoader.java
 	- MISSING -	java/lang/Compiler.java
 	- MISSING -	java/lang/Deprecated.java
-	- DONE -	java/lang/Double.java
-	- DONE -	java/lang/Float.java
+	[BOOTSTRAP] - DONE -	java/lang/Double.java
+	[BOOTSTRAP] - DONE -	java/lang/Float.java
 	- MISSING -	java/lang/instrument/ClassFileTransformer.java
 	- MISSING -	java/lang/instrument/Instrumentation.java
 	- MISSING -	java/lang/invoke/MemberName.java
@@ -326,7 +325,7 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/lang/management/MemoryMXBean.java
 	- MISSING -	java/lang/management/ThreadInfo.java
 	- MISSING -	java/lang/Math.java
-	- DONE -	java/lang/Object.java
+	[BOOTSTRAP] - DONE -	java/lang/Object.java
 	- MISSING -	java/lang/Package.java
 	- MISSING -	java/lang/Process.java
 	- MISSING -	java/lang/ProcessBuilder.java
@@ -341,12 +340,12 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/lang/Shutdown.java
 	- MISSING -	java/lang/StackTraceElement.java
 	- MISSING -	java/lang/StrictMath.java
-	- DONE -	java/lang/String.java
-	- PARTIAL -	java/lang/System.java
+	[BOOTSTRAP] - DONE -	java/lang/String.java
+	[BOOTSTRAP] - PARTIAL -	java/lang/System.java
 	- MISSING -	java/lang/Thread.java
 	- MISSING -	java/lang/ThreadGroup.java
 	- MISSING -	java/lang/ThreadLocal.java
-	- MISSING -	java/lang/Throwable.java
+	- DONE -	java/lang/Throwable.java
 	- MISSING -	java/lang/UnsatisfiedLinkError.java
 	- MISSING -	java/net/AbstractPlainDatagramSocketImpl.java
 	- MISSING -	java/net/AbstractPlainSocketImpl.java
@@ -381,7 +380,7 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/nio/MappedByteBuffer.java
 	- MISSING -	java/nio/StringCharBuffer.java
 	- MISSING -	java/security/AccessControlContext.java
-	- STUB -	java/security/AccessController.java
+	[BOOTSTRAP] - STUB -	java/security/AccessController.java
 	- MISSING -	java/security/AuthProvider.java
 	- MISSING -	java/security/cert/PKIXBuilderParameters.java
 	- MISSING -	java/security/cert/PKIXParameters.java
@@ -663,9 +662,9 @@ Java Class Library native modules implementation status:
 	- MISSING -	sun/misc/Perf.java
 	- MISSING -	sun/misc/PerfCounter.java
 	- MISSING -	sun/misc/Signal.java
-	- STUB -	sun/misc/Unsafe.java
+	[BOOTSTRAP] - PARTIAL -	sun/misc/Unsafe.java
 	- MISSING -	sun/misc/Version.java
-	- DONE -	sun/misc/VM.java
+	[BOOTSTRAP] - DONE -	sun/misc/VM.java
 	- MISSING -	sun/misc/VMSupport.java
 	- MISSING -	sun/net/RegisteredDomain.java
 	- MISSING -	sun/net/sdp/SdpSupport.java
@@ -701,11 +700,11 @@ Java Class Library native modules implementation status:
 	- MISSING -	sun/print/PrintJob2D.java
 	- MISSING -	sun/print/PSPrinterJob.java
 	- MISSING -	sun/print/RasterPrinterJob.java
-	- MISSING -	sun/reflect/ConstantPool.java
+	[BOOTSTRAP] - STUB -	sun/reflect/ConstantPool.java
 	- MISSING -	sun/reflect/MethodAccessorGenerator.java
 	- MISSING -	sun/reflect/NativeConstructorAccessorImpl.java
 	- MISSING -	sun/reflect/NativeMethodAccessorImpl.java
-	- PARTIAL -	sun/reflect/Reflection.java
+	[BOOTSTRAP] - PARTIAL -	sun/reflect/Reflection.java
 	- MISSING -	sun/reflect/ReflectionFactory.java
 	- MISSING -	sun/rmi/server/Activation.java
 	- MISSING -	sun/rmi/server/MarshalInputStream.java
