@@ -317,7 +317,7 @@ class LimboGen
 				limbo_t = "real";
 			else if ( t_name.equals( "byte"    ) ||
 					  t_name.equals( "boolean" ) )
-				limbo_t = "byte";
+				limbo_t = "int"; // FIXME: should be byte here, but runtime seems to assume int
 			else 
 				limbo_t = ""; // void
 
