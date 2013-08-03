@@ -214,21 +214,16 @@ regionMatches_Z_I_rString_I_I_Z( this : JString, p0 : int,p1 : int,p2 : JString,
 
 hashCode_I( this : JString) : int
 {#>>
-	# hashcode of string as defined in JLS
+	# hashcode of string as say java docs
 	strhash     := 0;
 	this_str := this.str;
 	this_len := len this_str;
 	
-	if ( this_len <= 15 )
+	curmult := 1;
+	for (i := this_len - 1; i >= 0; i--)
 	{
-		for(x:=0; x<this_len; x++)
-			strhash = (strhash*37) + this_str[x];
-	}
-	else
-	{
-		k := int (this_len/8);
-		for(x:=0; x < this_len; x+=k)
-			strhash = (strhash*39) + this_str[x];
+		strhash += this_str[i] * curmult;
+		curmult *= 31;
 	}
 
 	return( strhash );
