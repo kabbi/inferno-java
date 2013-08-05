@@ -29,6 +29,25 @@ GetVersion() : int
 	return( JNI_VER );
 }
 
+InternalFindClass( name : string ) : ClassData
+{
+	# return class data adt used by the Java Loader
+	# which stores all the class information.
+	# WARNING: does not loads the class. Only use
+	# when you know what you are doing
+	# WARNING: arrays are not supported.
+
+	# replace all ocurrences of "." with "/" in name
+	newname : string;
+	for(x:=0;x<len name; x++)
+	{
+		if (name[x]=='.')
+			newname[x] = '/';
+		else
+			newname[x] = name[x];
+	}
+	return jldr->getclass(newname);
+}
 
 FindClass( name : string ) : ClassData
 {
@@ -712,7 +731,10 @@ NewClassObject( targ_class : ClassData ) : JClass
 {
 	# create an instance of java.lang.Class
 	cl_data  := classclass();
-	return( JClass(classclass().moddata, targ_class, nil) );
+	object := cast->ToJClass(NewObject(cl_data));
+	object.class = targ_class;
+
+	return( object );
 }
 
 
@@ -944,6 +966,7 @@ MainThreadGroup() : JObject
 
 FatalError( msg : string )
 {
+	sys->print("Fatal error: %s\n", msg);
 	ThrowException( "java/lang/InternalError", msg );
 }
 
