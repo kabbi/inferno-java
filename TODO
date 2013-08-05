@@ -47,6 +47,12 @@ Current tasks:
 			- translation
 			- runtime support (?)
 
+JCL modifications to simplify development process (not-to-forget to fix
+that after everything else is working):
+	- removed thread safe atomic objects from BufferedStreams
+	- removed default charset detection in Charset.defaultCharset()
+
+
 Java Class Library native modules implementation status:
 	- note: OK - means fully completed and tested, other statuses include
 	MISSING, STUB, PARTIAL, DONE. Stub means that all the functions are
@@ -342,7 +348,7 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/lang/StrictMath.java
 	[BOOTSTRAP] - DONE -	java/lang/String.java
 	[BOOTSTRAP] - PARTIAL -	java/lang/System.java
-	- MISSING -	java/lang/Thread.java
+	[BOOTSTRAP] - PARTIAL -	java/lang/Thread.java
 	- MISSING -	java/lang/ThreadGroup.java
 	- MISSING -	java/lang/ThreadLocal.java
 	- DONE -	java/lang/Throwable.java
