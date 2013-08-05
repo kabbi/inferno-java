@@ -346,6 +346,12 @@ JNI : module
 	FindClass  : fn( name : string ) : ClassData;
 
 	#
+	# Find the class data for a given class name.
+	# Will NOT load the class if necessary.
+	#
+	InternalFindClass : fn( name : string ) : ClassData;
+
+	#
 	# Return the class's superclass data.
 	#
 	GetSuperclass  : fn( cl_data : ClassData ) : ClassData;
