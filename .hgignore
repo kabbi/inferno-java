@@ -29,3 +29,4 @@ syntax: regexp
 java/pkg/.*\.dis$
 java/pkg/.*\.s$
 java/pkg/.*\.sbl$
+java/.*\.class$
