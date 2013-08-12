@@ -71,8 +71,6 @@ init( jni_p : JNI )
 
 currentThread_rThread( ) : JThread
 {#>>
-	e := ref Sys->Exception;
-	if ( sys->rescue("*",e) == Sys->HANDLER )
 	{
 		# get the java thread object assocciated 
 		# with this thread. it is stored in the
@@ -80,10 +78,12 @@ currentThread_rThread( ) : JThread
 		thd_obj := jldr->getthreaddata().this;
 		if ( thd_obj != nil )
 			return( cast->JObjToJThd(thd_obj) );
-		sys->unrescue();
 	}
-	else
-		sys->rescued(Sys->ONCE, nil);
+	exception e
+	{
+		"*" =>
+			; # ignore
+	}
 
 	
 	# either we could not find the thread data
@@ -118,7 +118,7 @@ sleep_J_V( p0 : big)
 	jldr->sleep( millis );
 }#<<
 
-start_V( this : JThread)
+start0_V( this : JThread)
 {#>>
 	thdobj := cast->JThdToJObj(this);
 
@@ -249,10 +249,7 @@ lowinit_rThread_V( p0 : JThread)
 	# java.lang.Thread object. 'p0' is the "root thread" object
 	# which must be associated witht the Dis thread which is
 	# calling this fuction -- i.e. associate the 'p0' java thread
-	# object with the current Dis thread. 'p1' is the same thread
-	# object, just with the type JObject which allows us to store
-	# it off in the JavaClassLoader->ThreadData structure associated
-	# with the calling Dis thread.
+	# object with the current Dis thread.
 
 	# since this is the root thread make a root thread group by
 	# creating an instance of ThreadGroup and calling its private
@@ -271,6 +268,32 @@ lowinit_rThread_V( p0 : JThread)
 	thd.this       = cast->JThdToJObj(p0);     # save java object in thread data
 	p0.PrivateInfo = thd;    # save thread data in java object
 
+}#<<
+
+holdsLock_rObject_Z( p0 : JObject) : int
+{#>>
+	if (p0 == nil)
+		jni->ThrowException( "java.lang.NullPointerException", "obj arg is null" );
+
+	# TODO: implement
+	return 0;
+}#<<
+
+dumpThreads_aThread_aaStackTraceElement( p0 : JArrayJObject) : JArray
+{#>>
+	# TODO: implement
+	return nil;
+}#<<
+
+getThreads_aThread( ) : JArrayJObject
+{#>>
+	# TODO: implement
+	return nil;
+}#<<
+
+registerNatives_V(  )
+{#>>
+    # currently empty...
 }#<<
 
 
@@ -324,8 +347,6 @@ javathreadinit( jthd : JNI->JThread, ok : chan of int )
 
 	# we need to catch any exceptions in order
 	# to clean up the thread object's state
-	ee := ref Sys->Exception;
-	if ( sys->rescue( "*", ee ) == Sys->HANDLER )
 	{
 		
 		# call Thread.run() or Runnable.run()
@@ -334,17 +355,14 @@ javathreadinit( jthd : JNI->JThread, ok : chan of int )
 		# call Thread.exit()
 		(mod,idx) := jni->FindMethod( threadclass, "exit", "()V", JNI->METH_PRIVATE );
 		jni->jassist->mcall1( mod, idx, thdobj );
-		sys->unrescue();
 	}
-	else
+	exception e
 	{
-		# clear exception
-		sys->rescued( Sys->ONCE, nil );
-
-		# thread threw an unhandled exception so
-		# call the ThreadGroup.uncaughtException()
-		# method.
-		UncaughtException( jthd, thdobj, ee );
+		"*" =>
+			# thread threw an unhandled exception so
+			# call the ThreadGroup.uncaughtException()
+			# method.
+			UncaughtException( jthd, thdobj, e );
 	}
 
 	# java thread clean up
@@ -408,7 +426,7 @@ Run( jthd : JNI->JThread, thdobj : JObject )
 # The method is passed an instance of the Thread along with the
 # "throwable" (i.e. exception).
 #
-UncaughtException( jthd : JThread, thdobj : JObject, ee : ref Sys->Exception )
+UncaughtException( jthd : JThread, thdobj : JObject, ee : string )
 {
 	tgrp_cl := jni->GetObjectClassData( jthd.group );
 
@@ -421,8 +439,6 @@ UncaughtException( jthd : JThread, thdobj : JObject, ee : ref Sys->Exception )
 	{
 		# call method, protected against exceptions
 		# since we must still clean-up the thread
-		eee := ref Sys->Exception;
-		if ( sys->rescue( "*", eee ) == Sys->HANDLER )
 		{
 			# find the uncaughtException method for the thd-grp
 			(mod,idx) := jni->FindMethod( tgrp_cl, "uncaughtException", 
@@ -441,13 +457,12 @@ UncaughtException( jthd : JThread, thdobj : JObject, ee : ref Sys->Exception )
 				# do the call
 				##LATER nil := jni->LowCall( mod, idx, jthd.group, args ); 
 			}
-			sys->unrescue();
 		}
-		else
+		exception e
 		{
-			# if we get an exception here just return
-			# and let the thread finish cleanup.
-			sys->rescued( Sys->ONCE, nil );
+			"*" =>
+				# if we get an exception here just return
+				# and let the thread finish cleanup.
 		}
 	}
 	
