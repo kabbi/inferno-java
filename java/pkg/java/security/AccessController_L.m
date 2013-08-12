@@ -2,6 +2,9 @@
 
 AccessController_L : module
 {
+	ACTION_RUN_METHOD: con "run";
+	ACTION_RUN_SIGNATURE: con "()Ljava/lang/Object;";
+
     AccessController_obj : adt
     {
         cl_mod : ClassModule;
