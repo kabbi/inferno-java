@@ -571,20 +571,24 @@ class Bits {                            // package-private
     }
 
     static {
-        long a = unsafe.allocateMemory(8);
-        try {
-            unsafe.putLong(a, 0x0102030405060708L);
-            byte b = unsafe.getByte(a);
-            switch (b) {
-            case 0x01: byteOrder = ByteOrder.BIG_ENDIAN;     break;
-            case 0x08: byteOrder = ByteOrder.LITTLE_ENDIAN;  break;
-            default:
-                assert false;
-                byteOrder = null;
-            }
-        } finally {
-            unsafe.freeMemory(a);
-        }
+        // [Inferno] <
+        //long a = unsafe.allocateMemory(8);
+        //try {
+        //    unsafe.putLong(a, 0x0102030405060708L);
+        //    byte b = unsafe.getByte(a);
+        //    switch (b) {
+        //    case 0x01: byteOrder = ByteOrder.BIG_ENDIAN;     break;
+        //    case 0x08: byteOrder = ByteOrder.LITTLE_ENDIAN;  break;
+        //    default:
+        //        assert false;
+        //        byteOrder = null;
+        //    }
+        //} finally {
+        //    unsafe.freeMemory(a);
+        //}
+        // [Inferno] =
+        byteOrder = ByteOrder.LITTLE_ENDIAN;
+        // [Inferno] >
     }
 
 
