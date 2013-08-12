@@ -13,6 +13,7 @@ System_L : module
     setErr0_rPrintStream_V : fn( p0 : JObject);
     currentTimeMillis_J : fn( ) : big;
     arraycopy_rObject_I_rObject_I_I_V : fn( p0 : JObject,p1 : int,p2 : JObject,p3 : int,p4 : int);
+    mapLibraryName_rString_rString : fn( p0 : JString) : JString;
     identityHashCode_rObject_I : fn( p0 : JObject) : int;
     initProperties_rProperties_rProperties : fn( p0 : JObject ) : JObject;
     GetUserName_rString : fn( ) : JString;

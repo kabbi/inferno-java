@@ -50,6 +50,13 @@ init( jni_p : JNI )
 	#<<
 }
 
+mapLibraryName_rString_rString( p0 : JString) : JString
+{#>>
+	# TODO: what are libraries in Inferno?
+	# dis files? native modules? .m?
+	return p0;
+}#<<
+
 setIn0_rInputStream_V( p0 : JObject)
 {#>>
 	Value : import JNI;
@@ -141,6 +148,9 @@ initProperties_rProperties_rProperties( p0 : JObject ) : JObject
 	# Default properties
 	# TODO: ask Inferno when possible instead of hardcoded values
 	properties := array [] of {
+		("java.vm.version", "20.51-b01-457"), #FIXME: write real version here
+		("java.vm.name", "Inferno's JVM, Sux(?)"),
+		("java.vm.info", "mixed mode"),
 		("java.vendor", "Inferno project"),
 		("java.vendor.url", "http://www.vitanuova.com/inferno/"),
 		("java.home", "/java"),
@@ -149,6 +159,7 @@ initProperties_rProperties_rProperties( p0 : JObject ) : JObject
 		("os.name", "Inferno OS"),
 		("os.arch", "x86"),
 		("os.version", "4th edition"),
+		("file.encoding", "utf-8"),
 		("file.separator", "/"),
 		("path.separator", ":"),
 		("line.separator", "\n"),

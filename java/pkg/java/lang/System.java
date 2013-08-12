@@ -1142,10 +1142,17 @@ public final class System {
         setErr0(new PrintStream(new BufferedOutputStream(fdErr, 128), true));
         // Load the zip library now in order to keep java.util.zip.ZipFile
         // from trying to use itself to load this library later.
-        loadLibrary("zip");
+        // [Inferno] <
+        // Not really needed now. We have no libraries, no jars, and currently
+        // can run only converted dis code.
+        //loadLibrary("zip");
+        // [Inferno] >
 
         // Setup Java signal handlers for HUP, TERM, and INT (where available).
-        Terminator.setup();
+        // [Inferno] <
+        // No terminators in Inferno
+        //Terminator.setup();
+        // [Inferno] >
 
         // Initialize any miscellenous operating system settings that need to be
         // set for the class libraries. Currently this is no-op everywhere except
