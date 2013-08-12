@@ -65,10 +65,13 @@ class BufferedInputStream extends FilterInputStream {
      * of buf[] as primary indicator that this stream is closed. (The
      * "in" field is also nulled out on close.)
      */
-    private static final
-        AtomicReferenceFieldUpdater<BufferedInputStream, byte[]> bufUpdater =
-        AtomicReferenceFieldUpdater.newUpdater
-        (BufferedInputStream.class,  byte[].class, "buf");
+    // [Inferno] <
+    //private static final
+    //    AtomicReferenceFieldUpdater<BufferedInputStream, byte[]> bufUpdater =
+    //    AtomicReferenceFieldUpdater.newUpdater
+    //    (BufferedInputStream.class,  byte[].class, "buf");
+    // [Inferno] =
+    // [Inferno] >
 
     /**
      * The index one greater than the index of the last valid byte in
@@ -221,14 +224,19 @@ class BufferedInputStream extends FilterInputStream {
                     nsz = marklimit;
                 byte nbuf[] = new byte[nsz];
                 System.arraycopy(buffer, 0, nbuf, 0, pos);
-                if (!bufUpdater.compareAndSet(this, buffer, nbuf)) {
-                    // Can't replace buf if there was an async close.
-                    // Note: This would need to be changed if fill()
-                    // is ever made accessible to multiple threads.
-                    // But for now, the only way CAS can fail is via close.
-                    // assert buf == null;
+                // [Inferno] <
+                //if (!bufUpdater.compareAndSet(this, buffer, nbuf)) {
+                //    // Can't replace buf if there was an async close.
+                //    // Note: This would need to be changed if fill()
+                //    // is ever made accessible to multiple threads.
+                //    // But for now, the only way CAS can fail is via close.
+                //    // assert buf == null;
+                //    throw new IOException("Stream closed");
+                //}
+                // [Inferno] =
+                if (buffer == null)
                     throw new IOException("Stream closed");
-                }
+                // [Inferno] >
                 buffer = nbuf;
             }
         count = pos;
@@ -465,13 +473,21 @@ class BufferedInputStream extends FilterInputStream {
     public void close() throws IOException {
         byte[] buffer;
         while ( (buffer = buf) != null) {
-            if (bufUpdater.compareAndSet(this, buffer, null)) {
-                InputStream input = in;
-                in = null;
-                if (input != null)
-                    input.close();
-                return;
-            }
+            // [Inferno] <
+            //if (bufUpdater.compareAndSet(this, buffer, null)) {
+            //    InputStream input = in;
+            //    in = null;
+            //    if (input != null)
+            //        input.close();
+            //    return;
+            //}
+            // [Inferno] =
+            InputStream input = in;
+            in = null;
+            if (input != null)
+                input.close();
+            return;
+            // [Inferno] >
             // Else retry in case a new buf was CASed in fill()
         }
     }
