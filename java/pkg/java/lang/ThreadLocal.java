@@ -80,14 +80,37 @@ public class ThreadLocal<T> {
      * are used by the same threads, while remaining well-behaved in
      * less common cases.
      */
+    // [Inferno] <
+    //private final int threadLocalHashCode = nextHashCode();
+//
+    ///**
+    // * The next hash code to be given out. Updated atomically. Starts at
+    // * zero.
+    // */
+    //private static AtomicInteger nextHashCode =
+    //    new AtomicInteger();
+//
+    ///**
+    // * The difference between successively generated hash codes - turns
+    // * implicit sequential thread-local IDs into near-optimally spread
+    // * multiplicative hash values for power-of-two-sized tables.
+    // */
+    //private static final int HASH_INCREMENT = 0x61c88647;
+//
+    ///**
+    // * Returns the next hash code.
+    // */
+    //private static int nextHashCode() {
+    //    return nextHashCode.getAndAdd(HASH_INCREMENT);
+    //}
+// ================
     private final int threadLocalHashCode = nextHashCode();
 
     /**
      * The next hash code to be given out. Updated atomically. Starts at
      * zero.
      */
-    private static AtomicInteger nextHashCode =
-        new AtomicInteger();
+    private static int nextHashCode = 0;
 
     /**
      * The difference between successively generated hash codes - turns
@@ -100,7 +123,7 @@ public class ThreadLocal<T> {
      * Returns the next hash code.
      */
     private static int nextHashCode() {
-        return nextHashCode.getAndAdd(HASH_INCREMENT);
+        return nextHashCode += HASH_INCREMENT;
     }
 
     /**
