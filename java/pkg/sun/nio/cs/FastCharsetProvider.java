@@ -119,6 +119,8 @@ public class FastCharsetProvider
             Class c = Class.forName(packagePrefix + "." + cln,
                                     true,
                                     this.getClass().getClassLoader());
+            debugPrintString("===");
+            debugPrintString(c.getName());
             cs = (Charset)c.newInstance();
             cache.put(csn, cs);
             return cs;
