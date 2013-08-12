@@ -14,8 +14,8 @@ Unsafe_L : module
     unpark_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject);
     getObject_rObject_J_rObject : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : JObject;
     putObject_rObject_J_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject);
-    getBoolean_rObject_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
-    putBoolean_rObject_J_Z_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
+    getBoolean_rObject_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    putBoolean_rObject_J_Z_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
     getByte_J_B : fn( this : ref Unsafe_obj, p0 : big) : byte;
     getByte_rObject_J_B : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
     putByte_J_B_V : fn( this : ref Unsafe_obj, p0 : big,p1 : byte);
@@ -46,8 +46,8 @@ Unsafe_L : module
     putDouble_rObject_J_D_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : real);
     getObjectVolatile_rObject_J_rObject : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : JObject;
     putObjectVolatile_rObject_J_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : JObject);
-    getBooleanVolatile_rObject_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
-    putBooleanVolatile_rObject_J_Z_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
+    getBooleanVolatile_rObject_J_Z : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
+    putBooleanVolatile_rObject_J_Z_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : int);
     getByteVolatile_rObject_J_B : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : byte;
     putByteVolatile_rObject_J_B_V : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big,p2 : byte);
     getShortVolatile_rObject_J_S : fn( this : ref Unsafe_obj, p0 : JObject,p1 : big) : int;
@@ -89,7 +89,7 @@ Unsafe_L : module
     defineAnonymousClass_rClass_aB_aObject_rClass : fn( this : ref Unsafe_obj, p0 : JClass,p1 : JArrayB,p2 : JArrayJObject) : JClass;
     monitorEnter_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject);
     monitorExit_rObject_V : fn( this : ref Unsafe_obj, p0 : JObject);
-    tryMonitorEnter_rObject_Z : fn( this : ref Unsafe_obj, p0 : JObject) : byte;
+    tryMonitorEnter_rObject_Z : fn( this : ref Unsafe_obj, p0 : JObject) : int;
     getLoadAverage_aD_I_I : fn( this : ref Unsafe_obj, p0 : JArrayD,p1 : int) : int;
 
 };
