@@ -10,7 +10,7 @@ Throwable_L : module
     };
 
     init : fn( jni_p : JNI );
-    printStackTrace0_rObject_V : fn( this : ref Throwable_obj, p0 : JObject);
-    fillInStackTrace_rThrowable : fn( this : ref Throwable_obj) : ref Throwable_obj;
-
+    fillInStackTrace_I_rThrowable : fn( this : ref Throwable_obj, p0 : int) : ref Throwable_obj;
+    getStackTraceDepth_I : fn( this : ref Throwable_obj) : int;
+    getStackTraceElement_I_rStackTraceElement : fn( this : ref Throwable_obj, p0 : int) : JObject;
 };
