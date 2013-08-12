@@ -117,6 +117,14 @@ public final
                               java.lang.reflect.GenericDeclaration,
                               java.lang.reflect.Type,
                               java.lang.reflect.AnnotatedElement {
+
+    // [Inferno] <
+    /** A field that is used by jvm to store internal data */
+    private transient Object classData;
+    /** A field that is used by jvm to store internal data */
+    private transient Object arrayName;
+    // [Inferno] >
+
     private static final int ANNOTATION= 0x00002000;
     private static final int ENUM      = 0x00004000;
     private static final int SYNTHETIC = 0x00001000;
@@ -254,16 +262,19 @@ public final
                                    ClassLoader loader)
         throws ClassNotFoundException
     {
-        if (loader == null) {
-            SecurityManager sm = System.getSecurityManager();
-            if (sm != null) {
-                ClassLoader ccl = ClassLoader.getCallerClassLoader();
-                if (ccl != null) {
-                    sm.checkPermission(
-                        SecurityConstants.GET_CLASSLOADER_PERMISSION);
-                }
-            }
-        }
+        // [Inferno] <
+        //if (loader == null) {
+        //    SecurityManager sm = System.getSecurityManager();
+        //    if (sm != null) {
+        //        ClassLoader ccl = ClassLoader.getCallerClassLoader();
+        //        if (ccl != null) {
+        //            sm.checkPermission(
+        //                SecurityConstants.GET_CLASSLOADER_PERMISSION);
+        //        }
+        //    }
+        //}
+        // [Inferno] =
+        // [Inferno] >
         return forName0(name, initialize, loader);
     }
 
@@ -328,57 +339,61 @@ public final
         return newInstance0();
     }
 
-    private T newInstance0()
-        throws InstantiationException, IllegalAccessException
-    {
-        // NOTE: the following code may not be strictly correct under
-        // the current Java memory model.
-
-        // Constructor lookup
-        if (cachedConstructor == null) {
-            if (this == Class.class) {
-                throw new IllegalAccessException(
-                    "Can not call newInstance() on the Class for java.lang.Class"
-                );
-            }
-            try {
-                Class<?>[] empty = {};
-                final Constructor<T> c = getConstructor0(empty, Member.DECLARED);
-                // Disable accessibility checks on the constructor
-                // since we have to do the security check here anyway
-                // (the stack depth is wrong for the Constructor's
-                // security check to work)
-                java.security.AccessController.doPrivileged(
-                    new java.security.PrivilegedAction<Void>() {
-                        public Void run() {
-                                c.setAccessible(true);
-                                return null;
-                            }
-                        });
-                cachedConstructor = c;
-            } catch (NoSuchMethodException e) {
-                throw new InstantiationException(getName());
-            }
-        }
-        Constructor<T> tmpConstructor = cachedConstructor;
-        // Security check (same as in java.lang.reflect.Constructor)
-        int modifiers = tmpConstructor.getModifiers();
-        if (!Reflection.quickCheckMemberAccess(this, modifiers)) {
-            Class<?> caller = Reflection.getCallerClass(3);
-            if (newInstanceCallerCache != caller) {
-                Reflection.ensureMemberAccess(caller, this, null, modifiers);
-                newInstanceCallerCache = caller;
-            }
-        }
-        // Run constructor
-        try {
-            return tmpConstructor.newInstance((Object[])null);
-        } catch (InvocationTargetException e) {
-            Unsafe.getUnsafe().throwException(e.getTargetException());
-            // Not reached
-            return null;
-        }
-    }
+    // [Inferno] <
+    //private T newInstance0()
+    //    throws InstantiationException, IllegalAccessException
+    //{
+    //    // NOTE: the following code may not be strictly correct under
+    //    // the current Java memory model.
+//
+    //    // Constructor lookup
+    //    if (cachedConstructor == null) {
+    //        if (this == Class.class) {
+    //            throw new IllegalAccessException(
+    //                "Can not call newInstance() on the Class for java.lang.Class"
+    //            );
+    //        }
+    //        try {
+    //            Class<?>[] empty = {};
+    //            final Constructor<T> c = getConstructor0(empty, Member.DECLARED);
+    //            // Disable accessibility checks on the constructor
+    //            // since we have to do the security check here anyway
+    //            // (the stack depth is wrong for the Constructor's
+    //            // security check to work)
+    //            java.security.AccessController.doPrivileged(
+    //                new java.security.PrivilegedAction<Void>() {
+    //                    public Void run() {
+    //                            c.setAccessible(true);
+    //                            return null;
+    //                        }
+    //                    });
+    //            cachedConstructor = c;
+    //        } catch (NoSuchMethodException e) {
+    //            throw new InstantiationException(getName());
+    //        }
+    //    }
+    //    Constructor<T> tmpConstructor = cachedConstructor;
+    //    // Security check (same as in java.lang.reflect.Constructor)
+    //    int modifiers = tmpConstructor.getModifiers();
+    //    if (!Reflection.quickCheckMemberAccess(this, modifiers)) {
+    //        Class<?> caller = Reflection.getCallerClass(3);
+    //        if (newInstanceCallerCache != caller) {
+    //            Reflection.ensureMemberAccess(caller, this, null, modifiers);
+    //            newInstanceCallerCache = caller;
+    //        }
+    //    }
+    //    // Run constructor
+    //    try {
+    //        return tmpConstructor.newInstance((Object[])null);
+    //    } catch (InvocationTargetException e) {
+    //        Unsafe.getUnsafe().throwException(e.getTargetException());
+    //        // Not reached
+    //        return null;
+    //    }
+    //}
+    // [Inferno] =
+    private native T newInstance0();
+    // [Inferno] >
     private volatile transient Constructor<T> cachedConstructor;
     private volatile transient Class<?>       newInstanceCallerCache;
 
