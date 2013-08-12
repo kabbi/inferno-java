@@ -50,7 +50,8 @@ Current tasks:
 JCL modifications to simplify development process (not-to-forget to fix
 that after everything else is working):
 	- removed thread safe atomic objects from BufferedStreams
-	- removed default charset detection in Charset.defaultCharset()
+	- removed byte order detection in java/nio/Bits, as it uses unimplemented
+	malloc from Unsafe
 
 
 Java Class Library native modules implementation status:
@@ -308,7 +309,7 @@ Java Class Library native modules implementation status:
 	[BOOTSTRAP] - DONE -	java/io/FileInputStream.java
 	- MISSING -	java/io/FileNotFoundException.java
 	[BOOTSTRAP] - DONE -	java/io/FileOutputStream.java
-	- MISSING -	java/io/FileSystem.java
+	[BOOTSTRAP] - PARTIAL -	java/io/FileSystem.java
 	- MISSING -	java/io/ObjectInputStream.java
 	- MISSING -	java/io/ObjectOutputStream.java
 	- MISSING -	java/io/ObjectStreamClass.java
@@ -340,12 +341,12 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/lang/reflect/Method.java
 	- MISSING -	java/lang/reflect/Modifier.java
 	- MISSING -	java/lang/reflect/Proxy.java
-	- MISSING -	java/lang/Runtime.java
+	[BOOTSTRAP] - PARTIAL -	java/lang/Runtime.java
 	- MISSING -	java/lang/RuntimePermission.java
 	- MISSING -	java/lang/SecurityManager.java
 	- MISSING -	java/lang/Shutdown.java
 	- MISSING -	java/lang/StackTraceElement.java
-	- MISSING -	java/lang/StrictMath.java
+	- DONE -	java/lang/StrictMath.java
 	[BOOTSTRAP] - DONE -	java/lang/String.java
 	[BOOTSTRAP] - PARTIAL -	java/lang/System.java
 	[BOOTSTRAP] - PARTIAL -	java/lang/Thread.java
@@ -371,7 +372,7 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/net/SocketOutputStream.java
 	- MISSING -	java/net/URI.java
 	- MISSING -	java/net/URL.java
-	- MISSING -	java/nio/Bits.java
+	[BOOTSTRAP] - STUB -	java/nio/Bits.java
 	- MISSING -	java/nio/Buffer.java
 	- MISSING -	java/nio/ByteOrder.java
 	- MISSING -	java/nio/channels/FileLock.java
@@ -669,7 +670,7 @@ Java Class Library native modules implementation status:
 	- MISSING -	sun/misc/PerfCounter.java
 	- MISSING -	sun/misc/Signal.java
 	[BOOTSTRAP] - PARTIAL -	sun/misc/Unsafe.java
-	- MISSING -	sun/misc/Version.java
+	[BOOTSTRAP] - PARTIAL -	sun/misc/Version.java
 	[BOOTSTRAP] - DONE -	sun/misc/VM.java
 	- MISSING -	sun/misc/VMSupport.java
 	- MISSING -	sun/net/RegisteredDomain.java
