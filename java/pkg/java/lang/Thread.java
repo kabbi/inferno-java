@@ -145,11 +145,16 @@ class Thread implements Runnable {
 
     private char        name[];
     private int         priority;
-    private Thread      threadQ;
-    private long        eetop;
+    // [Inferno] <
+    //private Thread      threadQ;
+    //private long        eetop;
+    // [Inferno] =
+    private Object PrivateInfo;
+    private boolean     was_interrupted;
+    // [Inferno] >
 
     /* Whether or not to single_step this thread. */
-    private boolean     single_step;
+    // [Inferno] // private boolean     single_step;
 
     /* Whether or not the thread is a daemon thread. */
     private boolean     daemon = false;
@@ -2032,4 +2037,41 @@ class Thread implements Runnable {
     private native void suspend0();
     private native void resume0();
     private native void interrupt0();
+
+    // [Inferno] <
+    private native static void lowinit(Thread thd);
+
+    //
+    // this constructor is only used for the creation of the root
+    // thread. This root thread is special, as it is already running.
+    // The parameter is only there to make the constructor unique from
+    // the public constructors. 
+    //
+    private Thread( int i )
+    {
+        if ( threadInitNumber != 0 )
+            throw new InternalError( "redundant root thread creation" );
+
+        name         = new char[] {'m','a','i','n'};
+        priority     = NORM_PRIORITY;
+        daemon       = false;
+        stillborn    = false;
+        target       = null;
+        group        = null;  //this is set later
+        PrivateInfo  = null;  //set later to lowerlevel structure
+    }
+
+    static
+    {
+        // create the "first" thread object and 
+        // associate it with the thread executing
+        // this initializer.
+        threadInitNumber = 0;         //0 is reserved
+        Thread thd = new Thread(0);   // use private constructor
+        lowinit(thd);
+        thd.group.add(thd);
+        threadInitNumber = 1;         //next thread id
+    }
+
+    // [Inferno] >
 }
