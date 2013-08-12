@@ -32,5 +32,6 @@ Class_L : module
     getDeclaredConstructors0_Z_aConstructor : fn( this : JClass, p0 : int) : JArrayJObject;
     getDeclaredClasses0_aClass : fn( this : JClass) : JArrayJClass;
     desiredAssertionStatus0_rClass_Z : fn( p0 : JClass) : int;
+    newInstance0_rObject : fn( this : JClass) : JObject;
 
 };

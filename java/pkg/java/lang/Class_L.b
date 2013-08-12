@@ -54,7 +54,7 @@ forName0_rString_Z_rClassLoader_rClass( p0 : JString,p1 : int,p2 : JObject) : JC
         if (p0.str != nil && p0.str[0] == '[')
             return jni->LookupArrayClass(p0.str);
         else
-            return jni->GetClassObject(jni->FindClass(p0.str));
+            return jni->NewClassObject(jni->FindClass(p0.str));
     }
     exception e {
         "JLD:e0*" =>
@@ -314,6 +314,11 @@ desiredAssertionStatus0_rClass_Z( p0 : JClass) : int
 {#>>
     #jni->FatalError("desiredAssertionStatus0 is not implemented");
     return int 0;
+}#<<
+
+newInstance0_rObject( this : JClass) : JObject
+{#>>
+    return jni->NewObject(this.class);
 }#<<
 
 #
