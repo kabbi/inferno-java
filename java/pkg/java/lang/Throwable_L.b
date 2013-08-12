@@ -56,7 +56,7 @@ printStackTrace0_rObject_V( this : ref Throwable_obj, p0 : JObject)
 
 }#<<
 
-fillInStackTrace_rThrowable( this : ref Throwable_obj) : ref Throwable_obj
+fillInStackTrace_I_rThrowable( this : ref Throwable_obj, p0 : int) : ref Throwable_obj
 {#>>
 	# attempt to open the local "prog" device (i.e. '#p')
 	# and read the call stack into an array of bytes
@@ -75,6 +75,16 @@ fillInStackTrace_rThrowable( this : ref Throwable_obj) : ref Throwable_obj
 		this.backtrace = array of byte jni->sys->sprint("could not open %s:%r\n", progfile );
 
 	return( this );
+}#<<
+
+getStackTraceDepth_I( this : ref Throwable_obj) : int
+{#>>
+	return 0;
+}#<<
+
+getStackTraceElement_I_rStackTraceElement( this : ref Throwable_obj, p0 : int) : JObject
+{#>>
+	return nil;
 }#<<
 
 ####### private functions
