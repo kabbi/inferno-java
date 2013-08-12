@@ -43,7 +43,7 @@ public final class Unsafe {
     private static native void registerNatives();
     static {
         registerNatives();
-        sun.reflect.Reflection.registerMethodsToFilter(Unsafe.class, "getUnsafe");
+        //sun.reflect.Reflection.registerMethodsToFilter(Unsafe.class, "getUnsafe");
     }
 
     private Unsafe() {}
@@ -81,9 +81,10 @@ public final class Unsafe {
      *             access to the system properties.
      */
     public static Unsafe getUnsafe() {
-        Class cc = sun.reflect.Reflection.getCallerClass(2);
-        if (cc.getClassLoader() != null)
-            throw new SecurityException("Unsafe");
+        // [Infenro] TODO: uncomment this! IMPORTANT
+        //Class cc = sun.reflect.Reflection.getCallerClass(2);
+        //if (cc.getClassLoader() != null)
+        //    throw new SecurityException("Unsafe");
         return theUnsafe;
     }
 
