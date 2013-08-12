@@ -612,19 +612,15 @@ public abstract class Charset
      */
     public static Charset defaultCharset() {
         if (defaultCharset == null) {
-            // [Inferno] <
-            //synchronized (Charset.class) {
-            //    String csn = AccessController.doPrivileged(
-            //        new GetPropertyAction("file.encoding"));
-            //    Charset cs = lookup(csn);
-            //    if (cs != null)
-            //        defaultCharset = cs;
-            //    else
-            //        defaultCharset = forName("UTF-8");
-            //}
-            // [Inferno] =
-            defaultCharset = forName("UTF-8");
-            // [Inferno] >
+            synchronized (Charset.class) {
+                String csn = AccessController.doPrivileged(
+                    new GetPropertyAction("file.encoding"));
+                Charset cs = lookup(csn);
+                if (cs != null)
+                    defaultCharset = cs;
+                else
+                    defaultCharset = forName("UTF-8");
+            }
         }
         return defaultCharset;
     }
