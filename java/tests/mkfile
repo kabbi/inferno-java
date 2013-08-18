@@ -1,0 +1,24 @@
+<../../mkconfig
+ROOT=/Users/zubr/dev/distributed/inferno-java
+
+TESTS=	SystemIOTest\
+		MathTest\
+		InnerClassTest\
+		ThreadTest\
+
+OBJ=${TESTS:%=test-%}
+JAVAC=os -d $ROOT`{pwd} javac
+
+tests:QV: utils $OBJ
+
+utils:QV:
+	@{builtin cd utils; mk $MKFLAGS}
+
+test-%:QV:
+	$JAVAC $stem.java
+	for c in $stem*.class {java/j2d -g $c}
+	java/jvm $stem
+	echo $stem passed!
+
+clean:QV:
+	rm *.dis *.class *.sbl

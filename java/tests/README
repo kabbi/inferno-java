@@ -1,0 +1,13 @@
+This folder contains some jvm tests.
+
+These simple pieces of code try to check some basic jvm
+and jcl features. They are currently using mkfiles as
+tests platform, but may later use Inferno's itest.
+
+Currently tests are defined in mkfile, in TESTS var.
+Every test consists of runnable java class.
+
+Useful commands:
+	mk, or mk tests: compiles and runs all the tests
+	mk test-%test name%: run some specific test
+	mk clean: clean-up all binary and debug files
