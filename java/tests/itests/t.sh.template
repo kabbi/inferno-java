@@ -1,0 +1,4 @@
+#!/dis/sh
+
+# Common init, compile and run test
+run ../common.sh

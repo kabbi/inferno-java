@@ -1,0 +1,19 @@
+<../../../mkconfig
+ROOT=/Users/zubr/dev/distributed/inferno-java
+
+UTILS=	Utils\
+
+OBJ=${UTILS:%=%.dis}
+JAVAC=os -d $ROOT`{pwd} javac
+
+all:QV: $OBJ
+	echo Compiled test utils
+
+%.dis:QE:	%.class
+	for c in $stem*.class {java/j2d -g $c}
+
+%.class:Q:	%.java
+	$JAVAC $stem.java
+
+clean:QV:
+	rm *.dis *.class *.sbl
