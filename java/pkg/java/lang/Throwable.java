@@ -776,7 +776,8 @@ public class Throwable implements Serializable {
      * @return  a reference to this {@code Throwable} instance.
      * @see     java.lang.Throwable#printStackTrace()
      */
-    public synchronized Throwable fillInStackTrace() {
+    // [Inferno] removed 'synchronized'
+    public /*synchronized*/ Throwable fillInStackTrace() {
         if (stackTrace != null ||
             backtrace != null /* Out of protocol state */ ) {
             fillInStackTrace(0);

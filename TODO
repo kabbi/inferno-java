@@ -52,6 +52,10 @@ that after everything else is working):
 	- removed thread safe atomic objects from BufferedStreams
 	- removed byte order detection in java/nio/Bits, as it uses unimplemented
 	malloc from Unsafe
+	- removed 'synchronized' from Throwable.fillInStackTrace, as it was called
+	when ThreadDeath class was initialized, and no thread manipulations are
+	allowed at that time (as ThreadDeath is created *after* jvm removes current
+	thread context)
 
 
 Java Class Library native modules implementation status:
