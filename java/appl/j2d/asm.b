@@ -216,6 +216,17 @@ instconv(in: ref Inst): string
 	return s;
 }
 
+asmhandlers()
+{
+	nex := len class.handlers;
+	bout.puts("\texceptions " + string nex + "\n");
+	for (i := 0; i < len class.handlers; i++) {
+		h := class.handlers[i];
+		bout.puts(sprint("\texception\t%d, %d, 0, -1, 0, 0\n", h.start_pc, h.end_pc));
+		bout.puts(sprint("\texctab\t*, %d\n", h.handler_pc));
+	}
+}
+
 ehtable(c: ref Code)
 {
 	i: int;

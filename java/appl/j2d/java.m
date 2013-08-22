@@ -202,6 +202,7 @@ Class: adt {				# ClassFile
 	methods_count:		int;
 	methods:		array of ref Method;
 	source_file:		int;
+	handlers:		array of ref Handler;
 };
 
 Addr: adt {			# Dis operand

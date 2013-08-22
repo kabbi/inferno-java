@@ -47,7 +47,7 @@ Hentry: adt {
 };
 
 htable :=	array [Hashsize] of ref Hentry;
-mpoff:		int;
+mpoff  :=	IBY2WD; # skip first cell, as it's reserved for nil ptr
 
 mplist:		ref Datum;
 mptail:		ref Datum;
