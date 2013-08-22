@@ -51,6 +51,7 @@ translate(in: string, out: string)
 		asmvar();
 		asmmod();
 		asmlinks();
+		asmhandlers();
 	} else
 		disout();	# generate .dis file
 

@@ -266,10 +266,38 @@ disinst()
 	ibuf = nil;
 }
 
+disstr(s: string)
+{
+	a := array of byte s;
+	for (i := 0; i < len a; i++)
+		bout.putb(a[i]);
+	discon(0);
+}
+
+dishandlers()
+{
+	discon(len class.handlers);
+	for (i := 0; i < len class.handlers; i++) {
+		h := class.handlers[i];
+		# FIXME: exception object offset
+		discon(42);
+		discon(h.start_pc);
+		discon(h.end_pc);
+		discon(-1); # type to destroy, nil
+		discon(1); # number of exception handlers
+		disstr("*");
+		discon(h.handler_pc);
+		discon(0);
+	}
+	# Don't know what is it, but zero-byte is
+	# expected after handler section
+	discon(0);
+}
+
 disout()
 {
 	discon(XMAGIC);
-	discon(DONTCOMPILE);	# runtime "hints"
+	discon(DONTCOMPILE | HASEXCEPT);	# dis flags
 	disstackext();		# minimum stack extent size
 	disninst();
 	disnvar();
@@ -281,4 +309,5 @@ disout()
 	disvar();
 	dismod();
 	dislinks();
+	dishandlers();
 }

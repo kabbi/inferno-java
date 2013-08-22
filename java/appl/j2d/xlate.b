@@ -1382,7 +1382,7 @@ xjavastore(op: int)
 	i: ref Inst;
 
 	if(op == IMOVP && J.bb.js == J && int (J.bb.flags & BB_FINALLY))
-		; # astore instruction at the start of a finally block
+		print("[The voice of Translator] removed some MOV at %d\n", op); # astore instruction at the start of a finally block
 	else if(J.dst.mode != Anone) {	# marked for explicit mov
 		i = newi(op);
 		*i.s = *code.j[J.src[0]].dst;
@@ -2071,6 +2071,20 @@ EHInst: adt {
 ehinst:		ref EHInst;
 trylist:	ref Try;
 distrylist:	ref Try;
+
+#
+# Dis pc by jinst index
+#
+
+instpc(jix: int): int
+{
+	j := code.j[jix];
+	while(j.dis == nil) {
+		jix += j.size;
+		j = code.j[jix];
+	}
+	return j.dis.pc;
+}
 
 #
 # Save an EH branch instruction for later patching.
@@ -2814,9 +2828,16 @@ java2dis()
 		jix += J.size;
 	}
 	# handle exception handlers
-	for(t := trylist; t != nil; t = t.next) {
-		# just convert pc's and append the entries to global distrylist
-
+	hbase := len class.handlers;
+	newhandlers := array [len class.handlers + code.nex] of ref Handler;
+	newhandlers[:] = class.handlers[:];
+	class.handlers = newhandlers;
+	for(i := 0; i < code.nex; i++) {
+		h := code.ex[i];
+		# by this time all the needed code is already translated, so we can
+		# just convert pc's and append the entries to global handlers section
+		class.handlers[hbase++] = ref Handler(instpc(h.start_pc), instpc(h.end_pc),
+			instpc(h.handler_pc), 0);
 	}
 	J = nil;
 }

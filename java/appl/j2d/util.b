@@ -405,7 +405,9 @@ reset()
 	# mdata.b
 	for(i = 0; i < Hashsize; i++)
 		htable[i] = nil;
-	mpoff = 0;
+	# mpoff should not be zero,
+	# as zero is reserved for nil ptr
+	mpoff = IBY2WD;
 	mplist = nil;
 	mptail = nil;
 	llist = nil;

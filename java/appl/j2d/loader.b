@@ -308,7 +308,7 @@ byte2Class(text: array of byte)
 	mp: ref Method;
 
 	uSet(text);
-	class = ref Class(0, 0, 0, nil, nil, 0, 0, 0, 0, nil, 0, nil, 0, nil, 0);
+	class = ref Class(0, 0, 0, nil, nil, 0, 0, 0, 0, nil, 0, nil, 0, nil, 0, nil);
 
 	if(u4() != int 16rCAFEBABE)
 		verifyerrormess("magic");
