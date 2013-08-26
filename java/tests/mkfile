@@ -5,6 +5,7 @@ TESTS=	SystemIOTest\
 		MathTest\
 		InnerClassTest\
 		ThreadTest\
+		ExceptionsTest\
 
 OBJ=${TESTS:%=test-%}
 JAVAC=os -d $ROOT`{pwd} javac
@@ -16,7 +17,7 @@ utils:QV:
 
 test-%:QV:
 	$JAVAC $stem.java
-	for c in $stem*.class {java/j2d -g $c}
+	for c in $stem*.class {java/j2d -g $c; java/j2d -pvS $c}
 	java/jvm $stem
 	echo $stem passed!
 
