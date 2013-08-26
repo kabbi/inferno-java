@@ -425,6 +425,7 @@ framedesc(): int
 	ln = frameoff / (8*IBY2WD) + (frameoff % (8*IBY2WD) != 0);
 	map = array [ln] of { * => byte 0 };
 	#setbit(map, REFSYSEX);	# slot for 'ref Sys->Exception'
+	setbit(map, EXSTR);	# slot for exception string
 	setbit(map, EXOBJ);	# slot for exception object
 	for(i = 0; i < nlocals; i++) {
 		if(locals[i].dtype == DIS_P)

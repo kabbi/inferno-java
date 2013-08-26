@@ -220,8 +220,8 @@ asmhandlers()
 {
 	nex := len class.handlers;
 	bout.puts("\texceptions " + string nex + "\n");
-	for (i := 0; i < len class.handlers; i++) {
-		h := class.handlers[i];
+	for (it := class.handlers; it != nil; it = tl it) {
+		h := hd it;
 		bout.puts(sprint("\texception\t%d, %d, 0, -1, 0, 0\n", h.start_pc, h.end_pc));
 		bout.puts(sprint("\texctab\t*, %d\n", h.handler_pc));
 	}

@@ -1556,24 +1556,24 @@ iinc(val: int, ix: int)
 #   J.u.i is destination PC (relative from J.pc)
 #
 
-tldiff(): int
-{
-	tls, tld: int;
-	ix: int;
-
-	pick jp := J {
-	Pi =>
-		ix = jp.i;
-	* =>
-		badpick("tldiff");
-	}
-
-	tld = 0;
-	tls = trylevel(J.pc);
-	if(tls > 0)
-		tld = trylevel(J.pc+ix);
-	return tls-tld;
-}
+#tldiff(): int
+#{
+#	tls, tld: int;
+#	ix: int;
+#
+#	pick jp := J {
+#	Pi =>
+#		ix = jp.i;
+#	* =>
+#		badpick("tldiff");
+#	}
+#
+#	tld = 0;
+#	tls = trylevel(J.pc);
+#	if(tls > 0)
+#		tld = trylevel(J.pc+ix);
+#	return tls-tld;
+#}
 
 #
 # Java if_acmp<cond>, if_icmp<cond>, if<cond>, ifnonnull, ifnull.
@@ -2105,21 +2105,8 @@ saveehinst(i: ref Inst)
 
 patchehinst()
 {
-	ehi: ref EHInst;
-	i: ref Inst;
-	j: ref Jinst;
-	jix: int;
-
-	for(ehi = ehinst; ehi != nil; ehi = ehi.next) {
-		i = ehi.i;
-		jix = i.d.ival;
-		j = code.j[jix];
-		while(j.dis == nil) {
-			jix += j.size;
-			j = code.j[jix];
-		}
-		i.d.ival = j.dis.pc;
-	}
+	for(ehi := ehinst; ehi != nil; ehi = ehi.next)
+		ehi.i.d.ival = instpc(ehi.i.d.ival);
 	ehinst = nil;
 }
 
@@ -2173,96 +2160,23 @@ trylevel(pc: int): int
 }
 
 #
-# Install an exception handler: call sys.rescue("*", nil).
-#
-
-rescue(): ref Addr
-{
-	print("rescue()\n");
-	#imframe, i: ref Inst;
-	#cr: ref Creloc;
-	#frm, frf: ref Freloc;
-#
-	#cr = getCreloc(RLOADER);
-	#frm = getFreloc(cr, RSYS, nil, 0);
-	#frf = getFreloc(cr, "rescue", nil, 0);
-#
-	#imframe = loadermframe(frm, frf);
-#
-	#i = newi(IMOVP);
-	#addrsind(i.s, Amp, mpstring("*"));
-	#addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
-	#addDreloc(i, PSRC, PSIND);
-#
-	#i = newi(IMOVP);
-	#addrsind(i.s, Afp, REFSYSEX);
-	#addrdind(i.d, Afpind, imframe.d.offset, REGSIZE+IBY2WD);
-#
-	#i = newi(ILEA);
-	#addrsind(i.s, Afp, getreg(DIS_W));
-	#addrdind(i.d, Afpind, imframe.d.offset, REGRET*IBY2WD);
-#
-	#loadermcall(imframe, frf, frm);
-	#relreg(imframe.d);
-#
-	#return i.s;
-	return nil;
-}
-
-#
-# Uninstall one or more exception handlers: call sys.unrescue() n times.
-#
-
-unrescue(n: int)
-{
-	print("unrescue()\n");
-	#imframe: ref Inst;
-	#cr: ref Creloc;
-	#frm, frf: ref Freloc;
-#
-	#cr = getCreloc(RLOADER);
-	#frm = getFreloc(cr, RSYS, nil, 0);
-	#frf = getFreloc(cr, "unrescue", nil, 0);
-#
-	#while(n > 0) {
-	#	imframe = loadermframe(frm, frf);
-	#	loadermcall(imframe, frf, frm);
-	#	relreg(imframe.d);
-	#	n--;
-	#}
-}
-
-#
 # Current handler doesn't catch current exception.
-# Call sys.raise(@jex) to propagate (rethrow) the exception.
+# Call raise to propagate (rethrow) the exception.
 #
 
 rethrow(): ref Inst
 {
 	print("rethrow()\n");
-	#imframe, i: ref Inst;
-	#cr: ref Creloc;
-	#frm, frf: ref Freloc;
-#
-	#cr = getCreloc(RLOADER);
-	#frm = getFreloc(cr, RSYS, nil, 0);
-	#frf = getFreloc(cr, "raise", nil, 0);
-#
+	i: ref Inst;
+
+	# FIXME: is that needed?
 	#if(M.access_flags & ACC_SYNCHRONIZED && trylevel(J.pc) == 1)
 	#	mon_or_throw(Jmonitorexit, M.access_flags, 0);
-#
-	#imframe = loadermframe(frm, frf);
-#
-	#i = newi(IMOVP);
-	#addrsind(i.s, Amp, 0);
-	#addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
-	#LTIpatch(getFreloc(cr, RJEX, nil, 0), i, PSRC, PSIND);
-#
-	#i = loadermcall(imframe, frf, frm);
-	#relreg(imframe.d);
-#
-	#return i;
-	return nil;
+
+	i = newi(IRAISE);
+	addrsind(i.s, Afp, EXSTR);
+
+	return i;
 }
 
 #
@@ -2272,26 +2186,26 @@ rethrow(): ref Inst
 catch()
 {
 	print("catch()\n");
-	#imframe, i: ref Inst;
-	#cr: ref Creloc;
-	#frm, frf: ref Freloc;
-#
-	#cr = getCreloc(RLOADER);
-	#frm = getFreloc(cr, RMP, nil, 0);
-	#frf = getFreloc(cr, "culprit", nil, 0);
-#
-	#imframe = loadermframe(frm, frf);
-#
-	#i = newi(IMOVP);
-	#addrsind(i.s, Afp, REFSYSEX);
-	#addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
-#
-	#i = newi(ILEA);
-	#addrsind(i.s, Afp, EXOBJ);	# put in known location
-	#addrdind(i.d, Afpind, imframe.d.offset, REGRET*IBY2WD);
-#
-	#loadermcall(imframe, frf, frm);
-	#relreg(imframe.d);
+	imframe, i: ref Inst;
+	cr: ref Creloc;
+	frm, frf: ref Freloc;
+
+	cr = getCreloc(RLOADER);
+	frm = getFreloc(cr, RMP, nil, 0);
+	frf = getFreloc(cr, "culprit", nil, 0);
+
+	imframe = loadermframe(frm, frf);
+
+	i = newi(IMOVP);
+	addrsind(i.s, Afp, EXSTR);
+	addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
+
+	i = newi(ILEA);
+	addrsind(i.s, Afp, EXOBJ);	# put in known location
+	addrdind(i.d, Afpind, imframe.d.offset, REGRET*IBY2WD);
+
+	loadermcall(imframe, frf, frm);
+	relreg(imframe.d);
 }
 
 #
@@ -2301,38 +2215,37 @@ catch()
 chkhandler(exname: string): ref Addr
 {
 	print("chkhandler()\n");
-	#imframe, i: ref Inst;
-	#rtc: ref RTClass;
-	#cr: ref Creloc;
-	#frm, frf: ref Freloc;
-#
-	#rtc = getRTClass(exname);
-	#callrtload(rtc, exname);
-#
-	#cr = getCreloc(RLOADER);
-	#frm = getFreloc(cr, RMP, nil, 0);
-	#frf = getFreloc(cr, "instanceof", nil, 0);
-#
-	#imframe = loadermframe(frm, frf);
-#
-	#i = newi(IMOVP);
-	#addrsind(i.s, Afp, EXOBJ);
-	#addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
-#
-	#i = newi(IMOVP);
-	#addrsind(i.s, Amp, 0);
-	#RTIpatch(getRTReloc(rtc, RADT, nil, 0), i, PSRC, PSIND);
-	#addrdind(i.d, Afpind, imframe.d.offset, REGSIZE+IBY2WD);
-#
-	#i = newi(ILEA);
-	#addrsind(i.s, Afp, getreg(DIS_W));
-	#addrdind(i.d, Afpind, imframe.d.offset, REGRET*IBY2WD);
-#
-	#loadermcall(imframe, frf, frm);
-	#relreg(imframe.d);
-#
-	#return i.s;
-	return nil;
+	imframe, i: ref Inst;
+	rtc: ref RTClass;
+	cr: ref Creloc;
+	frm, frf: ref Freloc;
+
+	rtc = getRTClass(exname);
+	callrtload(rtc, exname);
+
+	cr = getCreloc(RLOADER);
+	frm = getFreloc(cr, RMP, nil, 0);
+	frf = getFreloc(cr, "instanceof", nil, 0);
+
+	imframe = loadermframe(frm, frf);
+
+	i = newi(IMOVP);
+	addrsind(i.s, Afp, EXOBJ);
+	addrdind(i.d, Afpind, imframe.d.offset, REGSIZE);
+
+	i = newi(IMOVP);
+	addrsind(i.s, Amp, 0);
+	RTIpatch(getRTReloc(rtc, RADT, nil, 0), i, PSRC, PSIND);
+	addrdind(i.d, Afpind, imframe.d.offset, REGSIZE+IBY2WD);
+
+	i = newi(ILEA);
+	addrsind(i.s, Afp, getreg(DIS_W));
+	addrdind(i.d, Afpind, imframe.d.offset, REGRET*IBY2WD);
+
+	loadermcall(imframe, frf, frm);
+	relreg(imframe.d);
+
+	return i.s;
 }
 
 #
@@ -2342,21 +2255,13 @@ chkhandler(exname: string): ref Addr
 trystart(t: ref Try)
 {
 	print("trystart()\n");
-	ibeqw, i: ref Inst;
+	ijmp, i: ref Inst;
 	a: ref Addr;
 	c: ref Catch;
 
-	a = rescue();
-
-	#ibeqw = newi(IBEQW);
-	#*ibeqw.s = *a;
-	#relreg(a);
-	#addrimm(ibeqw.m, 0);		# Sys.HANDLER == 0
-	#addrimm(ibeqw.d, 0);
-
-	# code executed when sys.rescue() "returns" Sys.EXCEPTION
-
-	unrescue(1);
+	# always skip this block in normal flow
+	ijmp = newi(IJMP);
+	addrimm(ijmp.d, 0);
 
 	catch();
 
@@ -2374,14 +2279,16 @@ trystart(t: ref Try)
 		i = newi(IJMP);
 		addrimm(i.d, t.any_pc);
 		saveehinst(i);
-	} #else
-	#	i = rethrow();
+	} else
+		i = rethrow();
 
-	#ibeqw.d.ival = i.pc+1;
+	ijmp.d.ival = i.pc + 1;
+	t.any_pc = ijmp.pc + 1;
+	print("Generated handler block at %d - %d\n", ijmp.pc, i.pc);
 
 	#
-	# rtload()'s done in Sys.EXCEPTION branch are not valid
-	# for normal flow (Sys.HANDLER branch)
+	# rtload()'s done in handler branch are not valid
+	# for normal flow, as they are not executed
 	#
 	rtncache = 0;
 }
@@ -2392,17 +2299,12 @@ trystart(t: ref Try)
 
 tryhandling()
 {
-	#print("tryhandling()\n");
-	#t: ref Try;
-#
-	#for(t = trylist; t != nil; t = t.next) {
-	#	# > 1 try block can have the same start_pc
-	#	if(t.start_pc == J.pc)
-	#		trystart(t);
-	#	# try block may consist of just 1 bytecode
-	#	if(t.end_pc == J.pc+J.size)
-	#		callunrescue = 1;
-	#}
+	for(t := trylist; t != nil; t = t.next) {
+		# FIXME
+		# > 1 try block can have the same start_pc
+		if(t.start_pc == J.pc)
+			trystart(t);
+	}
 }
 
 #
@@ -2436,7 +2338,7 @@ java2dis()
 		if(J.pc == 0 && M.access_flags & ACC_SYNCHRONIZED)
 			mon_or_throw(Jmonitorenter, M.access_flags, 0);
 
-		#tryhandling();
+		tryhandling();
 
 		if(jix+J.size < code.code_length)
 			jnext = code.j[jix+J.size];
@@ -2828,16 +2730,12 @@ java2dis()
 		jix += J.size;
 	}
 	# handle exception handlers
-	hbase := len class.handlers;
-	newhandlers := array [len class.handlers + code.nex] of ref Handler;
-	newhandlers[:] = class.handlers[:];
-	class.handlers = newhandlers;
-	for(i := 0; i < code.nex; i++) {
-		h := code.ex[i];
+	for(t := trylist; t != nil; t = t.next) {
 		# by this time all the needed code is already translated, so we can
-		# just convert pc's and append the entries to global handlers section
-		class.handlers[hbase++] = ref Handler(instpc(h.start_pc), instpc(h.end_pc),
-			instpc(h.handler_pc), 0);
+		# just convert pc's and prepend the entries to global handlers section
+		# the final list will be reverted, and that is what we need
+		class.handlers = ref Handler(instpc(t.start_pc), instpc(t.end_pc),
+			t.any_pc, 0) :: class.handlers;
 	}
 	J = nil;
 }
