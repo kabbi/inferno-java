@@ -18,7 +18,7 @@
 /^	link.*"getstrarray"$/s/0x[^,]*/0x67808576/
 /^	link.*"getstring"$/s/0x[^,]*/0xe6647e4a/
 /^	link.*"intarraytoJS"$/s/0x[^,]*/0x9dfa2ee1/
-/^	link.*"jclnilmod"$/s/0x[^,]*/0x18138a11/
+/^	link.*"jclnilmod"$/s/0x[^,]*/0x8b8bcc49/
 /^	link.*"little_endian"$/s/0x[^,]*/0x616977e8/
 /^	link.*"makeadt"$/s/0x[^,]*/0x2d805d/
 /^	link.*"mcall0"$/s/0x[^,]*/0x9af56bb1/
