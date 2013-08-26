@@ -2166,7 +2166,6 @@ trylevel(pc: int): int
 
 rethrow(): ref Inst
 {
-	print("rethrow()\n");
 	i: ref Inst;
 
 	# FIXME: is that needed?
@@ -2185,7 +2184,6 @@ rethrow(): ref Inst
 
 catch()
 {
-	print("catch()\n");
 	imframe, i: ref Inst;
 	cr: ref Creloc;
 	frm, frf: ref Freloc;
@@ -2214,7 +2212,6 @@ catch()
 
 chkhandler(exname: string): ref Addr
 {
-	print("chkhandler()\n");
 	imframe, i: ref Inst;
 	rtc: ref RTClass;
 	cr: ref Creloc;
@@ -2254,7 +2251,6 @@ chkhandler(exname: string): ref Addr
 
 trystart(t: ref Try)
 {
-	print("trystart()\n");
 	ijmp, i: ref Inst;
 	a: ref Addr;
 	c: ref Catch;
@@ -2284,7 +2280,6 @@ trystart(t: ref Try)
 
 	ijmp.d.ival = i.pc + 1;
 	t.any_pc = ijmp.pc + 1;
-	print("Generated handler block at %d - %d\n", ijmp.pc, i.pc);
 
 	#
 	# rtload()'s done in handler branch are not valid
