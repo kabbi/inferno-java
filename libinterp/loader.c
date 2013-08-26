@@ -14,6 +14,10 @@ static uchar	Tlinkmap[] = Loader_Link_map;
 static Type*	Tlink;
 static uchar	Importmap[] = Loader_Import_map;
 static Type*	Timport;
+static uchar	Exceptmap[] = Loader_Except_map;
+static Type*	Texcept;
+static uchar	Handlermap[] = Loader_Handler_map;
+static Type*	Thandler;
 
 void
 loadermodinit(void)
@@ -24,6 +28,8 @@ loadermodinit(void)
 	Tdesc = dtype(freeheap, sizeof(Loader_Typedesc), Tdescmap, sizeof(Tdescmap));
 	Tlink = dtype(freeheap, sizeof(Loader_Link), Tlinkmap, sizeof(Tlinkmap));
 	Timport = dtype(freeheap, sizeof(Loader_Import), Importmap, sizeof(Importmap));
+	Texcept = dtype(freeheap, sizeof(Loader_Except), Exceptmap, sizeof(Exceptmap));
+	Thandler = dtype(freeheap, sizeof(Loader_Handler), Handlermap, sizeof(Handlermap));
 }
 
 static void
@@ -286,6 +292,146 @@ Loader_setimports(void *fp)
 
 	// Don't forget to say the world we now have ldt
 	m->rt |= HASLDT;
+
+	*f->ret = 0;
+}
+
+
+void
+Loader_handlers(void *a)
+{
+	F_Loader_handlers *f;
+	Handler *h;
+	Except *e;
+	Loader_Handler *hi;
+	Loader_Except *ei;
+	Array *ar, *ai;
+	Module *m;
+	int nhandlers;
+	int nexcepts;
+
+	f = a;
+	destroy(*f->ret);
+	*f->ret = H;
+
+	if (f->mp == H)
+		return;
+	m = f->mp->m;
+	if (m == H)
+		return;
+	if (m->htab == nil)
+		return;
+
+	nhandlers = 0;
+	for(h = m->htab; h->etab != nil; h++)
+		nhandlers++;
+	
+	ar = H2D(Array*, heaparray(Thandler, nhandlers));
+	hi = (Loader_Handler*)ar->data;
+
+	for(h = m->htab; h->etab != nil; h++){
+		hi->pc1 = h->pc1;
+		hi->pc2 = h->pc2;
+		hi->eoff = h->eoff;
+		hi->tdesc = -1;
+
+		nexcepts = 1;
+		for (e = h->etab; e->s != nil; e++)
+			nexcepts++;
+
+		ai = H2D(Array*, heaparray(Texcept, nexcepts));
+		ei = (Loader_Except*)ai->data;
+		for (e = h->etab; e->s != nil; e++) {
+			ei->e = c2string(e->s, strlen(e->s));
+			ei->pc = e->pc;
+			ei++;
+		}
+		ei->e = H;
+		ei->pc = e->pc;
+
+		hi->etab = ai;
+		hi++;
+	}
+
+	*f->ret = ar;
+}
+
+void
+Loader_sethandlers(void *fp)
+{
+	F_Loader_sethandlers *f;
+	Handler *h;
+	Except *e;
+	Loader_Handler *hi;
+	Loader_Except *ei;
+	Array *ar, *ai;
+	Module *m;
+	int i, j;
+
+	f = fp;
+
+	*f->ret = -1;
+	if(f->mp == H || f->handlers == H)
+		return;
+	m = f->mp->m;
+	if(m == H)
+		return;
+	if(m->compiled) {
+		return;
+	}
+
+	// Free existing handler table
+	if((m->rt & HASEXCEPT) && m->htab != nil){
+		for(h = m->htab; h->etab != nil; h++){
+			for(e = h->etab; e->s != nil; e++)
+				free(e->s);
+			free(h->etab);
+		}
+		free(m->htab);
+	}
+
+	// And set the new one
+	m->htab = (Handler*)malloc((f->handlers->len+1)*sizeof(Handler));
+	if(m->htab == nil){
+		kwerrstr(exNomem);
+		return;
+	}
+
+	h = m->htab;
+	hi = (Loader_Handler*)f->handlers->data;
+	for (i = 0; i < f->handlers->len; i++) {
+		h->pc1 = hi->pc1;
+		h->pc2 = hi->pc2;
+		h->eoff = hi->eoff;
+		h->t = nil;
+		if (hi->tdesc != -1)
+			h->t = m->type[hi->tdesc];
+		h->ne = 0;
+
+		h->etab = malloc((hi->etab->len)*sizeof(Except));
+		if(h->etab == nil){
+			kwerrstr(exNomem);
+			return;
+		}
+		e = h->etab;
+		ei = (Loader_Except*)hi->etab->data;
+		for (j = 0; j < hi->etab->len; j++) {
+			e->s = nil;
+			if (ei->e != H)
+				e->s = strdup(string2c(ei->e));
+			e->pc = ei->pc;
+			ei++;
+			e++;
+		}
+
+		hi++;
+		h++;
+	}
+	// The end of table marker
+	h->etab = nil;
+
+	// Don't forget to say the world we now have ldt
+	m->rt |= HASEXCEPT;
 
 	*f->ret = 0;
 }

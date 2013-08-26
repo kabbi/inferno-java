@@ -33,6 +33,8 @@ typedef struct Loader_Inst Loader_Inst;
 typedef struct Loader_Typedesc Loader_Typedesc;
 typedef struct Loader_Link Loader_Link;
 typedef struct Loader_Import Loader_Import;
+typedef struct Loader_Except Loader_Except;
+typedef struct Loader_Handler Loader_Handler;
 typedef struct Loader_Niladt Loader_Niladt;
 typedef struct Freetype_Matrix Freetype_Matrix;
 typedef struct Freetype_Vector Freetype_Vector;
@@ -434,6 +436,23 @@ struct Loader_Import
 };
 #define Loader_Import_size 8
 #define Loader_Import_map {0x80,}
+struct Loader_Except
+{
+	String*	e;
+	WORD	pc;
+};
+#define Loader_Except_size 8
+#define Loader_Except_map {0x80,}
+struct Loader_Handler
+{
+	WORD	pc1;
+	WORD	pc2;
+	WORD	eoff;
+	WORD	tdesc;
+	Array*	etab;
+};
+#define Loader_Handler_size 20
+#define Loader_Handler_map {0x8,}
 struct Loader_Niladt
 {
 	char	dummy[1];
@@ -3888,6 +3907,15 @@ struct F_Loader_ext
 	WORD	pc;
 	WORD	tdesc;
 };
+void Loader_handlers(void*);
+typedef struct F_Loader_handlers F_Loader_handlers;
+struct F_Loader_handlers
+{
+	WORD	regs[NREG-1];
+	Array**	ret;
+	uchar	temps[12];
+	Modlink*	mp;
+};
 void Loader_ifetch(void*);
 typedef struct F_Loader_ifetch F_Loader_ifetch;
 struct F_Loader_ifetch
@@ -3927,6 +3955,16 @@ struct F_Loader_newmod
 	WORD	nlink;
 	Array*	inst;
 	Loader_Niladt*	data;
+};
+void Loader_sethandlers(void*);
+typedef struct F_Loader_sethandlers F_Loader_sethandlers;
+struct F_Loader_sethandlers
+{
+	WORD	regs[NREG-1];
+	WORD*	ret;
+	uchar	temps[12];
+	Modlink*	mp;
+	Array*	handlers;
 };
 void Loader_setimports(void*);
 typedef struct F_Loader_setimports F_Loader_setimports;
