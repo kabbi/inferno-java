@@ -23,9 +23,14 @@ TODO:
 	- more to come later...
 
 Current tasks:
-	- correct exception handling in dis code
-		- just translate the addresses and write them directly
+	-DONE- correct exception handling in dis code
+		-DONE- just translate the addresses and write them directly
 		to dis 'handlers' section at the end
+		-DONE- add some code that converts inferno exceptions to java
+		ones and checks handlers (was already implemented, just needs
+		some fixing)
+		-DONE- implement Loader support for getting and setting exception
+		handlers
 	- support for new const types (CONSTANT_MethodHandle,
 	CONSTANT_MethodType, CONSTANT_InvokeDynamic):
 		-DONE- internal structures (java.m)
