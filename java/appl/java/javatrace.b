@@ -41,6 +41,34 @@ info(c: ref Class)
 	}
 }
 
+flagstext(flags: int): string
+{
+	result := "";
+	if(flags & JavaClassLoader->ACC_PUBLIC)
+		result += "|public";
+	if(flags & JavaClassLoader->ACC_PRIVATE)
+		result += "|private";
+	if(flags & JavaClassLoader->ACC_PROTECTED)
+		result += "|protected";
+	if(flags & JavaClassLoader->ACC_STATIC)
+		result += "|static";
+	if(flags & JavaClassLoader->ACC_FINAL)
+		result += "|final";
+	if(flags & JavaClassLoader->ACC_SUPER) # ACC_SYNCHRONIZED == ACC_SUPER
+		result += "|super/synchronized";
+	if(flags & JavaClassLoader->ACC_VOLATILE)
+		result += "|volatile";
+	if(flags & JavaClassLoader->ACC_TRANSIENT)
+		result += "|transient";
+	if(flags & JavaClassLoader->ACC_NATIVE)
+		result += "|native";
+	if(flags & JavaClassLoader->ACC_INTERFACE)
+		result += "|interface";
+	if(flags & JavaClassLoader->ACC_ABSTRACT)
+		result += "|abstract";
+	return result;
+}
+
 pr_reloc(r: Reloc)
 {
 	f := r.field;
@@ -54,7 +82,8 @@ pr_reloc(r: Reloc)
 		n = -1;
 	else
 		n = len r.patch;
-	sys->fprint(outfd, "%s %s %d %d\n", f, s, r.flags, n);
+
+	sys->fprint(outfd, "%s %s %d (flags: %s) %d\n", f, s, r.flags, flagstext(r.flags), n);
 }
 
 pr_relocs(r: array of JavaClassLoader->Reloc)

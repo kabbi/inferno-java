@@ -48,6 +48,6 @@
 # misc cast
 	link	1,0,0x2b7b0708,"Class2Niladt"
 	link	1,0,0x2e1c372c,"Obj2Niladt"
-	link	1,0,0x69964565,"JNI2Nilmod"
+	link	1,0,0xa5cc9a8d,"JNI2Nilmod"
 	link	1,0,0xe04c9ec8,"JArrayToHolder"
 

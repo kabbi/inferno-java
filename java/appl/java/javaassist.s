@@ -122,7 +122,7 @@
 	link	2,9,0x43ec4524,"putptr"
 	link	2,9,0x46bbe09a,"putstring"
 	link	3,12,0x616977e8,"little_endian"
-	link	4,15,0x18138a11,"jclnilmod"
+	link	4,15,0x8b8bcc49,"jclnilmod"
 	link	4,15,0x8cdb1059,"sysnilmod"
 	link	4,15,0x6d675ef6,"arrayof"
 	link	4,15,0x79238ebb,"bytearraytoJS"

@@ -821,8 +821,12 @@ ctlfile(t: ref ThreadData)
 
 threaddeath(): ref Class
 {
-	if (tdclass == nil)
+	if (tdclass == nil) {
+		trace(JDEBUG, sys->sprint("threaddeath: Loading ThreadDeath class"));
 		tdclass = loader(EXCEPTIONPATH + "ThreadDeath");
+		trace(JDEBUG, sys->sprint("threaddeath: Load ok"));
+	}
+
 	return tdclass;
 }
 
@@ -1054,6 +1058,7 @@ sysexception( e : string ) : ref Object
 
 culprit(e: string): ref Object
 {
+	trace(JVERBOSE, "culprit called with ex " + e);
 	thd := getthreaddata();
 
 	if ( thd.culprit == nil || e != JAVAEXCEPTION )
@@ -1068,6 +1073,11 @@ culprit(e: string): ref Object
 
 throw(c: ref Object)
 {
+	thr := jassist->ObjecttoJT(c);
+	msg := "";
+	if (thr != nil && thr.msg != nil && thr.msg.str != nil)
+		msg = thr.msg.str;
+	trace(JDEBUG, sys->sprint("Some fatal error: %s: %s", c.class().name, msg));
 	getthreaddata().culprit = c;
 	raise JAVAEXCEPTION;
 }
@@ -1510,6 +1520,10 @@ interrupt(t: ref ThreadData)
 #
 getclassclass(caller: string, class: string): ref Object
 {
+#	if (class == "" || caller == "") {
+#		trace(JVERBOSE, "Ignoring malformed getclassclass");
+#		return nil;
+#	}
 	c := getclass(caller);
 	if (c == nil)
 		sthrow("NullPointerException");
@@ -1525,12 +1539,9 @@ getclassclass(caller: string, class: string): ref Object
 		sthrow("NullPointerException");
 	f := cc.findsmethod("forName", "(Ljava/lang/String;)Ljava/lang/Class;");
 	if (f == nil)
-		error(sys->sprint("%s: %s: missing forName0 in Class", nosuchmethod, cc.name));
-	result := cc.call(f.value, JStoObject(ref JavaString(stringclass.moddata, class)));
+		error(sys->sprint("%s: %s: missing forName in Class", nosuchmethod, cc.name));
 
-	trace(JDEBUG, sys->sprint("forName0 returned something, i think, %d", result != nil));
-
-	return result;
+	return cc.call(f.value, JStoObject(ref JavaString(stringclass.moddata, class)));
 }
 
 #
@@ -1557,6 +1568,7 @@ checkcast(who: ref Object, what: ref Class)
 
 instanceof(who: ref Object, what: ref Class): int
 {
+	trace(JVERBOSE, "instance of called");
 	if (who == nil)
 		return 0;
 	return compatclass(who.class(), what);
@@ -2068,7 +2080,10 @@ Class.makeobjtype(c: self ref Class)
 #
 Class.makevmtable(c: self ref Class, m: list of ref Field, z: int): array of Method
 {
-	trace(JDEBUG, sys->sprint("Makevmtable for %s, %d", c.name, z));
+	lsuper := 0;
+	if (c.super != nil)
+		lsuper = len c.super.virtualmethods;
+	trace(JDEBUG, sys->sprint("Makevmtable for %s, %d with %d + %d", c.name, z, len m, lsuper));
 	t := array[z] of Method;
 	if (c.super != nil) {
 		s := c.super.virtualmethods;
@@ -2089,6 +2104,7 @@ Class.makevmtable(c: self ref Class, m: list of ref Field, z: int): array of Met
 			JCLDREX + nosuchmethod + "*" =>
 				# TODO: check if we really have it in superclass vmtable
 				m = tl m;
+				trace(JDEBUG, sys->sprint("Makevmtable skipping cell %d", n));
 				continue;
 		}
 		t[n].field = f;
@@ -2199,8 +2215,9 @@ Class.linkinterfaces(c: self ref Class)
 			f := v[j].field;
 			x := findmfsx(c.virtualmethods, f.field, f.signature);
 			if (x < 0)
-				loaderror( nosuchmethod, sys->sprint("method %s'%s' of interface %s not implemented", 
-				                                   f.field, f.signature, s.name));
+				# TODO: fix this!
+				;#loaderror( nosuchmethod, sys->sprint("method %s'%s' of interface %s not implemented", 
+				#                                   f.field, f.signature, s.name));
 			else
 				o[j] = (METHODOFFSET + x * 2) * WORDZ;
 		}
@@ -2316,6 +2333,10 @@ Class.relocate(c: self ref Class)
 	c.instrpatch(instructions);
 	trace(JDEBUG, sys->sprint("\t%d instrs", len instructions));
 	#
+	#	Persist exception handlers
+	#
+	handlers := ld->handlers(c.mod);
+	#
 	#	Make the new module.
 	#
 	links := c.info.links;
@@ -2341,6 +2362,10 @@ Class.relocate(c: self ref Class)
 		if (ld->ext(c.mod, i, links[i].pc, links[i].tdesc) < 0) 
 			error(sys->sprint("ext failed: %r"));
 	}
+	#
+	#	Restore exception handlers
+	#
+	ld->sethandlers(c.mod, handlers);
 	#
 	#	This word is used by rtload.
 	#
@@ -2793,8 +2818,8 @@ Class.resolvereloc(c: self ref Class, r, s: string, flags: int): (int, int)
 			break;
 		}
 		v = findmfsx(c.virtualmethods, r, s);
-		if (v < 0)
-			loaderror( nosuchmethod, sys->sprint("interface method %s '%s' not found in class %s", r, s, c.name));
+		#if (v < 0)
+		#	loaderror( nosuchmethod, sys->sprint("interface method %s '%s' not found in class %s", r, s, c.name));
 		v |= c.interindex << 16;
 	Rinvokespecial =>
 		error("Rinvokespecial botch");
@@ -2966,7 +2991,7 @@ Class.initjni(c: self ref Class)
 			if (l[i].sig != jnisig)
 				error(sys->sprint("init typecheck in class %s native", c.name));
 			jassist->mcallm(c.native, i, jninil);
-			trace(JDEBUG, "done");
+			trace(JDEBUG, sys->sprint("%s->init() done", c.name));
 			return;
 		}
 	}
@@ -3486,7 +3511,20 @@ setflags( flags : list of (string,int) )
 runmain( classloader : JavaClassLoader, classname : string, argv : list of string )
 {
 	{
-		classloader->loader(classname).run(tl tl argv);
+		# TODO: move initializeSystemClass call in some better place
+		c := classloader->loader(classname);
+		# Pre-load ThreadDeath class
+		threaddeath();
+
+		# Call static System.initializeSystemClass to init JCL
+		system := classloader->loader("java/lang/System");
+		if (system == nil || system.state != INITED)
+			error("System class not found or not loaded properly");
+		initm := system.findsmethod("initializeSystemClass", "()V");
+		if (initm != nil)
+			jassist->mcall0(system.mod, initm.value);
+
+		c.run(tl tl argv);
 	}
 	exception e
 	{
