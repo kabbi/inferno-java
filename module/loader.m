@@ -38,6 +38,21 @@ Loader: module
 		sig:	int;
 	};
 
+	Except: adt
+	{
+		e:	string;
+		pc:	int;
+	};
+
+	Handler: adt
+	{
+		pc1:	int;
+		pc2:	int;
+		eoff:	int;
+		tdesc:	int;
+		etab:	array of Except;
+	};
+
 	Niladt: adt
 	{
 	};
@@ -50,6 +65,8 @@ Loader: module
 	link:		fn(mp: Nilmod): array of Link;
 	imports:	fn(mp: Nilmod): array of array of Import;
 	setimports:	fn(mp: Nilmod, imp: array of array of Import): int;
+	handlers:	fn(mp: Nilmod): array of Handler;
+	sethandlers:	fn(mp: Nilmod, handlers: array of Handler): int;
 	ext:		fn(mp: Nilmod, idx, pc: int, tdesc: int): int;
 	dnew:		fn(size: int, map: array of byte): ref Niladt;
 	compile:	fn(mp: Nilmod, flag: int): int;
