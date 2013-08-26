@@ -81,6 +81,7 @@ STR_DISSTR:		con IBY2WD;	# offset to Dis string in a String
 # miscellaneous
 
 #REFSYSEX:		con 24;		# 24(fp) is a 'ref Sys->Exception'
+EXSTR:			con 24;		# 24(fp) is exception string
 EXOBJ:			con 28;		# 28(fp) is exception object
 THISOFF:		con 32;		# 32(fp) is "this" pointer
 REGSIZE:		con 32;		# 32(fp) is first usable frame cell
@@ -202,7 +203,7 @@ Class: adt {				# ClassFile
 	methods_count:		int;
 	methods:		array of ref Method;
 	source_file:		int;
-	handlers:		array of ref Handler;
+	handlers:		list of ref Handler;
 };
 
 Addr: adt {			# Dis operand

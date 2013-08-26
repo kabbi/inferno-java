@@ -277,26 +277,23 @@ disstr(s: string)
 dishandlers()
 {
 	discon(len class.handlers);
-	for (i := 0; i < len class.handlers; i++) {
-		h := class.handlers[i];
-		# FIXME: exception object offset
-		discon(42);
-		discon(h.start_pc);
-		discon(h.end_pc);
-		discon(-1); # type to destroy, nil
-		discon(1); # number of exception handlers
-		disstr("*");
-		discon(h.handler_pc);
-		discon(0);
+	for (it := class.handlers; it != nil; it = tl it) {
+		h := hd it;
+		discon(EXSTR);		# exception string offset in fp
+		discon(h.start_pc);	# from start_pc
+		discon(h.end_pc);	# up to, but not including end_pc
+		discon(-1); 		# type to destroy, -1 means nothing
+		discon(1); 			# number of exception handlers
+		disstr("*");		# handle any ex, we will later rethrow if not handled
+		discon(h.handler_pc);	# pc to jump to when exception occurs
+		discon(-1);
 	}
-	# Don't know what is it, but zero-byte is
-	# expected after handler section
-	discon(0);
 }
 
 disout()
 {
 	discon(XMAGIC);
+	flags := DONTCOMPILE;
 	discon(DONTCOMPILE | HASEXCEPT);	# dis flags
 	disstackext();		# minimum stack extent size
 	disninst();
