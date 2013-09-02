@@ -515,6 +515,7 @@ findsrc(src: string): ref Mod
 
 	pat := list of {
 		file+" (Limbo source)",
+		"*.* (Java source)",
 		"*.b (Limbo source)"
 	};
 

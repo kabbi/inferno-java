@@ -821,8 +821,9 @@ findsbl(dis: string): string
 	}
 	if(dism != nil && (b := dism->src(dis)) != nil){
 		n = len b;
-		if(n > 2 && b[n-2: n] == ".b"){
-			sbl := b[0: n-2] + ".sbl";
+		(base, ext) := str->splitr(b, ".");
+		if(ext == ".b" || ext == ".java"){
+			sbl := base + ".sbl";
 			if(sys->open(sbl, Sys->OREAD) != nil)
 				return sbl;
 		}
