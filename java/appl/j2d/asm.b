@@ -314,17 +314,19 @@ sblinst(bsym: ref Bufio->Iobuf)
 	bsym.puts(string n + "\n");
 	curline = 1;
 	lastline = -1;
-	lastchar = 6;
+	# A small hack: we cannot know the exact number of chars in the line,
+	# so we supply some dummy large value.
+	lastchar = 42000;
 	blockid = -1;
 	for(i = ihead; i != nil; i = i.next) {
 		if(i.j != nil)
 			curline = i.j.line;
 		if(curline != lastline) {
 			lastline = curline;
-			lastchar = 6;
+			lastchar = 42000;
 			blockid++;
 			bsym.puts(string curline + ".");
 		}
-		bsym.puts("1," + string lastchar++ + " " + string blockid + "\n");
+		bsym.puts("0," + string lastchar++ + " " + string blockid + "\n");
 	}
 }
