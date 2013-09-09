@@ -2,25 +2,11 @@ This project is intended to run Java 7 apps natively in inferno,
 by converting class files to dis and linking them at runtime.
 
 Currently working features:
-	- not many of them really, see problem list below
-	- although jvm runtime loader and linker is supposed to
-	work with java 1.4 classes (there was no chance to get
-	those sources, as java released only 1.5 ones and later)
-	sources are needed to provide native part of the JCL
-
-TODO:
-	- reworkd j2d to support modern exception handling in dis
-	- implement support for new bytecode instructions:
-		- DONE - ldc, ldc2, ldcw_2, ldc2_w: those will accept
-		more argument types, see http://docs.oracle.com/
-		javase/specs/jvms/se7/html/jvms-4.html#jvms-4.10.1.9.ldc
-		since class file version 49.0
-		- invokedynamic, completely new since 49.0
-	- prepare the pkg dir that would contain all the JCL classes
-	from the OpenJDK (as they come with GPL license), compiled and
-	translated into dis
-	- implement proper makefiles to compile JCL and native classes
-	- more to come later...
+	- pure java code execution
+	- basic i/o streams, printers and writers
+	- exceptions
+	- threads
+	- some small part of the JCL, see below
 
 Current tasks:
 	-DONE- correct exception handling in dis code
@@ -31,26 +17,28 @@ Current tasks:
 		some fixing)
 		-DONE- implement Loader support for getting and setting exception
 		handlers
-	- support for new const types (CONSTANT_MethodHandle,
+	- NOT NEEDED - support for new const types (CONSTANT_MethodHandle,
 	CONSTANT_MethodType, CONSTANT_InvokeDynamic):
 		-DONE- internal structures (java.m)
 		-DONE- loading from class files (loader.b)
 		- verification (loader.b)
 		- debug output (loader.b)
-	- support for new instruction behaviuor
+	- NOT NEEDED - support for new instruction behaviuor
 		- DONE - ldc, ldc_w (new argument types):
 			- DONE - loading and verification (javadas.b)
 			- DONE - simulation (simjvm.b)
 			- DONE - translation (xlate.b)
-			- DONE - runtime support (classloader.b) - NOT COMPLETELY TESTED
-			- note: the ldc since 50.0 supports Class refs loading for
-			classes, so we need a way to obtain that class from the loader
-			and push it to the stack
-		- invokedynamic
+			- DONE - runtime support (classloader.b)
+		- NOT NEEDED - invokedynamic
 			- loading from class files
 			- verification
 			- translation
 			- runtime support (?)
+	- good debugging support
+		- DONE - basic pc to java source translations
+		- class fields (only basic types) showing (seems
+		to be almost impossible to implement, as translator
+		is mostly unaware of the types and their runtime offsets)
 
 JCL modifications to simplify development process (not-to-forget to fix
 that after everything else is working):
@@ -61,6 +49,7 @@ that after everything else is working):
 	when ThreadDeath class was initialized, and no thread manipulations are
 	allowed at that time (as ThreadDeath is created *after* jvm removes current
 	thread context)
+	- ProcessImpl and InfernoProcess classes in java.lang are to be implemented
 
 
 Java Class Library native modules implementation status:
@@ -310,47 +299,34 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/awt/Toolkit.java
 	- MISSING -	java/awt/TrayIcon.java
 	- MISSING -	java/awt/Window.java
-	- MISSING -	java/beans/EventHandler.java
-	- MISSING -	java/beans/PersistenceDelegate.java
-	- MISSING -	java/beans/XMLEncoder.java
-	- MISSING -	java/io/Console.java
+	- STUB -	java/io/Console.java
 	[BOOTSTRAP] - DONE -	java/io/FileDescriptor.java
 	[BOOTSTRAP] - DONE -	java/io/FileInputStream.java
-	- MISSING -	java/io/FileNotFoundException.java
 	[BOOTSTRAP] - DONE -	java/io/FileOutputStream.java
 	[BOOTSTRAP] - PARTIAL -	java/io/FileSystem.java
 	- MISSING -	java/io/ObjectInputStream.java
 	- MISSING -	java/io/ObjectOutputStream.java
 	- MISSING -	java/io/ObjectStreamClass.java
 	- MISSING -	java/io/RandomAccessFile.java
-	- MISSING -	java/io/Serializable.java
 	[BOOTSTRAP] - PARTIAL -	java/lang/Class.java
 	[BOOTSTRAP] - PARTIAL -	java/lang/ClassLoader.java
 	- MISSING -	java/lang/Compiler.java
-	- MISSING -	java/lang/Deprecated.java
 	[BOOTSTRAP] - DONE -	java/lang/Double.java
 	[BOOTSTRAP] - DONE -	java/lang/Float.java
-	- MISSING -	java/lang/instrument/ClassFileTransformer.java
-	- MISSING -	java/lang/instrument/Instrumentation.java
 	- MISSING -	java/lang/invoke/MemberName.java
 	- MISSING -	java/lang/invoke/MethodHandle.java
 	- MISSING -	java/lang/invoke/MethodHandleImpl.java
 	- MISSING -	java/lang/invoke/MethodHandleNatives.java
 	- MISSING -	java/lang/invoke/MethodType.java
-	- MISSING -	java/lang/invoke/package-info.java
-	- MISSING -	java/lang/management/MemoryMXBean.java
-	- MISSING -	java/lang/management/ThreadInfo.java
-	- MISSING -	java/lang/Math.java
 	[BOOTSTRAP] - DONE -	java/lang/Object.java
 	- MISSING -	java/lang/Package.java
-	- MISSING -	java/lang/Process.java
-	- MISSING -	java/lang/ProcessBuilder.java
 	- MISSING -	java/lang/ref/Finalizer.java
 	- MISSING -	java/lang/reflect/Array.java
 	- MISSING -	java/lang/reflect/Method.java
 	- MISSING -	java/lang/reflect/Modifier.java
 	- MISSING -	java/lang/reflect/Proxy.java
 	[BOOTSTRAP] - PARTIAL -	java/lang/Runtime.java
+	- MISSING - java/lang/InfernoProcess.java
 	- MISSING -	java/lang/RuntimePermission.java
 	- MISSING -	java/lang/SecurityManager.java
 	- MISSING -	java/lang/Shutdown.java
@@ -379,35 +355,10 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/net/SocketImpl.java
 	- MISSING -	java/net/SocketInputStream.java
 	- MISSING -	java/net/SocketOutputStream.java
-	- MISSING -	java/net/URI.java
-	- MISSING -	java/net/URL.java
 	[BOOTSTRAP] - STUB -	java/nio/Bits.java
-	- MISSING -	java/nio/Buffer.java
-	- MISSING -	java/nio/ByteOrder.java
-	- MISSING -	java/nio/channels/FileLock.java
-	- MISSING -	java/nio/channels/MulticastChannel.java
-	- MISSING -	java/nio/channels/package-info.java
-	- MISSING -	java/nio/channels/spi/AbstractInterruptibleChannel.java
-	- MISSING -	java/nio/charset/Charset.java
-	- MISSING -	java/nio/file/Files.java
-	- MISSING -	java/nio/file/Paths.java
-	- MISSING -	java/nio/file/WatchKey.java
-	- MISSING -	java/nio/file/WatchService.java
 	- MISSING -	java/nio/MappedByteBuffer.java
-	- MISSING -	java/nio/StringCharBuffer.java
-	- MISSING -	java/security/AccessControlContext.java
 	[BOOTSTRAP] - STUB -	java/security/AccessController.java
-	- MISSING -	java/security/AuthProvider.java
-	- MISSING -	java/security/cert/PKIXBuilderParameters.java
-	- MISSING -	java/security/cert/PKIXParameters.java
-	- MISSING -	java/security/cert/X509Certificate.java
-	- MISSING -	java/security/cert/X509CertSelector.java
-	- MISSING -	java/security/cert/X509Extension.java
-	- MISSING -	java/security/SecureRandom.java
-	- MISSING -	java/sql/Connection.java
 	- MISSING -	java/sql/DriverManager.java
-	- MISSING -	java/text/DigitList.java
-	- MISSING -	java/text/RuleBasedBreakIterator.java
 	- MISSING -	java/util/concurrent/atomic/AtomicBoolean.java
 	- MISSING -	java/util/concurrent/atomic/AtomicInteger.java
 	- MISSING -	java/util/concurrent/atomic/AtomicIntegerArray.java
@@ -429,104 +380,16 @@ Java Class Library native modules implementation status:
 	- MISSING -	java/util/concurrent/locks/Lock.java
 	- MISSING -	java/util/concurrent/RejectedExecutionHandler.java
 	- MISSING -	java/util/concurrent/ScheduledThreadPoolExecutor.java
-	- MISSING -	java/util/EnumSet.java
 	- MISSING -	java/util/jar/JarFile.java
-	- MISSING -	java/util/Locale.java
 	- MISSING -	java/util/logging/FileHandler.java
-	- MISSING -	java/util/logging/LogManager.java
-	- MISSING -	java/util/prefs/Preferences.java
-	- MISSING -	java/util/Properties.java
 	- MISSING -	java/util/ResourceBundle.java
 	- MISSING -	java/util/TimeZone.java
-	- MISSING -	java/util/TreeMap.java
 	- MISSING -	java/util/zip/Adler32.java
 	- MISSING -	java/util/zip/CRC32.java
 	- MISSING -	java/util/zip/Deflater.java
 	- MISSING -	java/util/zip/Inflater.java
 	- MISSING -	java/util/zip/ZipFile.java
 	- MISSING -	java/util/zip/ZStreamRef.java
-	- MISSING -	javax/imageio/IIOParamController.java
-	- MISSING -	javax/imageio/ImageReader.java
-	- MISSING -	javax/imageio/ImageWriter.java
-	- MISSING -	javax/imageio/metadata/IIOMetadata.java
-	- MISSING -	javax/imageio/metadata/IIOMetadataController.java
-	- MISSING -	javax/imageio/spi/IIORegistry.java
-	- MISSING -	javax/imageio/spi/IIOServiceProvider.java
-	- MISSING -	javax/imageio/spi/ImageInputStreamSpi.java
-	- MISSING -	javax/imageio/spi/ImageOutputStreamSpi.java
-	- MISSING -	javax/imageio/spi/ImageReaderSpi.java
-	- MISSING -	javax/imageio/spi/ImageReaderWriterSpi.java
-	- MISSING -	javax/imageio/spi/ImageWriterSpi.java
-	- MISSING -	javax/imageio/spi/ServiceRegistry.java
-	- MISSING -	javax/management/loading/MLet.java
-	- MISSING -	javax/management/loading/MLetMBean.java
-	- MISSING -	javax/management/MBeanAttributeInfo.java
-	- MISSING -	javax/management/MBeanConstructorInfo.java
-	- MISSING -	javax/management/MBeanInfo.java
-	- MISSING -	javax/management/MBeanNotificationInfo.java
-	- MISSING -	javax/management/MBeanOperationInfo.java
-	- MISSING -	javax/management/MBeanParameterInfo.java
-	- MISSING -	javax/management/MBeanServerConnection.java
-	- MISSING -	javax/management/remote/rmi/NoCallStackClassLoader.java
-	- MISSING -	javax/naming/CompositeName.java
-	- MISSING -	javax/naming/CompoundName.java
-	- MISSING -	javax/naming/Context.java
-	- MISSING -	javax/naming/LinkRef.java
-	- MISSING -	javax/print/attribute/standard/DialogTypeSelection.java
-	- MISSING -	javax/print/Doc.java
-	- MISSING -	javax/print/DocPrintJob.java
-	- MISSING -	javax/print/PrintService.java
-	- MISSING -	javax/print/PrintServiceLookup.java
-	- MISSING -	javax/security/auth/login/Configuration.java
-	- MISSING -	javax/security/auth/login/LoginContext.java
-	- MISSING -	javax/security/auth/Policy.java
-	- MISSING -	javax/sound/midi/MidiSystem.java
-	- MISSING -	javax/sql/DataSource.java
-	- MISSING -	javax/sql/rowset/CachedRowSet.java
-	- MISSING -	javax/sql/rowset/FilteredRowSet.java
-	- MISSING -	javax/sql/rowset/JoinRowSet.java
-	- MISSING -	javax/swing/filechooser/FileSystemView.java
-	- MISSING -	javax/swing/JComponent.java
-	- MISSING -	javax/swing/JEditorPane.java
-	- MISSING -	javax/swing/JFileChooser.java
-	- MISSING -	javax/swing/JFormattedTextField.java
-	- MISSING -	javax/swing/JInternalFrame.java
-	- MISSING -	javax/swing/JLabel.java
-	- MISSING -	javax/swing/JPopupMenu.java
-	- MISSING -	javax/swing/JRootPane.java
-	- MISSING -	javax/swing/JSpinner.java
-	- MISSING -	javax/swing/JTextArea.java
-	- MISSING -	javax/swing/JTextField.java
-	- MISSING -	javax/swing/KeyStroke.java
-	- MISSING -	javax/swing/LookAndFeel.java
-	- MISSING -	javax/swing/plaf/basic/BasicPopupMenuUI.java
-	- MISSING -	javax/swing/plaf/metal/MetalLookAndFeel.java
-	- MISSING -	javax/swing/plaf/metal/MetalRootPaneUI.java
-	- MISSING -	javax/swing/plaf/multi/MultiLookAndFeel.java
-	- MISSING -	javax/swing/plaf/synth/SynthLookAndFeel.java
-	- MISSING -	javax/swing/Popup.java
-	- MISSING -	javax/swing/RepaintManager.java
-	- MISSING -	javax/swing/SwingPaintEventDispatcher.java
-	- MISSING -	javax/swing/text/DefaultCaret.java
-	- MISSING -	javax/swing/text/Document.java
-	- MISSING -	javax/swing/text/FlowView.java
-	- MISSING -	javax/swing/text/html/HTMLDocument.java
-	- MISSING -	javax/swing/text/html/HTMLEditorKit.java
-	- MISSING -	javax/swing/text/html/StyleSheet.java
-	- MISSING -	javax/swing/text/MaskFormatter.java
-	- MISSING -	javax/swing/text/rtf/RTFReader.java
-	- MISSING -	javax/swing/text/Style.java
-	- MISSING -	javax/swing/text/StyleContext.java
-	- MISSING -	javax/swing/text/View.java
-	- MISSING -	javax/swing/ToolTipManager.java
-	- MISSING -	javax/swing/UIManager.java
-	- MISSING -	javax/xml/crypto/dsig/TransformService.java
-	- MISSING -	javax/xml/crypto/dsig/XMLSignatureFactory.java
-	- MISSING -	org/ietf/jgss/GSSContext.java
-	- MISSING -	sun/applet/AppletClassLoader.java
-	- MISSING -	sun/applet/resources/MsgAppletViewer_sv.java
-	- MISSING -	sun/audio/AudioTranslatorStream.java
-	- MISSING -	sun/audio/NativeAudioStream.java
 	- MISSING -	sun/awt/AWTAccessor.java
 	- MISSING -	sun/awt/AWTAutoShutdown.java
 	- MISSING -	sun/awt/CustomCursor.java
@@ -568,30 +431,7 @@ Java Class Library native modules implementation status:
 	- MISSING -	sun/awt/shell/ShellFolderColumnInfo.java
 	- MISSING -	sun/awt/SunToolkit.java
 	- MISSING -	sun/awt/WindowIDProvider.java
-	- MISSING -	sun/dc/DuctusRenderingEngine.java
-	- MISSING -	sun/font/CharToGlyphMapper.java
-	- MISSING -	sun/font/CMap.java
-	- MISSING -	sun/font/CompositeGlyphMapper.java
-	- MISSING -	sun/font/FileFont.java
-	- MISSING -	sun/font/FileFontStrike.java
-	- MISSING -	sun/font/Font2D.java
-	- MISSING -	sun/font/FontDesignMetrics.java
-	- MISSING -	sun/font/FontManager.java
-	- MISSING -	sun/font/FontRunIterator.java
-	- MISSING -	sun/font/FontScaler.java
-	- MISSING -	sun/font/FontStrikeDisposer.java
-	- MISSING -	sun/font/FontUtilities.java
 	- MISSING -	sun/font/FreetypeFontScaler.java
-	- MISSING -	sun/font/GlyphLayout.java
-	- MISSING -	sun/font/GlyphList.java
-	- MISSING -	sun/font/NullFontScaler.java
-	- MISSING -	sun/font/PhysicalFont.java
-	- MISSING -	sun/font/PhysicalStrike.java
-	- MISSING -	sun/font/StrikeCache.java
-	- MISSING -	sun/font/SunFontManager.java
-	- MISSING -	sun/font/SunLayoutEngine.java
-	- MISSING -	sun/font/TrueTypeFont.java
-	- MISSING -	sun/font/Type1Font.java
 	- MISSING -	sun/instrument/InstrumentationImpl.java
 	- MISSING -	sun/invoke/anon/AnonymousClassLoader.java
 	- MISSING -	sun/java2d/cmm/lcms/LCMS.java
@@ -645,221 +485,45 @@ Java Class Library native modules implementation status:
 	- MISSING -	sun/java2d/pipe/RenderQueue.java
 	- MISSING -	sun/java2d/pipe/ShapeSpanIterator.java
 	- MISSING -	sun/java2d/pipe/SpanClipRenderer.java
-	- MISSING -	sun/java2d/pipe/SpanIterator.java
-	- MISSING -	sun/java2d/pisces/Dasher.java
-	- MISSING -	sun/java2d/pisces/PiscesRenderingEngine.java
 	- MISSING -	sun/java2d/pisces/Renderer.java
-	- MISSING -	sun/java2d/pisces/Stroker.java
 	- MISSING -	sun/java2d/SurfaceData.java
-	- MISSING -	sun/jvmstat/perfdata/monitor/AbstractMonitoredVm.java
-	- MISSING -	sun/launcher/LauncherHelper.java
 	- MISSING -	sun/management/ClassLoadingImpl.java
 	- MISSING -	sun/management/Flag.java
 	- MISSING -	sun/management/GarbageCollectorImpl.java
 	- MISSING -	sun/management/GcInfoBuilder.java
 	- MISSING -	sun/management/HotSpotDiagnostic.java
 	- MISSING -	sun/management/HotspotThread.java
-	- MISSING -	sun/management/jmxremote/ConnectorBootstrap.java
-	- MISSING -	sun/management/ManagementFactoryHelper.java
 	- MISSING -	sun/management/MemoryImpl.java
 	- MISSING -	sun/management/MemoryManagerImpl.java
 	- MISSING -	sun/management/MemoryPoolImpl.java
-	- MISSING -	sun/management/MethodInfo.java
-	- MISSING -	sun/management/StackTraceElementCompositeData.java
 	- MISSING -	sun/management/ThreadImpl.java
 	- MISSING -	sun/management/VMManagementImpl.java
-	- MISSING -	sun/misc/Cleaner.java
-	- MISSING -	sun/misc/FloatingDecimal.java
-	- MISSING -	sun/misc/FormattedFloatingDecimal.java
 	- MISSING -	sun/misc/GC.java
-	- MISSING -	sun/misc/Launcher.java
 	- MISSING -	sun/misc/MessageUtils.java
 	- MISSING -	sun/misc/NativeSignalHandler.java
 	- MISSING -	sun/misc/Perf.java
-	- MISSING -	sun/misc/PerfCounter.java
 	- MISSING -	sun/misc/Signal.java
 	[BOOTSTRAP] - PARTIAL -	sun/misc/Unsafe.java
 	[BOOTSTRAP] - PARTIAL -	sun/misc/Version.java
 	[BOOTSTRAP] - DONE -	sun/misc/VM.java
 	- MISSING -	sun/misc/VMSupport.java
-	- MISSING -	sun/net/RegisteredDomain.java
 	- MISSING -	sun/net/sdp/SdpSupport.java
 	- MISSING -	sun/net/spi/DefaultProxySelector.java
-	- MISSING -	sun/nio/ch/AbstractPollArrayWrapper.java
-	- MISSING -	sun/nio/ch/AllocatedNativeObject.java
 	- MISSING -	sun/nio/ch/DatagramChannelImpl.java
-	- MISSING -	sun/nio/ch/DatagramSocketAdaptor.java
-	- MISSING -	sun/nio/ch/FileChannelImpl.java
-	- MISSING -	sun/nio/ch/IOUtil.java
-	- MISSING -	sun/nio/ch/IOVecWrapper.java
-	- MISSING -	sun/nio/ch/NativeDispatcher.java
-	- MISSING -	sun/nio/ch/NativeObject.java
-	- MISSING -	sun/nio/ch/NativeThreadSet.java
 	- MISSING -	sun/nio/ch/Net.java
-	- MISSING -	sun/nio/ch/SctpMessageInfoImpl.java
-	- MISSING -	sun/nio/ch/SctpStdSocketOption.java
-	- MISSING -	sun/nio/ch/ServerSocketChannelImpl.java
-	- MISSING -	sun/nio/ch/SimpleAsynchronousFileChannelImpl.java
 	- MISSING -	sun/nio/ch/SocketChannelImpl.java
-	- MISSING -	sun/nio/ch/Util.java
-	- MISSING -	sun/nio/cs/ext/EUC_JP.java
-	- MISSING -	sun/nio/cs/ext/EUC_JP_Open.java
-	- MISSING -	sun/nio/cs/ext/JIS_X_0212_MS5022X_Encoder.java
-	- MISSING -	sun/nio/cs/ext/PCK.java
-	- MISSING -	sun/nio/cs/ext/SJIS.java
-	- MISSING -	sun/nio/cs/StreamDecoder.java
-	- MISSING -	sun/nio/fs/Cancellable.java
-	- MISSING -	sun/nio/fs/NativeBuffer.java
-	- MISSING -	sun/nio/fs/NativeBuffers.java
-	- MISSING -	sun/nio/fs/PollingWatchService.java
-	- MISSING -	sun/print/PathGraphics.java
-	- MISSING -	sun/print/PrintJob2D.java
-	- MISSING -	sun/print/PSPrinterJob.java
-	- MISSING -	sun/print/RasterPrinterJob.java
 	[BOOTSTRAP] - STUB -	sun/reflect/ConstantPool.java
-	- MISSING -	sun/reflect/MethodAccessorGenerator.java
 	- MISSING -	sun/reflect/NativeConstructorAccessorImpl.java
 	- MISSING -	sun/reflect/NativeMethodAccessorImpl.java
 	[BOOTSTRAP] - PARTIAL -	sun/reflect/Reflection.java
-	- MISSING -	sun/reflect/ReflectionFactory.java
-	- MISSING -	sun/rmi/server/Activation.java
 	- MISSING -	sun/rmi/server/MarshalInputStream.java
 	- MISSING -	sun/security/ec/ECDHKeyAgreement.java
 	- MISSING -	sun/security/ec/ECDSASignature.java
 	- MISSING -	sun/security/ec/ECKeyPairGenerator.java
-	- MISSING -	sun/security/ec/SunEC.java
-	- MISSING -	sun/security/jgss/GSSContextImpl.java
-	- MISSING -	sun/security/jgss/GSSManagerImpl.java
-	- MISSING -	sun/security/jgss/spnego/SpNegoMechFactory.java
-	- MISSING -	sun/security/jgss/wrapper/GSSCredElement.java
 	- MISSING -	sun/security/jgss/wrapper/GSSLibStub.java
-	- MISSING -	sun/security/jgss/wrapper/GSSNameElement.java
-	- MISSING -	sun/security/jgss/wrapper/NativeGSSContext.java
-	- MISSING -	sun/security/jgss/wrapper/NativeGSSFactory.java
-	- MISSING -	sun/security/jgss/wrapper/SunNativeProvider.java
 	- MISSING -	sun/security/krb5/Config.java
 	- MISSING -	sun/security/krb5/Credentials.java
-	- MISSING -	sun/security/krb5/internal/ccache/CredentialsCache.java
-	- MISSING -	sun/security/krb5/internal/KerberosTime.java
-	- MISSING -	sun/security/krb5/internal/Krb5.java
-	- MISSING -	sun/security/krb5/internal/ktab/KeyTabInputStream.java
-	- MISSING -	sun/security/krb5/internal/util/KrbDataInputStream.java
-	- MISSING -	sun/security/pkcs11/P11Cipher.java
-	- MISSING -	sun/security/pkcs11/P11Digest.java
-	- MISSING -	sun/security/pkcs11/P11ECDHKeyAgreement.java
-	- MISSING -	sun/security/pkcs11/P11Key.java
-	- MISSING -	sun/security/pkcs11/P11KeyAgreement.java
-	- MISSING -	sun/security/pkcs11/P11KeyGenerator.java
 	- MISSING -	sun/security/pkcs11/Secmod.java
-	- MISSING -	sun/security/pkcs11/Session.java
-	- MISSING -	sun/security/pkcs11/SessionManager.java
-	- MISSING -	sun/security/pkcs11/SunPKCS11.java
-	- MISSING -	sun/security/pkcs11/wrapper/CK_MECHANISM.java
 	- MISSING -	sun/security/pkcs11/wrapper/PKCS11.java
-	- MISSING -	sun/security/pkcs11/wrapper/PKCS11Constants.java
-	- MISSING -	sun/security/pkcs11/wrapper/PKCS11RuntimeException.java
-	- MISSING -	sun/security/provider/ByteArrayAccess.java
-	- MISSING -	sun/security/provider/certpath/Builder.java
-	- MISSING -	sun/security/provider/certpath/ForwardBuilder.java
-	- MISSING -	sun/security/provider/certpath/ForwardState.java
-	- MISSING -	sun/security/provider/certpath/KeyChecker.java
-	- MISSING -	sun/security/provider/certpath/ldap/LDAPCertStore.java
-	- MISSING -	sun/security/provider/certpath/ReverseBuilder.java
-	- MISSING -	sun/security/provider/certpath/SunCertPathBuilder.java
-	- MISSING -	sun/security/provider/DSA.java
-	- MISSING -	sun/security/provider/SeedGenerator.java
-	- MISSING -	sun/security/provider/SunEntries.java
-	- MISSING -	sun/security/smartcardio/CardImpl.java
 	- MISSING -	sun/security/smartcardio/PCSC.java
-	- MISSING -	sun/security/smartcardio/PCSCException.java
-	- MISSING -	sun/security/smartcardio/PCSCTerminals.java
-	- MISSING -	sun/security/smartcardio/TerminalImpl.java
-	- MISSING -	sun/security/ssl/HandshakeMessage.java
-	- MISSING -	sun/security/tools/JarSigner.java
-	- MISSING -	sun/security/tools/JarSignerResources.java
-	- MISSING -	sun/security/tools/JarSignerResources_ja.java
-	- MISSING -	sun/security/tools/JarSignerResources_zh_CN.java
-	- MISSING -	sun/security/tools/KeyTool.java
-	- MISSING -	sun/security/util/HostnameChecker.java
-	- MISSING -	sun/security/util/Resources_sv.java
-	- MISSING -	sun/security/x509/AlgorithmId.java
-	- MISSING -	sun/security/x509/IPAddressName.java
-	- MISSING -	sun/security/x509/IssuerAlternativeNameExtension.java
-	- MISSING -	sun/security/x509/NameConstraintsExtension.java
-	- MISSING -	sun/security/x509/OIDMap.java
-	- MISSING -	sun/security/x509/PKIXExtensions.java
-	- MISSING -	sun/security/x509/SubjectAlternativeNameExtension.java
-	- MISSING -	sun/security/x509/X509CertImpl.java
-	- MISSING -	sun/security/x509/X509CertInfo.java
-	- MISSING -	sun/security/x509/X509CRLImpl.java
-	- MISSING -	sun/swing/SwingUtilities2.java
-	- MISSING -	sun/text/resources/FormatData.java
-	- MISSING -	sun/text/resources/FormatData_be.java
-	- MISSING -	sun/text/resources/FormatData_bg.java
-	- MISSING -	sun/text/resources/FormatData_ca.java
-	- MISSING -	sun/text/resources/FormatData_cs.java
-	- MISSING -	sun/text/resources/FormatData_da.java
-	- MISSING -	sun/text/resources/FormatData_de.java
-	- MISSING -	sun/text/resources/FormatData_de_CH.java
-	- MISSING -	sun/text/resources/FormatData_el.java
-	- MISSING -	sun/text/resources/FormatData_en_IN.java
-	- MISSING -	sun/text/resources/FormatData_es.java
-	- MISSING -	sun/text/resources/FormatData_es_BO.java
-	- MISSING -	sun/text/resources/FormatData_es_CO.java
-	- MISSING -	sun/text/resources/FormatData_es_CR.java
-	- MISSING -	sun/text/resources/FormatData_es_DO.java
-	- MISSING -	sun/text/resources/FormatData_es_EC.java
-	- MISSING -	sun/text/resources/FormatData_es_GT.java
-	- MISSING -	sun/text/resources/FormatData_es_HN.java
-	- MISSING -	sun/text/resources/FormatData_es_MX.java
-	- MISSING -	sun/text/resources/FormatData_es_NI.java
-	- MISSING -	sun/text/resources/FormatData_es_PA.java
-	- MISSING -	sun/text/resources/FormatData_es_PR.java
-	- MISSING -	sun/text/resources/FormatData_es_SV.java
-	- MISSING -	sun/text/resources/FormatData_et.java
-	- MISSING -	sun/text/resources/FormatData_fi.java
-	- MISSING -	sun/text/resources/FormatData_fr.java
-	- MISSING -	sun/text/resources/FormatData_fr_BE.java
-	- MISSING -	sun/text/resources/FormatData_fr_CH.java
-	- MISSING -	sun/text/resources/FormatData_hi_IN.java
-	- MISSING -	sun/text/resources/FormatData_hr.java
-	- MISSING -	sun/text/resources/FormatData_hu.java
-	- MISSING -	sun/text/resources/FormatData_is.java
-	- MISSING -	sun/text/resources/FormatData_it.java
-	- MISSING -	sun/text/resources/FormatData_it_CH.java
-	- MISSING -	sun/text/resources/FormatData_ja.java
-	- MISSING -	sun/text/resources/FormatData_lt.java
-	- MISSING -	sun/text/resources/FormatData_lv.java
-	- MISSING -	sun/text/resources/FormatData_mk.java
-	- MISSING -	sun/text/resources/FormatData_nl.java
-	- MISSING -	sun/text/resources/FormatData_no.java
-	- MISSING -	sun/text/resources/FormatData_no_NO_NY.java
-	- MISSING -	sun/text/resources/FormatData_pl.java
-	- MISSING -	sun/text/resources/FormatData_pt.java
-	- MISSING -	sun/text/resources/FormatData_ro.java
-	- MISSING -	sun/text/resources/FormatData_ru.java
-	- MISSING -	sun/text/resources/FormatData_sk.java
-	- MISSING -	sun/text/resources/FormatData_sl.java
-	- MISSING -	sun/text/resources/FormatData_sq.java
-	- MISSING -	sun/text/resources/FormatData_sv.java
-	- MISSING -	sun/text/resources/FormatData_th_TH_TH.java
-	- MISSING -	sun/text/resources/FormatData_tr.java
-	- MISSING -	sun/text/resources/FormatData_uk.java
-	- MISSING -	sun/text/resources/FormatData_vi.java
-	- MISSING -	sun/tools/asm/Assembler.java
-	- MISSING -	sun/tools/java/Constants.java
-	- MISSING -	sun/tools/java/MemberDefinition.java
-	- MISSING -	sun/tools/javac/SourceClass.java
-	- MISSING -	sun/tools/jstack/JStack.java
-	- MISSING -	sun/tools/native2ascii/A2NFilter.java
-	- MISSING -	sun/tools/native2ascii/Main.java
-	- MISSING -	sun/tools/native2ascii/N2AFilter.java
-	- MISSING -	sun/tools/native2ascii/resources/MsgNative2ascii.java
-	- MISSING -	sun/tools/native2ascii/resources/MsgNative2ascii_ja.java
-	- MISSING -	sun/tools/native2ascii/resources/MsgNative2ascii_zh_CN.java
-	- MISSING -	sun/tools/tree/Context.java
-	- MISSING -	sun/tools/tree/MethodExpression.java
-	- MISSING -	sun/tools/util/ModifierFilter.java
-	- MISSING -	sun/tracing/dtrace/Activation.java
-	- MISSING -	sun/tracing/dtrace/DTraceProvider.java
-	- MISSING -	sun/tracing/dtrace/JVM.java	
+	- MISSING -	sun/tracing/dtrace/JVM.java
