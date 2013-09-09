@@ -6,6 +6,8 @@ TESTS=	SystemIOTest\
 		InnerClassTest\
 		ThreadTest\
 		ExceptionsTest\
+#		DebugTest\		- always fails to allow debugger to connect
+#		EgorTask1Test\	- needs manual run, waits for input
 
 OBJ=${TESTS:%=test-%}
 JAVAC=os -d $ROOT`{pwd} javac
@@ -22,4 +24,4 @@ test-%:QV:
 	echo $stem passed!
 
 clean:QV:
-	rm *.dis *.class *.sbl
+	rm -f *.dis *.class *.sbl *.s
