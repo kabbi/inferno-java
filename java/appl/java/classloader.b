@@ -21,6 +21,9 @@ include "math.m";
 include "hash.m";
 	hash:	Hash;
 
+include "sh.m";
+	sh:	Sh;
+
 include "loader.m";
 include "classloader.m";
 	ld:		Loader;
@@ -82,6 +85,9 @@ warn:		int = 1;
 debug:		int = 0;
 verbose:	int = 0;
 errors:		int = 0;
+
+autotranslate := 0;
+sysautotranslate := 0;
 
 # for generating ClassLoader exceptions use
 # the following con's.  They will be turned
@@ -1842,18 +1848,63 @@ Class.clone(c: self ref Class, o: ref Object): ref Object
 #
 
 #
+#   Autotranslation
+#
+classfilepath(path: string): string
+{
+	extlen := len ".dis";
+	if (len path <= extlen)
+		return "";
+	return path[:len path - extlen] + ".class";
+}
+needtranslate(disfilepath: string, classfilepath: string): int
+{
+	(derr, ddir) := sys->stat(disfilepath);
+	if (derr < 0)
+		return 1;
+	(cerr, cdir) := sys->stat(classfilepath);
+	if (cerr < 0)
+		return 0;
+
+	return ddir.mtime < cdir.mtime;
+}
+translate(path: string)
+{
+	classfilepath := classfilepath(path);
+	if (sys->open(classfilepath, Sys->OREAD) == nil)
+		return;
+	if (!needtranslate(path, classfilepath))
+		return;
+
+	if (sh == nil) {
+		sh = load Sh Sh->PATH;
+		if (sh == nil)
+			error(sys->sprint("could not load %s: %r", Sh->PATH));
+	}
+
+	trace(JVERBOSE, sys->sprint("Autotranslate: calling j2d for %s", classfilepath));
+	result := sh->run(nil, "java/j2d" :: "-g" :: "-o" :: path :: classfilepath :: nil);
+	if (result != "")
+		loaderror(classformat, result + ": " + path);
+}
+
+#
 #	Load a class file.
 #
 Class.loadclass(c: self ref Class)
 {
 	c.encoding = encodename(c.name);
 	f := c.encoding + ".dis";
+	if (autotranslate)
+		translate(f);
 	m := load Nilmod f;
 	if (m == nil) {
 		e := sys->sprint("%r");
 		if (!matches(e, EXIST))
 			error(f + ": " + e);
 		f = ROOT + f;
+		if (autotranslate)
+			translate(f);
 		m = load Nilmod f;
 		if (m == nil) {
 			e = sys->sprint("%r");
@@ -3495,8 +3546,9 @@ setflags( flags : list of (string,int) )
 {
 	if ( flags == nil ) return;
 
-	for((f,v):=hd flags; flags != nil; flags = tl flags )
+	for(; flags != nil; flags = tl flags )
 	{
+		(f, v) := hd flags;
 		case (f)
 		{
 			"debug"   => loadtrace();
@@ -3504,6 +3556,7 @@ setflags( flags : list of (string,int) )
 			"verbose" => loadtrace();
 						 jtrace->level = JVERBOSE;
 			"warn"    => warn    = v;
+			"autotranslate" => autotranslate = 1;
 		}
 	}
 }

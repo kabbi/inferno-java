@@ -98,6 +98,8 @@ processargs( argv : list of string ) : (list of (string,int), list of string)
 			'v'  => opts = ("verbose",1)::opts;
 			'd'  => opts = ("debug",1)::opts;
 			'w'  => opts = ("warn",1)::opts;
+			'a'  => opts = ("autotranslate",1)::opts;
+			's'  => opts = ("sysautotranslate",1)::opts;
 			'i'  => showinfo();              #exits
 			'h'  => showhelp(jvmcmd);           #exits
 			*    => mesg(sys->sprint( "error: %c is an invalid option\n", flags[x] ));
@@ -130,7 +132,8 @@ showinfo()
 showhelp(cmd:string)
 {
 	mesg(sys->sprint( "usage:\t%s [-vdwih] classname classargs", cmd ));
-	mesg(sys->sprint( "\tv=verbose; d=debug; w=warnings; i=version; h=help" ));
+	mesg(sys->sprint( "\tv=verbose; d=debug; w=warnings; i=version; \n" + 
+		"\ta=autotranslate; s=autotranslate system classes; h=help" ));
 	exit;
 }
 
