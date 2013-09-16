@@ -439,7 +439,7 @@ doreloc()
 	}
 	exception e
 	{
-		"*disabled" =>
+		"*" =>
 			#NOTE: a raise is only expected from the init calls therefore
 			#      when we reach here we need to block and acquire
 			block(t);
@@ -483,7 +483,7 @@ loader(name: string): ref Class
 	}
 	exception e
 	{
-		"*disabled" =>
+		"*" =>
 			if(released == 0) {
 				release();
 				unblock(t);
@@ -3581,7 +3581,7 @@ runmain( classloader : JavaClassLoader, classname : string, argv : list of strin
 	}
 	exception e
 	{
-		"*disabled" =>
+		"*" =>
 			m := sys->sprint("uncaught exception: %s", e);
 			mesg(m);
 			if ( (obj := culprit(e)) != nil) 
