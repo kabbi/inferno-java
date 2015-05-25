@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "Day 3"
+date: 2013.06.19 23:29:10
+categories: gsoc
+---
+
+The issue of the day: Inferno panic.  
+&nbsp;  
+Ok, I've managed to do the thing with arrays in Inferno C Loader module. The case was that I should have used Array of Pointers to create Array of Arrays. Thanks Powerman from Inferno's IRC! The new code:
+
+    ar = H2D(Array*, heaparray(&Tptr, nimports));
+    ai = (Array**)ar->data;
+
+    for(i2 = m->ldt; *i2 != nil; i2++){
+        nimports = 0;
+        for(i1 = *i2; i1->name != nil; i1++)
+            nimports++;
+
+        *ai = H2D(Array*, heaparray(Timport, nimports));
+        li = (Loader_Import*)(*ai)->data;
+        for(i1 = *i2; i1->name != nil; i1++){
+            li->name = c2string(i1->name, strlen(i1->name));
+            li->sig = i1->sig;
+            li++;
+        }
+        ai++;
+    }
+I've completed my changes to the Loader module, now it supports getting and restoring all the Imports. I've also fixed classloader code to not forget this section. External modules load ok now.
+
+So, I've returned to my previous bug of Inferno panic. This are the ending lines of java start log:
+
+    ... 1738 lines of the log skipped ...
+
+    modpatch java/lang/Object
+    compile java/lang/Object
+    compile native java/lang/Object
+    Switching class java/lang/Object state to INITED
+    java/lang/Object->init()
+    done
+    java/lang/Object-><clinit>()
+    clinit done
+    Switching class java/lang/Class state to INITED
+    java/lang/Class->init()
+    done
+    java/lang/Class-><clinit>()
+    Debug pring: registerNatives called
+    clinit done
+    Switching class java/lang/String state to INITED
+    java/lang/String->init()
+    done
+    java/lang/String-><clinit>()
+    alloc:D2B: 68a874 in heap: in block at 68a440'640
+    area at 68a864:  ffffffff 437978 43c878 1ac ffffffff 0 ffffffff
+        68a880:  0 ffffffff 437c78 ffffffff 1cc ffffffff 437cd8 43c8d8
+        68a8a0:  1dc ffffffff 0 ffffffff 437eb8
+    panic: alloc:D2B 68a874 (from b0102e28/0)
+
+I need to find out what causes this. It had already happened before in the Class class, and now it also touches String. I know that the error is somewhere in the class static init function, and from the Class case analythis it seems that array initalisation has something to do with this bug.
+
+Happily, Charles suggested to use gdb (and I thought that Inferno is compiled using its own compilers so no debbugging info), and that worked! I've fixed makefiles (added -g to the gcc), and now I can debug that awful bug! By the way, Inferno (and currently libinterp) sources are really quite clear and easy to understand, I really love them!
+
+*To be continued...*
+
+Worked on files:
+- `libinterp/loader.c`: Loader module source code
+- `modules/Loader.m`: module definition file
+- `java/pkg/java/lang/String_L.[bm]`: String_L native class

@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "No luck"
+date: 2013.07.27 16:07:10
+categories: gsoc
+---
+
+The issue of the day: sun.misc.Unsafe.  
+&nbsp;  
+So, in previous post I've mentioned the problem with AtomicInteger and sun/misc/Unsafe. I was trying to fix that for another week (there are some problems with Unsafe.getUnsafe(), it failes in a very strange way), but I still failed and decided to workaround this thing. I've commented out AtomicInteger usage from the ThreadLocal, and continued running my 'hello-world'.
+
+Then there were some other problems that appeared. There was another whole-Inferno crash on
+    
+    initSystemFD_rFileDescriptor_I_rFileDescriptor(
+        p0: ref FileDescriptor_obj, p1: int): ref FileDescriptor_obj
+    {#>>
+            p0.fd = sys->fildes(p1);
+            return (p0);
+    }#<<
+
+This is the part of native method of FileDescriptor. That seemed to have absolutely no problems, but it crashed everything! And after some amount of time I understood that I forgot to allocate some space for fd field, and it actually was pointing to the p0 object itself, so I fixed that quite happily.
+
+Then I found out, that there were two methods missing in my FileDescriptor class, like `incrementAndGetUseCount` and `decrementAndGetUseCount`. I was really amused, because when I was implementing FileDescriptor class I found absolutely no mention of these in the official sun/oracle docs. I found no of them even in the OpenJDK docs. But they where definitely used in FileInputStream and some others. Just a funny fact :)
+
+So, I've successfully fixed my FileDescriptor, and then I've got this again:
+
+    [sin/misc/Unsafe]
+    ...
+    sun/misc/Unsafe-><clinit>()
+    rtload start
+    rtload java/lang/Class [84 -> 1056] for sun/misc/Unsafe
+    load class java/lang/Class
+    loader() exit
+    rtload end
+    Getclassclass called, 'sun/misc/Unsafe' asked for class ''
+    load class 
+    Switching class '' state to NEW
+    []
+    JLD:e0:: class not found
+    [JavaClassLoader] Broken: "JLD:e0:: class not found"
+    sh: 1055 "JavaClassLoader":JLD:e0:: class not found
+
+This is my old bug with Unsafe. Unfortunately, System.out depends on BufferedOutputStream, and it depends on AtomicReference, which uses Unsafe heavily. And it seems that I can't move forward until I implement this evil class. That's all for now.
+
+**PS:** The midterm is finally here! I'm still happy to work with this project, though it sometimes makes me really bored and sad. Lots of the bugs, that are *really* hard to track and fix. That's the main problem, I spend way too much time fixing the bad behaviour.
+But I really beleive, that soon enough I will finish that project and it will be extremelly useful for the community! 
+
+Worked on files:
+- `java/appl/java/classloader.b`: Classloader runtime code
+- `java/pkg/java/io/FileDescriptor.java`
+- `java/pkg/java/io/FileDescriptor_L.b`

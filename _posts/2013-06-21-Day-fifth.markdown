@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Day 5"
+date: 2013.06.21 23:13:10
+categories: gsoc
+---
+
+The issue of the day: j2d failure on some classes, ldc not working.  
+&nbsp;  
+So, here it the list of things that currently prevent everything to function at least on minimal testcases:
+
+1. `java/j2d` fails on some classes with unknown reason. One example:
+
+        ; cd /java/pkg/java/lang/
+        ; for c in *.class {java/j2d $c || echo fail $c}
+        ; # < ok, no errors here
+        ; cd /java/pkg/java/io/
+        ; for c in *.class {java/j2d $c || echo fail $c}
+        [J2d] Broken: "dereference of nil"
+        sh: 294 "J2d":dereference of nil
+        fail FileInputStream.class
+        [J2d] Broken: "dereference of nil"
+        sh: 366 "J2d":dereference of nil
+        fail PipedOutputStream.class
+        [J2d] Broken: "dereference of nil"
+        sh: 370 "J2d":dereference of nil
+        fail PrintStream.class
+        [J2d] Broken: "dereference of nil"
+        sh: 384 "J2d":dereference of nil
+        fail StringReader.class
+
+    And the most funny thing is that this errors are not stable, i. e. when we run this command some more times, it will fail on different classes. I think that the problem is somewhere in astore instructions handling, I will debug this more now.
+
+2.  `jvm` failes starting empty java app. Debug output:
+
+        ; java/jvm -d Test # < 'Test' here is test java class,
+        # with just an empty class with the only empty static main function
+        ... some lines skipped ...
+        relocate(java/lang/StringBuilder) exit
+        modpatch java/lang/StringBuilder
+        compile java/lang/StringBuilder
+        Switching class java/lang/StringBuilder state to INITED
+        java/lang/StringBuilder-><clinit>()
+        clinit done
+        loader() exit
+        [java/io/ObjectStreamField] Broken: "dereference of nil"
+        sh: 11 "java/io/ObjectStreamField":dereference of nil
+        ; 
+        ; # And the stacktrace is
+        ; cd /prog/11
+        ; cat stack
+        001bfac0 00000162 00435798 0070d510 0 java/io/ObjectStreamField
+        001bfa78 0000001e 00435798 0070d510 0 java/io/ObjectStreamField
+        001bfa48 00000005 00435798 0070d510 0 java/io/ObjectStreamField
+        001bfa10 00000548 0042f698 007092d0 0 java/lang/StringBuffer
+        001bf9e0 0000001f 00425c38 001cb490 0 /dis/java/javaassist.dis
+        001bf988 000001c6 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf948 00000200 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf8d8 000002e5 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf8b0 00000c52 01009558 0073e770 0 java/lang/String
+        001bf880 0000001f 00425c38 001cb490 0 /dis/java/javaassist.dis
+        001bf828 000001c6 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf7e8 00000200 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf778 000002e5 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf750 00001205 0046f4b8 00730e50 0 java/lang/Class
+        001bf720 0000001f 00425c38 001cb490 0 /dis/java/javaassist.dis
+        001bf6c8 000001c6 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf688 00000200 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf640 0000165f 004243f8 001d56f0 0 /dis/java/classloader.dis
+        001bf600 00000029 0041d2f8 001c9370 0 /dis/java/jvm.dis
+        001bf5c0 000007f0 00405038 001974b0 0 /dis/sh.dis
+
+    This one seems to happen because of the next bug.
+
+3.  ldc, ldc_w instructions are not implemented. These are the new things in Java since 1.6, but as opposed to some other new Java features (like invokedynamic), they are used a lot in the real bytecode. For example, there are some calls to them in StringBuffer class, so thats why I thing that the previous bug happens (it uses ldc to load class pointer, but my code currently inserts stubd and null pointers, and so the code in ObjectStreamField failes). Need some further research on these.
+
+
+Worked on files:
+- `libinterp/loader.c`: Loader module source code
+- `java/appl/java/classloader.b`: jvm Classloader source
+- `dis/java/classloader.dis`: Inferno's wm/rt tool is really helpful in debugging strange linkage errors and the things like that

@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "The first day of GSoC"
+date: 2013.06.17 14:29:10
+categories: gsoc
+---
+
+The issue of the day: failing `String_L.dis`.  
+&nbsp;  
+**Though this is currently my first post, soon I will write another 'welcome' one, describing the whole project and my thoughts about Google Summer of Code.**
+
+Today I found out that we need to pass dis imports in function newmod in Loader module. The problem is in that fact that when Classloader loads a native class module, it copies it using Loader's newmod function.
+
+{% highlight objective-c %}
+# Load the native module, and retrieve all the
+# information we can using ld of type Loader
+
+native := ROOT + c.encoding + "_L.dis";
+mod := load Nilmod native;
+if (mod == nil) {
+    trace(JVERBOSE, sys->sprint("Load native failed: %r"));
+    return;
+}
+trace(JDEBUG, sys->sprint("\"%s\"", native));
+links := ld->link(mod);
+if (links == nil)
+    error(sys->sprint("%s: native Loader->link failed: %r"));
+c.info.nlinks = links;
+types := ld->tdesc(mod);
+if (types == nil)
+    error(sys->sprint("%s: native tdesc failed: %r"));
+instrs := ld->ifetch(mod);
+if (instrs == nil)
+    error(sys->sprint("%s: native ifetch failed: %r"));
+
+# Here it is!
+nm := ld->newmod("N-" + c.name, STACKSIZE, len links, instrs, getmd(mod));
+
+# Now we've created empty module, and we will restore all the
+# information we've retrieved recently
+if (nm == nil)
+    error(sys->sprint("%s: native newmod failed: %r"));
+n := len types;
+for (i := 1; i < n; i++) {
+    if (ld->tnew(nm, types[i].size, types[i].map) != i)
+        error(sys->sprint("%s: native tnew failed: %r"));
+}
+n = len links;
+for (i = 0; i < n; i++) {
+    if (ld->ext(nm, i, links[i].pc, links[i].tdesc) < 0)
+        error(sys->sprint("%s: native ext failed: %r"));
+}
+{% endhighlight %}
+
+But when that function was written, dis modules where unaware of imports section. And now it is mandatory for the module to have one. So, I implemented imports getter, found out that we need also to store their order (two-dimensional array), as it is actually used in the code. Understood that I don't know how to create such arrays in c for limbo.
+
+Worked on files:
+- `libinterp/loader.c`: Loader module source code
+- `modules/Loader.m`: module definition file
+- `java/pkg/java/lang/String_L.[bm]`: String_L native class
+
+[jekyll-gh]: https://github.com/mojombo/jekyll
+[jekyll]:    http://jekyllrb.com
